@@ -1516,6 +1516,9 @@ local function OnRowMouseUp(control, button)
               function()
                 SetMapToMapId(mapId)
                 GPS:SetPlayerChoseCurrentMap()
+                if libgpsCoordinates then
+                  xLoc, yLoc = GPS:GlobalToLocal(data.px, data.py) -- recalculate on correct map
+                end
                 CALLBACK_MANAGER:FireCallbacks("OnWorldMapChanged")
                 PingMap(MAP_PIN_TYPE_RALLY_POINT, MAP_TYPE_LOCATION_CENTERED, xLoc, yLoc)
                 PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, xLoc, yLoc)
