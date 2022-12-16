@@ -414,7 +414,7 @@ local function ShouldDisplayLoreBooks()
 end
 
 local lastZone = ""
-local lastMapIp = 0
+local lastMapId = 0
 local lorebooks
 local bookshelves
 local eideticBooks
@@ -498,7 +498,7 @@ local function MapCallbackCreateShalidorPins(pinType)
 
   local mapId = LMD.mapId
   local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
-  if LMD.mapTexture ~= lastZone or lastMapIp ~= mapId then
+  if LMD.mapTexture ~= lastZone or lastMapId ~= mapId then
     UpdateLorebooksData(mapId, zoneMapId)
   end
   local shouldDisplay = ShouldDisplayLoreBooks()
@@ -534,7 +534,7 @@ local function MapCallbackCreateBookshelfPins(pinType)
 
   local mapId = LMD.mapId
   local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
-  if LMD.mapTexture ~= lastZone or lastMapIp ~= mapId then
+  if LMD.mapTexture ~= lastZone or lastMapId ~= mapId then
     UpdateLorebooksData(mapId, zoneMapId)
   end
 
@@ -562,7 +562,7 @@ local function MapCallbackCreateEideticPins(pinType)
 
   local mapId = LMD.mapId
   local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
-  if LMD.mapTexture ~= lastZone or lastMapIp ~= mapId then
+  if LMD.mapTexture ~= lastZone or lastMapId ~= mapId then
     UpdateLorebooksData(mapId, zoneMapId)
   end
   local isDungeon = LMD.isDungeon
