@@ -60641,8 +60641,11 @@ local bookData = {
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Green Serpent Bounty",
     ["e"] = {
+      [1] = {
+        ["px"] = 0.0815220019, ["py"] = 0.5830836017, ["pm"] = 2114, },
+      [2] = { ["pnx"] = 0.7893669605, ["pny"] = 0.4129191339, },
     },
-    ["c"] = false,
+    ["c"] = true,
   },
   [7115] = {
     ["cn"] = "Systres Tomes and Scrolls",
