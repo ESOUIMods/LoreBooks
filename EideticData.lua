@@ -59011,10 +59011,11 @@ local bookData = {
     }
   },
   [7601] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Vastyr Fisherfolk Song",
     ["e"] = {
+      [1] = { ["px"] = 0.0494599997, ["py"] = 0.5720068112, ["pm"] = 2227, ["zm"] = 2212, },
     }
   },
   [7314] = {
