@@ -57723,11 +57723,13 @@ local bookData = {
     ["c"] = true,
   },
   [7115] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Aurelia's Letter",
+    ["q"] = 6791,
     ["e"] = {
+      [1] = { ["px"] = 0.0694004026, ["py"] = 0.6027752052, ["pm"] = 2163, ["zm"] = 2114, },
     },
-    ["c"] = false,
   },
   [7116] = {
     ["c"] = true,
@@ -57865,12 +57867,16 @@ local bookData = {
     ["c"] = true,
   },
   [7130] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "History of House Dufort",
     ["e"] = {
       [1] = { ["px"] = 0.0715032013, ["py"] = 0.5897176011, ["pm"] = 2114, },
+    ["r"] = true,
+    ["m"] = {
+      [2114] = true,
     },
-    ["c"] = true,
+    },
   },
   [7200] = {
     ["c"] = true,
