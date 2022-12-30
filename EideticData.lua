@@ -43891,10 +43891,11 @@ local bookData = {
     },
   },
   [6701] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Dispatches from the Deadlands",
     ["n"] = "The Restoration of Fort Grief",
     ["e"] = {
+	  [1] = { ["px"] = 1.1062944337, ["py"] = 0.7310612152, ["pm"] = 2021, }, 
     },
   },
   [6702] = {
