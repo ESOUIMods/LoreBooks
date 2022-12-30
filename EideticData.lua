@@ -56871,16 +56871,18 @@ local bookData = {
   [7175] = {
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Amiviridil Arcanium",
+    ["q"] = 6771,
     ["e"] = {
+	  [1] = { ["px"] = 0.0689028013, ["py"] = 0.5972980009, ["pm"] = 2114, },
     },
-    ["c"] = false,
+    ["c"] = true,
   },
   [7176] = {
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Magister Irin's Notes",
     ["q"] = 6771,
     ["e"] = {
-      [1] = { ["px"] = 0.0691424023, ["py"] = 0.5966392011, ["pm"] = 2114, },
+      [1] = { ["px"] = 0.0691424023, ["py"] = 0.5966392011, ["pm"] = 2114, ["qp"] true, },
     },
     ["c"] = true,
   },
@@ -56909,9 +56911,11 @@ local bookData = {
   [7179] = {
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "The Purities of Mania",
+    ["q"] = 6771,
     ["e"] = {
+	  [1] = { ["px"] = 0.0692752014, ["py"] = 0.5971692036, ["pm"] = 2114, ["qp"] true, },
     },
-    ["c"] = false,
+    ["c"] = true,
   },
   [7180] = {
     ["cn"] = "Systres Tomes and Scrolls",
@@ -57473,9 +57477,11 @@ local bookData = {
   [7030] = {
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "The Mirrored Way",
+    ["q"] = 6771,
     ["e"] = {
+	  [1] = { ["px"] = 0.0687912018, ["py"] = 0.5970884015, ["pm"] = 2114, ["qp"] true, },
     },
-    ["c"] = false,
+    ["c"] = true,
   },
   [7031] = {
     ["cn"] = "Systres Tomes and Scrolls",
