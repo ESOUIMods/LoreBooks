@@ -33,11 +33,13 @@ local Postmail = {}
 local LoreBooks = _G["LoreBooks"]
 local internal = _G["LoreBooks_Internal"]
 
---LibDebugLogger -------------------------------------------------------------
+-------------------------------------------------
+----- Logger Function                       -----
+-------------------------------------------------
+internal.show_log = false
 if LibDebugLogger then
-  LoreBooks.logger = LibDebugLogger.Create(internal.ADDON_NAME)
+  internal.logger = LibDebugLogger.Create(internal.ADDON_NAME)
 end
-
 local logger
 local viewer
 if DebugLogViewer then viewer = true else viewer = false end
@@ -49,16 +51,16 @@ local function create_log(log_type, log_content)
     return
   end
   if logger and log_type == "Debug" then
-    LoreBooks.logger:Debug(log_content)
+    internal.logger:Debug(log_content)
   end
   if logger and log_type == "Info" then
-    LoreBooks.logger:Info(log_content)
+    internal.logger:Info(log_content)
   end
   if logger and log_type == "Verbose" then
-    LoreBooks.logger:Verbose(log_content)
+    internal.logger:Verbose(log_content)
   end
   if logger and log_type == "Warn" then
-    LoreBooks.logger:Warn(log_content)
+    internal.logger:Warn(log_content)
   end
 end
 
@@ -90,6 +92,7 @@ local function emit_table(log_type, t, indent, table_history)
 end
 
 function internal:dm(log_type, ...)
+  if not internal.show_log then return end
   for i = 1, select("#", ...) do
     local value = select(i, ...)
     if (type(value) == "table") then
