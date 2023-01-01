@@ -36,7 +36,7 @@ local internal = _G["LoreBooks_Internal"]
 -------------------------------------------------
 ----- Logger Function                       -----
 -------------------------------------------------
-internal.show_log = false
+internal.show_log = true
 if LibDebugLogger then
   internal.logger = LibDebugLogger.Create(internal.ADDON_NAME)
 end
@@ -413,6 +413,7 @@ end
 local function UpdateEideticLorebooksData(mapId, zoneMapId)
   --internal:dm("Debug", "UpdateEideticLorebooksData")
   if LMD.mapTexture ~= lastZoneEidetic or LMD.mapId ~= lastMapIpEidetic then
+  internal:dm("Warn", "UpdateEideticLorebooksData")
     lastZoneEidetic = LMD.mapTexture
     lastMapIpEidetic = LMD.mapId
     eideticBooks = LoreBooks_GetEideticData(mapId, zoneMapId) -- All Eidetic Books in Zone
@@ -561,7 +562,7 @@ local function MapCallbackCreateBookshelfPins(pinType)
 end
 
 local function MapCallbackCreateEideticPins(pinType)
-  --internal:dm("Debug", "MapCallbackCreateEideticPins")
+  internal:dm("Debug", "MapCallbackCreateEideticPins: " .. pinType)
 
   if LMD.isWorld then
     --internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
