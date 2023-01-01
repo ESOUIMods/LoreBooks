@@ -58270,38 +58270,43 @@ local bookData = {
     }
   },
   [7192] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Library of Incunabula",
     ["n"] = "A Warning to Those Who Follow",
     ["e"] = {
+	  [1] = { ["px"] = 0.0506455998, ["py"] = 0.6090427932, ["pm"] = 2240, ["d"] = true, ["zx"] = 0.0759564031, ["zy"] = 0.5872872124, ["zm"] = 2114, },
     }
   },
   [7193] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Library of Incunabula",
     ["n"] = "A Second Warning",
     ["e"] = {
+	  [1] = { ["px"] = 0.0519360015, ["py"] = 0.6090544034, ["pm"] = 2230, ["d"] = true, ["zx"] = 0.0759564031, ["zy"] = 0.5872872124, ["zm"] = 2114, },
     }
   },
   [7194] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Library of Incunabula",
     ["n"] = "Your Final Warning",
     ["e"] = {
+	  [1] = { ["px"] = 0.0509284004, ["py"] = 0.6079315914, ["pm"] = 2233, ["d"] = true, ["zx"] = 0.0759564031, ["zy"] = 0.5872872124, ["zm"] = 2114, },
     }
   },
   [7195] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Library of Incunabula",
     ["n"] = "Logbook of Druid Anwas",
     ["e"] = {
+	  [1] = { ["px"] = 0.0505004003, ["py"] = 0.6091539992, ["pm"] = 2229, ["d"] = true, ["zx"] = 0.0759564031, ["zy"] = 0.5872872124, ["zm"] = 2114, }, --This is for the post-dungeon completion location. You can find this on the ground pre-completion but it must be read BEFORE fighting final boss.
     }
   },
   [7196] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Library of Incunabula",
     ["n"] = "Logbook of Druid Betrys",
     ["e"] = {
+	  [1] = { ["px"] = 0.0505128004, ["py"] = 0.6091255992, ["pm"] = 2229, ["d"] = true, ["zx"] = 0.0759564031, ["zy"] = 0.5872872124, ["zm"] = 2114, },
     }
   },
   [7250] = {
