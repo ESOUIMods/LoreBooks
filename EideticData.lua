@@ -57411,11 +57411,13 @@ local bookData = {
     },
   },
   [7021] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Banneret Jenine's Orders",
+    ["q"] = 6765,
     ["e"] = {
+	  [1] = { ["px"] = 0.0563008013, ["py"] = 0.5815503940, ["pm"] = 2167, ["d"] = true, ["zx"] = 0.0593876026, ["zy"] = 0.5800732015, ["zm"] = 2114, },
     },
-    ["c"] = false,
   },
   [7022] = {
     ["c"] = true,
@@ -57430,11 +57432,13 @@ local bookData = {
     },
   },
   [7024] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Sailing Orders",
+    ["q"] = 6765,
     ["e"] = {
+	  [1] = { ["px"] = 0.0543943988, ["py"] = 0.6012120002, ["pm"] = 2168, ["d"] = true, ["zx"] = 0.0541156019, ["zy"] = 0.6012716013, ["zm"] = 2114, },
     },
-    ["c"] = false,
   },
   [7025] = {
     ["c"] = true,
@@ -57484,11 +57488,13 @@ local bookData = {
     ["c"] = true,
   },
   [7031] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "The Ascendant Magus's Commission",
+    ["q"] = 6765,
     ["e"] = {
+	  [1] = { ["px"] = 0.0461840018, ["py"] = 0.5993824017, ["pm"] = 2114, ["d"] = true, },
     },
-    ["c"] = false,
   },
   [7032] = {
     ["c"] = true,
@@ -57895,11 +57901,13 @@ local bookData = {
     },
   },
   [7132] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Burned Research Notes",
+    ["q"] = 6765,
     ["e"] = {
+	  [1] = { ["px"] = 0.0560376013, ["py"] = 0.5815155940, ["pm"] = 2167, ["d"] = true, ["zx"] = 0.0593876026, ["zy"] = 0.5800732015, ["zm"] = 2114, },
     },
-    ["c"] = false,
   },
   [7133] = {
     ["cn"] = "Systres Tomes and Scrolls",
