@@ -58349,8 +58349,9 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Archdruid Michiel's Orders",
+	["q"] = 6843,
     ["e"] = {
-      [1] = { ["px"] = 0.0670119999, ["py"] = 0.3616176081, ["pm"] = 1, },
+      [1] = { ["px"] = 0.0670119999, ["py"] = 0.3616176081, ["pm"] = 1, ["qp"] = true, },
     }
   },
   [7584] = {
