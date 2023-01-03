@@ -45671,10 +45671,11 @@ local bookData = {
     ["cn"] = "Summerset Scrolls",
   },
   [6899] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Library of Incunabula",
     ["n"] = "Time to Face Reality",
     ["e"] = {
+	  [1] = { ["px"] = 0.1445112067, ["py"] = 0.3108227940, ["pm"] = 2044, ["d"] = true, ["zx"] = 0.1392043987, ["zy"] = 0.3088380025, ["zm"] = 1, },
     },
   },
   [6900] = {
