@@ -58424,38 +58424,54 @@ local bookData = {
     }
   },
   [7286] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Welcome, Initiates!",
+    ["q"] = 6847,
     ["e"] = {
+      [1] = {
+        ["px"] = 0.0616848013, ["py"] = 0.5849788144, ["pm"] = 2236, ["d"] = true, ["zx"] = 0.0632516015, ["zy"] = 0.5845536026, ["zm"] = 2114,
+      },
     }
   },
   [7285] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Shipping Label",
+    ["q"] = 6847,
     ["e"] = {
+      [1] = {
+        ["px"] = 0.0619628014, ["py"] = 0.5847404144, ["pm"] = 2236, ["d"] = true, ["zx"] = 0.0632516015, ["zy"] = 0.5845536026, ["zm"] = 2114,
+      },
     }
   },
   [7287] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Orders from the Lord",
+    ["q"] = 6847,
     ["e"] = {
+      [1] = {
+        ["px"] = 0.0619548013, ["py"] = 0.5852788145, ["pm"] = 2236, ["d"] = true, ["zx"] = 0.0632516015, ["zy"] = 0.5845536026, ["zm"] = 2114,
+      },
     }
   },
   [7289] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Ancient Druid Bloodlines",
+    ["q"] = 6847,
     ["e"] = {
+	  [1] = { ["px"] = 0.0619119994, ["py"] = 0.5986619935, ["pm"] = 2268, ["d"] = true, ["zx"] = 0.0621792019, ["zy"] = 0.5980144024, ["zm"] = 2114, },
     }
   },
   [7288] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Lord Bacaro's Journal",
+    ["q"] = 6847,
     ["e"] = {
+	  [1] = { ["px"] = 0.0619043994, ["py"] = 0.5986511935, ["pm"] = 2268, ["d"] = true, ["zx"] = 0.0621792019, ["zy"] = 0.5980144024, ["zm"] = 2114, },
     }
   },
   [7365] = {
@@ -58510,10 +58526,12 @@ local bookData = {
     }
   },
   [7304] = {
-    ["c"] = false,
+    ["c"] = trrue,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Minahel's Note",
+    ["q"] = 6857,
     ["e"] = {
+	  [1] = { ["px"] = 0.0591472007, ["py"] = 0.5570900010, ["pm"] = 2212,
     }
   },
   [7311] = {
@@ -58549,7 +58567,7 @@ local bookData = {
     ["n"] = "Kiko's Riddles",
     ["q"] = 6860,
     ["e"] = {
-      [1] = { ["px"] = 0.0497435996, ["py"] = 0.5706932110, ["pm"] = 2227, ["zm"] = 2212, },
+      [1] = { ["px"] = 0.0497435996, ["py"] = 0.5706932110, ["pm"] = 2227, ["zm"] = 2212, }, --Post-quest location if not read during quest
     }
   },
   [7309] = {
@@ -58587,28 +58605,35 @@ local bookData = {
     ["q"] = 6904,
     ["e"] = {
       [1] = { ["px"] = 0.0557676013, ["py"] = 0.5649572008, ["pm"] = 2212, },
+	  [2] = { ["px"] = 0.0476288009, ["py"] = 0.5681704006, ["pm"] = 2212, },
     }
   },
   [7315] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Druid Fables: The Proud Faun",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7356] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "The Annotated Dream of Kasorayn",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7359] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Wines of the Systres",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7360] = {
     ["c"] = true,
@@ -58655,14 +58680,16 @@ local bookData = {
     ["n"] = "Dreadsails: Threat to the Isles",
     ["e"] = {
       [1] = { ["px"] = 0.0503007996, ["py"] = 0.5725312113, ["pm"] = 2227, ["zm"] = 2212, },
-    }
+    },
   },
   [7519] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Glimmertarn: A Stonelore Community",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7520] = {
     ["c"] = true,
@@ -58681,11 +58708,13 @@ local bookData = {
     }
   },
   [7522] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Molith the Mudcrab",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7523] = {
     ["c"] = false,
@@ -58702,17 +58731,22 @@ local bookData = {
     }
   },
   [7525] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "The Tempest and the Sunflower",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
+  },
   },
   [7526] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Arnoit and Lisette: The True Story",
     ["e"] = {
+	  [1] = { ["px"] = 0.0483504009, ["py"] = 0.5698271983, ["pm"] = 2281, ["d"] = true, },
+	  [2] = { ["px"] = 0.0483500008, ["py"] = 0.5698280005, ["pm"] = 2227, ["zm"] = 2212, ["fp"] = true, },
     }
   },
   [7527] = {
@@ -58731,11 +58765,13 @@ local bookData = {
     }
   },
   [7529] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Druid Food of Vastyr",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7530] = {
     ["c"] = false,
@@ -58782,11 +58818,13 @@ local bookData = {
     }
   },
   [7536] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Exodus of the Druids",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7537] = {
     ["c"] = false,
@@ -58803,18 +58841,22 @@ local bookData = {
     }
   },
   [7539] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "On Nature Spirits",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7540] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Legacy of the Bretons",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7541] = {
     ["c"] = false,
