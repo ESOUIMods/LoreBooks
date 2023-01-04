@@ -57586,11 +57586,13 @@ local bookData = {
     ["c"] = false,
   },
   [7095] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Silverslip's Journal",
+	["q"] = 6786,
     ["e"] = {
+	  [1] = { ["px"] = 0.7262711900, ["py"] = 0.5349919961, ["pm"] = 149, ["d"] = true, ["zx"] = 0.7262719910, ["zy"] = 0.5341439946, ["zm"] = 26, ["qp"] = true, },
     },
-    ["c"] = false,
   },
   [7098] = {
     ["cn"] = "Systres Tomes and Scrolls",
