@@ -57993,11 +57993,12 @@ local bookData = {
     },
   },
   [3047] = {
+    ["c"] = true,
     ["cn"] = "Library of Incunabula",
     ["n"] = "Terran's Notes",
     ["e"] = {
+	[1] = { ["px"] = 0.5477587896, ["py"] = 0.4759068019, ["pm"] = 908, ["d"] = true, }, -- Only accessible after defeating Molag Kena and going through the portal at the end, I don't know how to word this.
     },
-    ["c"] = false,
   },
   [7144] = {
     ["cn"] = "Systres Tomes and Scrolls",
