@@ -58655,11 +58655,13 @@ local bookData = {
     }
   },
   [7364] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Y'ffelon, the Forbidden Island",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7470] = {
     ["c"] = true,
