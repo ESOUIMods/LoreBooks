@@ -57595,11 +57595,12 @@ local bookData = {
     },
   },
   [7098] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Emerald Eye Mage's Journal",
-    ["e"] = {
+	["q"] = 6787,
+    ["e"] = { [1] = { ["px"] = 0.1742916002, ["py"] = 0.3957151922, ["pm"] = 30, ["qp"] = true, }, --Must be read as part of quest
     },
-    ["c"] = false,
   },
   [7099] = {
     ["cn"] = "Systres Tomes and Scrolls",
@@ -58137,11 +58138,12 @@ local bookData = {
     ["c"] = true,
   },
   [7159] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Izbadd's Letter",
-    ["e"] = {
+	["q"] = 6787,
+    ["e"] = { [1] = { ["qp"] = true, }, --It is given to you during the qust
     },
-    ["c"] = false,
   },
   [7168] = {
     ["c"] = true,
