@@ -57717,11 +57717,13 @@ local bookData = {
     ["c"] = true,
   },
   [7205] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Letter from Vetitia Marcott",
     ["e"] = {
+	  [1] = { ["px"] = 0.1700347960, ["py"] = 0.2494235974, ["pm"] = 812, ["d"] = true, ["zx"] = 0.1760099976, ["zy"] = 0.2461672003, ["zm"] = 10, },
+      [2] = { ["px"] = 0.1733212026, ["py"] = 0.2514208053, ["pm"] = 85, ["fp"] = true, },
     },
-    ["c"] = false,
   },
   [7113] = {
     ["c"] = true,
@@ -58345,10 +58347,11 @@ local bookData = {
     }
   },
   [7282] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Letter from Druid Laurel",
     ["e"] = {
+	  [1] = { ["px"] = 0.0588544026, ["py"] = 0.3539028008, ["pm"] = 1, },
     }
   },
   [7271] = {
@@ -58650,11 +58653,13 @@ local bookData = {
     }
   },
   [7363] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "The Druid Monoliths",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7364] = {
     ["c"] = true,
@@ -58766,11 +58771,13 @@ local bookData = {
     }
   },
   [7528] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Druid Fables: Systres Beavers",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7529] = {
     ["c"] = true,
@@ -58867,11 +58874,13 @@ local bookData = {
     ["m"] = { [2212] = 1, },
   },
   [7541] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "A Helpful, Steadfast Hand",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7544] = {
     ["c"] = true,
