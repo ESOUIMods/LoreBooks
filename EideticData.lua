@@ -44984,10 +44984,11 @@ local bookData = {
     },
   },
   [6857] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Library of Incunabula",
     ["n"] = "Ancient Inscription",
     ["e"] = {
+      [1] = { ["px"] = 0.1186399994, ["py"] = 0.6287551934, ["pm"] = 2111, ["d"] = true, ["zx"] = 0.1178388044, ["zy"] = 0.6371344010, ["zm"] = 1349, },
     },
   },
   [4810] = {
