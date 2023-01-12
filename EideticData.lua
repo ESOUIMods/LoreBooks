@@ -58790,11 +58790,13 @@ local bookData = {
     ["m"] = { [2212] = 1, },
   },
   [7530] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Journeys In Galen: A Scholar's Travels",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7531] = {
     ["c"] = true,
