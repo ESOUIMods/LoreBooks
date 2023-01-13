@@ -58315,7 +58315,8 @@ local bookData = {
     ["cn"] = "Library of Incunabula",
     ["n"] = "Logbook of Druid Anwas",
     ["e"] = {
-	  [1] = { ["px"] = 0.0505004003, ["py"] = 0.6091539992, ["pm"] = 2229, ["d"] = true, ["zx"] = 0.0759564031, ["zy"] = 0.5872872124, ["zm"] = 2114, }, --This is for the post-dungeon completion location. You can find this on the ground pre-completion but it must be read BEFORE fighting final boss.
+      [1] = { ["px"] = 0.0507428004, ["py"] = 0.6076639914, ["pm"] = 2233, ["d"] = true, ["zx"] = 0.0759564031, ["zy"] = 0.5872872124, ["zm"] = 2114, }, --This is for the pre-dungeon completion location.
+      [2] = { ["px"] = 0.0505004003, ["py"] = 0.6091539992, ["pm"] = 2229, ["d"] = true, ["zx"] = 0.0759564031, ["zy"] = 0.5872872124, ["zm"] = 2114, }, --This is for the post-dungeon completion location. You can find this on the ground pre-completion but it must be read BEFORE fighting final boss.
     }
   },
   [7196] = {
