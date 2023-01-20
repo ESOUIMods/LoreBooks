@@ -42372,11 +42372,13 @@ local bookData = {
     },
   },
   [6591] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Dispatches from the Deadlands",
     ["n"] = "Flora and Fauna of the Burn",
     ["e"] = {
     },
+    ["r"] = true,
+    ["m"] = { [2021] = 1, },
   },
   [6592] = {
     ["c"] = true,
