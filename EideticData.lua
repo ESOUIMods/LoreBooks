@@ -43839,10 +43839,11 @@ local bookData = {
     },
   },
   [6694] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Books of Blackwood",
     ["n"] = "Notes of Lovirithel the Sage",
     ["e"] = {
+      [1] = { ["px"] = 0.6295012288, ["py"] = 0.7098559863, ["pm"] = 1978, ["d"] = true, ["zx"] = 0.6299668080, ["zy"] = 0.7134668115, ["zm"] = 1887, },
     },
   },
   [6695] = {
@@ -57084,9 +57085,10 @@ local bookData = {
   [6950] = {
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Ode to the Nose of a Woman",
-    ["e"] = {
+    ["q"] = 6760,
+    ["e"] = { --Does not have a location; it is given directly to your inventory in the quest and must be read.
     },
-    ["c"] = false,
+    ["c"] = true,
   },
   [7207] = {
     ["cn"] = "Systres Tomes and Scrolls",
