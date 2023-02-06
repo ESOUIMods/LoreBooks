@@ -58824,14 +58824,18 @@ local bookData = {
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Systres History Addendum: The Druids of Galen",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7534] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Systres History: Vastyr",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7535] = {
     ["c"] = false,
@@ -58854,7 +58858,9 @@ local bookData = {
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Visitor's Guide to Galen",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7538] = {
     ["c"] = false,
