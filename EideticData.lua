@@ -58737,11 +58737,13 @@ local bookData = {
     ["m"] = { [2212] = 1, },
   },
   [7523] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Druid Funerals: A Piece of Y'ffre",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7524] = {
     ["c"] = false,
@@ -58855,7 +58857,7 @@ local bookData = {
     ["m"] = { [2212] = 1, },
   },
   [7537] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Visitor's Guide to Galen",
     ["e"] = {
@@ -58864,11 +58866,13 @@ local bookData = {
     ["m"] = { [2212] = 1, },
   },
   [7538] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Emeric's Judgment",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7539] = {
     ["c"] = true,
