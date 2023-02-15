@@ -58746,11 +58746,13 @@ local bookData = {
     ["m"] = { [2212] = 1, },
   },
   [7524] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Investigator Vale and the Darkmasts",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7525] = {
     ["c"] = true,
