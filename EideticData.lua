@@ -43927,11 +43927,13 @@ local bookData = {
     },
   },
   [6705] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Dispatches from the Deadlands",
     ["n"] = "The Penitent's Tale",
     ["e"] = {
     },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [6706] = {
     ["c"] = true,
@@ -58843,11 +58845,13 @@ local bookData = {
     ["m"] = { [2212] = 1, },
   },
   [7535] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Systres History: Addendum",
     ["e"] = {
-    }
+    },
+    ["r"] = true,
+    ["m"] = { [2212] = 1, },
   },
   [7536] = {
     ["c"] = true,
