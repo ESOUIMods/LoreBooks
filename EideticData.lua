@@ -59085,6 +59085,86 @@ local bookData = {
     ["e"] = {
     }
   },
+  [7476] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Excerpts from Keshargo's Journal",
+    ["e"] = {
+	  [1] = { ["px"] = 0.6140556012, ["py"] = 0.4041763994, ["pm"] = 2363, ["d"] = true, ["zx"] = 0.6163903933, ["zy"] = 0.3979327919, ["zm"] = 125, },
+    }
+  },
+  [7472] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Octants of the Scrivener",
+    ["e"] = {
+	  [1] = { ["px"] = 0.6140451918, ["py"] = 0.4043703997, ["pm"] = 2286, ["d"] = true, ["zx"] = 0.6163903933, ["zy"] = 0.3979327919, ["zm"] = 125, },
+    }
+  },
+  [7477] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Letter of Resignation",
+    ["e"] = {
+	  [1] = { ["px"] = 0.6143671918, ["py"] = 0.4043879997, ["pm"] = 2286, ["d"] = true, ["zx"] = 0.6163903933, ["zy"] = 0.3979327919, ["zm"] = 125, },
+    }
+  }, 
+  [7474] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Mazandi's Rift Tracking",
+    ["e"] = {
+	  [1] = { ["px"] = 0.6162123843, ["py"] = 0.4054256026, ["pm"] = 2287, ["d"] = true, ["zx"] = 0.6163903933, ["zy"] = 0.3979327919, ["zm"] = 125, },
+    }
+  },  
+  [7478] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Scribes of Mephala",
+    ["e"] = {
+	  [1] = { ["px"] = 0.6163655843, ["py"] = 0.4053000026, ["pm"] = 2287, ["d"] = true, ["zx"] = 0.6163903933, ["zy"] = 0.3979327919, ["zm"] = 125, },
+    }
+  },  
+  [7475] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Letter to the Magnastylus",
+    ["e"] = {
+	  [1] = { ["px"] = 0.6162287995, ["py"] = 0.4037220004, ["pm"] = 2289, ["d"] = true, ["zx"] = 0.6163903933, ["zy"] = 0.3979327919, ["zm"] = 125, },
+    }
+  },  
+  [7473] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Mission Report: Successful",
+    ["e"] = {
+	  [1] = { ["px"] = 0.6161935995, ["py"] = 0.4037172003, ["pm"] = 2289, ["d"] = true, ["zx"] = 0.6163903933, ["zy"] = 0.3979327919, ["zm"] = 125, },
+    }
+  },  
+  [7349] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Journal of Kovan Giryon",
+    ["e"] = {
+	  [1] = { ["px"] = 0.7834560094, ["py"] = 0.4616164114, ["pm"] = 2255, ["d"] = true, ["zx"] = 0.7770799938, ["zy"] = 0.4578639996, ["zm"] = 7, },
+    }
+  },
+  [7350] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Journal of Nerile Belvayn",
+    ["e"] = {
+	  [1] = { ["px"] = 0.7829868265, ["py"] = 0.4607308128, ["pm"] = 2258, ["d"] = true, ["zx"] = 0.7770799938, ["zy"] = 0.4578639996, ["zm"] = 7, },
+    }
+  },
+  [7351] = {
+    ["c"] = true,
+    ["cn"] = "Library of Incunabula",
+    ["n"] = "Journal of Adosi Fevur",
+    ["e"] = {
+	  [1] = { ["px"] = 0.7912075943, ["py"] = 0.4628452146, ["pm"] = 2262, ["d"] = true, ["zx"] = 0.7770799938, ["zy"] = 0.4578639996, ["zm"] = 7, },
+    }
+  },
 }
 
 function LoreBooks_GetBookData()
