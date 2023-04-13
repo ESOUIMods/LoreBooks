@@ -58493,10 +58493,11 @@ local bookData = {
     }
   },
   [7365] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "The Final Dream of Kasorayn",
     ["e"] = {
+	  [1] = { ["px"] = 0.0612380001, ["py"] = 0.5623435976, ["pm"] = 2251, ["d"] = true, ["zx"] = 0.6108773947, ["zy"] = 0.3824935257, ["zm"] = 2212, },
     }
   },
   [7361] = {
