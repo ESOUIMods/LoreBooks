@@ -58829,7 +58829,7 @@ local bookData = {
     }
   },
   [7533] = {
-    ["c"] = false,
+    ["c"] = true,
     ["cn"] = "Archipelago Books and Almanacs",
     ["n"] = "Systres History Addendum: The Druids of Galen",
     ["e"] = {
