@@ -48,8 +48,8 @@ NOTE: (SI CONST): Means it is an ingame localization and doesn't have to be tran
   - `["d"]= true`: Dungeon Pin. Usually anything in a zone that you enter Delve, Mine, Cave, etc.
   - `["fp"] = true`: Indicates this is a fake pin. It will be used as a Map Pin but but not for Loocations from the Lore Library menu.
   - `["ld"]`: Location Details for the Lorebook
-  - `["qp"] = true`: Player myst have the Quest in their Quest Journal to view the location of the book
-  - `["qc"] = true`: Player myst have Completed the Quest to view the location of the book
+  - `["qp"] = true`: Player must have the Quest in their Quest Journal to view the location of the book
+  - `["qc"] = true`: Player must have Completed the Quest to view the location of the book
 - `["r"]= true`: Random book appears in a Bookshelf
 - `["m"]`: Map ID locations where the book can be found
   - `[MapIdNumber] = count`: Map ID and count or times reported
