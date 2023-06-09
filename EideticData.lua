@@ -57995,7 +57995,10 @@ local bookData = {
     ["c"] = true,
     ["n"] = "Seeking Tribute Players!",
     ["cn"] = "Tomes of Tributes",
-    ["e"] = { [1] = { ["px"] = 0.0682280026, ["py"] = 0.6043096051, ["pm"] = 2163, ["zm"] = 2114, }, },
+    ["e"] = { 
+	  [1] = { ["px"] = 0.0682280026, ["py"] = 0.6043096051, ["pm"] = 2163, ["zm"] = 2114, },
+	  [2] = { ["px"] = 0.9388055812, ["py"] = 0.3856527953, ["pm"] = 2343, ["zm"] = 2274, },
+	},
   },
   [7185] = {
     ["c"] = true,
@@ -59024,6 +59027,7 @@ local bookData = {
     }
   },
   [7463] = {
+    ["c"] = true,
     ["cn"] = "Telvanni Tomes",
     ["n"] = "A Feast Among the Dead, Chapter IV",
     ["e"] = {
@@ -59047,11 +59051,13 @@ local bookData = {
     },
   },
   [7418] = {
+    ["c"] = true,
     ["cn"] = "Telvanni Tomes",
     ["n"] = "Oath of the Keepers",
     ["e"] = {
-      [1] = { ["px"] = 0.9393064152, ["py"] = 0.3738279957, ["pm"] = 2385, ["pm"] = 2274, ["d"] = true, },
-      [2] = { ["px"] = 0.9393063814, ["py"] = 0.3738279956, ["pm"] = 2343, ["fp"] = true, },
+      [1] = { ["px"] = 0.9393064152, ["py"] = 0.3738279957, ["pm"] = 2385, ["d"] = true, },
+      [2] = { ["px"] = 0.9386639812, ["py"] = 0.3769459957, ["pm"] = 2343, ["fp"] = true, },
+      [3] = { ["px"] = 0.9510455811, ["py"] = 0.3718255957, ["pm"] = 2343, ["fp"] = true, },
     },
   },
   [7751] = {
@@ -59089,6 +59095,264 @@ local bookData = {
 	  [1] = { ["px"] = 0.4734155837, ["py"] = 0.5894560061, ["pm"] = 256, },
     },
   },
+  [7442] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Critter Dangers: Telvanni Peninsula",
+    ["e"] = {
+      [1] = { ["px"] = 0.9112944066, ["py"] = 0.4113324036, ["pm"] = 2274, },
+    },
+  },
+  [7753] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Sunvys Golsathyn Gravestone",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8252300085, ["py"] = 0.4290488000, ["pm"] = 2274, },
+	},
+  },
+  [7754] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Savienie Mavlyn Gravestone",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8706836109, ["py"] = 0.4561263996, ["pm"] = 2274, },
+	},
+  },
+  [7756] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Favami Seravel Gravestone",
+    ["e"] = {
+      [1] = { ["px"] = 0.8668592121, ["py"] = 0.3882540036, ["pm"] = 2274, },
+    },
+  },
+  [7759] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Aralos Sarvrothi Gravestone",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8494224073, ["py"] = 0.4801320016, ["pm"] = 2274, },
+	},
+  },
+  [7420] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Deal with a Daedric Prince",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8861720097, ["py"] = 0.4305332063, ["pm"] = 2274, },
+	},
+  },
+  [7755] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Elovul Alarndil Gravestone",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8762340089, ["py"] = 0.4194548025, ["pm"] = 2274, },
+	},
+  },
+  [7772] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Parables of Saint Vorys",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8664948069, ["py"] = 0.4291420048, ["pm"] = 2274, },
+	},
+  },
+  [7758] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Dayldela Gilrom Gravestone",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8559208105, ["py"] = 0.4076184052, ["pm"] = 2274, },
+	},
+  },
+  [7757] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Triys Rehlo Gravestone",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9194792040, ["py"] = 0.4230828059, ["pm"] = 2274, },
+	},
+  },
+  [7678] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Attention All Egg-Hands",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9373284123, ["py"] = 0.4195620022, ["pm"] = 2305, ["d"] = true, }, 
+      [2] = { ["px"] = 0.9337532095, ["py"] = 0.4190540044, ["pm"] = 2274, ["fp"] = true, },
+	},
+  },
+  [7454] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "A New Cult Arises",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9347635802, ["py"] = 0.3888835951, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+  },
+  [7452] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Daedric Worship and the Dark Elves",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9346643811, ["py"] = 0.3887079951, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+  },
+  [7444] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "A Feast Among the Dead, Chapter I",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9389759801, ["py"] = 0.3850419962, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+  },
+  [7800] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "The Waiting Door",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9388071804, ["py"] = 0.3854871955, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+  },
+  [7462] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "A Feast Among the Dead, Chapter III",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9401100038, ["py"] = 0.3849048077, ["pm"] = 2342, ["d"] = true, },
+	  [2] = { ["px"] = 0.9394424151, ["py"] = 0.3738399957, ["pm"] = 2385, ["fp"] = true, },
+	  [3] = { ["px"] = 0.9341744151, ["py"] = 0.3932576016, ["pm"] = 2274, ["fp"] = true, },  
+  },
+  [7461] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "A Feast Among the Dead, Chapter II",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9439375806, ["py"] = 0.3891207951, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+  },
+  [7438] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Master of the Tides of Fate",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9442271803, ["py"] = 0.3885443965, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+  },
+  [7449] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Beverages for the Bereaved",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9470795805, ["py"] = 0.3927503953, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+    ["r"] = true,
+    ["m"] = {
+      [2274] = 1,
+    },
+  },
+  [7425] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Peryite's Salvation",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9589099803, ["py"] = 0.3744219957, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+    ["r"] = true,
+    ["m"] = {
+      [2274] = 1,
+    },
+  },
+  [7446] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Brave Little Scrib and the River Troll",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9328583810, ["py"] = 0.3933239959, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+    ["r"] = true,
+    ["m"] = {
+      [2274] = 1,
+    },
+  },
+  [7439] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "The Spires of the 34th Sermon",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9407631813, ["py"] = 0.3838179950, ["pm"] = 2343, ["zm"] = 2274, },
+	},
+  },
+  [7637] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Dreynis's Notes, Entry 001",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9352372158, ["py"] = 0.3585232068, ["pm"] = 2302, ["d"] = true, },
+	  [2] = { ["px"] = 0.9207820072, ["py"] = 0.3840748011, ["pm"] = 2274, ["fp"] = true, },
+	},
+  },
+  [7638] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Dreynis's Notes, Entry 028",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9322316156, ["py"] = 0.3589072069, ["pm"] = 2302, ["d"] = true, },
+	  [2] = { ["px"] = 0.9207820072, ["py"] = 0.3840748011, ["pm"] = 2274, ["fp"] = true, },
+	},
+  },
+  [7639] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Dreynis's Notes, Entry 007",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9313068155, ["py"] = 0.3617596069, ["pm"] = 2302, ["d"] = true, },
+	  [2] = { ["px"] = 0.9207820072, ["py"] = 0.3840748011, ["pm"] = 2274, ["fp"] = true, },
+	},
+  },
+  [7640] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "",
+    ["e"] = {
+	  [1] = { ["px"] = 0.9336175902, ["py"] = 0.3614855963, ["pm"] = 2303, ["d"] = true, },
+	  [2] = { ["px"] = 0.9207820072, ["py"] = 0.3840748011, ["pm"] = 2274, ["fp"] = true, },
+	},
+  },
+  [7440] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Our Puny Allies",
+    ["e"] = {
+	},
+    ["r"] = true,
+    ["m"] = {
+      [2274] = 1,
+    },
+  },
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 function LoreBooks_GetBookData()
