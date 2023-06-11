@@ -59083,7 +59083,7 @@ local bookData = {
     ["n"] = "Letter from Leramil the Wise",
     ["q"] = 6967,
     ["e"] = {
-	  [1] = { ["px"] = 0.4326671990, ["py"] = 0.7265287947, ["pm"] = 450, },
+	  [1] = { ["px"] = 0.4326671990, ["py"] = 0.7265287947, ["pm"] = 445, ["qp"] = true, },
     },
   },
   [7509] = {
@@ -59092,7 +59092,7 @@ local bookData = {
     ["n"] = "Mildanor's Ripped Note",
     ["q"] = 6967,
     ["e"] = {
-	  [1] = { ["px"] = 0.4734155837, ["py"] = 0.5894560061, ["pm"] = 256, },
+	  [1] = { ["px"] = 0.4734155837, ["py"] = 0.5894560061, ["pm"] = 256, ["qp"] = true, },
     },
   },
   [7442] = {
@@ -59137,7 +59137,7 @@ local bookData = {
   },
   [7420] = {
     ["c"] = true,
-    ["cn"] = "Telvanni Tomes",
+    ["cn"] = "Apocryphal Pages",
     ["n"] = "Deal with a Daedric Prince",
     ["e"] = {
 	  [1] = { ["px"] = 0.8861720097, ["py"] = 0.4305332063, ["pm"] = 2274, },
@@ -59235,7 +59235,7 @@ local bookData = {
   },
   [7438] = {
     ["c"] = true,
-    ["cn"] = "Telvanni Tomes",
+    ["cn"] = "Apocryphal Pages",
     ["n"] = "Master of the Tides of Fate",
     ["e"] = {
 	  [1] = { ["px"] = 0.9442271803, ["py"] = 0.3885443965, ["pm"] = 2343, ["zm"] = 2274, },
@@ -59332,27 +59332,172 @@ local bookData = {
       [2274] = 1,
     },
   },
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  [7580] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Master's Warning",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8262884091, ["py"] = 0.4134243877, ["pm"] = 2386, ["zm"] = 2274, },
+	},
+  },
+  [7464] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Our Dunmer Heritage",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8768564109, ["py"] = 0.4327468016, ["pm"] = 2274, },
+	},
+  },
+  [7433] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Life in the Camonna Tong",
+    ["e"] = {
+	  [1] = { ["px"] = 0.8279483761, ["py"] = 0.4592540153, ["pm"] = 2292, ["d"] = true, },
+	  [2] = { ["px"] = 0.2419940829, ["py"] = 0.6903234720, ["pm"] = 2274, ["fp"] = true, },
+	},
+  },
+  [7514] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Note to Rilasi",
+	["q"] = 6998,
+    ["e"] = {
+      [1] = { ["px"] = 0.8673792091, ["py"] = 0.4288468007, ["pm"] = 2274, ["qp"] = true, },
+	},
+  },
+  [7517] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Ransom Note from Shadeya",
+	["q"] = 6998,
+    ["e"] = {
+	  [1] = { ["px"] = 0.8790816037, ["py"] = 0.4345715978, ["pm"] = 2274, ["qp"] = true, },
+	},
+  },
+  [7445] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "A Brief History of House Telvanni",
+    ["e"] = {
+      [1] = { ["px"] = 0.8950176048, ["py"] = 0.4542852114, ["pm"] = 2274, },
+	},
+  },
+  [7577] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Sathile's Research Notes",
+	["q"] = 6999,
+    ["e"] = {
+	  [1] = { ["px"] = 0.8960900162, ["py"] = 0.4476811964, ["pm"] = 2293, ["d"] = true, ["qp"] = true, },
+	  [2] = { ["px"] = 0.8960876161, ["py"] = 0.4476511963, ["pm"] = 2293, ["fp"] = true, ["qp"] = true, },
+	  [3] = { ["px"] = 0.8954456049, ["py"] = 0.4538136114, ["pm"] = 2274, ["fp"] = true, ["qp"] = true, },
+	},
+  },
+  [7569] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Note to Nathyn",
+	["q"] = 6999
+    ["e"] = {
+	  [1] = { ["px"] = 0.8963116161, ["py"] = 0.4478907963, ["pm"] = 2293, ["d"] = true, ["qp"] = true, },
+	  [2] = { ["px"] = 0.8963160162, ["py"] = 0.4478939964, ["pm"] = 2293, ["fp"] = true, ["qp"] = true, },
+	  [3] = { ["px"] = 0.8954456049, ["py"] = 0.4538136114, ["pm"] = 2274, ["fp"] = true, ["qp"] = true, },
+	},
+  },
+  [7443] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Visitor's Guide: Telvanni Peninsula",
+    ["e"] = {
+      [1] = { ["px"] = 0.9407420136, ["py"] = 0.4101616015, ["pm"] = 2274, },
+	},
+    ["r"] = true,
+    ["m"] = {
+      [2274] = 1,
+    },
+  },
+  [7618] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Folsi's Report",
+	["q"] = 6990,
+    ["e"] = {
+	},
+  },
+  [7622] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Mud-Covered Letter",
+	["q"] = 6990,
+    ["e"] = {
+	  [1] = { ["px"] = 0.8380128079, ["py"] = 0.3970012019, ["pm"] = 2274, ["qp"] = true, },
+	},
+  },
+  [7623] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Letter Concering Tredecim",
+	["q"] = 6990,
+    ["e"] = {
+	  [1] = { ["px"] = 0.8327316086, ["py"] = 0.4434232029, ["pm"] = 2274, ["qp"] = true, },
+	},
+  },
+  [7624] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Report on Operation Siphon",
+	["q"] = 6990,
+    ["e"] = {
+	  [1] = { ["px"] = 0.8342712094, ["py"] = 0.4451927989, ["pm"] = 2274, ["qp"] = true, },
+	},
+  },
+  [7625] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Dres Message",
+	["q"] = 6990,
+    ["e"] = {
+	  [1] = { ["px"] = 0.8390820082, ["py"] = 0.3958232015, ["pm"] = 2274, ["qp"] = true, },
+	},
+  },
+  [7697] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Camp Update",
+	["q"] = 6990,
+    ["e"] = {
+	  [1] = { ["px"] = 0.8350176111, ["py"] = 0.4447179990, ["pm"] = 2274, ["qp"] = true, },
+	},
+  },
+  [7567] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Letter to Deredrien",
+	["q"] = 7017,
+    ["e"] = {
+	  [1] = { ["px"] = 0.9407499813, ["py"] = 0.3835687950, ["pm"] = 2343, },
+	  [2] = { ["px"] = 0.9407499813, ["py"] = 0.3835687950, ["pm"] = 2274, ["fp"] = true, },
+	},
+  },
+  [7570] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Organization Notes",
+	["q"] = 7017,
+    ["e"] = {
+	  [1] = { ["px"] = 0.8805228089, ["py"] = 0.4039224053, ["pm"] = 2274, },
+	},
+  },
+  [7687] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Letter from the Reformer",
+	["q"] = 7017,
+    ["e"] = {
+	  [1] = { ["px"] = 0.8749928070, ["py"] = 0.4069272037, ["pm"] = 2274, },
+	},
+  }, 
 }
 
 function LoreBooks_GetBookData()
