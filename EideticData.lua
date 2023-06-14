@@ -59036,8 +59036,8 @@ local bookData = {
   },
   [7597] = {
     ["c"] = true,
-    ["cn"] = "Cipher Sabinius's Apology",
-    ["n"] = "Apocryphal Pages",
+    ["cn"] = "Apocryphal Pages",
+    ["n"] = "Cipher Sabinius's Apology",
     ["e"] = {
       [1] = { ["px"] = 0.2137451964, ["py"] = 0.0126264074, ["pm"] = 2334, ["d"] = true, ["zx"] = 0.2118800029, ["zy"] = 0.0192912033, ["zm"] = 2275, },
       [2] = { ["px"] = 0.2118800029, ["py"] = 0.0192912033, ["pm"] = 2275, ["fp"] = true, },
