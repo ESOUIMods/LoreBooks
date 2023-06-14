@@ -59920,18 +59920,18 @@ local bookData = {
   [7765] = { 
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
-    ["n"] = "A Servant's Tale",
+    ["n"] = "A Servant's Tale", --Marked as A Hireling's Tale in the overworld, but shows up as A Servant's Tale in game
     ["e"] = { 
-      [1] = { ["px"] = 0.8353900090, ["py"] = 0.4221315881, ["pm"] = 2386, }, 
-    }, 
+      [1] = { ["px"] = 0.8354092088, ["py"] = 0.4221563884, ["pm"] = 2386, }, 
+    },
   },
   [7635] = { 
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
     ["n"] = "From the Journal of Balver Bemis",
     ["e"] = { 
-      [1] = { ["px"] = 0.8361140090, ["py"] = 0.4229371873, ["pm"] = 2386, }, 
-    },
+      [1] = { ["px"] = 0.8346808094, ["py"] = 0.4219427879, ["pm"] = 2386, },
+	},
   },
   [7603] = { 
     ["c"] = true,
