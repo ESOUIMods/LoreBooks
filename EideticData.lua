@@ -58678,11 +58678,20 @@ local bookData = {
 	  [2] = { ["px"] = 0.2419940829, ["py"] = 0.6903234720, ["pm"] = 2274, ["fp"] = true, },
 	},
   },
+  [7434] = {
+    ["c"] = true,
+    ["cn"] = "Apocryphal Pages",
+    ["n"] = "Kynmarcher Strix's Journal",
+    ["e"] = {
+	  [1] = { ["px"] = 0.1632744029, ["py"] = -0.0831064057, ["pm"] = 2354, ["d"] = true, },
+	},
+  },
   [7435] = {
     ["c"] = true,
     ["cn"] = "Apocryphal Pages",
     ["n"] = "A Summoner's Guide to Nymics",
     ["e"] = {
+	  [1] = { ["px"] = 0.1643508029, ["py"] = -0.0810468057, ["pm"] = 2354, ["d"] = true, },
 	},
     ["r"] = true,
     ["m"] = {
