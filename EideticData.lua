@@ -60157,6 +60157,15 @@ local bookData = {
 	  [2] = { ["px"] = 0.8724436112, ["py"] = 0.4730584011, ["pm"] = 2274, ["fp"] = true, ["qp"] = true, },
 	},
   },
+  [7675] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Reynila's Journal",
+	["q"] = 7019,
+    ["e"] = {
+	  [1] = { ["px"] = 0.7769651895, ["py"] = 0.5660899920, ["pm"] = 26, ["qp"] = true, },
+	},
+  },
   [7678] = {
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
@@ -60359,6 +60368,24 @@ local bookData = {
     ["e"] = {
 	  [1] = { ["px"] = 0.8494224073, ["py"] = 0.4801320016, ["pm"] = 2274, },
 	},
+  },
+  [7760] = { 
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Letter from Azandar",
+	["q"] = 7023,
+    ["e"] = { 
+      [1] = { ["qc"] = true, },
+    },
+  },
+  [7761] = { 
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Letter from Sharp",
+	["q"] = 7019,
+    ["e"] = { 
+      [1] = { ["qc"] = true, },
+    },
   },
   [7765] = { 
     ["c"] = true,
