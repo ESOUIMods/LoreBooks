@@ -59871,6 +59871,15 @@ local bookData = {
       [1] = { ["px"] = 0.0913344042, ["py"] = -0.0135887952, ["pm"] = 2275, ["qp"] = true, },
     },
   },
+  [7621] = { 
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Commentary on Fate Dialectal",
+    ["q"] = 7020,
+    ["e"] = { 
+      [1] = { ["px"] = 0.7884160052, ["py"] = 0.4818308158, ["pm"] = 13, ["qp"] = true, },
+    },
+  },
   [7622] = {
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
@@ -60148,6 +60157,15 @@ local bookData = {
 	["q"] = 7019,
     ["e"] = {
 	  [1] = { ["px"] = 0.7769651895, ["py"] = 0.5660899920, ["pm"] = 26, ["qp"] = true, },
+	},
+  },
+  [7677] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Letter to Elistrenne Starflower",
+	["q"] = 7020,
+    ["e"] = {
+	  [1] = { ["px"] = 0.4499367830, ["py"] = 0.5668588065, ["pm"] = 256, ["qp"] = true, },
 	},
   },
   [7678] = {
