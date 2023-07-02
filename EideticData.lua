@@ -58562,6 +58562,14 @@ local bookData = {
       [2] = { ["px"] = 0.1296596063, ["py"] = -0.0567127977, ["pm"] = 2275, ["fp"] = true, },
     },
   },
+  [7422] = { 
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Ranks and Titles of House Telvanni",
+    ["e"] = { 
+      [1] = { ["px"] = 0.8230964090, ["py"] = 0.4199739878, ["pm"] = 2386,  ["zm"] = 2274, },
+    },
+  },
   [7423] = { 
     ["c"] = true,
     ["cn"] = "Apocryphal Pages",
