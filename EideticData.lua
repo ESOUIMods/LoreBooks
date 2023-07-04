@@ -59852,6 +59852,15 @@ local bookData = {
 	  [2] = { ["px"] = 0.8422307813, ["py"] = 0.4189992140, ["pm"] = 2274, ["fp"] = true, ["qp"] = true, },
 	},
   },
+  [7615] = {
+    ["c"] = true,
+    ["cn"] = "Apocryphal Pages",
+    ["n"] = "Notes on Doors of Oblivion",
+	["q"] = 6994,
+    ["e"] = {
+	  [1] = { ["px"] = 0.0932772034, ["py"] = -0.0165807971, ["pm"] = 2275, ["qp"] = true, },
+	},
+  },
   [7616] = { 
     ["c"] = true,
     ["cn"] = "Apocryphal Pages",
@@ -59868,6 +59877,15 @@ local bookData = {
     ["n"] = "Folsi's Report",
 	["q"] = 6990,
     ["e"] = {
+	},
+  },
+  [7619] = {
+    ["c"] = true,
+    ["cn"] = "Apocryphal Pages",
+    ["n"] = "Morian Zenas Cell Note",
+	["q"] = 6994,
+    ["e"] = {
+	  [1] = { ["px"] = 0.0899632038, ["py"] = -0.0130367973, ["pm"] = 2275, ["qp"] = true, },
 	},
   },
   [7620] = { 
@@ -60484,6 +60502,15 @@ local bookData = {
       [1] = { ["px"] = 0.1308008040, ["py"] = -0.0263719960, ["pm"] = 2275, },
     },
   },
+  [7806] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "The Spotted Towers", -- Listed in game as TP Towers Song
+    ["e"] = {
+      [1] = { ["px"] = 0.8939672051, ["py"] = 0.4530512014, ["pm"] = 2274, },
+    },
+  },
+  -- Note for any new additions: PLEASE be sure to put them in numerical order by ID. These have painstakingly ensured to been kept in order.
 }
 
 function LoreBooks_GetBookData()
