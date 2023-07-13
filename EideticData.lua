@@ -60448,6 +60448,14 @@ local bookData = {
       [1] = { ["qc"] = true, },
     },
   },
+  [7762] = { 
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Preparing Necrom Kwama, Fifth Draft",
+    ["e"] = { 
+      [1] = { ["px"] = 0.9347500139, ["py"] = 0.4017576035, ["pm"] = 2274, },
+    },
+  },
   [7765] = { 
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
