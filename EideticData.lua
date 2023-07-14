@@ -60209,6 +60209,14 @@ local bookData = {
 	  [2] = { ["px"] = 0.8724436112, ["py"] = 0.4730584011, ["pm"] = 2274, ["fp"] = true, ["qp"] = true, },
 	},
   },
+  [7671] = {
+    ["c"] = true,
+    ["cn"] = "Apocryphal Pages",
+    ["n"] = "Plague Concoctor's Instructions",
+    ["e"] = {
+	  [1] = { ["px"] = 0.1641800029, ["py"] = -0.0801340057, ["pm"] = 2395, ["d"] = true, },
+	},
+  },
   [7675] = {
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
