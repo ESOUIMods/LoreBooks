@@ -36941,55 +36941,35 @@ local bookData = {
   },
   [3713] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.5420600000,
-        ["zt"] = 843,
-        ["px"] = 0.7193500000,
-      },
-    },
-    ["n"] = "Captive's Journal",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Captive's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.7193495857, ["py"] = 0.5420640076, ["pm"] = 1128, ["d"] = true, ["zx"] = 0.7174887920, ["zy"] = 0.5417071944, ["zm"] = 26, },
+    },
   },
   [3715] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.5418100000,
-        ["zt"] = 843,
-        ["px"] = 0.7197900000,
-      },
-    },
-    ["n"] = "Farewell Note",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Farewell Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.7197951734, ["py"] = 0.5418136137, ["pm"] = 1129, ["d"] = true, ["zx"] = 0.7174887920, ["zy"] = 0.5417071944, ["zm"] = 26, },
+    },
   },
   [3716] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.5414400000,
-        ["zt"] = 843,
-        ["px"] = 0.7187200000,
-      },
-    },
-    ["n"] = "Urgent Letter",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Urgent Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.7187164094, ["py"] = 0.5414403948, ["pm"] = 1127, ["d"] = true, ["zx"] = 0.7174887920, ["zy"] = 0.5417071944, ["zm"] = 26, },
+    },
   },
   [3717] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.5413700000,
-        ["zt"] = 843,
-        ["px"] = 0.7193500000,
-      },
-    },
-    ["n"] = "Na-Kesh's Journal",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Na-Kesh's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.7193464123, ["py"] = 0.5413668141, ["pm"] = 1130, ["d"] = true, ["zx"] = 0.7174887920, ["zy"] = 0.5417071944, ["zm"] = 26, },
+    },
   },
   [3719] = {
     ["c"] = true,
@@ -37197,42 +37177,27 @@ local bookData = {
   },
   [3956] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.5609600000,
-        ["zt"] = 848,
-        ["px"] = 0.7248900000,
-      },
-    },
-    ["n"] = "Geel-Ma's Diary",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Geel-Ma's Diary",
+    ["e"] = {
+      [1] = { ["px"] = 0.7248960079, ["py"] = 0.5609620149, ["pm"] = 1133, ["d"] = true, ["zx"] = 0.7253195922, ["zy"] = 0.5595879920, ["zm"] = 26, },
+    },
   },
   [3957] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.5612100000,
-        ["zt"] = 848,
-        ["px"] = 0.7250000000,
-      },
-    },
-    ["n"] = "Web-Covered Diary",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Web-Covered Diary",
+    ["e"] = {
+      [1] = { ["px"] = 0.7250011714, ["py"] = 0.5612079994, ["pm"] = 1134, ["d"] = true, ["zx"] = 0.7253195922, ["zy"] = 0.5595879920, ["zm"] = 26, },
+    },
   },
   [3958] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.5607200000,
-        ["zt"] = 848,
-        ["px"] = 0.7255900000,
-      },
-    },
-    ["n"] = "Dranos's Diary",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Dranos's Diary",
+    ["e"] = {
+      [1] = { ["px"] = 0.7255908049, ["py"] = 0.5607140017, ["pm"] = 1135, ["d"] = true, ["zx"] = 0.7253195922, ["zy"] = 0.5595879920, ["zm"] = 26, },
+    },
   },
   [3959] = {
     ["c"] = true,
@@ -42548,94 +42513,59 @@ local bookData = {
   },
   [4884] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.2382800000,
-        ["py"] = 0.2984600000,
-        ["d"] = true,
-        ["pm"] = 1435,
-      },
-    },
-    ["n"] = "Research of Nathien Mortieu, Vol. 1",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Research of Nathien Mortieu, Vol. 1",
+    ["e"] = {
+      [1] = { ["px"] = 0.2382828011, ["py"] = 0.2984556002, ["pm"] = 1432, ["d"] = true, ["zx"] = 0.2394964008, ["zy"] = 0.3005428030, ["zm"] = 12,  },
+    },
   },
   [4885] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.2387000000,
-        ["py"] = 0.2978300000,
-        ["d"] = true,
-        ["pm"] = 1435,
-      },
-    },
-    ["n"] = "Research of Nathien Mortieu, Vol. 2",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Research of Nathien Mortieu, Vol. 2",
+    ["e"] = {
+      [1] = { ["px"] = 0.2386999949, ["py"] = 0.2978328064, ["pm"] = 1433, ["d"] = true, ["zx"] = 0.2394964008, ["zy"] = 0.3005428030, ["zm"] = 12, },
+    },
   },
   [4886] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.2388100000,
-        ["py"] = 0.2962900000,
-        ["d"] = true,
-        ["pm"] = 1435,
-      },
-    },
-    ["n"] = "Research of Nathien Mortieu, Vol. 3",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Research of Nathien Mortieu, Vol. 3",
+    ["e"] = {
+      [1] = { ["px"] = 0.2388108042, ["py"] = 0.2962884018, ["pm"] = 1434, ["d"] = true, ["zx"] = 0.2394964008, ["zy"] = 0.3005428030, ["zm"] = 12, },
+    },
   },
   [4887] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.2391600000,
-        ["py"] = 0.2977000000,
-        ["d"] = true,
-        ["pm"] = 1435,
-      },
-    },
-    ["n"] = "A Brother's Plea",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "A Brother's Plea",
+    ["e"] = {
+      [1] = { ["px"] = 0.2391699949, ["py"] = 0.2976968064, ["pm"] = 1433, ["d"] = true, ["zx"] = 0.2394964008, ["zy"] = 0.3005428030, ["zm"] = 12, },
+    },
   },
   [4888] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.2394000000,
-        ["py"] = 0.2968800000,
-        ["d"] = true,
-        ["pm"] = 1435,
-      },
-    },
-    ["n"] = "A Sister's Retort",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "A Sister's Retort",
+    ["e"] = {
+      [1] = { ["px"] = 0.2393956043, ["py"] = 0.2968760018, ["pm"] = 1434, ["d"] = true, ["zx"] = 0.2394964008, ["zy"] = 0.3005428030, ["zm"] = 12, },
+    },
   },
   [4889] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.2389600000,
-        ["py"] = 0.2956300000,
-        ["d"] = true,
-        ["pm"] = 1435,
-      },
-    },
-    ["n"] = "A Sister's Regret",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "A Sister's Regret",
+    ["e"] = {
+      [1] = { ["px"] = 0.2389624061, ["py"] = 0.2956312010, ["pm"] = 1435, ["d"] = true, ["zx"] = 0.2394964008, ["zy"] = 0.3005428030, ["zm"] = 12, },
+    },
   },
   [4890] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.2387100000,
-        ["py"] = 0.2992300000,
-        ["d"] = true,
-        ["pm"] = 1435,
-      },
-    },
-    ["n"] = "The History of Zaan the Scalecaller",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "The History of Zaan the Scalecaller",
+    ["e"] = {
+      [1] = { ["px"] = 0.2387104011, ["py"] = 0.2992312002, ["pm"] = 1432, ["d"] = true, ["zx"] = 0.2394964008, ["zy"] = 0.3005428030, ["zm"] = 12, },
+    },
   },
   [4891] = {
     ["c"] = true,
@@ -44398,55 +44328,35 @@ local bookData = {
   },
   [5181] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.3018100000,
-        ["py"] = 0.5636600000,
-        ["d"] = true,
-        ["pm"] = 1596,
-      },
-    },
-    ["n"] = "Unearthing Garlas Malatar",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Unearthing Garlas Malatar",
+    ["e"] = {
+      [1] = { ["px"] = 0.3018083956, ["py"] = 0.5636580075, ["pm"] = 1596, ["d"] = true, ["zx"] = 0.3030780139, ["zy"] = 0.5632388122, ["zm"] = 1006, },
+    },
   },
   [5182] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.3026300000,
-        ["py"] = 0.5645400000,
-        ["d"] = true,
-        ["pm"] = 1596,
-      },
-    },
-    ["n"] = "Frostbitten Journal",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Frostbitten Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.3026263867, ["py"] = 0.5645391985, ["pm"] = 1597, ["d"] = true, ["zx"] = 0.3030780139, ["zy"] = 0.5632388122, ["zm"] = 1006, },
+    },
   },
   [5183] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.3032500000,
-        ["py"] = 0.5648200000,
-        ["d"] = true,
-        ["pm"] = 1596,
-      },
-    },
-    ["n"] = "Umaril is Undone",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Umaril is Undone",
+    ["e"] = {
+      [1] = { ["px"] = 0.3032484132, ["py"] = 0.5648216026, ["pm"] = 1598, ["d"] = true, ["zx"] = 0.3030780139, ["zy"] = 0.5632388122, ["zm"] = 1006, },
+    },
   },
   [5184] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.3033000000,
-        ["py"] = 0.5650700000,
-        ["d"] = true,
-        ["pm"] = 1596,
-      },
-    },
-    ["n"] = "Send Your Forces, Narilmor",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Send Your Forces, Narilmor",
+    ["e"] = {
+      [1] = { ["px"] = 0.3032996133, ["py"] = 0.5650672025, ["pm"] = 1598, ["d"] = true, ["zx"] = 0.3030780139, ["zy"] = 0.5632388122, ["zm"] = 1006, },
+    },
   },
   [5188] = {
     ["c"] = true,
@@ -46361,101 +46271,59 @@ local bookData = {
   },
   [5443] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.4641200000,
-        ["i"] = 12,
-        ["d"] = true,
-        ["py"] = 0.7177500000,
-        ["zt"] = 1123,
-      },
-    },
-    ["n"] = "Observations on the Changeling",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Observations on the Changeling",
+    ["e"] = {
+      [1] = { ["px"] = 0.4641215892, ["py"] = 0.7177508019, ["pm"] = 1720, ["d"] = true, ["zx"] = 0.4610535870, ["zy"] = 0.7205431876, ["zm"] = 9, },
+    },
   },
   [5444] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.4628500000,
-        ["i"] = 12,
-        ["d"] = true,
-        ["py"] = 0.7181900000,
-        ["zt"] = 1123,
-      },
-    },
-    ["n"] = "Observations on Tenmar Valley",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Observations on Tenmar Valley",
+    ["e"] = {
+      [1] = { ["px"] = 0.4628479968, ["py"] = 0.7181951848, ["pm"] = 1717, ["d"] = true, ["zx"] = 0.4610535870, ["zy"] = 0.7205431876, ["zm"] = 9, },
+    },
   },
   [5445] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.4628300000,
-        ["i"] = 12,
-        ["d"] = true,
-        ["py"] = 0.7180900000,
-        ["zt"] = 1123,
-      },
-    },
-    ["n"] = "No! No! No!",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "No! No! No!",
+    ["e"] = {
+      [1] = { ["px"] = 0.4628199968, ["py"] = 0.7180915848, ["pm"] = 1717, ["d"] = true, ["zx"] = 0.4610535870, ["zy"] = 0.7205431876, ["zm"] = 9, },
+    },
   },
   [5446] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.4631007968, ["py"] = 0.7183351847, ["pm"] = 1717, ["d"] = true,
-        ["zx"] = 0.4610751815, ["zy"] = 0.7205291882, ["zm"] = 9,
-      },
-    },
-    ["n"] = "Maarselok Reconnaissance Log One",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Maarselok Reconnaissance Log One",
+    ["e"] = {
+      [1] = { ["px"] = 0.4631011968, ["py"] = 0.7183359848, ["pm"] = 1717, ["d"] = true, ["zx"] = 0.4610535870, ["zy"] = 0.7205431876, ["zm"] = 9, },
+    },
   },
   [5447] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.4639600000,
-        ["i"] = 12,
-        ["d"] = true,
-        ["py"] = 0.7181200000,
-        ["zt"] = 1123,
-        ["zx"] = 0.4610751815, ["zy"] = 0.7205291882, ["zm"] = 9,
-      },
-    },
-    ["n"] = "Maarselok Reconnaissance Log Two",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Maarselok Reconnaissance Log Two",
+    ["e"] = {
+      [1] = { ["px"] = 0.4639599892, ["py"] = 0.7181180019, ["pm"] = 1720, ["d"] = true, ["zx"] = 0.4610535870, ["zy"] = 0.7205431876, ["zm"] = 9, },
+    },
   },
   [5448] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.4646200000,
-        ["i"] = 12,
-        ["d"] = true,
-        ["py"] = 0.7183600000,
-        ["zt"] = 1123,
-        ["zx"] = 0.4610751815, ["zy"] = 0.7205291882, ["zm"] = 9,
-      },
-    },
-    ["n"] = "Maarselok Reconnaissance Log Three",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Maarselok Reconnaissance Log Three",
+    ["e"] = {
+      [1] = { ["px"] = 0.4646212131, ["py"] = 0.7183508000, ["pm"] = 1718, ["d"] = true, ["zx"] = 0.4610535870, ["zy"] = 0.7205431876, ["zm"] = 9, },
+    },
   },
   [5449] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["px"] = 0.4637700000,
-        ["i"] = 12,
-        ["d"] = true,
-        ["py"] = 0.7191600000,
-        ["zt"] = 1123,
-        ["zx"] = 0.4610751815, ["zy"] = 0.7205291882, ["zm"] = 9,
-      },
-    },
-    ["n"] = "Maarselok Reconnaissance Log Four",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Maarselok Reconnaissance Log Four",
+    ["e"] = {
+      [1] = { ["px"] = 0.4637703969, ["py"] = 0.7191611892, ["pm"] = 1722, ["d"] = true, ["zx"] = 0.4610535870, ["zy"] = 0.7205431876, ["zm"] = 9, },
+    },
   },
   [5450] = {
     ["c"] = true,
@@ -46744,61 +46612,36 @@ local bookData = {
   },
   [5474] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.2824300000,
-        ["zt"] = 1080,
-        ["px"] = 0.5978200000,
-      },
-      [2] = {
-        ["px"] = 0.3018100000,
-        ["py"] = 0.5636500000,
-        ["d"] = true,
-        ["pm"] = 1596,
-      },
-    },
-    ["n"] = "Picking up the Pieces",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Picking up the Pieces",
+    ["e"] = {
+      [1] = { ["px"] = 0.5978143741, ["py"] = 0.2824296052, ["pm"] = 1607, ["d"] = true, ["zx"] = 0.5992216243, ["zy"] = 0.2840387986, ["zm"] = 61, },
+      [2] = { ["px"] = 0.3018119956, ["py"] = 0.5636508075, ["pm"] = 1596, ["d"] = true, ["zx"] = 0.3030780139, ["zy"] = 0.5632388122, ["zm"] = 1006, },
+    },
   },
   [5475] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.2824400000,
-        ["zt"] = 1080,
-        ["px"] = 0.5986900000,
-      },
-    },
-    ["n"] = "In Pursuit of Mhuvnak",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "In Pursuit of Mhuvnak",
+    ["e"] = {
+      [1] = { ["px"] = 0.5986928287, ["py"] = 0.2824387952, ["pm"] = 1604, ["d"] = true, ["zx"] = 0.5992216243, ["zy"] = 0.2840387986, ["zm"] = 61, },
+    },
   },
   [5476] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.2823900000,
-        ["zt"] = 1080,
-        ["px"] = 0.5986600000,
-      },
-    },
-    ["n"] = "Skeevaton Modification and Operation",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Skeevaton Modification and Operation",
+    ["e"] = {
+      [1] = { ["px"] = 0.5986616287, ["py"] = 0.2823831952, ["pm"] = 1604, ["d"] = true, ["zx"] = 0.5992216243, ["zy"] = 0.2840387986, ["zm"] = 61, },
+    },
   },
   [5477] = {
     ["c"] = true,
-    ["e"] = {
-      [1] = {
-        ["d"] = true,
-        ["py"] = 0.2824200000,
-        ["zt"] = 1080,
-        ["px"] = 0.5978000000,
-      },
-    },
-    ["n"] = "Burr's Writing Practice",
     ["cn"] = "Library of Incunabula",
+    ["n"] = "Burr's Writing Practice",
+    ["e"] = {
+      [1] = { ["px"] = 0.5978043741, ["py"] = 0.2824160052, ["pm"] = 1607, ["d"] = true, ["zx"] = 0.5992216243, ["zy"] = 0.2840387986, ["zm"] = 61, },
+    },
   },
   [5478] = {
     ["c"] = true,
@@ -55576,12 +55419,13 @@ local bookData = {
     ["c"] = false,
   },
   [6950] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Ode to the Nose of a Woman",
-    ["q"] = 6760,
-    ["e"] = { --Does not have a location; it is given directly to your inventory in the quest and must be read.
+    ["q"] = 6760, -- it is given to you at the begining of the quest
+    ["e"] = { 
+      [1] = { ["px"] = 0.0518611997, ["py"] = 0.5992903875, ["pm"] = 2219, ["d"] = true, ["zm"] = 2114, ["qc"] = true, }, -- can be found here AFTER quest is completed
     },
-    ["c"] = true,
   },
   [6966] = {
     ["c"] = true,
@@ -56031,11 +55875,13 @@ local bookData = {
     },
   },
   [7099] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Letter from Aurelia Jourvel",
+    ["q"] = 6789, -- given to you at the begining of the quest
     ["e"] = {
+      [1] = { ["px"] = 0.0518443997, ["py"] = 0.5991439875, ["pm"] = 2219, ["d"] = true, ["zm"] = 2114, ["qc"] = true, }, -- can be found here AFTER completing the quest
     },
-    ["c"] = false,
   },
   [7100] = {
     ["cn"] = "Systres Tomes and Scrolls",
@@ -56466,6 +56312,7 @@ local bookData = {
     ["n"] = "Izbadd's Letter",
     ["q"] = 6787, --It is given to you during the quest.
     ["e"] = {
+      [1] = { ["px"] = 0.2835007991, ["py"] = 0.3134632048, ["pm"] = 84, ["zm"] = 20, ["qc"] = true, }, -- can be found here AFTER completing the quest
     },
   },
   [7168] = {
