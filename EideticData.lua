@@ -56600,19 +56600,21 @@ local bookData = {
     },
   },
   [6949] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Note to Cynric",
+    ["q"] = 6767,
     ["e"] = {
+	  [1] = { ["px"] = 0.0598784020, ["py"] = 0.5856520020, ["pm"] = 2114, ["qc"] = true, },
     },
-    ["c"] = false,
   },
   [6950] = {
+    ["c"] = true,
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Ode to the Nose of a Woman",
     ["q"] = 6760,
     ["e"] = { --Does not have a location; it is given directly to your inventory in the quest and must be read.
     },
-    ["c"] = true,
   },
   [6966] = {
     ["c"] = true,
@@ -58803,6 +58805,15 @@ local bookData = {
       [1] = { ["px"] = 0.9346643811, ["py"] = 0.3887079951, ["pm"] = 2343, ["zm"] = 2274, },
     },
   },
+  [7453] = {
+    ["c"] = true,
+    ["cn"] = "Apocryphal Pages",
+    ["n"] = "Torvesard's Journal",
+	["q"] = 6977,
+    ["e"] = {
+      [1] = { ["px"] = 0.1608312068, ["py"] = -0.0154607970, ["pm"] = 2275, ["qc"] = true, },
+    },
+  },
   [7454] = {
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
@@ -60259,6 +60270,15 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.1177608020, ["py"] = -0.0450756023, ["pm"] = 2367, ["d"] = true, ["zx"] = 0.1159252022, ["zy"] = -0.0472775979, ["zm"] = 2275, ["qp"] = true, },
       [2] = { ["px"] = 0.1159252022, ["py"] = -0.0472775979, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
+  [7694] = {
+    ["c"] = true,
+    ["cn"] = "Telvanni Tomes",
+    ["n"] = "Survey of the Alavelis Mine",
+    ["q"] = 6974,
+    ["e"] = {
+      [1] = { ["px"] = 0.8725492108, ["py"] = 0.4725896007, ["pm"] = 2274, },
     },
   },
   [7695] = {
