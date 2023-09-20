@@ -104,8 +104,6 @@ function internal:dm(log_type, ...)
 end
 
 --Local variables -------------------------------------------------------------
-local db --user settings
-
 local INFORMATION_TOOLTIP
 local loreLibraryReportKeybind
 local eideticModeAsked
@@ -130,24 +128,24 @@ end
 
 local function GetPinTexture(self)
   local _, texture, known = GetLoreBookInfo(1, self.m_PinTag[3], self.m_PinTag[4])
-  local textureType = db.pinTexture.type
+  local textureType = LoreBooks.db.pinTexture.type
   if texture == internal.MISSING_TEXTURE then texture = internal.PLACEHOLDER_TEXTURE end
   return (textureType == internal.PIN_ICON_REAL) and texture or internal.PIN_TEXTURES[textureType][known and 1 or 2]
 end
 
 local function GetPinTextureEidetic(self)
   local _, texture, known = GetLoreBookInfo(3, self.m_PinTag.c, self.m_PinTag.b)
-  local textureType = db.pinTextureEidetic
+  local textureType = LoreBooks.db.pinTextureEidetic
   if texture == internal.MISSING_TEXTURE then texture = internal.PLACEHOLDER_TEXTURE end
   return (textureType == internal.PIN_ICON_REAL) and texture or internal.PIN_TEXTURES[textureType][known and 1 or 2]
 end
 
 local function IsShaliPinGrayscale()
-  return db.pinTexture.type == internal.PIN_ICON_REAL and db.pinGrayscale
+  return LoreBooks.db.pinTexture.type == internal.PIN_ICON_REAL and LoreBooks.db.pinGrayscale
 end
 
 local function IsEideticPinGrayscale()
-  return db.pinTextureEidetic == internal.PIN_ICON_REAL and db.pinGrayscaleEidetic
+  return LoreBooks.db.pinTextureEidetic == internal.PIN_ICON_REAL and LoreBooks.db.pinGrayscaleEidetic
 end
 
 --[[Tooltip creator for the Shalidor Map Pins]]--
@@ -249,7 +247,7 @@ pinTooltipCreatorEidetic.creator = function(pin)
     INFORMATION_TOOLTIP:LayoutIconStringLine(INFORMATION_TOOLTIP.tooltip, nil, zo_strformat(collection), INFORMATION_TOOLTIP.tooltip:GetStyle("mapTitle"))
     INFORMATION_TOOLTIP:LayoutIconStringLine(INFORMATION_TOOLTIP.tooltip, nil, bookColor:Colorize(title), { fontSize = 27, fontColorField = GAMEPAD_TOOLTIP_COLOR_GENERAL_COLOR_3 })
 
-    if pinTag.q and db.showQuestName then
+    if pinTag.q and LoreBooks.db.showQuestName then
       local questName = GetQuestName(pinTag.q)
       local questDetails = GetQuestLocation(pinTag.q)
       local questInfo
@@ -260,7 +258,7 @@ pinTooltipCreatorEidetic.creator = function(pin)
       end
     end
 
-    if pinTag.d and db.showDungeonTag and mapName then
+    if pinTag.d and LoreBooks.db.showDungeonTag and mapName then
       INFORMATION_TOOLTIP:LayoutIconStringLine(INFORMATION_TOOLTIP.tooltip, nil, string.format("[%s]", mapName), { fontSize = 27, fontColorField = GAMEPAD_TOOLTIP_COLOR_GENERAL_COLOR_2 })
     end
 
@@ -276,7 +274,7 @@ pinTooltipCreatorEidetic.creator = function(pin)
 
     INFORMATION_TOOLTIP:AddLine(zo_iconTextFormat(icon, 32, 32, title), "", bookColor:UnpackRGB())
 
-    if pinTag.q and db.showQuestName then
+    if pinTag.q and LoreBooks.db.showQuestName then
       local questName = GetQuestName(pinTag.q)
       local questDetails = GetQuestLocation(pinTag.q)
       local questInfo
@@ -287,7 +285,7 @@ pinTooltipCreatorEidetic.creator = function(pin)
       end
     end
 
-    if pinTag.d and db.showDungeonTag and mapName then
+    if pinTag.d and LoreBooks.db.showDungeonTag and mapName then
       INFORMATION_TOOLTIP:AddLine(string.format("[%s]", mapName), "", ZO_SELECTED_TEXT:UnpackRGB())
     end
 
@@ -302,17 +300,17 @@ end
 
 local function ShouldDisplayLoreBooks()
 
-  if db.immersiveMode == internal.LBOOKS_IMMERSIVE_DISABLED then
+  if LoreBooks.db.immersiveMode == internal.LBOOKS_IMMERSIVE_DISABLED then
     return true
   end
 
   local mapIndex = LMD.mapIndex
 
   if mapIndex then
-    if db.immersiveMode == internal.LBOOKS_IMMERSIVE_ZONEMAINQUEST then
+    if LoreBooks.db.immersiveMode == internal.LBOOKS_IMMERSIVE_ZONEMAINQUEST then
       -- MainQuest
 
-      local conditionData = LoreBooks_GetImmersiveModeCondition(db.immersiveMode, mapIndex)
+      local conditionData = LoreBooks_GetImmersiveModeCondition(LoreBooks.db.immersiveMode, mapIndex)
       if type(conditionData) == "table" then
         for conditionIndex, achievementIndex in ipairs(conditionData) do
           local _, _, _, _, completed = GetAchievementInfo(achievementIndex)
@@ -326,19 +324,19 @@ local function ShouldDisplayLoreBooks()
         return completed
       end
 
-    elseif db.immersiveMode == internal.LBOOKS_IMMERSIVE_WAYSHRINES then
+    elseif LoreBooks.db.immersiveMode == internal.LBOOKS_IMMERSIVE_WAYSHRINES then
       -- Wayshrines
 
       if mapIndex ~= GetCyrodiilMapIndex() then
         -- It is impossible to unlock all Wayshrines in Cyrodiil
-        local conditionData = LoreBooks_GetImmersiveModeCondition(db.immersiveMode, mapIndex)
+        local conditionData = LoreBooks_GetImmersiveModeCondition(LoreBooks.db.immersiveMode, mapIndex)
         return conditionData
       end
 
-    elseif db.immersiveMode == internal.LBOOKS_IMMERSIVE_EXPLORATION then
+    elseif LoreBooks.db.immersiveMode == internal.LBOOKS_IMMERSIVE_EXPLORATION then
       -- Exploration
 
-      local conditionData = LoreBooks_GetImmersiveModeCondition(db.immersiveMode, mapIndex)
+      local conditionData = LoreBooks_GetImmersiveModeCondition(LoreBooks.db.immersiveMode, mapIndex)
       if type(conditionData) == "table" then
         for conditionIndex, achievementIndex in ipairs(conditionData) do
           local _, _, _, _, completed = GetAchievementInfo(achievementIndex)
@@ -352,10 +350,10 @@ local function ShouldDisplayLoreBooks()
         return completed
       end
 
-    elseif db.immersiveMode == internal.LBOOKS_IMMERSIVE_ZONEQUESTS then
+    elseif LoreBooks.db.immersiveMode == internal.LBOOKS_IMMERSIVE_ZONEQUESTS then
       -- Zone Quests
 
-      local conditionData = LoreBooks_GetImmersiveModeCondition(db.immersiveMode, mapIndex)
+      local conditionData = LoreBooks_GetImmersiveModeCondition(LoreBooks.db.immersiveMode, mapIndex)
 
       if type(conditionData) == "table" then
         for conditionIndex, achievementIndex in ipairs(conditionData) do
@@ -389,8 +387,9 @@ local bookshelves
 local eideticBooks
 
 local function UpdateShalidorLorebooksData(mapId, zoneMapId)
-  --internal:dm("Debug", "UpdateShalidorLorebooksData")
+  internal:dm("Debug", "UpdateShalidorLorebooksData")
   if LMD.mapTexture ~= lastZoneShalidor or LMD.mapId ~= lastMapIpShalidor then
+    internal:dm("Warn", "Shalidor Books Updated")
     lastZoneShalidor = LMD.mapTexture
     lastMapIpShalidor = LMD.mapId
     lorebooks = LoreBooks_GetLocalData(mapId) -- Shalidor
@@ -400,8 +399,9 @@ local function UpdateShalidorLorebooksData(mapId, zoneMapId)
 end
 
 local function UpdateBookshelfLorebooksData(mapId, zoneMapId)
-  --internal:dm("Debug", "UpdateBookshelfLorebooksData")
+  internal:dm("Debug", "UpdateBookshelfLorebooksData")
   if LMD.mapTexture ~= lastZoneBookshelf or LMD.mapId ~= lastMapIpBookshelf then
+    internal:dm("Warn", "Bookshelf Data Updated")
     lastZoneBookshelf = LMD.mapTexture
     lastMapIpBookshelf = LMD.mapId
     bookshelves = LoreBooks_GetBookshelfDataFromMapId(mapId) -- Bookshelf
@@ -411,9 +411,9 @@ local function UpdateBookshelfLorebooksData(mapId, zoneMapId)
 end
 
 local function UpdateEideticLorebooksData(mapId, zoneMapId)
-  --internal:dm("Debug", "UpdateEideticLorebooksData")
+  internal:dm("Debug", "UpdateEideticLorebooksData")
   if LMD.mapTexture ~= lastZoneEidetic or LMD.mapId ~= lastMapIpEidetic then
-    --internal:dm("Warn", "UpdateEideticLorebooksData")
+    internal:dm("Warn", "EideticBooks Updated")
     lastZoneEidetic = LMD.mapTexture
     lastMapIpEidetic = LMD.mapId
     eideticBooks = LoreBooks_GetEideticData(mapId, zoneMapId) -- All Eidetic Books in Zone
@@ -423,17 +423,16 @@ local function UpdateEideticLorebooksData(mapId, zoneMapId)
 end
 
 local function ShalidorCompassCallback()
-  --internal:dm("Debug", "ShalidorCompassCallback")
-
   if LMD.isWorld then
     --internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
+  internal:dm("Debug", "ShalidorCompassCallback")
 
   if lorebooks then
     for _, pinData in ipairs(lorebooks) do
       local _, _, known = GetLoreBookInfo(internal.LORE_LIBRARY_SHALIDOR, pinData[3], pinData[4])
-      if not known and db.filters[internal.PINS_COMPASS] then
+      if not known and LoreBooks.db.filters[internal.PINS_COMPASS] then
         COMPASS_PINS.pinManager:CreatePin(internal.PINS_COMPASS, pinData, pinData[1], pinData[2])
       end
     end
@@ -441,16 +440,15 @@ local function ShalidorCompassCallback()
 end
 
 local function BookshelfCompassCallback()
-  --internal:dm("Debug", "BookshelfCompassCallback")
-
   if LMD.isWorld then
     --internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
+  internal:dm("Debug", "BookshelfCompassCallback")
 
   if bookshelves then
     for _, pinData in ipairs(bookshelves) do
-      if db.filters[internal.PINS_COMPASS_BOOKSHELF] then
+      if LoreBooks.db.filters[internal.PINS_COMPASS_BOOKSHELF] then
         COMPASS_PINS.pinManager:CreatePin(internal.PINS_COMPASS_BOOKSHELF, pinData, pinData.x, pinData.y)
       end
     end
@@ -458,12 +456,11 @@ local function BookshelfCompassCallback()
 end
 
 local function EideticMemoryCompassCallback()
-  --internal:dm("Debug", "EideticMemoryCompassCallback")
-
   if LMD.isWorld then
     --internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
+  internal:dm("Debug", "EideticMemoryCompassCallback")
 
   local mapId = LMD.mapId
   if eideticBooks then
@@ -493,7 +490,7 @@ local function EideticMemoryCompassCallback()
       end
 
       local hasLocation = xLoc ~= nil and yLoc ~= nil
-      local displayPin = hasLocation and not fakePinInfo and not known and db.filters[internal.PINS_COMPASS_EIDETIC]
+      local displayPin = hasLocation and not fakePinInfo and not known and LoreBooks.db.filters[internal.PINS_COMPASS_EIDETIC]
       if displayPin then
         COMPASS_PINS.pinManager:CreatePin(internal.PINS_COMPASS_EIDETIC, pinData, xLoc, yLoc)
       end -- end of mapId,  not known, filters PINS_COMPASS_EIDETIC
@@ -502,12 +499,11 @@ local function EideticMemoryCompassCallback()
 end
 
 local function MapCallbackCreateShalidorPins(pinType)
-  --internal:dm("Debug", "MapCallbackCreateShalidorPins")
-
   if LMD.isWorld then
     --internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
+  internal:dm("Debug", "MapCallbackCreateShalidorPins: " .. pinType)
 
   local mapId = LMD.mapId
   local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
@@ -536,12 +532,11 @@ local function MapCallbackCreateShalidorPins(pinType)
 end
 
 local function MapCallbackCreateBookshelfPins(pinType)
-  --internal:dm("Debug", "MapCallbackCreateBookshelfPins")
-
   if LMD.isWorld then
     --internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
+  internal:dm("Debug", "MapCallbackCreateBookshelfPins")
 
   local mapId = LMD.mapId
   local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
@@ -562,12 +557,11 @@ local function MapCallbackCreateBookshelfPins(pinType)
 end
 
 local function MapCallbackCreateEideticPins(pinType)
-  --internal:dm("Debug", "MapCallbackCreateEideticPins: " .. pinType)
-
   if LMD.isWorld then
     --internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
+  internal:dm("Debug", "MapCallbackCreateEideticPins: " .. pinType)
 
   local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
   UpdateEideticLorebooksData(LMD.mapId, zoneMapId)
@@ -659,9 +653,14 @@ end
 local function InitializePins()
 
   local pinTextures = internal.PIN_TEXTURES
-  local pinTextureLevel = db.pinTexture.level
-  local pinTextureSize = db.pinTexture.size
-  local compassMaxDistance = db.compassMaxDistance
+  local pinTextureLevel = LoreBooks.db.pinTexture.level
+  local pinTextureSize = LoreBooks.db.pinTexture.size
+  local compassTextureType = LoreBooks.db.pinTexture.type
+  local compassEideticTextureType = LoreBooks.db.pinTextureEidetic
+  local compassMaxDistance = LoreBooks.db.compassMaxDistance
+  local invertedTextureFromTable = 2
+  local compassLayoutTexture = pinTextures[compassTextureType][invertedTextureFromTable] or internal.MISSING_TEXTURE
+  local compassEideticLayoutTexture = pinTextures[compassEideticTextureType][invertedTextureFromTable] or internal.MISSING_TEXTURE
 
   local mapPinLayout_eidetic = { level = pinTextureLevel, texture = GetPinTextureEidetic, size = pinTextureSize, grayscale = IsEideticPinGrayscale }
   local mapPinLayout_eideticCollected = { level = pinTextureLevel, texture = GetPinTextureEidetic, size = pinTextureSize }
@@ -669,7 +668,7 @@ local function InitializePins()
   local mapPinLayout_collected = { level = pinTextureLevel, texture = GetPinTexture, size = pinTextureSize, grayscale = IsShaliPinGrayscale }
   local mapPinLayout_bookshelf = { level = pinTextureLevel, texture = GetPinTextureBookshelf, size = pinTextureSize }
 
-  local compassPinLayout = { maxDistance = compassMaxDistance, texture = pinTextures[db.pinTexture.type][2],
+  local compassPinLayout = { maxDistance = compassMaxDistance, texture = compassLayoutTexture,
                              sizeCallback = function(pin, angle, normalizedAngle, normalizedDistance)
                                if zo_abs(normalizedAngle) > 0.25 then
                                  pin:SetDimensions(54 - 24 * zo_abs(normalizedAngle), 54 - 24 * zo_abs(normalizedAngle))
@@ -679,7 +678,7 @@ local function InitializePins()
                              end,
                              additionalLayout = {
                                function(pin, angle, normalizedAngle, normalizedDistance)
-                                 if (db.pinTexture.type == internal.PIN_ICON_REAL) then
+                                 if (LoreBooks.db.pinTexture.type == internal.PIN_ICON_REAL) then
                                    --replace icon with icon from LoreLibrary
                                    local _, texture = GetLoreBookInfo(1, pin.pinTag[3], pin.pinTag[4])
                                    local icon = pin:GetNamedChild("Background")
@@ -692,7 +691,7 @@ local function InitializePins()
                                end
                              }
   }
-  local compassPinLayoutEidetic = { maxDistance = compassMaxDistance, texture = pinTextures[db.pinTextureEidetic][2],
+  local compassPinLayoutEidetic = { maxDistance = compassMaxDistance, texture = compassEideticLayoutTexture,
                                     sizeCallback = function(pin, angle, normalizedAngle, normalizedDistance)
                                       if zo_abs(normalizedAngle) > 0.25 then
                                         pin:SetDimensions(54 - 24 * zo_abs(normalizedAngle), 54 - 24 * zo_abs(normalizedAngle))
@@ -702,7 +701,7 @@ local function InitializePins()
                                     end,
                                     additionalLayout = {
                                       function(pin, angle, normalizedAngle, normalizedDistance)
-                                        if (db.pinTextureEidetic == internal.PIN_ICON_REAL) then
+                                        if (LoreBooks.db.pinTextureEidetic == internal.PIN_ICON_REAL) then
                                           --replace icon with icon from LoreLibrary
                                           local _, texture = GetLoreBookInfo(3, pin.pinTag.c, pin.pinTag.b)
                                           local icon = pin:GetNamedChild("Background")
@@ -733,17 +732,17 @@ local function InitializePins()
   LMP:AddPinType(internal.PINS_BOOKSHELF, function() MapCallbackCreateBookshelfPins(internal.PINS_BOOKSHELF) end, nil, mapPinLayout_bookshelf, pinTooltipCreatorBookshelf)
 
   --add map filters
-  LMP:AddPinFilter(internal.PINS_UNKNOWN, GetString(LBOOKS_FILTER_UNKNOWN), nil, db.filters)
-  LMP:AddPinFilter(internal.PINS_COLLECTED, GetString(LBOOKS_FILTER_COLLECTED), nil, db.filters)
-  LMP:AddPinFilter(internal.PINS_EIDETIC, GetLoreCategoryInfo(3), nil, db.filters)
-  LMP:AddPinFilter(internal.PINS_EIDETIC_COLLECTED, zo_strformat(LBOOKS_FILTER_EICOLLECTED, GetLoreCategoryInfo(3)), nil, db.filters)
-  LMP:AddPinFilter(internal.PINS_BOOKSHELF, GetString(LBOOKS_FILTER_BOOKSHELF), nil, db.filters)
+  LMP:AddPinFilter(internal.PINS_UNKNOWN, GetString(LBOOKS_FILTER_UNKNOWN), nil, LoreBooks.db.filters)
+  LMP:AddPinFilter(internal.PINS_COLLECTED, GetString(LBOOKS_FILTER_COLLECTED), nil, LoreBooks.db.filters)
+  LMP:AddPinFilter(internal.PINS_EIDETIC, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC), nil, LoreBooks.db.filters)
+  LMP:AddPinFilter(internal.PINS_EIDETIC_COLLECTED, zo_strformat(LBOOKS_FILTER_EICOLLECTED, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC)), nil, LoreBooks.db.filters)
+  LMP:AddPinFilter(internal.PINS_BOOKSHELF, GetString(LBOOKS_FILTER_BOOKSHELF), nil, LoreBooks.db.filters)
 
   --add handler for the left click
   LMP:SetClickHandlers(internal.PINS_UNKNOWN, {
     [1] = {
       name = function(pin) return zo_strformat(LBOOKS_SET_WAYPOINT, GetLoreBookInfo(1, pin.m_PinTag[3], pin.m_PinTag[4])) end,
-      show = function(pin) return db.showClickMenu and not select(3, GetLoreBookInfo(1, pin.m_PinTag[3], pin.m_PinTag[4])) end,
+      show = function(pin) return LoreBooks.db.showClickMenu and not select(3, GetLoreBookInfo(1, pin.m_PinTag[3], pin.m_PinTag[4])) end,
       duplicates = function(pin1, pin2) return (pin1.m_PinTag[3] == pin2.m_PinTag[3] and pin1.m_PinTag[4] == pin2.m_PinTag[4]) end,
       callback = function(pin) PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, pin.normalizedX, pin.normalizedY) end,
     }
@@ -752,7 +751,7 @@ local function InitializePins()
   LMP:SetClickHandlers(internal.PINS_EIDETIC, {
     [1] = {
       name = function(pin) return zo_strformat(LBOOKS_SET_WAYPOINT, GetLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) end,
-      show = function(pin) return db.showClickMenu and not select(3, GetLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) end,
+      show = function(pin) return LoreBooks.db.showClickMenu and not select(3, GetLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) end,
       duplicates = function(pin1, pin2) return (pin1.m_PinTag.b == pin2.m_PinTag.c and pin1.m_PinTag.b == pin2.m_PinTag.b) end,
       callback = function(pin) PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, pin.normalizedX, pin.normalizedY) end,
     }
@@ -760,7 +759,7 @@ local function InitializePins()
   LMP:SetClickHandlers(internal.PINS_EIDETIC_COLLECTED, {
     [1] = {
       name = function(pin) return zo_strformat(LBOOKS_SET_WAYPOINT, GetLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) end,
-      show = function(pin) return db.showClickMenu and select(3, GetLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) == true end,
+      show = function(pin) return LoreBooks.db.showClickMenu and select(3, GetLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) == true end,
       duplicates = function(pin1, pin2) return (pin1.m_PinTag.b == pin2.m_PinTag.c and pin1.m_PinTag.b == pin2.m_PinTag.b) end,
       callback = function(pin) PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, pin.normalizedX, pin.normalizedY) end,
     }
@@ -827,7 +826,7 @@ local function SendData(data)
   --	end
   --end
   --
-  --local pendingData = db.postmailData
+  --local pendingData = LoreBooks.db.postmailData
   --if Postmail.recipient == GetDisplayName() then
   --	SendMailData(data)
   --elseif Postmail.isActive then
@@ -836,30 +835,30 @@ local function SendData(data)
   --	if pendingData ~= "" then
   --		if not string.find(pendingData, data) then
   --			local dataMergedLen = string.len(pendingData) + dataLen + 1 -- 1 is \n
-  --			if now - db.postmailFirstInsert > Postmail.maxDelay then -- A send must be done
+  --			if now - LoreBooks.db.postmailFirstInsert > Postmail.maxDelay then -- A send must be done
   --				if dataMergedLen > Postmail.mailMaxSize then
   --					SendMailData(pendingData) -- too big, send pendingData and save the modulo
-  --					db.postmailData = data
-  --					db.postmailFirstInsert = now
+  --					LoreBooks.db.postmailData = data
+  --					LoreBooks.db.postmailFirstInsert = now
   --				else
   --					SendMailData(pendingData .. "\n" .. data) -- Send all data
-  --					db.postmailData = ""
-  --					db.postmailFirstInsert = now
+  --					LoreBooks.db.postmailData = ""
+  --					LoreBooks.db.postmailFirstInsert = now
   --				end
   --			else
   --				-- Send only if data is too big
   --				if dataMergedLen > Postmail.mailMaxSize then
   --					SendMailData(pendingData) -- too big, send pendingData and save the modulo
-  --					db.postmailData = data
-  --					db.postmailFirstInsert = now
+  --					LoreBooks.db.postmailData = data
+  --					LoreBooks.db.postmailFirstInsert = now
   --				else
-  --					db.postmailData = db.postmailData .. "\n" .. data
+  --					LoreBooks.db.postmailData = LoreBooks.db.postmailData .. "\n" .. data
   --				end
   --			end
   --		end
   --	elseif dataLen < Postmail.mailMaxSize then
-  --		db.postmailData = data
-  --		db.postmailFirstInsert = now
+  --		LoreBooks.db.postmailData = data
+  --		LoreBooks.db.postmailFirstInsert = now
   --	end
   --end
 
@@ -909,7 +908,7 @@ function LoreBooks.ToggleShareData()
   --
   --minerEnabled, minerCallback = LoreBooks.IsMinerEnabled()
   --
-  --if db.shareData and minerEnabled and minerCallback then
+  --if LoreBooks.db.shareData and minerEnabled and minerCallback then
   --	local postmailIsConfigured = ConfigureMail(PostmailData)
   --	if postmailIsConfigured then
   --		EnableMail()
@@ -1061,7 +1060,7 @@ local function BuildShalidorReport()
   local booksInShalidor = 0
 
   local collectionsData = {}
-  local _, numCollections = GetLoreCategoryInfo(1)
+  local _, numCollections = GetLoreCategoryInfo(internal.LORE_LIBRARY_SHALIDOR)
   for collectionIndex = 1, numCollections do
     local name, _, numKnownBooks, totalBooks, hidden = GetLoreCollectionInfo(1, collectionIndex)
     if not hidden then
@@ -1388,7 +1387,7 @@ local function BuildCategoryList(self)
 
     for collectionIndex = 1, numCollections do
       local collectionName, description, numKnownBooks, totalBooks, hidden, _, collectionId = GetLoreCollectionInfo(categoryIndex, collectionIndex)
-      if collectionName and ((db.unlockEidetic and collectionName ~= "") or not hidden) then
+      if collectionName and ((LoreBooks.db.unlockEidetic and collectionName ~= "") or not hidden) then
         lbcategories[i].lbcollections[#lbcategories[i].lbcollections + 1] = { categoryIndex = categoryIndex, collectionIndex = collectionIndex, name = collectionName, description = description, numKnownBooks = numKnownBooks, totalBooks = totalBooks, collectionId = collectionId }
         self.totalCurrentlyCollected = self.totalCurrentlyCollected + numKnownBooks
         self.totalPossibleCollected = self.totalPossibleCollected + totalBooks
@@ -1808,7 +1807,7 @@ local function OnShowBook(eventCode, bookTitle, body, medium, showTitle, bookId)
   lastReadBook = bookTitle
   currentOpenBook = bookTitle
   shownBookId = bookId
-  --if minerEnabled and db.shareData then
+  --if minerEnabled and LoreBooks.db.shareData then
   --    local dataToShare = minerCallback(bookId)
   --    if dataToShare then
   --        SendData(dataToShare)
@@ -1904,11 +1903,14 @@ local function CreateEideticLorebookLocation()
   if collectionIndex and bookIndex then
     _, _, _, bookId = GetLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, collectionIndex, bookIndex)
   end
+  local collectionName = GetLoreCollectionInfo(categoryIndex, collectionIndex)
   -- /script d({GetLoreBookIndicesFromBookId(151)})
   -- /script d({GetLoreBookInfo(3, 21, 1)})
   if categoryIndex and categoryIndex == internal.LORE_LIBRARY_SHALIDOR then
     outText = string.format("[%d] = { %.10f, %.10f, %s, %s, moreInfo }, -- %s, %s", mapId, x, y, collectionIndex, bookIndex, bookName, zone)
   elseif categoryIndex and categoryIndex == internal.LORE_LIBRARY_EIDETIC then
+    local cnf = '"cn"' -- used for Collection Name
+    local nf = '"n"' -- used for Book Name
     local ef = '"e"'
     local df = '"d"' -- inDungeon
     local mdf = '"pm"' -- mapId
@@ -1922,14 +1924,15 @@ local function CreateEideticLorebookLocation()
     local mf = '"m"' -- used for zone booklist
     local zf = '"z"' -- used for zone bookshelf
     if isDungeon then
-      outText = string.format("[%d] = { [%s] = { [1] = { [%s] = %.10f, [%s] = %.10f, [%s] = %d, [%s] = %s, }, }, }, { [%s] = %d, [%s] = %.10f, [%s] = %.10f }, -- %s, %s",
-        shownBookId, ef, pxf, xpos, pyf, ypos, mdf, mapId, df, tostring(isDungeon), smf, mapId, pnxf, x, pnyf, y, bookName, zone)
+      outText = string.format("[%d] = { [%s] = %s, [%s] = %s, [%s] = { [1] = { [%s] = %.10f, [%s] = %.10f, [%s] = %d, [%s] = %s, }, }, }, { [%s] = %d, [%s] = %.10f, [%s] = %.10f }, -- %s",
+        shownBookId, cnf, '"'.. collectionName .. '"', nf, '"'.. bookName .. '"', ef, pxf, xpos, pyf, ypos, mdf, mapId, df, tostring(isDungeon), smf, mapId, pnxf, x, pnyf, y, zone)
     else
-      outText = string.format("[%d] = { [%s] = { [1] = { [%s] = %.10f, [%s] = %.10f, [%s] = %d, }, }, }, { [%s] = %d, [%s] = %.10f, [%s] = %.10f }, -- %s, %s",
-        shownBookId, ef, pxf, xpos, pyf, ypos, mdf, mapId, smf, mapId, pnxf, x, pnyf, y, bookName, zone)
+      outText = string.format("[%d] = { [%s] = %s, [%s] = %s, [%s] = { [1] = { [%s] = %.10f, [%s] = %.10f, [%s] = %d, }, }, }, { [%s] = %d, [%s] = %.10f, [%s] = %.10f }, -- %s",
+        shownBookId, cnf, '"'.. collectionName .. '"', nf, '"'.. bookName .. '"', ef, pxf, xpos, pyf, ypos, mdf, mapId, smf, mapId, pnxf, x, pnyf, y, zone)
     end
+    -- the bookshelf data uses the zoneId to determine the icon
     if isBookshelf then
-      outText = string.format("[%d] = { [%s] = { [%d] = 1, }, }, [%d] = { { [%s] = %.10f, [%s] = %.10f, [%s] = %d, }, },  -- %s, %s",
+      outText = string.format("[%d] = { [%s] = { [%d] = 1, }, }, [%d] = { { [%s] = %.10f, [%s] = %.10f, [%s] = %d, }, },  -- Bookshelf: %s, %s",
         shownBookId, mf, zoneMapId, mapId, xf, x, yf, y, zf, zoneId, bookName, zone)
     end
   end
@@ -1978,8 +1981,9 @@ local function OnLoad(eventCode, name)
 
     EVENT_MANAGER:UnregisterForEvent(internal.ADDON_NAME, EVENT_ADD_ON_LOADED)
 
-    LoreBooks:CreateSettings()
-    db = LoreBooks:GetSettings()
+    LoreBooks.db = ZO_SavedVars:NewAccountWide("LBooks_SavedVariables", internal.SAVEDVARIABLES_VERSION, nil, LoreBooks.defaults)
+
+    LoreBooks:CreateLamPanel()
 
     -- Lorelibrary
     RebuildLoreLibrary()
