@@ -4,49 +4,7 @@ local internal = _G["LoreBooks_Internal"]
 local LAM = LibAddonMenu2
 local LMP = LibMapPins
 
-local db
-local defaults = {      --default settings for saved variables
-  compassMaxDistance = 0.04,
-  pinTexture = {
-    type = 1,
-    size = 26,
-    level = 40,
-  },
-  pinGrayscale = true,
-  pinTextureEidetic = 1,
-  pinGrayscaleEidetic = true,
-  filters = {
-    [internal.PINS_COMPASS_EIDETIC] = false,
-    [internal.PINS_COMPASS] = true,
-    [internal.PINS_UNKNOWN] = true,
-    [internal.PINS_COLLECTED] = false,
-    [internal.PINS_EIDETIC] = false,
-    [internal.PINS_EIDETIC_COLLECTED] = false,
-    [internal.PINS_BOOKSHELF] = true,
-    [internal.PINS_COMPASS_BOOKSHELF] = false,
-
-  },
-  shareData = true,
-  postmailData = "",
-  postmailFirstInsert = GetTimeStamp(),
-  booksCollected = {},
-  unlockEidetic = false,
-  steps = {},
-  immersiveMode = 1,
-  questTools = {},
-  showClickMenu = true,
-  showDungeonTag = true,
-  showQuestName = true,
-}
-
-function LoreBooks:GetSettings()
-  return db
-end
-
-function LoreBooks:CreateSettings()
-
-  db = ZO_SavedVars:NewAccountWide("LBooks_SavedVariables", internal.SAVEDVARIABLES_VERSION, nil, defaults)
-
+function LoreBooks:CreateLamPanel()
   local panelData = {
     type = "panel",
     name = GetString(LBOOKS_TITLE),
@@ -79,23 +37,23 @@ function LoreBooks:CreateSettings()
     if panel == LoreBooksPanel then
       unknownIcon = WINDOW_MANAGER:CreateControl(nil, panel.controlsToRefresh[1], CT_TEXTURE)
       unknownIcon:SetAnchor(RIGHT, panel.controlsToRefresh[1].combobox, LEFT, -10, 0)
-      unknownIcon:SetTexture(pinTextures[db.pinTexture.type][2])
-      unknownIcon:SetDimensions(db.pinTexture.size, db.pinTexture.size)
+      unknownIcon:SetTexture(pinTextures[LoreBooks.db.pinTexture.type][2])
+      unknownIcon:SetDimensions(LoreBooks.db.pinTexture.size, LoreBooks.db.pinTexture.size)
       collectedIcon = WINDOW_MANAGER:CreateControl(nil, panel.controlsToRefresh[1], CT_TEXTURE)
       collectedIcon:SetAnchor(RIGHT, unknownIcon, LEFT, -5, 0)
-      collectedIcon:SetTexture(pinTextures[db.pinTexture.type][1])
-      collectedIcon:SetDimensions(db.pinTexture.size, db.pinTexture.size)
-      collectedIcon:SetDesaturation((db.pinTexture.type == internal.PIN_ICON_REAL) and 1 or 0)
+      collectedIcon:SetTexture(pinTextures[LoreBooks.db.pinTexture.type][1])
+      collectedIcon:SetDimensions(LoreBooks.db.pinTexture.size, LoreBooks.db.pinTexture.size)
+      collectedIcon:SetDesaturation((LoreBooks.db.pinTexture.type == internal.PIN_ICON_REAL) and 1 or 0)
 
       unknownIconEidetic = WINDOW_MANAGER:CreateControl(nil, panel.controlsToRefresh[3], CT_TEXTURE)
       unknownIconEidetic:SetAnchor(RIGHT, panel.controlsToRefresh[3].combobox, LEFT, -10, 0)
-      unknownIconEidetic:SetTexture(pinTextures[db.pinTextureEidetic][2])
-      unknownIconEidetic:SetDimensions(db.pinTexture.size, db.pinTexture.size)
+      unknownIconEidetic:SetTexture(pinTextures[LoreBooks.db.pinTextureEidetic][2])
+      unknownIconEidetic:SetDimensions(LoreBooks.db.pinTexture.size, LoreBooks.db.pinTexture.size)
       collectedIconEidetic = WINDOW_MANAGER:CreateControl(nil, panel.controlsToRefresh[3], CT_TEXTURE)
       collectedIconEidetic:SetAnchor(RIGHT, unknownIconEidetic, LEFT, -5, 0)
-      collectedIconEidetic:SetTexture(pinTextures[db.pinTextureEidetic][1])
-      collectedIconEidetic:SetDimensions(db.pinTexture.size, db.pinTexture.size)
-      collectedIconEidetic:SetDesaturation((db.pinTextureEidetic == internal.PIN_ICON_REAL) and 1 or 0)
+      collectedIconEidetic:SetTexture(pinTextures[LoreBooks.db.pinTextureEidetic][1])
+      collectedIconEidetic:SetDimensions(LoreBooks.db.pinTexture.size, LoreBooks.db.pinTexture.size)
+      collectedIconEidetic:SetDesaturation((LoreBooks.db.pinTextureEidetic == internal.PIN_ICON_REAL) and 1 or 0)
 
       CALLBACK_MANAGER:UnregisterCallback("LAM-PanelControlsCreated", CreateIcons)
     end
@@ -122,27 +80,27 @@ function LoreBooks:CreateSettings()
     tooltip = GetString(LBOOKS_PIN_TEXTURE_DESC),
     choices = pinTexturesList,
     choicesValues = pinTexturesValues,
-    getFunc = function() return db.pinTexture.type end,
+    getFunc = function() return LoreBooks.db.pinTexture.type end,
     setFunc = function(value)
-      db.pinTexture.type = value
+      LoreBooks.db.pinTexture.type = value
       unknownIcon:SetTexture(pinTextures[value][2])
-      collectedIcon:SetDesaturation(value == defaults.pinTexture.type and 1 or 0)
+      collectedIcon:SetDesaturation(value == LoreBooks.defaults.pinTexture.type and 1 or 0)
       collectedIcon:SetTexture(pinTextures[value][1])
       LMP:RefreshPins(internal.PINS_UNKNOWN)
       LMP:RefreshPins(internal.PINS_COLLECTED)
       COMPASS_PINS.pinLayouts[internal.PINS_COMPASS].texture = pinTextures[value][2]
       COMPASS_PINS:RefreshPins(internal.PINS_COMPASS)
     end,
-    default = defaults.pinTexture.type,
+    default = LoreBooks.defaults.pinTexture.type,
   }
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_PIN_GRAYSCALE),
     tooltip = GetString(LBOOKS_PIN_GRAYSCALE_DESC),
-    getFunc = function() return db.pinGrayscale end,
-    setFunc = function(value) db.pinGrayscale = value end,
-    disabled = function() return db.pinTexture.type ~= internal.PIN_ICON_REAL end,
-    default = defaults.pinGrayscale,
+    getFunc = function() return LoreBooks.db.pinGrayscale end,
+    setFunc = function(value) LoreBooks.db.pinGrayscale = value end,
+    disabled = function() return LoreBooks.db.pinTexture.type ~= internal.PIN_ICON_REAL end,
+    default = LoreBooks.defaults.pinGrayscale,
   }
   optionsTable[#optionsTable + 1] = {
     type = "dropdown",
@@ -150,27 +108,27 @@ function LoreBooks:CreateSettings()
     tooltip = GetString(LBOOKS_PIN_TEXTURE_DESC),
     choices = pinTexturesList,
     choicesValues = pinTexturesValues,
-    getFunc = function() return db.pinTextureEidetic end,
+    getFunc = function() return LoreBooks.db.pinTextureEidetic end,
     setFunc = function(value)
-      db.pinTextureEidetic = value
+      LoreBooks.db.pinTextureEidetic = value
       unknownIconEidetic:SetTexture(pinTextures[value][2])
-      collectedIconEidetic:SetDesaturation(value == defaults.pinTextureEidetic and 1 or 0)
+      collectedIconEidetic:SetDesaturation(value == LoreBooks.defaults.pinTextureEidetic and 1 or 0)
       collectedIconEidetic:SetTexture(pinTextures[value][1])
       LMP:RefreshPins(internal.PINS_EIDETIC)
       LMP:RefreshPins(internal.PINS_EIDETIC_COLLECTED)
       COMPASS_PINS.pinLayouts[internal.PINS_COMPASS_EIDETIC].texture = pinTextures[value][2]
       COMPASS_PINS:RefreshPins(internal.PINS_COMPASS_EIDETIC)
     end,
-    default = defaults.pinTextureEidetic,
+    default = LoreBooks.defaults.pinTextureEidetic,
   }
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_PIN_GRAYSCALE),
     tooltip = GetString(LBOOKS_PIN_GRAYSCALE_EIDETIC_DESC),
-    getFunc = function() return db.pinGrayscaleEidetic end,
-    setFunc = function(value) db.pinGrayscaleEidetic = value end,
-    disabled = function() return db.pinTextureEidetic ~= internal.PIN_ICON_REAL end,
-    default = defaults.pinGrayscaleEidetic,
+    getFunc = function() return LoreBooks.db.pinGrayscaleEidetic end,
+    setFunc = function(value) LoreBooks.db.pinGrayscaleEidetic = value end,
+    disabled = function() return LoreBooks.db.pinTextureEidetic ~= internal.PIN_ICON_REAL end,
+    default = LoreBooks.defaults.pinGrayscaleEidetic,
   }
   optionsTable[#optionsTable + 1] = {
     type = "slider",
@@ -179,9 +137,9 @@ function LoreBooks:CreateSettings()
     min = 10,
     max = 70,
     step = 1,
-    getFunc = function() return db.pinTexture.size end,
+    getFunc = function() return LoreBooks.db.pinTexture.size end,
     setFunc = function(size)
-      db.pinTexture.size = size
+      LoreBooks.db.pinTexture.size = size
       unknownIcon:SetDimensions(size, size)
       collectedIcon:SetDimensions(size, size)
       SetLayoutKeyAndRefresh(internal.PINS_UNKNOWN, "size", size)
@@ -189,8 +147,8 @@ function LoreBooks:CreateSettings()
       SetLayoutKeyAndRefresh(internal.PINS_EIDETIC, "size", size)
       SetLayoutKeyAndRefresh(internal.PINS_EIDETIC_COLLECTED, "size", size)
     end,
-    disabled = function() return not (db.filters[internal.PINS_UNKNOWN] or db.filters[internal.PINS_COLLECTED] or db.filters[internal.PINS_EIDETIC] or db.filters[internal.PINS_EIDETIC_COLLECTED] or db.filters[internal.PINS_BOOKSHELF]) end,
-    default = defaults.pinTexture.size
+    disabled = function() return not (LoreBooks.db.filters[internal.PINS_UNKNOWN] or LoreBooks.db.filters[internal.PINS_COLLECTED] or LoreBooks.db.filters[internal.PINS_EIDETIC] or LoreBooks.db.filters[internal.PINS_EIDETIC_COLLECTED] or LoreBooks.db.filters[internal.PINS_BOOKSHELF]) end,
+    default = LoreBooks.defaults.pinTexture.size
   }
   optionsTable[#optionsTable + 1] = {
     type = "slider",
@@ -199,132 +157,132 @@ function LoreBooks:CreateSettings()
     min = 10,
     max = 200,
     step = 5,
-    getFunc = function() return db.pinTexture.level end,
+    getFunc = function() return LoreBooks.db.pinTexture.level end,
     setFunc = function(level)
-      db.pinTexture.level = level
+      LoreBooks.db.pinTexture.level = level
       SetLayoutKeyAndRefresh(internal.PINS_UNKNOWN, "level", level)
       SetLayoutKeyAndRefresh(internal.PINS_COLLECTED, "level", level)
       SetLayoutKeyAndRefresh(internal.PINS_EIDETIC, "level", level)
       SetLayoutKeyAndRefresh(internal.PINS_EIDETIC_COLLECTED, "level", level)
     end,
-    disabled = function() return not (db.filters[internal.PINS_UNKNOWN] or db.filters[internal.PINS_COLLECTED] or db.filters[internal.PINS_EIDETIC] or db.filters[internal.PINS_EIDETIC_COLLECTED] or db.filters[internal.PINS_BOOKSHELF]) end,
-    default = defaults.pinTexture.level,
+    disabled = function() return not (LoreBooks.db.filters[internal.PINS_UNKNOWN] or LoreBooks.db.filters[internal.PINS_COLLECTED] or LoreBooks.db.filters[internal.PINS_EIDETIC] or LoreBooks.db.filters[internal.PINS_EIDETIC_COLLECTED] or LoreBooks.db.filters[internal.PINS_BOOKSHELF]) end,
+    default = LoreBooks.defaults.pinTexture.level,
   }
   -- add Dungeon tag or zonename
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_DUNGEON_TAG_MENU),
     tooltip = GetString(LBOOKS_DUNGEON_TAG_MENU_DESC),
-    getFunc = function() return db.showDungeonTag end,
-    setFunc = function(state) db.showDungeonTag = state end,
-    default = defaults.showDungeonTag,
+    getFunc = function() return LoreBooks.db.showDungeonTag end,
+    setFunc = function(state) LoreBooks.db.showDungeonTag = state end,
+    default = LoreBooks.defaults.showDungeonTag,
   }
   -- add Quest Name and Location
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_QUESTINFO_MENU),
     tooltip = GetString(LBOOKS_QUESTINFO_MENU_DESC),
-    getFunc = function() return db.showQuestName end,
-    setFunc = function(state) db.showQuestName = state end,
-    default = defaults.showQuestName,
+    getFunc = function() return LoreBooks.db.showQuestName end,
+    setFunc = function(state) LoreBooks.db.showQuestName = state end,
+    default = LoreBooks.defaults.showQuestName,
   }
   optionsTable[#optionsTable + 1] = { -- disable clicl menu
     type = "checkbox",
     name = GetString(LBOOKS_PIN_CLICK_MENU),
     tooltip = GetString(LBOOKS_PIN_CLICK_MENU_DESC),
-    getFunc = function() return db.showClickMenu end,
+    getFunc = function() return LoreBooks.db.showClickMenu end,
     setFunc = function(state)
-      db.showClickMenu = state
+      LoreBooks.db.showClickMenu = state
     end,
-    default = defaults.showClickMenu,
+    default = LoreBooks.defaults.showClickMenu,
   }
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_UNKNOWN),
     tooltip = GetString(LBOOKS_UNKNOWN_DESC),
-    getFunc = function() return db.filters[internal.PINS_UNKNOWN] end,
+    getFunc = function() return LoreBooks.db.filters[internal.PINS_UNKNOWN] end,
     setFunc = function(state)
-      db.filters[internal.PINS_UNKNOWN] = state
+      LoreBooks.db.filters[internal.PINS_UNKNOWN] = state
       LMP:SetEnabled(internal.PINS_UNKNOWN, state)
     end,
-    default = defaults.filters[internal.PINS_UNKNOWN],
+    default = LoreBooks.defaults.filters[internal.PINS_UNKNOWN],
   }
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_COLLECTED),
     tooltip = GetString(LBOOKS_COLLECTED_DESC),
-    getFunc = function() return db.filters[internal.PINS_COLLECTED] end,
+    getFunc = function() return LoreBooks.db.filters[internal.PINS_COLLECTED] end,
     setFunc = function(state)
-      db.filters[internal.PINS_COLLECTED] = state
+      LoreBooks.db.filters[internal.PINS_COLLECTED] = state
       LMP:SetEnabled(internal.PINS_COLLECTED, state)
     end,
-    default = defaults.filters[internal.PINS_COLLECTED]
+    default = LoreBooks.defaults.filters[internal.PINS_COLLECTED]
   }
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_EIDETIC),
     tooltip = GetString(LBOOKS_EIDETIC_DESC),
-    getFunc = function() return db.filters[internal.PINS_EIDETIC] end,
+    getFunc = function() return LoreBooks.db.filters[internal.PINS_EIDETIC] end,
     setFunc = function(state)
-      db.filters[internal.PINS_EIDETIC] = state
+      LoreBooks.db.filters[internal.PINS_EIDETIC] = state
       LMP:SetEnabled(internal.PINS_EIDETIC, state)
     end,
-    default = defaults.filters[internal.PINS_EIDETIC]
+    default = LoreBooks.defaults.filters[internal.PINS_EIDETIC]
   }
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_EIDETIC_COLLECTED),
     tooltip = GetString(LBOOKS_EIDETIC_COLLECTED_DESC),
-    getFunc = function() return db.filters[internal.PINS_EIDETIC_COLLECTED] end,
+    getFunc = function() return LoreBooks.db.filters[internal.PINS_EIDETIC_COLLECTED] end,
     setFunc = function(state)
-      db.filters[internal.PINS_EIDETIC_COLLECTED] = state
+      LoreBooks.db.filters[internal.PINS_EIDETIC_COLLECTED] = state
       LMP:SetEnabled(internal.PINS_EIDETIC_COLLECTED, state)
     end,
-    default = defaults.filters[internal.PINS_EIDETIC_COLLECTED]
+    default = LoreBooks.defaults.filters[internal.PINS_EIDETIC_COLLECTED]
   }
   optionsTable[#optionsTable + 1] = { -- Bookshelf
     type = "checkbox",
     name = GetString(LBOOKS_BOOKSHELF_NAME),
     tooltip = GetString(LBOOKS_BOOKSHELF_DESC),
-    getFunc = function() return db.filters[internal.PINS_BOOKSHELF] end,
+    getFunc = function() return LoreBooks.db.filters[internal.PINS_BOOKSHELF] end,
     setFunc = function(state)
-      db.filters[internal.PINS_BOOKSHELF] = state
+      LoreBooks.db.filters[internal.PINS_BOOKSHELF] = state
       LMP:SetEnabled(internal.PINS_BOOKSHELF, state)
     end,
-    default = defaults.filters[internal.PINS_BOOKSHELF]
+    default = LoreBooks.defaults.filters[internal.PINS_BOOKSHELF]
   }
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_COMPASS_UNKNOWN),
     tooltip = GetString(LBOOKS_COMPASS_UNKNOWN_DESC),
-    getFunc = function() return db.filters[internal.PINS_COMPASS] end,
+    getFunc = function() return LoreBooks.db.filters[internal.PINS_COMPASS] end,
     setFunc = function(state)
-      db.filters[internal.PINS_COMPASS] = state
+      LoreBooks.db.filters[internal.PINS_COMPASS] = state
       COMPASS_PINS:RefreshPins(internal.PINS_COMPASS)
     end,
-    default = defaults.filters[internal.PINS_COMPASS],
+    default = LoreBooks.defaults.filters[internal.PINS_COMPASS],
   }
   optionsTable[#optionsTable + 1] = {
     type = "checkbox",
     name = GetString(LBOOKS_COMPASS_EIDETIC),
     tooltip = GetString(LBOOKS_COMPASS_EIDETIC_DESC),
-    getFunc = function() return db.filters[internal.PINS_COMPASS_EIDETIC] end,
+    getFunc = function() return LoreBooks.db.filters[internal.PINS_COMPASS_EIDETIC] end,
     setFunc = function(state)
-      db.filters[internal.PINS_COMPASS_EIDETIC] = state
+      LoreBooks.db.filters[internal.PINS_COMPASS_EIDETIC] = state
       COMPASS_PINS:RefreshPins(internal.PINS_COMPASS_EIDETIC)
     end,
-    default = defaults.filters[internal.PINS_COMPASS_EIDETIC],
+    default = LoreBooks.defaults.filters[internal.PINS_COMPASS_EIDETIC],
   }
   optionsTable[#optionsTable + 1] = { -- Bookshelf
     type = "checkbox",
     name = GetString(LBOOKS_COMPASS_BOOKSHELF_NAME),
     tooltip = GetString(LBOOKS_COMPASS_BOOKSHELF_DESC),
-    getFunc = function() return db.filters[internal.PINS_COMPASS_BOOKSHELF] end,
+    getFunc = function() return LoreBooks.db.filters[internal.PINS_COMPASS_BOOKSHELF] end,
     setFunc = function(state)
-      db.filters[internal.PINS_COMPASS_BOOKSHELF] = state
+      LoreBooks.db.filters[internal.PINS_COMPASS_BOOKSHELF] = state
       COMPASS_PINS:RefreshPins(internal.PINS_COMPASS_BOOKSHELF)
     end,
-    default = defaults.filters[internal.PINS_COMPASS_BOOKSHELF],
+    default = LoreBooks.defaults.filters[internal.PINS_COMPASS_BOOKSHELF],
   }
   optionsTable[#optionsTable + 1] = {
     type = "slider",
@@ -333,9 +291,9 @@ function LoreBooks:CreateSettings()
     min = 1,
     max = 100,
     step = 1,
-    getFunc = function() return db.compassMaxDistance * 1000 end,
+    getFunc = function() return LoreBooks.db.compassMaxDistance * 1000 end,
     setFunc = function(maxDistance)
-      db.compassMaxDistance = maxDistance / 1000
+      LoreBooks.db.compassMaxDistance = maxDistance / 1000
       COMPASS_PINS.pinLayouts[internal.PINS_COMPASS].maxDistance = maxDistance / 1000
       COMPASS_PINS:RefreshPins(internal.PINS_COMPASS)
       COMPASS_PINS.pinLayouts[internal.PINS_COMPASS_EIDETIC].maxDistance = maxDistance / 1000
@@ -343,24 +301,24 @@ function LoreBooks:CreateSettings()
       COMPASS_PINS.pinLayouts[internal.PINS_COMPASS_BOOKSHELF].maxDistance = maxDistance / 1000
       COMPASS_PINS:RefreshPins(internal.PINS_COMPASS_BOOKSHELF)
     end,
-    disabled = function() return not (db.filters[internal.PINS_COMPASS] or db.filters[internal.PINS_COMPASS_EIDETIC] or db.filters[internal.PINS_COMPASS_BOOKSHELF]) end,
-    default = defaults.compassMaxDistance * 1000,
+    disabled = function() return not (LoreBooks.db.filters[internal.PINS_COMPASS] or LoreBooks.db.filters[internal.PINS_COMPASS_EIDETIC] or LoreBooks.db.filters[internal.PINS_COMPASS_BOOKSHELF]) end,
+    default = LoreBooks.defaults.compassMaxDistance * 1000,
   }
   optionsTable[#optionsTable + 1] = {
     type = "dropdown",
     name = GetString(LBOOKS_IMMERSIVE),
     tooltip = GetString(LBOOKS_IMMERSIVE_DESC),
     choices = immersiveChoices,
-    getFunc = function() return immersiveChoices[db.immersiveMode] end,
+    getFunc = function() return immersiveChoices[LoreBooks.db.immersiveMode] end,
     setFunc = function(selected)
       for index, name in ipairs(immersiveChoices) do
         if name == selected then
-          db.immersiveMode = index
+          LoreBooks.db.immersiveMode = index
           break
         end
       end
     end,
-    default = immersiveChoices[defaults.immersiveMode],
+    default = immersiveChoices[LoreBooks.defaults.immersiveMode],
   }
   --[[
   {
@@ -373,35 +331,35 @@ function LoreBooks:CreateSettings()
         return GetString(LBOOKS_UNLOCK_EIDETIC_WARNING)
       end
     end,
-    getFunc = function() return db.unlockEidetic end,
+    getFunc = function() return LoreBooks.db.unlockEidetic end,
     setFunc = function(state)
-      db.unlockEidetic = state
+      LoreBooks.db.unlockEidetic = state
       LORE_LIBRARY:BuildCategoryList()
     end,
-    default = defaults.unlockEidetic,
+    default = LoreBooks.defaults.unlockEidetic,
     disabled = function() return not LoreBooks.CanEmulateLibrary() end,
   },
   {
     type = "checkbox",
     name = GetString(LBOOKS_USE_QUEST_BOOKS),
     tooltip = GetString(LBOOKS_USE_QUEST_BOOKS_DESC),
-    getFunc = function() return db.useQuestBooks end,
+    getFunc = function() return LoreBooks.db.useQuestBooks end,
     setFunc = function(state)
-      db.useQuestBooks = state
+      LoreBooks.db.useQuestBooks = state
       LoreBooks.ToggleUseQuestBooks()
     end,
-    default = defaults.useQuestBooks,
+    default = LoreBooks.defaults.useQuestBooks,
   },
   {
     type = "checkbox",
     name = GetString(LBOOKS_SHARE_DATA),
     tooltip = GetString(LBOOKS_SHARE_DATA_DESC),
-    getFunc = function() return db.shareData end,
+    getFunc = function() return LoreBooks.db.shareData end,
     setFunc = function(state)
-      db.shareData = state
+      LoreBooks.db.shareData = state
       LoreBooks.ToggleShareData()
     end,
-    default = defaults.shareData,
+    default = LoreBooks.defaults.shareData,
     disabled = GetWorldName() ~= "EU Megaserver" or not internal.SUPPORTED_LANG[lang],
   },
   --]]

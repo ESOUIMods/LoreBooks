@@ -1,12 +1,14 @@
 local LoreBooks = {}
 local internal = {}
+LoreBooks.db = {}
 _G["LoreBooks"] = LoreBooks
 _G["LoreBooks_Internal"] = internal
+
 
 --Local constants -------------------------------------------------------------
 internal.ADDON_NAME = "LoreBooks"
 internal.ADDON_AUTHOR = "Garkin, Ayantir, Kyoma, |cFF9B15Sharlikran|r"
-internal.ADDON_VERSION = "73"
+internal.ADDON_VERSION = "75"
 internal.ADDON_WEBSITE = "http://www.esoui.com/downloads/info288-LoreBooks.html"
 internal.ADDON_PANEL = "LoreBooksPanel"
 internal.SAVEDVARIABLES_VERSION = 3
@@ -128,6 +130,40 @@ internal.icon_list_zoneid = {
   [181] = "/esoui/art/icons/housing_cra_fur_bookshelvescombo005.dds", -- ava_whole_0
   [584] = "/esoui/art/icons/housing_cra_fur_bookshelvescombo005.dds", -- imperialcity_base_0
   [267] = "/esoui/art/icons/housing_alt_fur_cabinet004.dds", -- eyevea_base_0
+}
+
+LoreBooks.defaults = {      --default settings for saved variables
+  compassMaxDistance = 0.04,
+  pinTexture = {
+    type = internal.PIN_ICON_REAL,
+    size = 26,
+    level = 40,
+  },
+  pinGrayscale = true,
+  pinTextureEidetic = internal.PIN_ICON_REAL,
+  pinGrayscaleEidetic = true,
+  filters = {
+    [internal.PINS_COMPASS_EIDETIC] = false,
+    [internal.PINS_COMPASS] = true,
+    [internal.PINS_UNKNOWN] = true,
+    [internal.PINS_COLLECTED] = false,
+    [internal.PINS_EIDETIC] = false,
+    [internal.PINS_EIDETIC_COLLECTED] = false,
+    [internal.PINS_BOOKSHELF] = true,
+    [internal.PINS_COMPASS_BOOKSHELF] = false,
+
+  },
+  shareData = true,
+  postmailData = "",
+  postmailFirstInsert = GetTimeStamp(),
+  booksCollected = {},
+  unlockEidetic = false,
+  steps = {},
+  immersiveMode = 1,
+  questTools = {},
+  showClickMenu = true,
+  showDungeonTag = true,
+  showQuestName = true,
 }
 
 -- /esoui/art/icons/housing_arg_fur_mrkshelftall001.dds Argonian
