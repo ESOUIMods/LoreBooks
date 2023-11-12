@@ -59216,12 +59216,39 @@ local bookData = {
       [1] = { ["px"] = 0.9347500139, ["py"] = 0.4017576035, ["pm"] = 2274, },
     },
   },
+  [7763] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "The Last Addition of Bikkus-Muz",
+    ["e"] = {
+      [1] = { ["px"] = 0.1770703948, ["py"] = -0.0311508035, ["pm"] = 2422, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
+  [7764] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Snushularg's Promise",
+    ["e"] = {
+      [1] = { ["px"] = 0.1758708001, ["py"] = -0.0306579957, ["pm"] = 2425, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
   [7765] = {
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
     ["n"] = "A Servant's Tale", --Marked as A Hireling's Tale in the overworld, but shows up as A Servant's Tale in game
     ["e"] = {
       [1] = { ["px"] = 0.8354092088, ["py"] = 0.4221563884, ["pm"] = 2386, ["zx"] = 0.8354020109, ["zy"] = 0.4221504017, ["zm"] = 2274, },
+    },
+  },
+  [7766] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Malkhest's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.1758571953, ["py"] = -0.0311891934, ["pm"] = 2407, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
     },
   },
   [7769] = {
