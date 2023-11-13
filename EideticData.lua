@@ -59314,6 +59314,15 @@ local bookData = {
       [2] = { ["px"] = 0.1537979973, ["py"] = -0.0282487988, ["pm"] = 2275, ["fp"] = true, ["qp"] = true, },
     },
   },
+  [7788] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Archmagister Mavon's Ascension",
+    ["e"] = {
+      [1] = { ["px"] = 0.1758471953, ["py"] = -0.0311995934, ["pm"] = 2407, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
   [7800] = {
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
