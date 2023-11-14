@@ -59323,6 +59323,15 @@ local bookData = {
       [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
     },
   },
+  [7795] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Captain Burwarah's Records",
+    ["e"] = {
+      [1] = { ["px"] = 0.1764803982, ["py"] = -0.0302087977, ["pm"] = 2416, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
   [7800] = {
     ["c"] = true,
     ["cn"] = "Telvanni Tomes",
