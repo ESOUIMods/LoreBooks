@@ -59314,6 +59314,15 @@ local bookData = {
       [2] = { ["px"] = 0.1537979973, ["py"] = -0.0282487988, ["pm"] = 2275, ["fp"] = true, ["qp"] = true, },
     },
   },
+  [7786] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Obscure Killers of the North",
+    ["e"] = {
+      [1] = { ["px"] = 0.1767440000, ["py"] = -0.0312256023, ["pm"] = 2421, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
   [7788] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
