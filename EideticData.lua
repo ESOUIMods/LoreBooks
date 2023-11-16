@@ -59332,12 +59332,30 @@ local bookData = {
       [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
     },
   },
+  [7794] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Izzmothar's Power",
+    ["e"] = {
+      [1] = { ["px"] = 0.1768020013, ["py"] = -0.0308828049, ["pm"] = 2414, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
   [7795] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
     ["n"] = "Captain Burwarah's Records",
     ["e"] = {
       [1] = { ["px"] = 0.1764803982, ["py"] = -0.0302087977, ["pm"] = 2416, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
+  [7799] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "The Felling of Windweaper's Grove",
+    ["e"] = {
+      [1] = { ["px"] = 0.1767352013, ["py"] = -0.0307784049, ["pm"] = 2414, ["d"] = true, },
       [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
     },
   },
