@@ -59400,6 +59400,15 @@ local bookData = {
       [1] = { ["px"] = 0.8939672051, ["py"] = 0.4530512014, ["pm"] = 2274, },
     },
   },
+  [7822] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "On the Discovery of Relic Fiends",
+    ["e"] = {
+      [1] = { ["px"] = 0.1758739930, ["py"] = -0.0305527941, ["pm"] = 2417, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
 }
 
 function LoreBooks_GetBookData()
