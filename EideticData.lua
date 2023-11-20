@@ -59400,6 +59400,15 @@ local bookData = {
       [1] = { ["px"] = 0.8939672051, ["py"] = 0.4530512014, ["pm"] = 2274, },
     },
   },
+  [7821] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Materials for Novice Necromancers",
+    ["e"] = {
+      [1] = { ["px"] = 0.1767475932, ["py"] = -0.0305320006, ["pm"] = 2415, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
   [7822] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
