@@ -59341,6 +59341,15 @@ local bookData = {
       [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
     },
   },
+  [7793] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "The Silver Rose Blooms over Borderwatch",
+    ["e"] = {
+      [1] = { ["px"] = 0.1761883982, ["py"] = -0.0308459952, ["pm"] = 2408, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
   [7794] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
