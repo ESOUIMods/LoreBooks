@@ -1376,7 +1376,7 @@ local function BuildCategoryList(self)
   end
 
   table.sort(lbcategories, NameSorter)
-
+  local firstNode = nil
   local collectionNodeToSelect = nil
   for i, categoryData in ipairs(lbcategories) do
     local parent = self.navigationTree:AddNode("ZO_LabelHeader", categoryData)
@@ -1408,7 +1408,7 @@ local function BuildCategoryList(self)
     table.sort(lbcategories[i].lbcollections, NameSorter)
 
     local search = string.lower(LORE_LIBRARY.search)
-    local firstNode = nil
+
     for _, collectionData in ipairs(lbcategories[i].lbcollections) do
       local node = self.navigationTree:AddNode("ZO_LoreLibraryNavigationEntry", collectionData, parent)
       if not firstNode then firstNode = node end
