@@ -7,7 +7,7 @@ _G[LIB_IDENTIFIER] = lib
 
 local lang = GetCVar("Language.2")
 
-lib.locales = { "en", "es", "de", "fr", "ru", "br", "it", "pl", "zh" }
+lib.locales = { "en", "es", "de", "fr", "ru", "zh", "br", "it", "pl" }
 function lib:IsLanguageSupported(language)
   for _, l in ipairs(self.locales) do
     if language == l then
