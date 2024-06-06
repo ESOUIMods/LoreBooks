@@ -233,7 +233,7 @@ pinTooltipCreatorEidetic.creator = function(pin)
   local pinTag = pin.m_PinTag
   local title, icon, known = GetLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, pinTag.c, pinTag.b)
   local collection = GetLoreCollectionInfo(internal.LORE_LIBRARY_EIDETIC, pinTag.c)
-  if icon == MISSING_TEXTURE then icon = PLACEHOLDER_TEXTURE end
+  if icon == internal.MISSING_TEXTURE then icon = internal.PLACEHOLDER_TEXTURE end
   local dungeonMapId = pinTag.pm
   local mapName = zo_strformat(SI_WINDOW_TITLE_WORLD_MAP, GetMapNameById(dungeonMapId))
 
