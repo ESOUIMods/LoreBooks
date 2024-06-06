@@ -120,6 +120,7 @@ end
 -- Pins -----------------------------------------------------------------------
 local function GetPinTextureBookshelf(self)
   local zoneId = 1261
+  --[[TODO account for 1283 and 1414 ]]--
   if self and self.m_PinTag then
     if self.m_PinTag.z then zoneId = GetParentZoneId(self.m_PinTag.z) end
   end
