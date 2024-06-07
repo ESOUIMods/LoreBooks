@@ -1442,12 +1442,11 @@ end
 
 local function GetHirelingMessageCollection(hirelingType)
   local numHirelingMessages, maxHirelingMessages = GetNumUnlockedHirelingCorrespondence(hirelingType)
-  local categoryData = 
-  {
-      hirelingType = hirelingType,
-      name = GetString("SI_HIRELINGTYPE", hirelingType),
-      numKnownBooks = numHirelingMessages,
-      totalBooks = maxHirelingMessages,
+  local categoryData = {
+    hirelingType = hirelingType,
+    name = GetString("SI_HIRELINGTYPE", hirelingType),
+    numKnownBooks = numHirelingMessages,
+    totalBooks = maxHirelingMessages,
   }
   return categoryData
 end
@@ -1456,9 +1455,9 @@ local function GetHirelingMessages(hirelingType)
   local numHirelingMessages = GetNumUnlockedHirelingCorrespondence(hirelingType)
   local messages = {}
   for messageIndex = 1, numHirelingMessages do
-      local sender, subject, body, icon = GetHirelingCorrespondenceInfoByIndex(hirelingType, messageIndex)
-      local title = zo_strformat(SI_LORE_LIBRARY_HIRELING_CORRESPONDENCE_ENTRY_FORMATTER, subject, messageIndex)
-      table.insert(messages, { hirelingType = hirelingType, sender = sender, subject = subject, body = body, icon = icon, title = title, messageIndex = messageIndex })
+    local sender, subject, body, icon = GetHirelingCorrespondenceInfoByIndex(hirelingType, messageIndex)
+    local title = zo_strformat(SI_LORE_LIBRARY_HIRELING_CORRESPONDENCE_ENTRY_FORMATTER, subject, messageIndex)
+    table.insert(messages, { hirelingType = hirelingType, sender = sender, subject = subject, body = body, icon = icon, title = title, messageIndex = messageIndex })
   end
   return messages
 end
@@ -1483,11 +1482,11 @@ local function FilterScrollList(self)
       local nextSender = string.lower(messageData.sender)
       if currentHirelingSender ~= nextSender then
         currentHirelingSender = nextSender
-        table.insert(scrollData, ZO_ScrollList_CreateDataEntry(HIRELING_MESSAGE_HEADER_TYPE, 
+        table.insert(scrollData, ZO_ScrollList_CreateDataEntry(HIRELING_MESSAGE_HEADER_TYPE,
           {
-            hirelingType = messageData.hirelingType, 
-            name = zo_strformat(SI_LORE_LIBRARY_HIRELING_CORRESPONDENCE_SENDER_FORMATTER, currentHirelingSender), 
-            sortOrder = index, 
+            hirelingType = messageData.hirelingType,
+            name = zo_strformat(SI_LORE_LIBRARY_HIRELING_CORRESPONDENCE_SENDER_FORMATTER, currentHirelingSender),
+            sortOrder = index,
           }))
       end
       messageData.sortOrder = index
@@ -1770,102 +1769,102 @@ function LoreBooks:IsMotifButtonChecked(control)
 end
 
 local function RebuildLoreLibrary()
-	loreLibraryReportKeybind = {
-		{
-			alignment = KEYBIND_STRIP_ALIGN_LEFT,
-			name = GetString(LBOOKS_REPORT_KEYBIND_RPRT),
-			keybind = "UI_SHORTCUT_SECONDARY",
-			callback = ShowLoreLibraryReport,
-		},
-		{
-			alignment = KEYBIND_STRIP_ALIGN_LEFT,
-			name = GetString(LBOOKS_REPORT_KEYBIND_SWITCH),
-			keybind = "UI_SHORTCUT_QUATERNARY",
-			callback = SwitchLoreLibraryReportMode,
-			visible = IsReportShown,
-		},
-		{
-			alignment = KEYBIND_STRIP_ALIGN_LEFT,
-			name = GetString(LBOOKS_REPORT_KEYBIND_COPY),
-			keybind = "UI_SHORTCUT_TERTIARY",
-			callback = ShowLoreLibraryCopyReport,
-			visible = IsReportShown,
-		},
-	}
+  loreLibraryReportKeybind = {
+    {
+      alignment = KEYBIND_STRIP_ALIGN_LEFT,
+      name = GetString(LBOOKS_REPORT_KEYBIND_RPRT),
+      keybind = "UI_SHORTCUT_SECONDARY",
+      callback = ShowLoreLibraryReport,
+    },
+    {
+      alignment = KEYBIND_STRIP_ALIGN_LEFT,
+      name = GetString(LBOOKS_REPORT_KEYBIND_SWITCH),
+      keybind = "UI_SHORTCUT_QUATERNARY",
+      callback = SwitchLoreLibraryReportMode,
+      visible = IsReportShown,
+    },
+    {
+      alignment = KEYBIND_STRIP_ALIGN_LEFT,
+      name = GetString(LBOOKS_REPORT_KEYBIND_COPY),
+      keybind = "UI_SHORTCUT_TERTIARY",
+      callback = ShowLoreLibraryCopyReport,
+      visible = IsReportShown,
+    },
+  }
 
-	local function OnStateChanged(oldState, newState)
-		if newState == SCENE_SHOWING then
-			KEYBIND_STRIP:AddKeybindButtonGroup(loreLibraryReportKeybind)
-		elseif newState == SCENE_HIDDEN then
-			KEYBIND_STRIP:RemoveKeybindButtonGroup(loreLibraryReportKeybind)
-			ShowLoreLibraryReport(true)
-		end
-	end
+  local function OnStateChanged(oldState, newState)
+    if newState == SCENE_SHOWING then
+      KEYBIND_STRIP:AddKeybindButtonGroup(loreLibraryReportKeybind)
+    elseif newState == SCENE_HIDDEN then
+      KEYBIND_STRIP:RemoveKeybindButtonGroup(loreLibraryReportKeybind)
+      ShowLoreLibraryReport(true)
+    end
+  end
 
-	LORE_LIBRARY_SCENE:RegisterCallback("StateChange", OnStateChanged)
+  LORE_LIBRARY_SCENE:RegisterCallback("StateChange", OnStateChanged)
 
-	local lorebookResearch = WINDOW_MANAGER:CreateControlFromVirtual("Lorebook_Research", ZO_LoreLibrary, "Lorebook_Research_Template")
-	lorebookResearch.searchBox = GetControl(lorebookResearch, "Box")
-	lorebookResearch.searchBox:SetHandler("OnTextChanged", OnSearchTextChanged)
+  local lorebookResearch = WINDOW_MANAGER:CreateControlFromVirtual("Lorebook_Research", ZO_LoreLibrary, "Lorebook_Research_Template")
+  lorebookResearch.searchBox = GetControl(lorebookResearch, "Box")
+  lorebookResearch.searchBox:SetHandler("OnTextChanged", OnSearchTextChanged)
 
-	ZO_PreHook(LORE_LIBRARY, "BuildCategoryList", BuildCategoryList)
-	ZO_PreHook(LORE_LIBRARY.list, "FilterScrollList", FilterScrollList)
+  ZO_PreHook(LORE_LIBRARY, "BuildCategoryList", BuildCategoryList)
+  ZO_PreHook(LORE_LIBRARY.list, "FilterScrollList", FilterScrollList)
 
-	--LoreBooks.EmulateLibrary()
-	BuildLorebooksLoreLibrary()
-	--BuildLoreBookSummary()
+  --LoreBooks.EmulateLibrary()
+  BuildLorebooksLoreLibrary()
+  --BuildLoreBookSummary()
 
-	local origLoreLibraryBuildBookList = LORE_LIBRARY.BuildBookList
-	LORE_LIBRARY.BuildBookList = function(self, ...)
-		origLoreLibraryBuildBookList(self, ...)
-		BuildBookListPostHook()
-	end
+  local origLoreLibraryBuildBookList = LORE_LIBRARY.BuildBookList
+  LORE_LIBRARY.BuildBookList = function(self, ...)
+    origLoreLibraryBuildBookList(self, ...)
+    BuildBookListPostHook()
+  end
 
-	local includeMotifsCheckbox = WINDOW_MANAGER:CreateControlFromVirtual("$(parent)IncludeMotifs", LORE_LIBRARY.totalCollectedLabel, "ZO_CheckButton" )
+  local includeMotifsCheckbox = WINDOW_MANAGER:CreateControlFromVirtual("$(parent)IncludeMotifs", LORE_LIBRARY.totalCollectedLabel, "ZO_CheckButton")
 
-	includeMotifsCheckbox:SetAnchor(LEFT, LORE_LIBRARY.totalCollectedLabel, RIGHT, 85, 0)
+  includeMotifsCheckbox:SetAnchor(LEFT, LORE_LIBRARY.totalCollectedLabel, RIGHT, 85, 0)
 
-	ZO_CheckButton_SetLabelText(includeMotifsCheckbox, GetString(LBOOKS_INCLUDE_MOTIFS_CHECKBOX))
-	ZO_CheckButton_SetToggleFunction(includeMotifsCheckbox, function()
-		LORE_LIBRARY:RefreshCollectedInfo()
-		LoreBooks.callbackObject:FireCallbacks(LoreBooks.callbackType.MOTIF_CHECKBOX_CHANGED)
-	end)
+  ZO_CheckButton_SetLabelText(includeMotifsCheckbox, GetString(LBOOKS_INCLUDE_MOTIFS_CHECKBOX))
+  ZO_CheckButton_SetToggleFunction(includeMotifsCheckbox, function()
+    LORE_LIBRARY:RefreshCollectedInfo()
+    LoreBooks.callbackObject:FireCallbacks(LoreBooks.callbackType.MOTIF_CHECKBOX_CHANGED)
+  end)
 
-	LORE_LIBRARY.RefreshCollectedInfo = function(library)
-		local currentlyCollected = library.totalCurrentlyCollected
-		local possibleCollected = library.totalPossibleCollected
+  LORE_LIBRARY.RefreshCollectedInfo = function(library)
+    local currentlyCollected = library.totalCurrentlyCollected
+    local possibleCollected = library.totalPossibleCollected
 
-		if not LoreBooks:IsMotifButtonChecked(includeMotifsCheckbox) then
-			currentlyCollected = currentlyCollected - library.motifsCurrentlyCollected
-			possibleCollected = possibleCollected - library.motifsPossibleCollected
-		end
-		library.totalCollectedLabel:SetText(zo_strformat(SI_LORE_LIBRARY_TOTAL_COLLECTED, currentlyCollected, possibleCollected))
-	end
+    if not LoreBooks:IsMotifButtonChecked(includeMotifsCheckbox) then
+      currentlyCollected = currentlyCollected - library.motifsCurrentlyCollected
+      possibleCollected = possibleCollected - library.motifsPossibleCollected
+    end
+    library.totalCollectedLabel:SetText(zo_strformat(SI_LORE_LIBRARY_TOTAL_COLLECTED, currentlyCollected, possibleCollected))
+  end
 
-	-- Add hireling correspondence sections
-	local function AddHirelingCorrespondenceSections()
-		local parent = LORE_LIBRARY.navigationTree:AddNode("ZO_LabelHeader", { name = GetString(SI_LORE_LIBRARY_HIRELING_CORRESPONDENCE_HEADER) })
-		for hirelingType = HIRELING_TYPE_ITERATION_BEGIN, HIRELING_TYPE_ITERATION_END do
-			local hirelings = {}
+  -- Add hireling correspondence sections
+  local function AddHirelingCorrespondenceSections()
+    local parent = LORE_LIBRARY.navigationTree:AddNode("ZO_LabelHeader", { name = GetString(SI_LORE_LIBRARY_HIRELING_CORRESPONDENCE_HEADER) })
+    for hirelingType = HIRELING_TYPE_ITERATION_BEGIN, HIRELING_TYPE_ITERATION_END do
+      local hirelings = {}
 
-			local hirelingCollection = GetHirelingMessageCollection(hirelingType)
-			if hirelingCollection.totalBooks > 0 then
-				-- If this hireling hasn't been set up with data yet, don't show it.
-				table.insert(hirelings, hirelingCollection)
-			end
+      local hirelingCollection = GetHirelingMessageCollection(hirelingType)
+      if hirelingCollection.totalBooks > 0 then
+        -- If this hireling hasn't been set up with data yet, don't show it.
+        table.insert(hirelings, hirelingCollection)
+      end
 
-			for k, hirelingData in ipairs(hirelings) do
-				LORE_LIBRARY.navigationTree:AddNode("ZO_LoreLibraryNavigationEntry", hirelingData, parent)
-			end
-		end
-	end
+      for k, hirelingData in ipairs(hirelings) do
+        LORE_LIBRARY.navigationTree:AddNode("ZO_LoreLibraryNavigationEntry", hirelingData, parent)
+      end
+    end
+  end
 
-	-- Hook into the BuildCategoryList to add hireling correspondence sections
-	local origBuildCategoryList = LORE_LIBRARY.BuildCategoryList
-	LORE_LIBRARY.BuildCategoryList = function(self, ...)
-		origBuildCategoryList(self, ...)
-		AddHirelingCorrespondenceSections()
-	end
+  -- Hook into the BuildCategoryList to add hireling correspondence sections
+  local origBuildCategoryList = LORE_LIBRARY.BuildCategoryList
+  LORE_LIBRARY.BuildCategoryList = function(self, ...)
+    origBuildCategoryList(self, ...)
+    AddHirelingCorrespondenceSections()
+  end
 end
 
 local lastReadBook
