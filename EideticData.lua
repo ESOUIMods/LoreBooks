@@ -59265,6 +59265,15 @@ local bookData = {
        [2] = { ["px"] = 0.4445747926, ["py"] = 0.4330003942, ["pm"] = 2427, ["fp"] = true, },
     },
   },
+  [8050] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Research of Salora Adlaron",
+    ["e"] = {
+       [1] = { ["px"] = 0.4447724016, ["py"] = 0.4331283945, ["pm"] = 2552, ["d"] = true, },
+       [2] = { ["px"] = 0.4445747926, ["py"] = 0.4330003942, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
   [8051] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
@@ -59865,6 +59874,14 @@ local bookData = {
     ["n"] = "All Bow to Mirrormoor!",
     ["e"] = {
       [1] = { ["px"] = 0.3468915882, ["py"] = 0.5308448012, ["pm"] = 2427, },
+    },
+  },
+  [8194] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Voices on the Wind",
+    ["e"] = {
+      [1] = { ["px"] = 0.4735079906, ["py"] = 0.5348935939, ["pm"] = 2427, },
     },
   },
   [8195] = {
