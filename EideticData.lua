@@ -59685,6 +59685,14 @@ local bookData = {
 	  [2] = { ["px"] = 0.4421360095, ["py"] = 0.5200491959, ["pm"] = 2514, },
     },
   },
+  [8141] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Gleaner's Claim",
+    ["e"] = {
+      [1] = { ["px"] = 0.8394324200, ["py"] = 0.9369076056, ["pm"] = 2509, ["d"] = true, },
+    },
+  },
   [8146] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
