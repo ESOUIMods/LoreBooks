@@ -58316,6 +58316,8 @@ local bookData = {
     ["cn"] = "West Weald Writings",
     ["n"] = "Saga of Varen's Rebellion, Part 3",
     ["e"] = {
+	  [1] = { ["px"] = 0.4341207882, ["py"] = 0.4837299968, ["pm"] = 2427, ["fp"] = true, },
+	  [2] = { ["px"] = 0.4364499963, ["py"] = 0.4816312073, ["pm"] = 2433, ["d"] = true, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
