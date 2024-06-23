@@ -27838,6 +27838,7 @@ local bookData = {
         ["px"] = 0.7645000000,
         ["pm"] = 13,
       },
+	  [5] = { ["px"] = 0.3325076051, ["py"] = 0.2758615966, ["pm"] = 583, },
     },
     ["n"] = "From Jofnir to Merric",
     ["cn"] = "Letters and Missives",
