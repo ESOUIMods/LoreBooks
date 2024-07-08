@@ -58675,8 +58675,10 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "The Day of Remembering",
+	["q"] = 7074,
     ["e"] = {
       [1] = { ["px"] = 0.3686036007, ["py"] = 0.5339540038, ["pm"] = 2505, ["d"] = true, },
+	  [2] = { ["px"] = 0.3681351909, ["py"] = 0.5240015932, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [7854] = {
@@ -58773,8 +58775,9 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Journal of Shardmarshal Vargas",
+	["q"] = 7075,
     ["e"] = {
-       [1] = { ["px"] = 0.4372432091, ["py"] = 0.5316975960, ["pm"] = 2514, },
+       [1] = { ["px"] = 0.4372432091, ["py"] = 0.5316975960, ["pm"] = 2514, ["qc"] = true, },
     },
   },
   [7867] = {
@@ -58945,6 +58948,7 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Warning to the Weald",
+	["q"] = 7074,
     ["e"] = {
       [1] = { ["px"] = 0.4182435897, ["py"] = 0.4761011919, ["pm"] = 2427, },
     },
@@ -58953,6 +58957,7 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Milvia Terthil's Note",
+	["q"] = 7074,
     ["e"] = {
       [1] = { ["px"] = 0.4171859934, ["py"] = 0.4765495926, ["pm"] = 2427, },
     },
@@ -59141,8 +59146,10 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weal Writings",
     ["n"] = "Mystic Tarim's Notes",
+	["q"] = 7073,
     ["e"] = {
-      [1] = {  ["px"] = 0.3422616142, ["py"] = 0.5191527916, ["pm"] = 2468, ["d"] = true, },
+      [1] = { ["px"] = 0.3422616142, ["py"] = 0.5191527916, ["pm"] = 2468, ["d"] = true, },
+	  [2] = { ["px"] = 0.3420783880, ["py"] = 0.5189767919, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [8013] = {
@@ -59257,8 +59264,10 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "King Nantharion's Orders",
+	["q"] = 7073,
     ["e"] = {
-       [1] = { ["px"] = 0.3422616142, ["py"] = 0.5191575915, ["pm"] = 2468, ["d"] = true, },
+      [1] = { ["px"] = 0.3422616142, ["py"] = 0.5191575915, ["pm"] = 2468, ["d"] = true, },
+	  [2] = { ["px"] = 0.3420783880, ["py"] = 0.5189767919, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [8028] = {
@@ -59266,7 +59275,7 @@ local bookData = {
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "Challenges of the Indrik",
     ["e"] = {
-       [1] = { ["px"] = 0.0152744002, ["py"] = 0.1725504006, ["pm"] = 2520, ["d"] = true, },
+      [1] = { ["px"] = 0.0152744002, ["py"] = 0.1725504006, ["pm"] = 2520, ["d"] = true, },
     },
   },
   [8044] = {
@@ -59573,6 +59582,7 @@ local bookData = {
     ["n"] = "Riddle of the Luminary Fires",
     ["e"] = {
       [1] = { ["px"] = 0.4627040113, ["py"] = 0.2605711973, ["pm"] = 2542, ["d"] = true, },
+	  [2] = { ["px"] = 0.0170099998, ["py"] = 0.1702332012, ["pm"] = 2515, },
     },
   },
   [8101] = {
@@ -59613,8 +59623,10 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Report on Feldagard Keep",
+	["q"] = 7072,
     ["e"] = {
       [1] = { ["px"] = 0.4123431989, ["py"] = 0.5207844105, ["pm"] = 2508, ["d"] = true, },
+	  [2] = { ["px"] = 0.4134119870, ["py"] = 0.5177311936, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [8107] = {
@@ -59623,6 +59635,22 @@ local bookData = {
     ["n"] = "Notes on the Fable of the Dragon",
     ["e"] = {
       [1] = { ["px"] = 0.0187488007, ["py"] = 0.1724692001, ["pm"] = 2523, ["d"] = true, },
+    },
+  },
+  [8108] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Riddles of the Dragon (Solutions)",
+    ["e"] = {
+      [1] = { ["px"] = 0.0187488007, ["py"] = 0.1724692001, ["pm"] = 2523, ["d"] = true, },
+    },
+  },
+  [8111] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Notes on the Fable of the Netch",
+    ["e"] = {
+      [1] = { ["px"] = 0.0157027997, ["py"] = 0.1708236002, ["pm"] = 2521, ["d"] = true, },
     },
   },
   [8116] = {
@@ -59730,6 +59758,7 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Leonaud Niscel's Journal",
+	["q"] = 7071,
     ["e"] = {
       [1] = { ["px"] = 0.4504751931, ["py"] = 0.4945927920, ["pm"] = 2444, ["d"] = true, },
       [2] = { ["px"] = 0.4464871947, ["py"] = 0.4962051928, ["pm"] = 2427, ["fp"] = true, },
@@ -59744,12 +59773,14 @@ local bookData = {
 	  [2] = { ["px"] = 0.4421360095, ["py"] = 0.5200491959, ["pm"] = 2514, },
     },
   },
-  [8141] = {
+  [8143] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Gleaner's Claim",
+	["q"] = 7075,
     ["e"] = {
       [1] = { ["px"] = 0.8394324200, ["py"] = 0.9369076056, ["pm"] = 2509, ["d"] = true, },
+	  [2] = { ["px"] = 0.4474383881, ["py"] = 0.4728427920, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [8146] = {
@@ -59757,6 +59788,7 @@ local bookData = {
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "An Argument For Common Sense",
     ["e"] = {
+	  [1] = { ["px"] = 0.0149835998, ["py"] = 0.1739736012, ["pm"] = 2515, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
@@ -59766,6 +59798,7 @@ local bookData = {
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "The Atmoran Cult Writings",
     ["e"] = {
+	  [1] = { ["px"] = 0.0170551999, ["py"] = 0.1749868011, ["pm"] = 2515, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
@@ -59809,6 +59842,7 @@ local bookData = {
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "We Sail for the Horizon",
     ["e"] = {
+	  [1] = { ["px"] = 0.0183100002, ["py"] = 0.1738720013, ["pm"] = 2515, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
