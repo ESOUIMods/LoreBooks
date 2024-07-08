@@ -59852,6 +59852,7 @@ local bookData = {
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "A Change in the Chimer",
     ["e"] = {
+	  [1] = { ["px"] = 0.0204355997, ["py"] = 0.1726780011, ["pm"] = 2515, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
