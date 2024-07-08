@@ -59367,6 +59367,7 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Note to a Scarlet",
+    ["q"] = 7206,
     ["e"] = {
        [1] = { ["px"] = 0.4191647943, ["py"] = 0.5400551989, ["pm"] = 2427, },
     },
@@ -59591,6 +59592,7 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Scarlets List",
+    ["q"] = 7206,
     ["e"] = {
       [1] = { ["px"] = 0.3922799955, ["py"] = 0.5137575954, ["pm"] = 2582, ["d"] = true, },
 	  [2] = { ["px"] = 0.3913051885, ["py"] = 0.5141448001, ["pm"] = 2427, ["fp"] = true, },
@@ -59600,6 +59602,7 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Weathered Journal",
+    ["q"] = 7206,
     ["e"] = {
       [1] = { ["px"] = 0.3920919955, ["py"] = 0.5139215953, ["pm"] = 2582, ["d"] = true, },
 	  [2] = { ["px"] = 0.3913051885, ["py"] = 0.5141448001, ["pm"] = 2427, ["fp"] = true, },
@@ -59609,6 +59612,7 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Burned Fragment",
+    ["q"] = 7206,
     ["e"] = {
       [1] = { ["px"] = 0.3757495909, ["py"] = 0.5432808000, ["pm"] = 2427, },
     },
@@ -59617,6 +59621,7 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Letter to Valenia",
+    ["q"] = 7206,
     ["e"] = {
       [1] = { ["px"] = 0.3802680113, ["py"] = 0.5435900031, ["pm"] = 2604, },
     },
