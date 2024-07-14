@@ -58300,6 +58300,7 @@ local bookData = {
     ["cn"] = "West Weald Writings",
     ["n"] = "Saga of Varen's Rebellion, Part 1",
     ["e"] = {
+	  [1] = { ["px"] = 0.4272499951, ["py"] = 0.4776003956, ["pm"] = 2427, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
@@ -58347,6 +58348,7 @@ local bookData = {
     ["cn"] = "West Weald Writings",
     ["n"] = "Wood Elf Nicknames and Bynames",
     ["e"] = {
+	  [1] = { ["px"] = 0.4177587903, ["py"] = 0.5403815957, ["pm"] = 2427, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
@@ -58398,6 +58400,7 @@ local bookData = {
     ["cn"] = "West Weald Writings",
     ["n"] = "The Footsteps of Shezarr",
     ["e"] = {
+	  [1] = { ["px"] = 0.4563963880, ["py"] = 0.5232023925, ["pm"] = 2427, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
@@ -58859,6 +58862,7 @@ local bookData = {
     ["cn"] = "West Weald Writings",
     ["n"] = "Until We Wander Home Again",
     ["e"] = {
+	  [1] = { ["px"] = 0.3964027927, ["py"] = 0.5336579994, ["pm"] = 2427, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
