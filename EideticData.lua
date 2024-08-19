@@ -58268,6 +58268,15 @@ local bookData = {
       [1] = { ["px"] = 0.4261787894, ["py"] = 0.5027267941, ["pm"] = 2427, },
     },
   },
+  [7792] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Notes on Tho'at Replicanum",
+    ["e"] = {
+      [1] = { ["px"] = 0.1758555953, ["py"] = -0.0311927934, ["pm"] = 2407, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
   [7793] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
