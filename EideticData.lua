@@ -58518,7 +58518,7 @@ local bookData = {
   },
   [7823] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Haldain's Journal",
     ["e"] = {
       [1] = { ["px"] = 0.4426791997, ["py"] = 0.5536704001, ["pm"] = 2453, ["d"] = true, },
@@ -59159,7 +59159,7 @@ local bookData = {
   },
   [8012] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Mystic Tarim's Notes",
 	["q"] = 7073,
     ["e"] = {
@@ -59169,7 +59169,7 @@ local bookData = {
   },
   [8013] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "The Awful Truth About the Green Pact",
     ["e"] = {
       [1] = { ["px"] = 0.4396283998, ["py"] = 0.5531760000, ["pm"] = 2453, ["d"] = true, },
@@ -59180,7 +59180,7 @@ local bookData = {
   },
   [8014] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Open Tabs: 2E 579",
 	["q"] = 7084,
     ["e"] = {
@@ -59189,7 +59189,7 @@ local bookData = {
   },
   [8015] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Old Monk's Diary",
 	["q"] = 7084,
     ["e"] = {
@@ -59198,7 +59198,7 @@ local bookData = {
   },
   [8016] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Lumber Camp Journal 1",
     ["e"] = {
       [1] = { ["px"] = 0.4398059997, ["py"] = 0.5536144001, ["pm"] = 2453, ["d"] = true, },
@@ -59207,7 +59207,7 @@ local bookData = {
   },
   [8017] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Lumber Camp Journal 2",
     ["e"] = {
       [1] = { ["px"] = 0.4395591998, ["py"] = 0.5561716001, ["pm"] = 2453, ["d"] = true, },
@@ -59216,7 +59216,7 @@ local bookData = {
   },
   [8018] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Lumber Camp Journal 3",
     ["e"] = {
       [1] = { ["px"] = 0.4427491998, ["py"] = 0.5558908000, ["pm"] = 2453, ["d"] = true, },
@@ -59225,7 +59225,7 @@ local bookData = {
   },
   [8019] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Save Skingrad!",
     ["e"] = {
       [1] = { ["px"] = 0.4367936088, ["py"] = 0.5275451956, ["pm"] = 2514, },
