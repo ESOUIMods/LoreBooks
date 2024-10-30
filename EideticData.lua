@@ -27838,6 +27838,7 @@ local bookData = {
         ["px"] = 0.7645000000,
         ["pm"] = 13,
       },
+      [5] = { ["px"] = 0.3325076051, ["py"] = 0.2758615966, ["pm"] = 583, },
     },
     ["n"] = "From Jofnir to Merric",
     ["cn"] = "Letters and Missives",
@@ -28625,6 +28626,7 @@ local bookData = {
         ["pm"] = 1576,
         ["zm"] = 1555,
       },
+      [8] = { ["px"] = 0.4435564091, ["py"] = 0.5254399949, ["pm"] = 2514, },
     },
   },
   [2565] = {
@@ -40405,6 +40407,7 @@ local bookData = {
       },
       [22] = { ["px"] = 0.9377860150, ["py"] = 0.3865956061, ["pm"] = 2343, ["zm"] = 2274, },
       [23] = { ["px"] = 0.8314488096, ["py"] = 0.4165651877, ["pm"] = 2386, ["zm"] = 2274, },
+      [24] = { ["px"] = 0.4121527866, ["py"] = 0.4891444105, ["pm"] = 2592, },
     },
   },
   [4813] = {
@@ -57967,6 +57970,7 @@ local bookData = {
       [8] = { ["px"] = 0.6097244054, ["py"] = 0.6774832075, ["pm"] = 1940, },
       [9] = { ["px"] = 0.0710136029, ["py"] = 0.6023444052, ["pm"] = 2163, },
       [10] = { ["px"] = 0.9418383804, ["py"] = 0.3945583964, ["pm"] = 2343, },
+      [11] = { ["px"] = 0.4429324099, ["py"] = 0.5193907952, ["pm"] = 2514, },
     },
   },
   [7753] = {
@@ -58149,6 +58153,69 @@ local bookData = {
       [2] = { ["px"] = 0.1537979973, ["py"] = -0.0282487988, ["pm"] = 2275, ["fp"] = true, ["qp"] = true, },
     },
   },
+  [7778] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Letter from Nothelas",
+    ["e"] = {
+      [1] = { ["px"] = 0.3861631907, ["py"] = 0.5449195946, ["pm"] = 2427, },
+    },
+  },
+  [7779] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Wines of West Weald",
+    ["e"] = {
+      [1] = { ["px"] = 0.4419032099, ["py"] = 0.5175079958, ["pm"] = 2514, },
+    },
+  },
+  [7780] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Proclamation of Neutrality",
+    ["e"] = {
+      [1] = { ["px"] = 0.4245931848, ["py"] = 0.5361859954, ["pm"] = 2427, },
+    },
+  },
+  [7781] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "A Hunter's Journey II: The Imperial Reserve",
+    ["e"] = {
+      [1] = { ["px"] = 0.4253515916, ["py"] = 0.5201819970, ["pm"] = 2427, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7782] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Emperor of the Villa",
+    ["e"] = {
+      [1] = { ["px"] = 0.4703103866, ["py"] = 0.5433655926, ["pm"] = 2427, ["fp"] = true, },
+      [2] = { ["px"] = 0.4695736073, ["py"] = 0.5428752155, ["pm"] = 2441, ["d"] = true, },
+    },
+  },
+  [7783] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "House Rayn of Silvenar",
+    ["e"] = {
+      [1] = { ["px"] = 0.4365740089, ["py"] = 0.5317355956, ["pm"] = 2514, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7784] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Gold Road: A Merchant's Journey",
+    ["e"] = {
+      [1] = { ["px"] = 0.4233047895, ["py"] = 0.5031867955, ["pm"] = 2427, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
   [7786] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
@@ -58174,6 +58241,31 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.1758471953, ["py"] = -0.0311995934, ["pm"] = 2407, ["d"] = true, },
       [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
+  [7789] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "On the War of Righteousness",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7790] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Book of Circles, Fredas Maxim",
+    ["e"] = {
+      [1] = { ["px"] = 0.4200163952, ["py"] = 0.5409719967, ["pm"] = 2427, },
+    },
+  },
+  [7791] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Mastery of Compassion",
+    ["e"] = {
+      [1] = { ["px"] = 0.4261787894, ["py"] = 0.5027267941, ["pm"] = 2427, },
     },
   },
   [7793] = {
@@ -58203,6 +58295,34 @@ local bookData = {
       [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
     },
   },
+  [7796] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Saga of Varen's Rebellion, Part 1",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7797] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Saga of Varen's Rebellion, Part 2",
+    ["e"] = {
+      [1] = { ["px"] = 0.4518523914, ["py"] = 0.5083567962, ["pm"] = 2427, },
+    },
+  },
+  [7798] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Saga of Varen's Rebellion, Part 3",
+    ["e"] = {
+      [1] = { ["px"] = 0.4341207882, ["py"] = 0.4837299968, ["pm"] = 2427, ["fp"] = true, },
+      [2] = { ["px"] = 0.4364499963, ["py"] = 0.4816312073, ["pm"] = 2433, ["d"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
   [7799] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
@@ -58218,6 +58338,33 @@ local bookData = {
     ["n"] = "The Waiting Door",
     ["e"] = {
       [1] = { ["px"] = 0.9388071804, ["py"] = 0.3854871955, ["pm"] = 2343, ["zm"] = 2274, },
+    },
+  },
+  [7801] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Wood Elf Nicknames and Bynames",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7802] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Mirror Portal: A Gleaner Legend",
+    ["e"] = {
+      [1] = { ["px"] = 0.3839427914, ["py"] = 0.5416035922, ["pm"] = 2427, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7803] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Blue Aedral Shipment Details",
+    ["e"] = {
+      [1] = { ["px"] = 0.4349891958, ["py"] = 0.4828036072, ["pm"] = 2433, ["d"] = true, },
     },
   },
   [7804] = {
@@ -58243,6 +58390,25 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.8939672051, ["py"] = 0.4530512014, ["pm"] = 2274, },
     },
+  },
+  [7807] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Footsteps of Shezarr",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7809] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Vashabar Threat",
+    ["e"] = {
+      [1] = { ["px"] = 0.4184799859, ["py"] = 0.5252471915, ["pm"] = 2427, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
   },
   [7810] = {
     ["c"] = true,
@@ -58309,6 +58475,15 @@ local bookData = {
       [2] = { ["px"] = 0.8367668291, ["py"] = 0.3469560064, ["pm"] = 1060, ["fp"] = true, },
     },
   },
+  [7819] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Captain Abitius's Orders",
+    ["e"] = {
+      [1] = { ["px"] = 0.3303819987, ["py"] = 0.5278428071, ["pm"] = 2442, ["d"] = true, },
+      [2] = { ["px"] = 0.3305423899, ["py"] = 0.5288419978, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
   [7821] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
@@ -58325,6 +58500,15 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.1758739930, ["py"] = -0.0305527941, ["pm"] = 2417, ["d"] = true, },
       [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
+  [7823] = {
+    ["c"] = true,
+    ["cn"] = "West Weal Writings",
+    ["n"] = "Haldain's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.4426791997, ["py"] = 0.5536704001, ["pm"] = 2453, ["d"] = true, },
+      [2] = { ["px"] = 0.4414015918, ["py"] = 0.5522111919, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [7824] = {
@@ -58355,6 +58539,100 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.8377119989, ["py"] = 0.3458927932, ["pm"] = 2448, ["d"] = true, },
       [2] = { ["px"] = 0.8367668291, ["py"] = 0.3469560064, ["pm"] = 1060, ["fp"] = true, },
+    },
+  },
+  [7827] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Jagga Drinking Song",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7834] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Will and Testament of Lady Weatherleah",
+    ["q"] = 7082,
+    ["e"] = {
+      [1] = { ["px"] = 0.4328384035, ["py"] = 0.4971279887, ["pm"] = 2568, ["d"] = true, },
+      [2] = { ["px"] = 0.4309543863, ["py"] = 0.4951179969, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7835] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Letter of Warning",
+    ["q"] = 7082,
+    ["e"] = {
+      [1] = { ["px"] = 0.4331904035, ["py"] = 0.4970983887, ["pm"] = 2568, ["d"] = true, },
+      [2] = { ["px"] = 0.4309543863, ["py"] = 0.4951179969, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7836] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Varen's Call to Arms",
+    ["e"] = {
+      [1] = { ["px"] = 0.4323464035, ["py"] = 0.4972403886, ["pm"] = 2568, ["d"] = true, },
+      [2] = { ["px"] = 0.4309543863, ["py"] = 0.4951179969, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7837] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Lord Gallio Valente's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.5000515873, ["py"] = 0.4179967931, ["pm"] = 2427, },
+    },
+  },
+  [7838] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Edric's Confession",
+    ["q"] = 7082,
+    ["e"] = {
+      [1] = { ["px"] = 0.4275355866, ["py"] = 0.4921415945, ["pm"] = 2427, },
+    },
+  },
+  [7839] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Letter to Pelena",
+    ["q"] = 7082,
+    ["e"] = {
+      [1] = { ["px"] = 0.4321892036, ["py"] = 0.4960767887, ["pm"] = 2568, ["d"] = true, },
+      [2] = { ["px"] = 0.4309543863, ["py"] = 0.4951179969, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7840] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "To Investigator Mizzik",
+    ["q"] = 7082,
+    ["e"] = {
+      [1] = { ["px"] = 0.4319196035, ["py"] = 0.4968283886, ["pm"] = 2568, ["d"] = true, },
+      [2] = { ["px"] = 0.4309543863, ["py"] = 0.4951179969, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7842] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Note from Lady Weatherleah",
+    ["q"] = 7082,
+    ["e"] = {
+      [1] = { ["px"] = 0.4349255998, ["py"] = 0.4950015951, ["pm"] = 2471, ["d"] = true, },
+      [2] = { ["px"] = 0.4309543863, ["py"] = 0.4951179969, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7844] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Necromancer Anniar's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.4022131852, ["py"] = 0.5111771940, ["pm"] = 2427, },
+      [2] = { ["px"] = 0.4168715921, ["py"] = 0.5065207968, ["pm"] = 2427, },
     },
   },
   [7845] = {
@@ -58393,12 +58671,245 @@ local bookData = {
       [2] = { ["px"] = 0.2128399972, ["py"] = 0.2703303973, ["pm"] = 667, ["fp"] = true, },
     },
   },
+  [7853] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Day of Remembering",
+    ["e"] = {
+      [1] = { ["px"] = 0.3686036007, ["py"] = 0.5339540038, ["pm"] = 2505, ["d"] = true, },
+    },
+  },
+  [7854] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Terror's Orders",
+    ["q"] = 7090,
+    ["e"] = {
+      [1] = { ["px"] = 0.3357599892, ["py"] = 0.5332807934, ["pm"] = 2427, },
+    },
+  },
+  [7855] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Tham's Note",
+    ["q"] = 7090,
+    ["e"] = {
+      [1] = { ["px"] = 0.3345363873, ["py"] = 0.5390995988, ["pm"] = 2427, },
+    },
+  },
   [7856] = {
     ["c"] = true,
     ["cn"] = "Daedric Cults",
     ["n"] = "A Call for Recollection",
     ["e"] = {
       [1] = { ["px"] = 0.4421107823, ["py"] = 0.7517819888, ["pm"] = 9, },
+    },
+  },
+  [7857] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Journal of Legionary Jucanis",
+    ["e"] = {
+      [1] = { ["px"] = 0.3317147986, ["py"] = 0.5203496077, ["pm"] = 2442, ["d"] = true, },
+      [2] = { ["px"] = 0.3305423899, ["py"] = 0.5288419978, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7860] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Letter to Captain Leronus",
+    ["q"] = 7083,
+    ["e"] = {
+      [1] = { ["px"] = 0.4522343933, ["py"] = 0.5390163971, ["pm"] = 2427, },
+    },
+  },
+  [7861] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Notes on the Five Loyal Retainers",
+    ["q"] = 7086,
+    ["e"] = {
+      [1] = { ["px"] = 0.4448507923, ["py"] = 0.4711503953, ["pm"] = 2427, },
+    },
+  },
+  [7862] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Dealing with the Recollection",
+    ["q"] = 7086,
+    ["e"] = {
+      [1] = { ["px"] = 0.4436735958, ["py"] = 0.4726639926, ["pm"] = 2427, },
+    },
+  },
+  [7863] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Report From the Wendir Dig",
+    ["q"] = 7086,
+    ["e"] = {
+      [1] = { ["px"] = 0.4441191923, ["py"] = 0.4752519946, ["pm"] = 2427, },
+    },
+  },
+  [7864] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Letter to Vashabar",
+    ["q"] = 7086,
+    ["e"] = {
+      [1] = { ["px"] = 0.4458439929, ["py"] = 0.4710575961, ["pm"] = 2427, },
+    },
+  },
+  [7865] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Epitaph for the Five Loyal Retainers",
+    ["q"] = 7086,
+    ["e"] = {
+      [1] = { ["px"] = 0.4478772107, ["py"] = 0.4715660001, ["pm"] = 2445, ["d"] = true, },
+      [2] = { ["px"] = 0.4464487931, ["py"] = 0.4721263924, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7866] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Journal of Shardmarshal Vargas",
+    ["e"] = {
+      [1] = { ["px"] = 0.4372432091, ["py"] = 0.5316975960, ["pm"] = 2514, },
+    },
+  },
+  [7867] = {
+    ["c"] = true,
+    ["cn"] = "Daedric Cults",
+    ["n"] = "Orders for Immediate Retrieval",
+    ["q"] = 7085,
+    ["e"] = {
+      [1] = { ["px"] = 0.4119747925, ["py"] = 0.5610704005, ["pm"] = 2427, },
+    },
+  },
+  [7868] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Letter to Lady Weatherleah",
+    ["q"] = 7082,
+    ["e"] = {
+      [1] = { ["px"] = 0.4327040035, ["py"] = 0.4973539886, ["pm"] = 2568, ["d"] = true, },
+      [2] = { ["px"] = 0.4309543863, ["py"] = 0.4951179969, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7870] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Fable of the Indrik (Annotated)",
+    ["q"] = 7197,
+    ["e"] = {
+      [1] = { ["px"] = 0.0161376000, ["py"] = 0.1718188011, ["pm"] = 2515, },
+      [2] = { ["px"] = 0.0154608002, ["py"] = 0.1725856006, ["pm"] = 2520, ["d"] = true, },
+    },
+  },
+  [7871] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Materials for Novice Necromancers",
+    ["e"] = {
+      [1] = { ["px"] = 0.1767475932, ["py"] = -0.0305320006, ["pm"] = 2415, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
+  [7873] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Ambush Orders",
+    ["e"] = {
+      [1] = { ["px"] = 0.3888707873, ["py"] = 0.5015631956, ["pm"] = 2427, },
+    },
+  },
+  [7876] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Delivery Confirmation",
+    ["q"] = 7180,
+    ["e"] = {
+      [1] = { ["px"] = 0.4100055865, ["py"] = 0.4998712107, ["pm"] = 2592, },
+    },
+  },
+  [7878] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Good Luck on the Gold Road",
+    ["e"] = {
+      [1] = { ["px"] = 0.3371171898, ["py"] = 0.5385307965, ["pm"] = 2427, },
+    },
+  },
+  [7880] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Gala Invitation",
+    ["e"] = {
+      [1] = { ["px"] = 0.4591668040, ["py"] = 0.4580859939, ["pm"] = 2459, ["d"] = true, },
+      [2] = { ["px"] = 0.4510175933, ["py"] = 0.4511131938, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [7882] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Until We Wander Home Again",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7883] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Meridia's Radiance",
+    ["e"] = {
+      [1] = { ["px"] = 0.4129767951, ["py"] = 0.5368995907, ["pm"] = 2427, },
+    },
+  },
+  [7885] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Things Lost, Things Forgotten",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7886] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "A Profitable Discovery",
+    ["q"] = 7180,
+    ["e"] = {
+      [1] = { ["px"] = 0.4103295876, ["py"] = 0.4997196111, ["pm"] = 2592, },
+    },
+  },
+  [7887] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Alchemist's Report",
+    ["q"] = 7180,
+    ["e"] = {
+      [1] = { ["px"] = 0.4062263871, ["py"] = 0.4834928107, ["pm"] = 2592, },
+    },
+  },
+  [7888] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "An Increasing Problem",
+    ["q"] = 7180,
+    ["e"] = {
+      [1] = { ["px"] = 0.4066551873, ["py"] = 0.4837064106, ["pm"] = 2592, },
+    },
+  },
+  [7889] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Your Services Are Required",
+    ["q"] = 7180,
+    ["e"] = {
+      [1] = { ["px"] = 0.4182499992, ["py"] = 0.4881556112, ["pm"] = 2516, ["d"] = true, },
+      [2] = { ["px"] = 0.4177259858, ["py"] = 0.4877703939, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [7890] = {
@@ -58409,6 +58920,61 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.4232636090, ["py"] = 0.6334640087, ["pm"] = 2540, ["d"] = true, },
       [2] = { ["px"] = 0.4217207851, ["py"] = 0.6364300014, ["pm"] = 256, ["fp"] = true, },
+    },
+  },
+  [7891] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Constable Ulbren's Notebook",
+    ["q"] = 7180,
+    ["e"] = {
+      [1] = { ["px"] = 0.4098807864, ["py"] = 0.4907676107, ["pm"] = 2592, },
+    },
+  },
+  [7894] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Rite of Propagation",
+    ["q"] = 7080,
+    ["e"] = {
+      [1] = { ["px"] = 0.3822427862, ["py"] = 0.5460564111, ["pm"] = 2506, ["d"] = true, },
+      [2] = { ["px"] = 0.3821764113, ["py"] = 0.5461732030, ["pm"] = 2604, ["fp"] = true, },
+    },
+  },
+  [7895] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Warning to the Weald",
+    ["e"] = {
+      [1] = { ["px"] = 0.4182435897, ["py"] = 0.4761011919, ["pm"] = 2427, },
+    },
+  },
+  [7896] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Milvia Terthil's Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.4171859934, ["py"] = 0.4765495926, ["pm"] = 2427, },
+    },
+  },
+  [7898] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Vashabar In Valenwood and Beyond",
+    ["q"] = 7080,
+    ["e"] = {
+      [1] = { ["px"] = 0.3822099862, ["py"] = 0.5461336111, ["pm"] = 2506, ["d"] = true, },
+      [2] = { ["px"] = 0.3821764113, ["py"] = 0.5461732030, ["pm"] = 2604, ["fp"] = true, },
+    },
+  },
+  [7900] = {
+    ["c"] = true,
+    ["cn"] = "Tomes of Tributes",
+    ["n"] = "The Green Lady's Primer for Children",
+    ["q"] = 7080,
+    ["e"] = {
+      [1] = { ["px"] = 0.3821443862, ["py"] = 0.5461380111, ["pm"] = 2506, ["d"] = true, },
+      [2] = { ["px"] = 0.3821764113, ["py"] = 0.5461732030, ["pm"] = 2604, ["fp"] = true, },
     },
   },
   [7901] = {
@@ -58435,6 +59001,30 @@ local bookData = {
     ["q"] = 7079,
     ["e"] = {
       [1] = { ["px"] = 0.7666896105, ["py"] = 0.5083392080, ["pm"] = 819, ["d"] = true, },
+    },
+  },
+  [7935] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Gelw Vashreef",
+    ["e"] = {
+      [1] = { ["px"] = 0.4119267864, ["py"] = 0.4928860106, ["pm"] = 2592, },
+    },
+  },
+  [7936] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Dalenn Forster",
+    ["e"] = {
+      [1] = { ["px"] = 0.4127275872, ["py"] = 0.4934684104, ["pm"] = 2592, },
+    },
+  },
+  [7937] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Evanoa Harklin",
+    ["e"] = {
+      [1] = { ["px"] = 0.4123487868, ["py"] = 0.4926852108, ["pm"] = 2592, },
     },
   },
   [7938] = {
@@ -58483,20 +59073,291 @@ local bookData = {
       [2] = { ["px"] = 0.2128399972, ["py"] = 0.2703303973, ["pm"] = 667, ["fp"] = true, },
     },
   },
+  [7995] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Ulbren af-Ander",
+    ["e"] = {
+      [1] = { ["px"] = 0.4125523876, ["py"] = 0.4936080108, ["pm"] = 2592, },
+    },
+  },
+  [7997] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "An Abbreviated History of Skingrad",
+    ["e"] = {
+      [1] = { ["px"] = 0.4285903900, ["py"] = 0.5303251942, ["pm"] = 2427, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [7999] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "To Tribune Alea Idolus",
+    ["q"] = 7083,
+    ["e"] = {
+      [1] = { ["px"] = 0.4511375942, ["py"] = 0.5348319910, ["pm"] = 2427, },
+    },
+  },
+  [8001] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Gilraedal's Book of Obscure and Ancient Spirits",
+    ["q"] = 7084,
+    ["e"] = {
+      [1] = { ["px"] = 0.4207803876, ["py"] = 0.5121975905, ["pm"] = 2427, },
+    },
+  },
+  [8002] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Warning Bulletin!",
+    ["e"] = {
+      [1] = { ["px"] = 0.4574875900, ["py"] = 0.5107167978, ["pm"] = 2427, },
+      [2] = { ["px"] = 0.4593371873, ["py"] = 0.5132511921, ["pm"] = 2427, },
+      [3] = { ["px"] = 0.4560503954, ["py"] = 0.5137955912, ["pm"] = 2427, },
+    },
+  },
   [8003] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "Ulfsild's Note",
+    ["q"] = 7104,
     ["e"] = {
       [1] = { ["px"] = 0.1547416013, ["py"] = 0.7241304264, ["pm"] = 2519, ["d"] = true, },
+    },
+  },
+  [8004] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Truth About the Green Pact",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8012] = {
+    ["c"] = true,
+    ["cn"] = "West Weal Writings",
+    ["n"] = "Mystic Tarim's Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.3422616142, ["py"] = 0.5191527916, ["pm"] = 2468, ["d"] = true, },
+    },
+  },
+  [8013] = {
+    ["c"] = true,
+    ["cn"] = "West Weal Writings",
+    ["n"] = "The Awful Truth About the Green Pact",
+    ["e"] = {
+      [1] = { ["px"] = 0.4396283998, ["py"] = 0.5531760000, ["pm"] = 2453, ["d"] = true, },
+      [2] = { ["px"] = 0.4414015918, ["py"] = 0.5522111919, ["pm"] = 2427, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8014] = {
+    ["c"] = true,
+    ["cn"] = "West Weal Writings",
+    ["n"] = "Open Tabs: 2E 579",
+    ["q"] = 7084,
+    ["e"] = {
+      [1] = { ["px"] = 0.4237955866, ["py"] = 0.5154187963, ["pm"] = 2427, },
+    },
+  },
+  [8015] = {
+    ["c"] = true,
+    ["cn"] = "West Weal Writings",
+    ["n"] = "Old Monk's Diary",
+    ["q"] = 7084,
+    ["e"] = {
+      [1] = { ["px"] = 0.4235095945, ["py"] = 0.5118387898, ["pm"] = 2427, },
+    },
+  },
+  [8016] = {
+    ["c"] = true,
+    ["cn"] = "West Weal Writings",
+    ["n"] = "Lumber Camp Journal 1",
+    ["e"] = {
+      [1] = { ["px"] = 0.4398059997, ["py"] = 0.5536144001, ["pm"] = 2453, ["d"] = true, },
+      [2] = { ["px"] = 0.4414015918, ["py"] = 0.5522111919, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8017] = {
+    ["c"] = true,
+    ["cn"] = "West Weal Writings",
+    ["n"] = "Lumber Camp Journal 2",
+    ["e"] = {
+      [1] = { ["px"] = 0.4395591998, ["py"] = 0.5561716001, ["pm"] = 2453, ["d"] = true, },
+      [2] = { ["px"] = 0.4414015918, ["py"] = 0.5522111919, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8018] = {
+    ["c"] = true,
+    ["cn"] = "West Weal Writings",
+    ["n"] = "Lumber Camp Journal 3",
+    ["e"] = {
+      [1] = { ["px"] = 0.4427491998, ["py"] = 0.5558908000, ["pm"] = 2453, ["d"] = true, },
+      [2] = { ["px"] = 0.4414015918, ["py"] = 0.5522111919, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8019] = {
+    ["c"] = true,
+    ["cn"] = "West Weal Writings",
+    ["n"] = "Save Skingrad!",
+    ["e"] = {
+      [1] = { ["px"] = 0.4367936088, ["py"] = 0.5275451956, ["pm"] = 2514, },
     },
   },
   [8020] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "Fable of the Indrik",
+    ["q"] = 7197,
     ["e"] = {
       [1] = { ["px"] = 0.0161347998, ["py"] = 0.1718332011, ["pm"] = 2515, },
+    },
+  },
+  [8021] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Fable of the Dragon (Annotated)",
+    ["q"] = 7203,
+    ["e"] = {
+      [1] = { ["px"] = 0.0164547997, ["py"] = 0.1769284015, ["pm"] = 2515, },
+      [2] = { ["px"] = 0.0187060007, ["py"] = 0.1725560000, ["pm"] = 2523, ["d"] = true, },
+    },
+  },
+  [8022] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Nable of the Fetch",
+    ["e"] = {
+      [1] = { ["px"] = 0.0164883997, ["py"] = 0.1718408012, ["pm"] = 2515, },
+    },
+  },
+  [8023] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Fable of the Gryphon",
+    ["e"] = {
+      [1] = { ["px"] = 0.0181035996, ["py"] = 0.1710804003, ["pm"] = 2522, ["d"] = true, },
+    },
+  },
+  [8025] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Fable of the Dragon",
+    ["q"] = 7203,
+    ["e"] = {
+      [1] = { ["px"] = 0.0179788001, ["py"] = 0.1723896014, ["pm"] = 2515, },
+    },
+  },
+  [8027] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "King Nantharion's Orders",
+    ["e"] = {
+      [1] = { ["px"] = 0.3422616142, ["py"] = 0.5191575915, ["pm"] = 2468, ["d"] = true, },
+    },
+  },
+  [8028] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Challenges of the Indrik",
+    ["e"] = {
+      [1] = { ["px"] = 0.0152744002, ["py"] = 0.1725504006, ["pm"] = 2520, ["d"] = true, },
+    },
+  },
+  [8044] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Lady Weatherleah's Journal",
+    ["q"] = 7082,
+    ["e"] = {
+      [1] = { ["px"] = 0.4329168035, ["py"] = 0.4974179886, ["pm"] = 2568, ["d"] = true, },
+      [2] = { ["px"] = 0.4309543863, ["py"] = 0.4951179969, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8045] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Memorial to Uriel Weatherleah",
+    ["e"] = {
+      [1] = { ["px"] = 0.4275175933, ["py"] = 0.4919683922, ["pm"] = 2427, },
+    },
+  },
+  [8048] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Last of the Ayleid Kings",
+    ["e"] = {
+      [1] = { ["px"] = 0.4483404107, ["py"] = 0.4728899999, ["pm"] = 2445, ["d"] = true, },
+      [2] = { ["px"] = 0.4464487931, ["py"] = 0.4721263924, ["pm"] = 2427, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8049] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Journal of Melus Marsicus",
+    ["e"] = {
+      [1] = { ["px"] = 0.4444584016, ["py"] = 0.4329607945, ["pm"] = 2552, ["d"] = true, },
+      [2] = { ["px"] = 0.4445747926, ["py"] = 0.4330003942, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8050] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Research of Salora Adlaron",
+    ["e"] = {
+      [1] = { ["px"] = 0.4447724016, ["py"] = 0.4331283945, ["pm"] = 2552, ["d"] = true, },
+      [2] = { ["px"] = 0.4445747926, ["py"] = 0.4330003942, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8051] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Sales Pitch for the Null Arca",
+    ["e"] = {
+      [1] = { ["px"] = 0.4447540016, ["py"] = 0.4331783945, ["pm"] = 2552, ["d"] = true, },
+      [2] = { ["px"] = 0.4445747926, ["py"] = 0.4330003942, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8052] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Seeker Manadra's Expedition",
+    ["e"] = {
+      [1] = { ["px"] = 0.4446768016, ["py"] = 0.4327603945, ["pm"] = 2552, ["d"] = true, },
+      [2] = { ["px"] = 0.4445747926, ["py"] = 0.4330003942, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8053] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Neletai's Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.4447640016, ["py"] = 0.4331703945, ["pm"] = 2552, ["d"] = true, },
+      [2] = { ["px"] = 0.4445747926, ["py"] = 0.4330003942, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8054] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Cavot Agnan's Breakthrough",
+    ["e"] = {
+      [1] = { ["px"] = 0.4444924016, ["py"] = 0.4327099946, ["pm"] = 2552, ["d"] = true, },
+      [2] = { ["px"] = 0.4445747926, ["py"] = 0.4330003942, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8056] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Note to a Scarlet",
+    ["e"] = {
+      [1] = { ["px"] = 0.4191647943, ["py"] = 0.5400551989, ["pm"] = 2427, },
     },
   },
   [8058] = {
@@ -58507,6 +59368,149 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = -0.0393440002, ["py"] = 0.0900340000, ["pm"] = 2449, ["d"] = true, },
       [2] = { ["px"] = 0.8435692244, ["py"] = 0.3173584089, ["pm"] = 1060, ["fp"] = true, },
+    },
+  },
+  [8059] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Bogvir's Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.4996227937, ["py"] = 0.4175995936, ["pm"] = 2427, },
+    },
+  },
+  [8066] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Riddles of the Dragon",
+    ["q"] = 7203,
+    ["e"] = {
+      [1] = { ["px"] = 0.0188964007, ["py"] = 0.1725404000, ["pm"] = 2523, ["d"] = true, },
+    },
+  },
+  [8067] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Ulfsild's Notes: The Impossible Riddle",
+    ["q"] = 7203,
+    ["e"] = {
+      [1] = { ["px"] = 0.1984959952, ["py"] = 0.2821500023, ["pm"] = 950, ["d"] = true, },
+    },
+  },
+  [8068] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Mizbi and the Magic Door (Annotated)",
+    ["q"] = 7203,
+    ["e"] = {
+      [1] = { ["px"] = 0.1549092013, ["py"] = 0.7241512264, ["pm"] = 2519, ["d"] = true, },
+    },
+  },
+  [8069] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "The History of Yawning and Proper Technique",
+    ["q"] = 7203,
+    ["e"] = {
+      [1] = { ["px"] = 0.0204339998, ["py"] = 0.1736816014, ["pm"] = 2515, },
+    },
+  },
+  [8071] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Ulfsild's Notes: The Origin of Luminaries",
+    ["q"] = 7203,
+    ["e"] = {
+      [1] = { ["px"] = 0.5031980139, ["py"] = 0.6609072279, ["pm"] = 1587, ["d"] = true, },
+    },
+  },
+  [8072] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Fable of the Netch (Annotated)",
+    ["q"] = 7204,
+    ["e"] = {
+      [1] = { ["px"] = 0.0195603997, ["py"] = 0.1754420011, ["pm"] = 2515, },
+      [2] = { ["px"] = 0.0160451997, ["py"] = 0.1710960002, ["pm"] = 2521, ["d"] = true, },
+    },
+  },
+  [8073] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Games of the Netch",
+    ["q"] = 7204,
+    ["e"] = {
+      [1] = { ["px"] = 0.0158655997, ["py"] = 0.1708752002, ["pm"] = 2521, ["d"] = true, },
+    },
+  },
+  [8074] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Legionary Ulrath's Report",
+    ["q"] = 7214,
+    ["e"] = {
+      [1] = { ["px"] = 0.3555179890, ["py"] = 0.5177280001, ["pm"] = 2427, },
+    },
+  },
+  [8081] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Fable of the Gryphon",
+    ["e"] = {
+      [1] = { ["px"] = 0.0178199999, ["py"] = 0.1718400013, ["pm"] = 2515, },
+    },
+  },
+  [8082] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Gryphon Fable (Annotated) Page 1",
+    ["q"] = 7217,
+    ["e"] = {
+      [1] = { ["px"] = 0.0207107997, ["py"] = 0.1754172015, ["pm"] = 2515, },
+    },
+  },
+  [8083] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Gryphon Fable (Annotated) Page 3",
+    ["q"] = 7217,
+    ["e"] = {
+      [1] = { ["px"] = 0.6464784117, ["py"] = 0.3802680005, ["pm"] = 198, },
+    },
+  },
+  [8084] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Gryphon Fable (Annotated) Page 4",
+    ["q"] = 7217,
+    ["e"] = {
+      [1] = { ["px"] = 0.6684020095, ["py"] = 0.3948959899, ["pm"] = 703, ["d"] = true, },
+    },
+  },
+  [8085] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Gryphon Fable (Annotated) Page 2",
+    ["q"] = 7217,
+    ["e"] = {
+      [1] = { ["px"] = 0.5976371989, ["py"] = 0.3758507926, ["pm"] = 125, },
+    },
+  },
+  [8086] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Safeguards of the Gryphon",
+    ["q"] = 7217,
+    ["e"] = {
+      [1] = { ["px"] = 0.0182363995, ["py"] = 0.1709776003, ["pm"] = 2522, ["d"] = true, },
+    },
+  },
+  [8088] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Special Volume Instructions",
+    ["q"] = 7217,
+    ["e"] = {
+      [1] = { ["px"] = 0.1719175985, ["py"] = 0.0512147977, ["pm"] = 2346, ["d"] = true, },
     },
   },
   [8091] = {
@@ -58554,12 +59558,324 @@ local bookData = {
       [2] = { ["px"] = 0.2128399972, ["py"] = 0.2703303973, ["pm"] = 667, ["fp"] = true, },
     },
   },
+  [8096] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Fable of the Crow",
+    ["q"] = 7220,
+    ["e"] = {
+      [1] = { ["px"] = 0.4616375909, ["py"] = 0.2574164003, ["pm"] = 2541, ["d"] = true, },
+    },
+  },
+  [8097] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Riddle of the Luminary Fires",
+    ["e"] = {
+      [1] = { ["px"] = 0.4627040113, ["py"] = 0.2605711973, ["pm"] = 2542, ["d"] = true, },
+    },
+  },
+  [8101] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Scarlets List",
+    ["e"] = {
+      [1] = { ["px"] = 0.3922799955, ["py"] = 0.5137575954, ["pm"] = 2582, ["d"] = true, },
+      [2] = { ["px"] = 0.3913051885, ["py"] = 0.5141448001, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8102] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Weathered Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.3920919955, ["py"] = 0.5139215953, ["pm"] = 2582, ["d"] = true, },
+      [2] = { ["px"] = 0.3913051885, ["py"] = 0.5141448001, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8103] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Burned Fragment",
+    ["e"] = {
+      [1] = { ["px"] = 0.3757495909, ["py"] = 0.5432808000, ["pm"] = 2427, },
+    },
+  },
+  [8104] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Letter to Valenia",
+    ["e"] = {
+      [1] = { ["px"] = 0.3802680113, ["py"] = 0.5435900031, ["pm"] = 2604, },
+    },
+  },
+  [8106] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Report on Feldagard Keep",
+    ["e"] = {
+      [1] = { ["px"] = 0.4123431989, ["py"] = 0.5207844105, ["pm"] = 2508, ["d"] = true, },
+    },
+  },
+  [8107] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Notes on the Fable of the Dragon",
+    ["e"] = {
+      [1] = { ["px"] = 0.0187488007, ["py"] = 0.1724692001, ["pm"] = 2523, ["d"] = true, },
+    },
+  },
+  [8116] = {
+    ["c"] = true,
+    ["cn"] = "Tomes of Tributes",
+    ["n"] = "Challenge of the Paladin",
+    ["e"] = {
+      [1] = { ["px"] = 0.4367128093, ["py"] = 0.5271075953, ["pm"] = 2514, },
+    },
+  },
+  [8124] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Count's Boar Hunt",
+    ["e"] = {
+      [1] = { ["px"] = 0.4366828091, ["py"] = 0.5272679947, ["pm"] = 2514, },
+    },
+  },
   [8125] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Gaea's Letter",
     ["e"] = {
       [1] = { ["px"] = 0.4407163942, ["py"] = 0.5049575979, ["pm"] = 2427, },
+      [2] = { ["px"] = 0.4406987901, ["py"] = 0.5049331948, ["pm"] = 2427, },
+    },
+  },
+  [8126] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Skingrad Widow's Lament",
+    ["e"] = {
+      [1] = { ["px"] = 0.4443644097, ["py"] = 0.5269679952, ["pm"] = 2514, },
+    },
+  },
+  [8128] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Taking Care of Your Bear",
+    ["e"] = {
+      [1] = { ["px"] = 0.4415964088, ["py"] = 0.5281943963, ["pm"] = 2514, },
+    },
+  },
+  [8130] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Shield of Julianos",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8131] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Spellwright's Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.4082255898, ["py"] = 0.5296504012, ["pm"] = 2427, },
+    },
+  },
+  [8132] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Spellwright's Second Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.4089051903, ["py"] = 0.5285387908, ["pm"] = 2427, },
+    },
+  },
+  [8133] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Spellwright's Third Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.4097099881, ["py"] = 0.5277895981, ["pm"] = 2427, },
+    },
+  },
+  [8134] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Traveler's Guide to West Weald",
+    ["e"] = {
+      [1] = { ["px"] = 0.4115295867, ["py"] = 0.4909192110, ["pm"] = 2592, },
+    },
+  },
+  [8135] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Dark Company: Deserters or Mercenaries?",
+    ["e"] = {
+      [1] = { ["px"] = 0.4548244041, ["py"] = 0.4547527941, ["pm"] = 2459, ["d"] = true, },
+      [2] = { ["px"] = 0.4510175933, ["py"] = 0.4511131938, ["pm"] = 2427, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8138] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Rite of Theft Song",
+    ["e"] = {
+      [1] = { ["px"] = 0.4080775869, ["py"] = 0.4935612103, ["pm"] = 2592, },
+    },
+  },
+  [8140] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Leonaud Niscel's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.4504751931, ["py"] = 0.4945927920, ["pm"] = 2444, ["d"] = true, },
+      [2] = { ["px"] = 0.4464871947, ["py"] = 0.4962051928, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8141] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Mercenaries Required",
+    ["e"] = {
+      [1] = { ["px"] = 0.4396359859, ["py"] = 0.5351299901, ["pm"] = 2427, },
+      [2] = { ["px"] = 0.4421360095, ["py"] = 0.5200491959, ["pm"] = 2514, },
+    },
+  },
+  [8141] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Gleaner's Claim",
+    ["e"] = {
+      [1] = { ["px"] = 0.8394324200, ["py"] = 0.9369076056, ["pm"] = 2509, ["d"] = true, },
+    },
+  },
+  [8146] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "An Argument For Common Sense",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8147] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "The Atmoran Cult Writings",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8148] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Ulfsild's Log: The Netch",
+    ["e"] = {
+      [1] = { ["px"] = 0.0167375999, ["py"] = 0.1711484013, ["pm"] = 2515, },
+    },
+  },
+  [8149] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Chronicler's Travelogue, Volume 4",
+    ["e"] = {
+      [1] = { ["px"] = 0.0197343999, ["py"] = 0.1749000015, ["pm"] = 2515, },
+      [2] = { ["px"] = 0.0197343999, ["py"] = 0.1749000015, ["pm"] = 2515, },
+    },
+  },
+  [8152] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Votary Llaren's Addition to the Scholarium",
+    ["e"] = {
+      [1] = { ["px"] = 0.0152155999, ["py"] = 0.1742796014, ["pm"] = 2515, },
+    },
+  },
+  [8153] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "A Change in the Chimer",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8156] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "We Sail for the Horizon",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8157] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "The Ashes of Red Mountain",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8159] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "The Secret of the Netch",
+    ["e"] = {
+      [1] = { ["px"] = 0.0167063997, ["py"] = 0.1712148013, ["pm"] = 2515, },
+    },
+  },
+  [8160] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Our Story, Part I",
+    ["e"] = {
+      [1] = { ["px"] = 0.0178787998, ["py"] = 0.1703436013, ["pm"] = 2515, },
+    },
+  },
+  [8161] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Our Story, Part III",
+    ["e"] = {
+      [1] = { ["px"] = 0.0196075998, ["py"] = 0.1748844016, ["pm"] = 2515, },
+    },
+  },
+  [8162] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "The Conquests of Hubalajad",
+    ["e"] = {
+      [1] = { ["px"] = 0.0190859997, ["py"] = 0.1744064015, ["pm"] = 2515, },
+    },
+  },
+  [8163] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Ulfsild's Log: The Indrik",
+    ["e"] = {
+      [1] = { ["px"] = 0.0158751997, ["py"] = 0.1720980012, ["pm"] = 2515, },
+    },
+  },
+  [8165] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Nahlia's Journal 1",
+    ["e"] = {
+      [1] = { ["px"] = 0.0186644000, ["py"] = 0.1752348010, ["pm"] = 2515, },
+    },
+  },
+  [8166] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Nahlia's Journal 3",
+    ["e"] = {
+      [1] = { ["px"] = 0.0213184000, ["py"] = 0.1731780014, ["pm"] = 2515, },
     },
   },
   [8167] = {
@@ -58570,6 +59886,48 @@ local bookData = {
       [1] = { ["px"] = 0.0165399997, ["py"] = 0.1767432015, ["pm"] = 2515, },
     },
   },
+  [8168] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "The Thirsty Dead",
+    ["e"] = {
+      [1] = { ["px"] = 0.3990664070, ["py"] = 0.5111347962, ["pm"] = 2439, ["d"] = true, },
+      [2] = { ["px"] = 0.4017211862, ["py"] = 0.5110415922, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8184] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Thulgeg's March",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8185] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "First Letter to the Mages Guild, Draft Copy",
+    ["e"] = {
+      [1] = { ["px"] = 0.0167692000, ["py"] = 0.1741424014, ["pm"] = 2515, },
+    },
+  },
+  [8186] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Second Letter to the Mages Guild, Draft Copy",
+    ["e"] = {
+      [1] = { ["px"] = 0.0167419999, ["py"] = 0.1740856013, ["pm"] = 2515, },
+    },
+  },
+  [8187] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Third Letter to the Mages Guild, Draft Copy",
+    ["e"] = {
+      [1] = { ["px"] = 0.0167692000, ["py"] = 0.1740700014, ["pm"] = 2515, },
+    },
+  },
   [8189] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
@@ -58578,12 +59936,194 @@ local bookData = {
       [1] = { ["px"] = 0.0174615997, ["py"] = 0.1734452013, ["pm"] = 2515, },
     },
   },
+  [8191] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Legionary Jadreitha's Journal Entry",
+    ["e"] = {
+      [1] = { ["px"] = 0.4414031943, ["py"] = 0.4561999928, ["pm"] = 2427, },
+    },
+  },
+  [8192] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Endemir's Journal Entry",
+    ["e"] = {
+      [1] = { ["px"] = 0.4170191895, ["py"] = 0.5537844004, ["pm"] = 2427, },
+    },
+  },
+  [8193] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "All Bow to Mirrormoor!",
+    ["e"] = {
+      [1] = { ["px"] = 0.3468915882, ["py"] = 0.5308448012, ["pm"] = 2427, },
+    },
+  },
+  [8194] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Voices on the Wind",
+    ["e"] = {
+      [1] = { ["px"] = 0.4735079906, ["py"] = 0.5348935939, ["pm"] = 2427, },
+    },
+  },
+  [8195] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Ulfsild's Log: The Dragon",
+    ["e"] = {
+      [1] = { ["px"] = 0.0183899999, ["py"] = 0.1721564014, ["pm"] = 2515, },
+    },
+  },
   [8196] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "Ulfsild's Log: Your Discovery, My Farewell",
     ["e"] = {
       [1] = { ["px"] = 0.0168395997, ["py"] = 0.1735684013, ["pm"] = 2515, },
+    },
+  },
+  [8197] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Captain's Log of the Intrepid Guar",
+    ["e"] = {
+      [1] = { ["px"] = 0.0180611996, ["py"] = 0.1721052013, ["pm"] = 2515, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8198] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Ulfsild's Log: The Gryphon and the Fox",
+    ["e"] = {
+      [1] = { ["px"] = 0.0181832001, ["py"] = 0.1718328011, ["pm"] = 2515, },
+    },
+  },
+  [8199] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Ancient Hunter's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.0151947998, ["py"] = 0.1743512014, ["pm"] = 2515, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8201] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Cries from Empty Mouths",
+    ["e"] = {
+      [1] = { ["px"] = 0.0193120002, ["py"] = 0.1742516014, ["pm"] = 2515, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
+  },
+  [8202] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Julian Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.0202267996, ["py"] = 0.1738280014, ["pm"] = 2515, },
+    },
+  },
+  [8206] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "The Largesse of the Archmagister",
+    ["e"] = {
+      [1] = { ["px"] = 0.0195343999, ["py"] = 0.1754628010, ["pm"] = 2515, },
+    },
+  },
+  [8207] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Caal: Assistant Chronicler",
+    ["e"] = {
+      [1] = { ["px"] = 0.0194851997, ["py"] = 0.1748152015, ["pm"] = 2515, },
+    },
+  },
+  [8208] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Sigil of the Indrik Analysis",
+    ["e"] = {
+      [1] = { ["px"] = 0.0196848000, ["py"] = 0.1750644010, ["pm"] = 2515, },
+    },
+  },
+  [8209] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Firandil's Scholarium Experience",
+    ["e"] = {
+      [1] = { ["px"] = 0.0175764000, ["py"] = 0.1736576014, ["pm"] = 2515, },
+    },
+  },
+  [8210] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Sigil of the Netch Analysis",
+    ["e"] = {
+      [1] = { ["px"] = 0.0198075997, ["py"] = 0.1754256013, ["pm"] = 2515, },
+    },
+  },
+  [8211] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Sigil of the Gryphon Analysis",
+    ["e"] = {
+      [1] = { ["px"] = 0.0197348002, ["py"] = 0.1754396013, ["pm"] = 2515, },
+    },
+  },
+  [8212] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Sigil of the Dragon Analysis",
+    ["e"] = {
+      [1] = { ["px"] = 0.0196088000, ["py"] = 0.1754548016, ["pm"] = 2515, },
+    },
+  },
+  [8213] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "The Class Script Conundrum",
+    ["e"] = {
+      [1] = { ["px"] = 0.0196619999, ["py"] = 0.1754956014, ["pm"] = 2515, },
+    },
+  },
+  [8215] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Nahlia's Journal 2",
+    ["e"] = {
+      [1] = { ["px"] = 0.0187995998, ["py"] = 0.1751520012, ["pm"] = 2515, },
+    },
+  },
+  [8216] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Nahlia's Journal 4",
+    ["e"] = {
+      [1] = { ["px"] = 0.0212823999, ["py"] = 0.1730956012, ["pm"] = 2515, },
+    },
+  },
+  [8217] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Our Story, Part II",
+    ["e"] = {
+      [1] = { ["px"] = 0.0164295998, ["py"] = 0.1706704012, ["pm"] = 2515, },
+    },
+  },
+  [8218] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Our Story, Part IV",
+    ["e"] = {
+      [1] = { ["px"] = 0.0201359997, ["py"] = 0.1737316012, ["pm"] = 2515, },
     },
   },
 }
