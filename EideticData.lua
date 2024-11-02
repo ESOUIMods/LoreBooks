@@ -59744,7 +59744,7 @@ local bookData = {
       [2] = { ["px"] = 0.4421360095, ["py"] = 0.5200491959, ["pm"] = 2514, },
     },
   },
-  [8141] = {
+  [8143] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Gleaner's Claim",
