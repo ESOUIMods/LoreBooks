@@ -120,6 +120,7 @@ end
 -- Pins -----------------------------------------------------------------------
 local function GetPinTextureBookshelf(self)
   local zoneId = 1261
+  --[[TODO account for 1283 and 1414 ]]--
   if self and self.m_PinTag then
     if self.m_PinTag.z then zoneId = GetParentZoneId(self.m_PinTag.z) end
   end
@@ -232,7 +233,7 @@ pinTooltipCreatorEidetic.creator = function(pin)
   local pinTag = pin.m_PinTag
   local title, icon, known = GetLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, pinTag.c, pinTag.b)
   local collection = GetLoreCollectionInfo(internal.LORE_LIBRARY_EIDETIC, pinTag.c)
-  if icon == MISSING_TEXTURE then icon = PLACEHOLDER_TEXTURE end
+  if icon == internal.MISSING_TEXTURE then icon = internal.PLACEHOLDER_TEXTURE end
   local dungeonMapId = pinTag.pm
   local mapName = zo_strformat(SI_WINDOW_TITLE_WORLD_MAP, GetMapNameById(dungeonMapId))
 
@@ -1375,7 +1376,7 @@ local function BuildCategoryList(self)
   end
 
   table.sort(lbcategories, NameSorter)
-
+  local firstNode = nil
   local collectionNodeToSelect = nil
   for i, categoryData in ipairs(lbcategories) do
     local parent = self.navigationTree:AddNode("ZO_LabelHeader", categoryData)
@@ -1407,7 +1408,7 @@ local function BuildCategoryList(self)
     table.sort(lbcategories[i].lbcollections, NameSorter)
 
     local search = string.lower(LORE_LIBRARY.search)
-    local firstNode = nil
+
     for _, collectionData in ipairs(lbcategories[i].lbcollections) do
       local node = self.navigationTree:AddNode("ZO_LoreLibraryNavigationEntry", collectionData, parent)
       if not firstNode then firstNode = node end
@@ -1439,35 +1440,78 @@ local function Sanitize(value)
   return value:gsub("[-*+?^$().[%]%%]", "%%%0") -- escape meta characters
 end
 
+local function GetHirelingMessageCollection(hirelingType)
+  local numHirelingMessages, maxHirelingMessages = GetNumUnlockedHirelingCorrespondence(hirelingType)
+  local categoryData = {
+    hirelingType = hirelingType,
+    name = GetString("SI_HIRELINGTYPE", hirelingType),
+    numKnownBooks = numHirelingMessages,
+    totalBooks = maxHirelingMessages,
+  }
+  return categoryData
+end
+
+local function GetHirelingMessages(hirelingType)
+  local numHirelingMessages = GetNumUnlockedHirelingCorrespondence(hirelingType)
+  local messages = {}
+  for messageIndex = 1, numHirelingMessages do
+    local sender, subject, body, icon = GetHirelingCorrespondenceInfoByIndex(hirelingType, messageIndex)
+    local title = zo_strformat(SI_LORE_LIBRARY_HIRELING_CORRESPONDENCE_ENTRY_FORMATTER, subject, messageIndex)
+    table.insert(messages, { hirelingType = hirelingType, sender = sender, subject = subject, body = body, icon = icon, title = title, messageIndex = messageIndex })
+  end
+  return messages
+end
+
 local function FilterScrollList(self)
 
   local BOOK_DATA_TYPE = 1
+  local HIRELING_MESSAGE_DATA_TYPE = 2
+  local HIRELING_MESSAGE_HEADER_TYPE = 3
 
-  local categoryIndex = self.owner:GetSelectedCategoryIndex()
-  local collectionIndex = self.owner:GetSelectedCollectionIndex()
-
-  local totalBooks = select(4, GetLoreCollectionInfo(categoryIndex, collectionIndex))
-
+  local categoryData = self.owner.navigationTree:GetSelectedData()
   local scrollData = ZO_ScrollList_GetDataList(self.list)
   ZO_ScrollList_Clear(self.list)
 
   local search = Sanitize(string.lower(LORE_LIBRARY.search))
 
-  if search ~= "" and string.len(search) >= 2 then
-    for bookIndex = 1, totalBooks do
-      local bookName = GetLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
-      if string.find(string.lower(bookName), search) then
-        scrollData[#scrollData + 1] = ZO_ScrollList_CreateDataEntry(BOOK_DATA_TYPE, { categoryIndex = categoryIndex, collectionIndex = collectionIndex, bookIndex = bookIndex })
+  if categoryData.hirelingType ~= nil then
+    local messages = GetHirelingMessages(categoryData.hirelingType)
+    local currentHirelingSender = ""
+
+    for index, messageData in ipairs(messages) do
+      local nextSender = string.lower(messageData.sender)
+      if currentHirelingSender ~= nextSender then
+        currentHirelingSender = nextSender
+        table.insert(scrollData, ZO_ScrollList_CreateDataEntry(HIRELING_MESSAGE_HEADER_TYPE,
+          {
+            hirelingType = messageData.hirelingType,
+            name = zo_strformat(SI_LORE_LIBRARY_HIRELING_CORRESPONDENCE_SENDER_FORMATTER, currentHirelingSender),
+            sortOrder = index,
+          }))
       end
+      messageData.sortOrder = index
+      table.insert(scrollData, ZO_ScrollList_CreateDataEntry(HIRELING_MESSAGE_DATA_TYPE, messageData))
     end
   else
-    for bookIndex = 1, totalBooks do
-      scrollData[#scrollData + 1] = ZO_ScrollList_CreateDataEntry(BOOK_DATA_TYPE, { categoryIndex = categoryIndex, collectionIndex = collectionIndex, bookIndex = bookIndex })
+    local categoryIndex = self.owner:GetSelectedCategoryIndex()
+    local collectionIndex = self.owner:GetSelectedCollectionIndex()
+    local totalBooks = select(4, GetLoreCollectionInfo(categoryIndex, collectionIndex))
+
+    if search ~= "" and string.len(search) >= 2 then
+      for bookIndex = 1, totalBooks do
+        local bookName = GetLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
+        if string.find(string.lower(bookName), search) then
+          scrollData[#scrollData + 1] = ZO_ScrollList_CreateDataEntry(BOOK_DATA_TYPE, { categoryIndex = categoryIndex, collectionIndex = collectionIndex, bookIndex = bookIndex })
+        end
+      end
+    else
+      for bookIndex = 1, totalBooks do
+        scrollData[#scrollData + 1] = ZO_ScrollList_CreateDataEntry(BOOK_DATA_TYPE, { categoryIndex = categoryIndex, collectionIndex = collectionIndex, bookIndex = bookIndex })
+      end
     end
   end
 
   return true
-
 end
 
 --[[TODO Update Right Click coordinates menu from Lore Library ]]--
@@ -1725,7 +1769,6 @@ function LoreBooks:IsMotifButtonChecked(control)
 end
 
 local function RebuildLoreLibrary()
-
   loreLibraryReportKeybind = {
     {
       alignment = KEYBIND_STRIP_ALIGN_LEFT,
@@ -1788,7 +1831,6 @@ local function RebuildLoreLibrary()
   end)
 
   LORE_LIBRARY.RefreshCollectedInfo = function(library)
-
     local currentlyCollected = library.totalCurrentlyCollected
     local possibleCollected = library.totalPossibleCollected
 
@@ -1797,6 +1839,31 @@ local function RebuildLoreLibrary()
       possibleCollected = possibleCollected - library.motifsPossibleCollected
     end
     library.totalCollectedLabel:SetText(zo_strformat(SI_LORE_LIBRARY_TOTAL_COLLECTED, currentlyCollected, possibleCollected))
+  end
+
+  -- Add hireling correspondence sections
+  local function AddHirelingCorrespondenceSections()
+    local parent = LORE_LIBRARY.navigationTree:AddNode("ZO_LabelHeader", { name = GetString(SI_LORE_LIBRARY_HIRELING_CORRESPONDENCE_HEADER) })
+    for hirelingType = HIRELING_TYPE_ITERATION_BEGIN, HIRELING_TYPE_ITERATION_END do
+      local hirelings = {}
+
+      local hirelingCollection = GetHirelingMessageCollection(hirelingType)
+      if hirelingCollection.totalBooks > 0 then
+        -- If this hireling hasn't been set up with data yet, don't show it.
+        table.insert(hirelings, hirelingCollection)
+      end
+
+      for k, hirelingData in ipairs(hirelings) do
+        LORE_LIBRARY.navigationTree:AddNode("ZO_LoreLibraryNavigationEntry", hirelingData, parent)
+      end
+    end
+  end
+
+  -- Hook into the BuildCategoryList to add hireling correspondence sections
+  local origBuildCategoryList = LORE_LIBRARY.BuildCategoryList
+  LORE_LIBRARY.BuildCategoryList = function(self, ...)
+    origBuildCategoryList(self, ...)
+    AddHirelingCorrespondenceSections()
   end
 end
 

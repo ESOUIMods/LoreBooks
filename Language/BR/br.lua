@@ -68,7 +68,7 @@ ZO_CreateStringId("LBOOKS_COLLECTED", "Mostrar livros já coletados")
 ZO_CreateStringId("LBOOKS_COLLECTED_DESC", "Mostrar/Ocultar ícones de livros já coletados no mapa.")
 
 ZO_CreateStringId("LBOOKS_SHARE_DATA", "Compartilhe suas descobertas com o autor do LoreBooks")
-ZO_CreateStringId("LBOOKS_SHARE_DATA_DESC", "Habilitar esta opção compartilhará suas descobertas com o autor do LoreBooks enviando automaticamente um e-mail no jogo com dados coletados.\Esta opção só está disponível para usuários da UE, mesmo se os dados coletados forem compartilhados com os NAs\Por favor, observe que você pode encontrar um pequeno atraso nas suas habilidades quando o email é enviado. O correio é enviado silenciosamente a cada 30 livros lidos.")
+ZO_CreateStringId("LBOOKS_SHARE_DATA_DESC", "Habilitar esta opção compartilhará suas descobertas com o autor do LoreBooks enviando automaticamente um e-mail no jogo com dados coletados.\Esta opção só está disponível para usuários da UE, mesmo se os dados coletados forem compartilhados com os NAs\nPor favor, observe que você pode encontrar um pequeno atraso nas suas habilidades quando o email é enviado. O correio é enviado silenciosamente a cada 30 livros lidos.")
 
 ZO_CreateStringId("LBOOKS_EIDETIC", "Mostrar Memória Eidética desconhecida")
 ZO_CreateStringId("LBOOKS_EIDETIC_DESC", "Mostrar/Esconder Pergaminhos de Memória Eidética desconhecidos no mapa. Esses pergaminhos são relacionados ao folclore e não envolvidos na Progressão da Guilda dos Magos, mas apenas informativos sobre Tamriel.")
