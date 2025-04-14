@@ -60484,6 +60484,14 @@ local bookData = {
 	  [1] = { ["px"] = 0.2487763957, ["py"] = 0.6742607979, ["pm"] = 545, },
     },
   },
+  [8293] = {
+    ["c"] = true,
+    ["cn"] = "Daedric Cults",
+    ["n"] = "Worm Cult Journal",
+    ["e"] = {
+	  [1] = { ["px"] = 0.1900079987, ["py"] = 0.2113976028, ["pm"] = 2640, ["d"] = true, },
+    },
+  },
   [8294] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
@@ -60498,6 +60506,14 @@ local bookData = {
     ["n"] = "Scribing for the Ebonheart Pact",
     ["e"] = {
       [1] = { ["px"] = 0.6264244259, ["py"] = 0.4564004054, ["pm"] = 574, }
+    },
+  },
+  [8297] = {
+    ["c"] = true,
+    ["cn"] = "Daedric Cults",
+    ["n"] = "Resurrection and Revelation",
+    ["e"] = {
+	  [1] = { ["px"] = 0.1894623987, ["py"] = 0.2127424028, ["pm"] = 2640, ["d"] = true, },
     },
   },
   [8298] = {
@@ -60586,6 +60602,14 @@ local bookData = {
 	  [1] = { ["px"] = 0.5022427901, ["py"] = 0.6106779950, ["pm"] = 2653, ["d"] = true, },
     },
   },
+  [8330] = {
+    ["c"] = true,
+    ["cn"] = "Military Orders and Reports",
+    ["n"] = "Guildmaster Merric's Notes",
+    ["e"] = {
+	  [1] = { ["px"] = 0.6497804191, ["py"] = 0.2771851944, ["pm"] = 61, },
+    },
+  },
   [8386] = {
     ["c"] = true,
     ["cn"] = "Companions Correspondence",
@@ -60611,6 +60635,14 @@ local bookData = {
     ["e"] = {
 	  [1] = { ["px"] = 0.4950304122, ["py"] = 0.6289695947, ["pm"] = 2616, ["d"] = true, },
 	  [2] = { ["px"] = 0.4309772089, ["py"] = 0.6594036164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8389] = {
+    ["c"] = true,
+    ["cn"] = "Daedric Cults",
+    ["n"] = "Summons to the Remnant",
+    ["e"] = {
+	  [1] = { ["px"] = 0.1656948005, ["py"] = 0.2532948016, ["pm"] = 2641, ["d"] = true, },
     },
   },
   [8409] = {
