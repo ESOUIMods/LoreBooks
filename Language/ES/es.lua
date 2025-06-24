@@ -90,7 +90,7 @@ ZO_CreateStringId("LBOOKS_UNLOCK_EIDETIC_WARNING", "Esta opción está desactiva
 --worldmap filters
 ZO_CreateStringId("LBOOKS_FILTER_UNKNOWN", "Libros desconocidos")
 ZO_CreateStringId("LBOOKS_FILTER_COLLECTED", "Libros coleccionados")
-ZO_CreateStringId("LBOOKS_FILTER_EICOLLECTED", "<<1>> (Coleccionado)")
+ZO_CreateStringId("LBOOKS_FILTER_COLLECTED", "<<1>> (Coleccionado)")
 ZO_CreateStringId("LBOOKS_FILTER_BOOKSHELF", "Lorebooks Bookshelf")
 
 --research

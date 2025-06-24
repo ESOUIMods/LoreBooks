@@ -90,7 +90,7 @@ ZO_CreateStringId("LBOOKS_UNLOCK_EIDETIC_WARNING", "This option is disabled beca
 --worldmap filters
 ZO_CreateStringId("LBOOKS_FILTER_UNKNOWN", "未発見の伝説の書物")
 ZO_CreateStringId("LBOOKS_FILTER_COLLECTED", "収集済みの伝説の書物")
-ZO_CreateStringId("LBOOKS_FILTER_EICOLLECTED", "<<1>> (収集済)")
+ZO_CreateStringId("LBOOKS_FILTER_COLLECTED", "<<1>> (収集済)")
 ZO_CreateStringId("LBOOKS_FILTER_BOOKSHELF", "Lorebooks Bookshelf")
 
 --research

@@ -104,7 +104,7 @@ function LoreBooks:CreateLamPanel()
   }
   optionsTable[#optionsTable + 1] = {
     type = "dropdown",
-    name = zo_strformat(LBOOKS_PIN_TEXTURE_EIDETIC, GetLoreCategoryInfo(3)),
+    name = zo_strformat(LBOOKS_PIN_TEXTURE_EIDETIC, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC)),
     tooltip = GetString(LBOOKS_PIN_TEXTURE_DESC),
     choices = pinTexturesList,
     choicesValues = pinTexturesValues,

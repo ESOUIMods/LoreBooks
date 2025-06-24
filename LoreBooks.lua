@@ -66,9 +66,7 @@ end
 
 local function emit_message(log_type, text)
   if text == "" then text = "[Empty String]" end
-  task:Call(function()
-    create_log(log_type, text)
-  end)
+  create_log(log_type, text)
 end
 
 local function emit_table(log_type, t, indent, table_history)
@@ -776,15 +774,15 @@ local function InitializePins()
                              additionalLayout = {
                                function(pin)
                                  if (LoreBooks.db.pinTexture.type == internal.PIN_ICON_REAL) then
-                                   --replace icon with icon from LoreLibrary
-                                   local _, texture = LoreBooks_GetNewLoreBookInfo(1, pin.pinTag[3], pin.pinTag[4])
+                                   -- replace icon with icon from LoreLibrary
+                                   local _, texture = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_SHALIDOR, pin.pinTag[3], pin.pinTag[4])
                                    local icon = pin:GetNamedChild("Background")
                                    if icon == internal.MISSING_TEXTURE then icon = internal.PLACEHOLDER_TEXTURE end
                                    icon:SetTexture(texture)
                                  end
                                end,
                                function(pin)
-                                 --I do not need to reset anything (texture is changed automatically), so the function is empty
+                                 -- I do not need to reset anything (texture is changed automatically), so the function is empty
                                end
                              }
   }
@@ -799,15 +797,15 @@ local function InitializePins()
                                     additionalLayout = {
                                       function(pin)
                                         if (LoreBooks.db.pinTextureEidetic == internal.PIN_ICON_REAL) then
-                                          --replace icon with icon from LoreLibrary
-                                          local _, texture = LoreBooks_GetNewLoreBookInfo(3, pin.pinTag.c, pin.pinTag.b)
+                                          -- replace icon with icon from LoreLibrary
+                                          local _, texture = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, pin.pinTag.c, pin.pinTag.b)
                                           local icon = pin:GetNamedChild("Background")
                                           if icon == internal.MISSING_TEXTURE then icon = internal.PLACEHOLDER_TEXTURE end
                                           icon:SetTexture(texture)
                                         end
                                       end,
                                       function(pin)
-                                        --I do not need to reset anything (texture is changed automatically), so the function is empty
+                                        -- I do not need to reset anything (texture is changed automatically), so the function is empty
                                       end
                                     }
   }
@@ -834,48 +832,85 @@ local function InitializePins()
                                       }
   }
 
-  --initialize map pins
+  -- initialize map pins
   LMP:AddPinType(internal.PINS_UNKNOWN, function() MapCallbackCreateShalidorPins(internal.PINS_UNKNOWN) end, nil, mapPinLayout_unknown, pinTooltipCreator)
   LMP:AddPinType(internal.PINS_COLLECTED, function() MapCallbackCreateShalidorPins(internal.PINS_COLLECTED) end, nil, mapPinLayout_collected, pinTooltipCreator)
   LMP:AddPinType(internal.PINS_EIDETIC, function() MapCallbackCreateEideticPins(internal.PINS_EIDETIC) end, nil, mapPinLayout_eidetic, pinTooltipCreatorEidetic)
   LMP:AddPinType(internal.PINS_EIDETIC_COLLECTED, function() MapCallbackCreateEideticPins(internal.PINS_EIDETIC_COLLECTED) end, nil, mapPinLayout_eideticCollected, pinTooltipCreatorEidetic)
   LMP:AddPinType(internal.PINS_BOOKSHELF, function() MapCallbackCreateBookshelfPins(internal.PINS_BOOKSHELF) end, nil, mapPinLayout_bookshelf, pinTooltipCreatorBookshelf)
 
-  --add map filters
-  LMP:AddPinFilter(internal.PINS_UNKNOWN, GetString(LBOOKS_FILTER_UNKNOWN), nil, LoreBooks.db.filters)
-  LMP:AddPinFilter(internal.PINS_COLLECTED, GetString(LBOOKS_FILTER_COLLECTED), nil, LoreBooks.db.filters)
-  LMP:AddPinFilter(internal.PINS_EIDETIC, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC), nil, LoreBooks.db.filters)
-  LMP:AddPinFilter(internal.PINS_EIDETIC_COLLECTED, zo_strformat(LBOOKS_FILTER_EICOLLECTED, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC)), nil, LoreBooks.db.filters)
-  LMP:AddPinFilter(internal.PINS_BOOKSHELF, GetString(LBOOKS_FILTER_BOOKSHELF), nil, LoreBooks.db.filters)
+  -- add map filters
+  local eideticPinCollected = zo_strformat(LBOOKS_FILTER_COLLECTED, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC))
+  LMP:AddPinFilter(internal.PINS_UNKNOWN, GetString(LBOOKS_FILTER_UNKNOWN), true, LoreBooks.db.filters, internal.PINS_UNKNOWN)
+  LMP:AddPinFilter(internal.PINS_COLLECTED, GetString(LBOOKS_FILTER_COLLECTED), true, LoreBooks.db.filters, internal.PINS_COLLECTED)
+  LMP:AddPinFilter(internal.PINS_EIDETIC, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC), true, LoreBooks.db.filters, internal.PINS_EIDETIC)
+  LMP:AddPinFilter(internal.PINS_EIDETIC_COLLECTED, eideticPinCollected, true, LoreBooks.db.filters, internal.PINS_EIDETIC_COLLECTED)
+  LMP:AddPinFilter(internal.PINS_BOOKSHELF, GetString(LBOOKS_FILTER_BOOKSHELF), true, LoreBooks.db.filters, internal.PINS_BOOKSHELF)
 
-  --add handler for the left click
+  LMP:SetPinFilterHidden(internal.PINS_UNKNOWN, LIBMAPPINS_BATTLEGROUND_MAPGROUP, true)
+  LMP:SetPinFilterHidden(internal.PINS_COLLECTED, LIBMAPPINS_BATTLEGROUND_MAPGROUP, true)
+  LMP:SetPinFilterHidden(internal.PINS_EIDETIC, LIBMAPPINS_BATTLEGROUND_MAPGROUP, true)
+  LMP:SetPinFilterHidden(internal.PINS_EIDETIC_COLLECTED, LIBMAPPINS_BATTLEGROUND_MAPGROUP, true)
+  LMP:SetPinFilterHidden(internal.PINS_BOOKSHELF, LIBMAPPINS_BATTLEGROUND_MAPGROUP, true)
+
+  -- add handler for the left click
   LMP:SetClickHandlers(internal.PINS_UNKNOWN, {
     [1] = {
-      name = function(pin) return zo_strformat(LBOOKS_SET_WAYPOINT, LoreBooks_GetNewLoreBookInfo(1, pin.m_PinTag[3], pin.m_PinTag[4])) end,
-      show = function(pin) return LoreBooks.db.showClickMenu and not select(3, LoreBooks_GetNewLoreBookInfo(1, pin.m_PinTag[3], pin.m_PinTag[4])) end,
-      duplicates = function(pin1, pin2) return (pin1.m_PinTag[3] == pin2.m_PinTag[3] and pin1.m_PinTag[4] == pin2.m_PinTag[4]) end,
-      callback = function(pin) PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, pin.normalizedX, pin.normalizedY) end,
+      name = function(pin)
+        local title = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_SHALIDOR, pin.m_PinTag[3], pin.m_PinTag[4])
+        return zo_strformat(LBOOKS_SET_WAYPOINT, title)
+      end,
+      show = function(pin)
+        local _, _, known = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_SHALIDOR, pin.m_PinTag[3], pin.m_PinTag[4])
+        return LoreBooks.db.showClickMenu and not known
+      end,
+      duplicates = function(pin1, pin2)
+        return (pin1.m_PinTag[3] == pin2.m_PinTag[3] and pin1.m_PinTag[4] == pin2.m_PinTag[4])
+      end,
+      callback = function(pin)
+        PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, pin.normalizedX, pin.normalizedY)
+      end,
     }
   })
 
   LMP:SetClickHandlers(internal.PINS_EIDETIC, {
     [1] = {
-      name = function(pin) return zo_strformat(LBOOKS_SET_WAYPOINT, LoreBooks_GetNewLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) end,
-      show = function(pin) return LoreBooks.db.showClickMenu and not select(3, LoreBooks_GetNewLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) end,
-      duplicates = function(pin1, pin2) return (pin1.m_PinTag.b == pin2.m_PinTag.c and pin1.m_PinTag.b == pin2.m_PinTag.b) end,
-      callback = function(pin) PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, pin.normalizedX, pin.normalizedY) end,
+      name = function(pin)
+        local title = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, pin.m_PinTag.c, pin.m_PinTag.b)
+        return zo_strformat(LBOOKS_SET_WAYPOINT, title)
+      end,
+      show = function(pin)
+        local _, _, known = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, pin.m_PinTag.c, pin.m_PinTag.b)
+        return LoreBooks.db.showClickMenu and not known
+      end,
+      duplicates = function(pin1, pin2)
+        return (pin1.m_PinTag.b == pin2.m_PinTag.c and pin1.m_PinTag.b == pin2.m_PinTag.b)
+      end,
+      callback = function(pin)
+        PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, pin.normalizedX, pin.normalizedY)
+      end,
     }
   })
   LMP:SetClickHandlers(internal.PINS_EIDETIC_COLLECTED, {
     [1] = {
-      name = function(pin) return zo_strformat(LBOOKS_SET_WAYPOINT, LoreBooks_GetNewLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) end,
-      show = function(pin) return LoreBooks.db.showClickMenu and select(3, LoreBooks_GetNewLoreBookInfo(3, pin.m_PinTag.c, pin.m_PinTag.b)) == true end,
-      duplicates = function(pin1, pin2) return (pin1.m_PinTag.b == pin2.m_PinTag.c and pin1.m_PinTag.b == pin2.m_PinTag.b) end,
-      callback = function(pin) PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, pin.normalizedX, pin.normalizedY) end,
+      name = function(pin)
+        local title = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, pin.m_PinTag.c, pin.m_PinTag.b)
+        return zo_strformat(LBOOKS_SET_WAYPOINT, title)
+      end,
+      show = function(pin)
+        local _, _, known = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, pin.m_PinTag.c, pin.m_PinTag.b)
+        return LoreBooks.db.showClickMenu and known == true
+      end,
+      duplicates = function(pin1, pin2)
+        return (pin1.m_PinTag.b == pin2.m_PinTag.c and pin1.m_PinTag.b == pin2.m_PinTag.b)
+      end,
+      callback = function(pin)
+        PingMap(MAP_PIN_TYPE_PLAYER_WAYPOINT, MAP_TYPE_LOCATION_CENTERED, pin.normalizedX, pin.normalizedY)
+      end,
     }
   })
 
-  --initialize compass pins
+  -- initialize compass pins
   COMPASS_PINS:AddCustomPin(internal.PINS_COMPASS, function() ShalidorCompassCallback() end, compassPinLayout)
   COMPASS_PINS:AddCustomPin(internal.PINS_COMPASS_EIDETIC, function() EideticMemoryCompassCallback() end, compassPinLayoutEidetic)
   COMPASS_PINS:AddCustomPin(internal.PINS_COMPASS_BOOKSHELF, function() BookshelfCompassCallback() end, compassPinLayoutBookshelf)
@@ -1126,7 +1161,7 @@ local function BuildEideticReportPerMap(lastObject)
 
           local eideticReport = ""
           for index, data in ipairs(eideticData[mapIndex]) do
-            local bookName = LoreBooks_GetNewLoreBookInfo(3, data.c, data.b)
+            local bookName = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, data.c, data.b)
             eideticReport = zo_strjoin(" ; ", bookName, eideticReport)
           end
 
