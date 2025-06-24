@@ -8,7 +8,7 @@ _G["LoreBooks_Internal"] = internal
 --Local constants -------------------------------------------------------------
 internal.ADDON_NAME = "LoreBooks"
 internal.ADDON_AUTHOR = "Garkin, Ayantir, Kyoma, |cFF9B15Sharlikran|r"
-internal.ADDON_VERSION = "87"
+internal.ADDON_VERSION = "88"
 internal.ADDON_WEBSITE = "http://www.esoui.com/downloads/info288-LoreBooks.html"
 internal.ADDON_PANEL = "LoreBooksPanel"
 internal.SAVEDVARIABLES_VERSION = 3
@@ -43,6 +43,22 @@ function LoreBooks:FireCallbacks(...)
   return callbackObject:FireCallbacks(...)
 end
 
+local function is_empty_or_nil(t)
+  if t == nil or t == "" then return true end
+  return type(t) == "table" and ZO_IsTableEmpty(t) or false
+end
+
+local function is_in(search_value, search_table)
+  if is_empty_or_nil(search_value) then return false end
+  for k, v in pairs(search_table) do
+    if search_value == v then return true end
+    if type(search_value) == "string" then
+      if string.find(string.lower(v), string.lower(search_value)) then return true end
+    end
+  end
+  return false
+end
+
 -- Pin Textures
 internal.PIN_ICON_REAL = 1
 internal.PIN_ICON_SET1 = 2
@@ -54,6 +70,7 @@ internal.PIN_TEXTURES = {
   [internal.PIN_ICON_SET2] = { "LoreBooks/Icons/book2.dds", "LoreBooks/Icons/book2-invert.dds" },
   [internal.PIN_ICON_ESOHEAD] = { "LoreBooks/Icons/book3.dds", "LoreBooks/Icons/book3-invert.dds" },
 }
+internal.MISSING_TITLE = "Untitled (Missing Translation)"
 internal.MISSING_TEXTURE = "/esoui/art/icons/icon_missing.dds"
 internal.PLACEHOLDER_TEXTURE = "/esoui/art/icons/lore_book4_detail1_color2.dds"
 
@@ -136,6 +153,20 @@ internal.icon_list_zoneid = {
   [267] = "/esoui/art/icons/housing_alt_fur_cabinet004.dds", -- eyevea_base_0
 }
 
+internal.current_api_version = GetAPIVersion()
+internal.supported_locales = { "en", "es", "de", "fr", "ru", "zh", "br", "it", "pl" }
+internal.current_locale = GetCVar("Language.2")
+internal.supported_bookshelf_locales = { "en", "de", "fr", "ru" }
+internal.current_bookshelf_locale = GetCVar("Language.2")
+do
+  if not is_in(internal.current_locale, internal.supported_locales) then
+    internal.current_locale = "en"
+  end
+  if not is_in(internal.current_bookshelf_locale, internal.supported_bookshelf_locales) then
+    internal.current_bookshelf_locale = "en"
+  end
+end
+
 LoreBooks.defaults = {      --default settings for saved variables
   compassMaxDistance = 0.04,
   pinTexture = {
@@ -157,14 +188,8 @@ LoreBooks.defaults = {      --default settings for saved variables
     [internal.PINS_COMPASS_BOOKSHELF] = false,
 
   },
-  shareData = true,
-  postmailData = "",
-  postmailFirstInsert = GetTimeStamp(),
-  booksCollected = {},
   unlockEidetic = false,
-  steps = {},
   immersiveMode = 1,
-  questTools = {},
   showClickMenu = true,
   showDungeonTag = true,
   showQuestName = true,

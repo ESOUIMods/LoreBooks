@@ -322,49 +322,6 @@ function LoreBooks:CreateLamPanel()
     end,
     default = immersiveChoices[LoreBooks.defaults.immersiveMode],
   }
-  --[[
-  {
-    type = "checkbox",
-    name = GetString(LBOOKS_UNLOCK_EIDETIC),
-    tooltip = function()
-      if LoreBooks.CanEmulateLibrary() then
-        return GetString(LBOOKS_UNLOCK_EIDETIC_DESC)
-      else
-        return GetString(LBOOKS_UNLOCK_EIDETIC_WARNING)
-      end
-    end,
-    getFunc = function() return LoreBooks.db.unlockEidetic end,
-    setFunc = function(state)
-      LoreBooks.db.unlockEidetic = state
-      LORE_LIBRARY:BuildCategoryList()
-    end,
-    default = LoreBooks.defaults.unlockEidetic,
-    disabled = function() return not LoreBooks.CanEmulateLibrary() end,
-  },
-  {
-    type = "checkbox",
-    name = GetString(LBOOKS_USE_QUEST_BOOKS),
-    tooltip = GetString(LBOOKS_USE_QUEST_BOOKS_DESC),
-    getFunc = function() return LoreBooks.db.useQuestBooks end,
-    setFunc = function(state)
-      LoreBooks.db.useQuestBooks = state
-      LoreBooks.ToggleUseQuestBooks()
-    end,
-    default = LoreBooks.defaults.useQuestBooks,
-  },
-  {
-    type = "checkbox",
-    name = GetString(LBOOKS_SHARE_DATA),
-    tooltip = GetString(LBOOKS_SHARE_DATA_DESC),
-    getFunc = function() return LoreBooks.db.shareData end,
-    setFunc = function(state)
-      LoreBooks.db.shareData = state
-      LoreBooks.ToggleShareData()
-    end,
-    default = LoreBooks.defaults.shareData,
-    disabled = GetWorldName() ~= "EU Megaserver" or not internal.SUPPORTED_LANG[lang],
-  },
-  --]]
   LAM:RegisterOptionControls(internal.ADDON_PANEL, optionsTable)
 
 end
