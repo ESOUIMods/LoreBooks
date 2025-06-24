@@ -763,73 +763,85 @@ local function InitializePins()
   local compassMaxDistance = LoreBooks.db.compassMaxDistance
   local compassLayoutTexture = pinTextures[compassTextureType][invertedTextureFromTable] or internal.MISSING_TEXTURE
   local compassEideticLayoutTexture = pinTextures[compassEideticTextureType][invertedTextureFromTable] or internal.MISSING_TEXTURE
-  local compassPinLayout = { maxDistance = compassMaxDistance, texture = compassLayoutTexture,
-                             sizeCallback = function(pin, angle, normalizedAngle, normalizedDistance)
-                               if zo_abs(normalizedAngle) > 0.25 then
-                                 pin:SetDimensions(54 - 24 * zo_abs(normalizedAngle), 54 - 24 * zo_abs(normalizedAngle))
-                               else
-                                 pin:SetDimensions(48, 48)
-                               end
-                             end,
-                             additionalLayout = {
-                               function(pin)
-                                 if (LoreBooks.db.pinTexture.type == internal.PIN_ICON_REAL) then
-                                   -- replace icon with icon from LoreLibrary
-                                   local _, texture = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_SHALIDOR, pin.pinTag[3], pin.pinTag[4])
-                                   local icon = pin:GetNamedChild("Background")
-                                   if icon == internal.MISSING_TEXTURE then icon = internal.PLACEHOLDER_TEXTURE end
-                                   icon:SetTexture(texture)
-                                 end
-                               end,
-                               function(pin)
-                                 -- I do not need to reset anything (texture is changed automatically), so the function is empty
-                               end
-                             }
+  local compassPinLayout = {
+    maxDistance = compassMaxDistance,
+    texture = compassLayoutTexture,
+    sizeCallback = function(pin, angle, normalizedAngle, normalizedDistance)
+      if zo_abs(normalizedAngle) > 0.25 then
+        pin:SetDimensions(54 - 24 * zo_abs(normalizedAngle), 54 - 24 * zo_abs(normalizedAngle))
+      else
+        pin:SetDimensions(48, 48)
+      end
+    end,
+    additionalLayout = {
+      [CUSTOM_COMPASS_LAYOUT_UPDATE] = function(pin)
+        if (LoreBooks.db.pinTexture.type == internal.PIN_ICON_REAL) then
+          -- replace icon with icon from LoreLibrary
+          local _, texture = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_SHALIDOR, pin.pinTag[3], pin.pinTag[4])
+          local icon = pin:GetNamedChild("Background")
+          if icon == internal.MISSING_TEXTURE then icon = internal.PLACEHOLDER_TEXTURE end
+          icon:SetTexture(texture)
+        end
+      end,
+    },
+    mapPinTypeString = internal.PINS_UNKNOWN,
+    onToggleCallback = function(compassPinType, enabled)
+      COMPASS_PINS:SetCustomPinEnabled(compassPinType, enabled)
+      COMPASS_PINS:RefreshPins(compassPinType)
+    end,
   }
-  local compassPinLayoutEidetic = { maxDistance = compassMaxDistance, texture = compassEideticLayoutTexture,
-                                    sizeCallback = function(pin, angle, normalizedAngle, normalizedDistance)
-                                      if zo_abs(normalizedAngle) > 0.25 then
-                                        pin:SetDimensions(54 - 24 * zo_abs(normalizedAngle), 54 - 24 * zo_abs(normalizedAngle))
-                                      else
-                                        pin:SetDimensions(48, 48)
-                                      end
-                                    end,
-                                    additionalLayout = {
-                                      function(pin)
-                                        if (LoreBooks.db.pinTextureEidetic == internal.PIN_ICON_REAL) then
-                                          -- replace icon with icon from LoreLibrary
-                                          local _, texture = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, pin.pinTag.c, pin.pinTag.b)
-                                          local icon = pin:GetNamedChild("Background")
-                                          if icon == internal.MISSING_TEXTURE then icon = internal.PLACEHOLDER_TEXTURE end
-                                          icon:SetTexture(texture)
-                                        end
-                                      end,
-                                      function(pin)
-                                        -- I do not need to reset anything (texture is changed automatically), so the function is empty
-                                      end
-                                    }
+  local compassPinLayoutEidetic = {
+    maxDistance = compassMaxDistance,
+    texture = compassEideticLayoutTexture,
+    sizeCallback = function(pin, angle, normalizedAngle, normalizedDistance)
+      if zo_abs(normalizedAngle) > 0.25 then
+        pin:SetDimensions(54 - 24 * zo_abs(normalizedAngle), 54 - 24 * zo_abs(normalizedAngle))
+      else
+        pin:SetDimensions(48, 48)
+      end
+    end,
+    additionalLayout = {
+      [CUSTOM_COMPASS_LAYOUT_UPDATE] = function(pin)
+        if (LoreBooks.db.pinTextureEidetic == internal.PIN_ICON_REAL) then
+          -- replace icon with icon from LoreLibrary
+          local _, texture = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, pin.pinTag.c, pin.pinTag.b)
+          local icon = pin:GetNamedChild("Background")
+          if icon == internal.MISSING_TEXTURE then icon = internal.PLACEHOLDER_TEXTURE end
+          icon:SetTexture(texture)
+        end
+      end,
+    },
+    mapPinTypeString = internal.PINS_EIDETIC,
+    onToggleCallback = function(compassPinType, enabled)
+      COMPASS_PINS:SetCustomPinEnabled(compassPinType, enabled)
+      COMPASS_PINS:RefreshPins(compassPinType)
+    end,
   }
-  local compassPinLayoutBookshelf = { maxDistance = compassMaxDistance, texture = internal.icon_list_zoneid[1261],
-                                      sizeCallback = function(pin, angle, normalizedAngle, normalizedDistance)
-                                        local size = zo_abs(normalizedAngle) > 0.25 and (54 - 24 * zo_abs(normalizedAngle)) or 48
-                                        pin:SetDimensions(size, size)
-                                      end,
-                                      additionalLayout = {
-                                        function(pin)
-                                          local zoneId = 1261 -- fallback
-                                          if pin.pinTag and pin.pinTag.z then
-                                            zoneId = GetParentZoneId(pin.pinTag.z)
-                                          end
-                                          local tex = internal.icon_list_zoneid[zoneId] or internal.icon_list_zoneid[1261]
-                                          local icon = pin:GetNamedChild("Background")
-                                          if icon then
-                                            icon:SetTexture(tex)
-                                          end
-                                        end,
-                                        function(pin)
-                                          -- optional cleanup if needed
-                                        end,
-                                      }
+  local compassPinLayoutBookshelf = {
+    maxDistance = compassMaxDistance,
+    texture = internal.icon_list_zoneid[1261],
+    sizeCallback = function(pin, angle, normalizedAngle, normalizedDistance)
+      local size = zo_abs(normalizedAngle) > 0.25 and (54 - 24 * zo_abs(normalizedAngle)) or 48
+      pin:SetDimensions(size, size)
+    end,
+    additionalLayout = {
+      [CUSTOM_COMPASS_LAYOUT_UPDATE] = function(pin)
+        local zoneId = 1261 -- fallback
+        if pin.pinTag and pin.pinTag.z then
+          zoneId = GetParentZoneId(pin.pinTag.z)
+        end
+        local tex = internal.icon_list_zoneid[zoneId] or internal.icon_list_zoneid[1261]
+        local icon = pin:GetNamedChild("Background")
+        if icon then
+          icon:SetTexture(tex)
+        end
+      end,
+    },
+    mapPinTypeString = internal.PINS_BOOKSHELF,
+    onToggleCallback = function(compassPinType, enabled)
+      COMPASS_PINS:SetCustomPinEnabled(compassPinType, enabled)
+      COMPASS_PINS:RefreshPins(compassPinType)
+    end,
   }
 
   -- initialize map pins
@@ -840,7 +852,8 @@ local function InitializePins()
   LMP:AddPinType(internal.PINS_BOOKSHELF, function() MapCallbackCreateBookshelfPins(internal.PINS_BOOKSHELF) end, nil, mapPinLayout_bookshelf, pinTooltipCreatorBookshelf)
 
   -- add map filters
-  local eideticPinCollected = zo_strformat(LBOOKS_FILTER_COLLECTED, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC))
+  local eideticPinCollected = zo_strformat(LBOOKS_FILTER_COLLECTED_FORMATTER, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC))
+
   LMP:AddPinFilter(internal.PINS_UNKNOWN, GetString(LBOOKS_FILTER_UNKNOWN), true, LoreBooks.db.filters, internal.PINS_UNKNOWN)
   LMP:AddPinFilter(internal.PINS_COLLECTED, GetString(LBOOKS_FILTER_COLLECTED), true, LoreBooks.db.filters, internal.PINS_COLLECTED)
   LMP:AddPinFilter(internal.PINS_EIDETIC, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC), true, LoreBooks.db.filters, internal.PINS_EIDETIC)
@@ -911,9 +924,9 @@ local function InitializePins()
   })
 
   -- initialize compass pins
-  COMPASS_PINS:AddCustomPin(internal.PINS_COMPASS, function() ShalidorCompassCallback() end, compassPinLayout)
-  COMPASS_PINS:AddCustomPin(internal.PINS_COMPASS_EIDETIC, function() EideticMemoryCompassCallback() end, compassPinLayoutEidetic)
-  COMPASS_PINS:AddCustomPin(internal.PINS_COMPASS_BOOKSHELF, function() BookshelfCompassCallback() end, compassPinLayoutBookshelf)
+  COMPASS_PINS:AddCustomPin(internal.PINS_COMPASS, function() ShalidorCompassCallback() end, compassPinLayout, LoreBooks.db.filters)
+  COMPASS_PINS:AddCustomPin(internal.PINS_COMPASS_EIDETIC, function() EideticMemoryCompassCallback() end, compassPinLayoutEidetic, LoreBooks.db.filters)
+  COMPASS_PINS:AddCustomPin(internal.PINS_COMPASS_BOOKSHELF, function() BookshelfCompassCallback() end, compassPinLayoutBookshelf, LoreBooks.db.filters)
   COMPASS_PINS:RefreshPins(internal.PINS_COMPASS)
   COMPASS_PINS:RefreshPins(internal.PINS_COMPASS_EIDETIC)
   COMPASS_PINS:RefreshPins(internal.PINS_COMPASS_BOOKSHELF)
