@@ -817,7 +817,7 @@ local function InitializePins()
                                         pin:SetDimensions(size, size)
                                       end,
                                       additionalLayout = {
-                                        [CUSTOM_COMPASS_LAYOUT_UPDATE] = function(pin)
+                                        function(pin)
                                           local zoneId = 1261 -- fallback
                                           if pin.pinTag and pin.pinTag.z then
                                             zoneId = GetParentZoneId(pin.pinTag.z)
@@ -828,7 +828,7 @@ local function InitializePins()
                                             icon:SetTexture(tex)
                                           end
                                         end,
-                                        [CUSTOM_COMPASS_LAYOUT_RESET] = function(pin)
+                                        function(pin)
                                           -- optional cleanup if needed
                                         end,
                                       }

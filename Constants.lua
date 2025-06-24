@@ -8,7 +8,7 @@ _G["LoreBooks_Internal"] = internal
 --Local constants -------------------------------------------------------------
 internal.ADDON_NAME = "LoreBooks"
 internal.ADDON_AUTHOR = "Garkin, Ayantir, Kyoma, |cFF9B15Sharlikran|r"
-internal.ADDON_VERSION = "88"
+internal.ADDON_VERSION = "89"
 internal.ADDON_WEBSITE = "http://www.esoui.com/downloads/info288-LoreBooks.html"
 internal.ADDON_PANEL = "LoreBooksPanel"
 internal.SAVEDVARIABLES_VERSION = 3
@@ -153,7 +153,6 @@ internal.icon_list_zoneid = {
   [267] = "/esoui/art/icons/housing_alt_fur_cabinet004.dds", -- eyevea_base_0
 }
 
-internal.current_api_version = GetAPIVersion()
 internal.supported_locales = { "en", "es", "de", "fr", "ru", "zh", "br", "it", "pl" }
 internal.current_locale = GetCVar("Language.2")
 internal.supported_bookshelf_locales = { "en", "de", "fr", "ru" }
