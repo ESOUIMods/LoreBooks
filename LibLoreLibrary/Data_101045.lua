@@ -2,7 +2,7 @@ LibLoreLibrary = LibLoreLibrary or {}
 
 local lib = LibLoreLibrary
 
-lib.data[101044] = {
+lib.data[101045] = {
   [1] = {
     [1] = {
       ["n"] = {

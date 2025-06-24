@@ -142,6 +142,8 @@ function LoreBooks:CreateLamPanel()
       LoreBooks.db.pinTexture.size = size
       unknownIcon:SetDimensions(size, size)
       collectedIcon:SetDimensions(size, size)
+      unknownIconEidetic:SetDimensions(size, size)
+      collectedIconEidetic:SetDimensions(size, size)
       SetLayoutKeyAndRefresh(internal.PINS_UNKNOWN, "size", size)
       SetLayoutKeyAndRefresh(internal.PINS_COLLECTED, "size", size)
       SetLayoutKeyAndRefresh(internal.PINS_EIDETIC, "size", size)
