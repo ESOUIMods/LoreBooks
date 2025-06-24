@@ -90,6 +90,7 @@ function lib:EmulateLoreLibrary()
   end
 end
 
+-- /script LibLoreLibrary:CollectLibraryData()
 function lib:CollectLibraryData(currentOnly, langIdx)
 
   if not self:IsEideticMemoryUnlocked() then
