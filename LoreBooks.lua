@@ -1395,8 +1395,8 @@ local function BuildCategoryList(self)
     lbcategories[i].lbcollections = {}
 
     for collectionIndex = 1, numCollections do
-      local collectionName, description, numKnownBooks, totalBooks, hidden, _, collectionId = LoreBooks_GetNewLoreCollectionInfo(categoryIndex, collectionIndex)
-      if collectionName and ((LoreBooks.db.unlockEidetic and collectionName ~= "") or not hidden) then
+      local collectionName, description, numKnownBooks, totalBooks, hidden, gamepadIcon, collectionId = LoreBooks_GetNewLoreCollectionInfo(categoryIndex, collectionIndex)
+      if collectionName and collectionName ~= "" then
         lbcategories[i].lbcollections[#lbcategories[i].lbcollections + 1] = { categoryIndex = categoryIndex, collectionIndex = collectionIndex, name = collectionName, description = description, numKnownBooks = numKnownBooks, totalBooks = totalBooks, collectionId = collectionId }
         self.totalCurrentlyCollected = self.totalCurrentlyCollected + numKnownBooks
         self.totalPossibleCollected = self.totalPossibleCollected + totalBooks
@@ -1875,6 +1875,11 @@ local function OnHideBook(eventCode)
 end
 
 local function OnBookLearned(eventCode, categoryIndex, collectionIndex, bookIndex, guildIndex, isMaxRank)
+  local cacheKey = categoryIndex .. ":" .. collectionIndex
+  if internal.collectionInfoCache then
+    internal.collectionInfoCache[cacheKey] = nil
+  end
+
   if categoryIndex ~= internal.LORE_LIBRARY_CRAFTING then
     if categoryIndex == internal.LORE_LIBRARY_SHALIDOR then
       LMP:RefreshPins(internal.PINS_UNKNOWN)
@@ -1888,7 +1893,6 @@ local function OnBookLearned(eventCode, categoryIndex, collectionIndex, bookInde
       COMPASS_PINS:RefreshPins(internal.PINS_COMPASS_BOOKSHELF)
     end
   end
-  --BuildLoreBookSummary()
 end
 
 -- slash commands -------------------------------------------------------------

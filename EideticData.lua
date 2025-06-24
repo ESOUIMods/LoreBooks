@@ -61590,36 +61590,58 @@ function LoreBooks_GetNewEideticData(categoryIndex, collectionIndex, bookIndex)
   return LoreBooks_GetNewEideticDataFromBookId(bookId)
 end
 
+local eideticDataCache = {}        -- mapId → data
+local eideticDataCacheOrder = {}   -- ordered list of recent mapIds
+local eideticDataCacheLimit = 3    -- max cache size
+
+local function TouchEideticCacheOrder(mapId)
+  for i, id in ipairs(eideticDataCacheOrder) do
+    if id == mapId then
+      table.remove(eideticDataCacheOrder, i)
+      break
+    end
+  end
+  table.insert(eideticDataCacheOrder, 1, mapId)
+
+  if #eideticDataCacheOrder > eideticDataCacheLimit then
+    local oldestMapId = table.remove(eideticDataCacheOrder)
+    eideticDataCache[oldestMapId] = nil
+  end
+end
+
 function LoreBooks_GetEideticData(mapId, z_mapId)
-  local _, numCollections = GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC) -- Only Eidetic
+  if eideticDataCache[mapId] then
+    TouchEideticCacheOrder(mapId)
+    return eideticDataCache[mapId]
+  end
+
   local eideticInZone = {}
+  local _, numCollections = GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC)
+
   for collectionIndex = 1, numCollections do
     local _, _, _, totalBooks = LoreBooks_GetNewLoreCollectionInfo(internal.LORE_LIBRARY_EIDETIC, collectionIndex)
     for bookIndex = 1, totalBooks do
       local eideticBookZoneData = LoreBooks_GetNewEideticData(internal.LORE_LIBRARY_EIDETIC, collectionIndex, bookIndex)
       local _, _, _, bookId = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, collectionIndex, bookIndex)
-      local eideticBooks
-      if eideticBookZoneData and eideticBookZoneData.c and eideticBookZoneData.e then
-        eideticBooks = eideticBookZoneData.c and NonContiguousCount(eideticBookZoneData.e) > 0
-      end
-      if eideticBooks then
-        local eideticData = eideticBookZoneData.e
-        for _, booksData in ipairs(eideticData) do
-          local hasZoneData = booksData["pm"] == mapId or booksData["zm"] == z_mapId
-          if hasZoneData then
-            booksData.c = collectionIndex -- Add collectionIndex
-            booksData.b = bookIndex -- Add bookIndex
-            booksData.k = bookId -- Add bookId
-            if eideticBookZoneData.q then booksData.q = eideticBookZoneData.q end -- Add quest info
-            eideticInZone[#eideticInZone + 1] = booksData
+      if eideticBookZoneData and eideticBookZoneData.e then
+        for _, booksData in ipairs(eideticBookZoneData.e) do
+          if booksData.pm == mapId or booksData.zm == z_mapId then
+            booksData.c = collectionIndex
+            booksData.b = bookIndex
+            booksData.k = bookId
+            if eideticBookZoneData.q then
+              booksData.q = eideticBookZoneData.q
+            end
+            table.insert(eideticInZone, booksData)
           end
         end
       end
     end
   end
 
+  eideticDataCache[mapId] = eideticInZone
+  TouchEideticCacheOrder(mapId)
   return eideticInZone
-
 end
 
 local function GetNumKnownBooksInCollection(categoryIndex, collectionIndex, booksInCollection)
@@ -61686,17 +61708,35 @@ function LoreBooks_GetNewLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
   bookId
 end
 
+local function ResolveLocalizedField(valueFromGame, fieldTable)
+  if valueFromGame and valueFromGame ~= "" then
+    return valueFromGame
+  end
+  if fieldTable then
+    local localized = fieldTable[locale]
+    if localized and localized ~= "" then
+      return localized
+    end
+    return fieldTable["en"] or ""
+  end
+  return ""
+end
+
 -- copy of GetLoreCollectionInfo
 -- Returns: string name, string description, number numKnownBooks, number totalBooks, boolean hidden, textureName gamepadIcon, number collectionId
 -- /script d({LoreBooks_GetNewLoreCollectionInfo(3, 46)})
 function LoreBooks_GetNewLoreCollectionInfo(categoryIndex, collectionIndex)
+  local cacheKey = categoryIndex .. ":" .. collectionIndex
+  local cached = internal.collectionInfoCache[cacheKey]
+  if cached then return unpack(cached) end
+
   local name, description, _, totalBooks, hidden, gamepadIcon, collectionId = GetLoreCollectionInfo(categoryIndex, collectionIndex)
   local category = libraryData[categoryIndex]
   local data = category and category[collectionIndex]
   local locale = internal.current_locale
 
-  name = (name == "" or name == nil) and data and data.n[locale] or name
-  description = (description == "" or description == nil) and data and data.d[locale] or description
+  name = ResolveLocalizedField(name, data and data.n)
+  description = ResolveLocalizedField(description, data and data.d)
   totalBooks = (totalBooks == nil or totalBooks == 0) and data and data.t or totalBooks
 
   if name == nil or description == nil or totalBooks == nil then
@@ -61709,11 +61749,17 @@ function LoreBooks_GetNewLoreCollectionInfo(categoryIndex, collectionIndex)
 
   local numKnownBooks = GetNumKnownBooksInCollection(categoryIndex, collectionIndex, totalBooks)
 
-  return name,
-  description,
-  numKnownBooks,
-  totalBooks,
-  hidden,
-  gamepadIcon,
-  collectionId
+  local result = {
+    name,
+    description,
+    numKnownBooks,
+    totalBooks,
+    hidden,
+    gamepadIcon,
+    collectionId
+  }
+
+  internal.collectionInfoCache[cacheKey] = result
+  return unpack(result)
 end
+
