@@ -483,6 +483,7 @@ local eideticBooks
 
 local function UpdateShalidorLorebooksData(mapId, zoneMapId)
   -- internal:dm("Debug", "UpdateShalidorLorebooksData")
+  if not LMD.mapId or not LMD.mapTexture then return end
   if LMD.mapTexture ~= lastZoneShalidor or LMD.mapId ~= lastMapIpShalidor then
     -- internal:dm("Warn", "Shalidor Books Updated")
     lastZoneShalidor = LMD.mapTexture
@@ -495,6 +496,7 @@ end
 
 local function UpdateBookshelfLorebooksData(mapId, zoneMapId)
   -- internal:dm("Debug", "UpdateBookshelfLorebooksData")
+  if not LMD.mapId or not LMD.mapTexture then return end
   if LMD.mapTexture ~= lastZoneBookshelf or LMD.mapId ~= lastMapIpBookshelf then
     -- internal:dm("Warn", "Bookshelf Data Updated")
     lastZoneBookshelf = LMD.mapTexture
@@ -507,6 +509,7 @@ end
 
 local function UpdateEideticLorebooksData(mapId, zoneMapId)
   -- internal:dm("Debug", "UpdateEideticLorebooksData")
+  if not LMD.mapId or not LMD.mapTexture then return end
   if LMD.mapTexture ~= lastZoneEidetic or LMD.mapId ~= lastMapIpEidetic then
     -- internal:dm("Warn", "EideticBooks Updated")
     lastZoneEidetic = LMD.mapTexture

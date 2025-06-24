@@ -61628,12 +61628,13 @@ local function TouchEideticCacheOrder(mapId)
 end
 
 function LoreBooks_GetEideticData(mapId, z_mapId)
+  local eideticInZone = {}
+  if not mapId then return eideticInZone end
   if eideticDataCache[mapId] then
     TouchEideticCacheOrder(mapId)
     return eideticDataCache[mapId]
   end
 
-  local eideticInZone = {}
   local _, numCollections = GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC)
 
   for collectionIndex = 1, numCollections do
