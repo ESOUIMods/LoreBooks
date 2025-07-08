@@ -1,10 +1,64 @@
-# Lorebooks
+# LoreBooks
 
-By: Kyoma, Ayantir, Garkin, Sharlikran
+By: Garkin (original author), Ayantir, Kyoma, Sharlikran
 
-# Description
+## Maintainers Timeline
 
-Displays map pins for Shalidor's Library books and Eidetic Memory Scrolls
+- **Ales Machat (Garkin)** — original creator, started 2014-04-18  
+- **Ayantir** — active maintainer and contributor from 2015-11-07  
+- **Kyoma** — contributor and maintainer starting 2018-05-30  
+- **Sharlikran** — current maintainer since 2022-11-12
+
+## License
+
+This addon incorporates contributions under the following licenses:
+
+- **MIT License** — for original work by Garkin (2014–2015)  
+- **Creative Commons Attribution-NonCommercial-ShareAlike 4.0** — for work by Ayantir (2015–2020)  
+- **BSD 3-Clause License** — for contributions by Sharlikran (2022–present)  
+
+See the [LICENSE](LICENSE) file for full legal text.
+
+## Description
+
+Displays map pins for Shalidor's Library books and Eidetic Memory Scrolls.
+
+## Credits and Contributors
+
+### Major Book Data Contributors
+
+Thanks to the following users for contributing book locations, Eidetic Memory data, or corrections:
+
+- **oath2order**
+- **yachoor**
+- **Sharlikran**
+- **desertforce**
+- **Schiffy**
+- **BixenteN7Akantor**
+- **shadowcep**
+- **vampire1326**
+- **Anceane**
+- **Devil73**
+- **NeuroticPixels**
+- **ILDaR_F**
+- **XXXspartiateXXX**
+- **DakJaniels** – for Hireling Correspondence
+
+### Translators and Localization Help
+
+- **Rhynchelma** – Summerset book locations  
+- **mlsevero** – Brazilian Portuguese translation  
+- **BowmoreLover** – Japanese translation  
+- **KiriX** – Russian translation  
+- **Childeric** – French translation  
+- **Ykses** – early French  
+- **Bl4ckSh33p** – early German  
+
+### Testing and Reporting
+
+- **Dirty_Mongrel** – bug and conflict reports
+
+---
 
 # Shalidor Data Syntax
 
