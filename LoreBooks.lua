@@ -789,7 +789,7 @@ local function InitializePins()
     },
     mapPinTypeString = internal.PINS_UNKNOWN,
     onToggleCallback = function(compassPinType, enabled)
-      COMPASS_PINS:SetCustomPinEnabled(compassPinType, enabled)
+      COMPASS_PINS:SetCompassPinEnabled(compassPinType, enabled)
       COMPASS_PINS:RefreshPins(compassPinType)
     end,
   }
@@ -816,7 +816,7 @@ local function InitializePins()
     },
     mapPinTypeString = internal.PINS_EIDETIC,
     onToggleCallback = function(compassPinType, enabled)
-      COMPASS_PINS:SetCustomPinEnabled(compassPinType, enabled)
+      COMPASS_PINS:SetCompassPinEnabled(compassPinType, enabled)
       COMPASS_PINS:RefreshPins(compassPinType)
     end,
   }
@@ -842,7 +842,7 @@ local function InitializePins()
     },
     mapPinTypeString = internal.PINS_BOOKSHELF,
     onToggleCallback = function(compassPinType, enabled)
-      COMPASS_PINS:SetCustomPinEnabled(compassPinType, enabled)
+      COMPASS_PINS:SetCompassPinEnabled(compassPinType, enabled)
       COMPASS_PINS:RefreshPins(compassPinType)
     end,
   }
