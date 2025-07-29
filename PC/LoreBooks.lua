@@ -1,29 +1,58 @@
 --[[
 -------------------------------------------------------------------------------
--- LoreBooks, by Ayantir
+-- LoreBooks
 -------------------------------------------------------------------------------
-This software is under : CreativeCommons CC BY-NC-SA 4.0
-Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-
-You are free to:
-
-    Share — copy and redistribute the material in any medium or format
-    Adapt — remix, transform, and build upon the material
-    The licensor cannot revoke these freedoms as long as you follow the license terms.
-
-
-Under the following terms:
-
-    Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-    NonCommercial — You may not use the material for commercial purposes.
-    ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
-    No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
-
-
-Please read full licence at :
-http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+-- Original author: Ales Machat (Garkin), started 2014-04-18
+--
+-- Maintainers:
+--    Ayantir (contributions starting 2015-11-07)
+--    Kyoma (contributions starting 2018-05-30)
+--    Sharlikran (current maintainer, contributions starting 2022-11-12)
+--
+-------------------------------------------------------------------------------
+-- This addon includes contributions licensed under three licenses:
+--
+-- MIT License (Garkin, 2014–2015):
+--   Permission is hereby granted, free of charge, to any person obtaining a copy
+--   of this software and associated documentation files (the "Software"), to deal
+--   in the Software without restriction, including without limitation the rights
+--   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+--   copies of the Software, and to permit persons to whom the Software is
+--   furnished to do so, subject to the conditions in the LICENSE file.
+--
+-- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020):
+--   You are free to share and adapt the material with attribution, but not for
+--   commercial purposes. Derivatives must be licensed under the same terms.
+--   Full terms at: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+--
+-- BSD 3-Clause License (Sharlikran, 2022–present):
+--   Redistribution and use in source and binary forms, with or without
+--   modification, are permitted under the conditions detailed in the LICENSE file.
+--
+-------------------------------------------------------------------------------
+-- Maintainer Notice:
+-- Redistribution of this addon outside of ESOUI.com or GitHub is discouraged
+-- unless authorized by the current maintainer. While the original MIT license
+-- permits wide redistribution, uncoordinated uploads may cause version
+-- fragmentation or confusion. Please respect the intent of the maintainers and
+-- the ESO addon ecosystem.
+-- ----------------------------------------------------------------------------
+-- Data Integrity and Attribution Notice:
+-- While individual book positions are discoverable via the ESO API, the
+-- comprehensive dataset included in LoreBooks is the result of years of
+-- community effort and contributions from multiple players. Recreating this
+-- dataset independently requires extensive time and dedication.
+--
+-- Direct reuse, extraction, or redistribution of the compiled data tables,
+-- either in whole or substantial part, without permission from the current
+-- maintainer, is prohibited. Claiming ownership or sole authorship over
+-- derived works that include this dataset is considered a violation of the
+-- contributors' efforts and the licenses under which this project is shared.
+--
+-- If you wish to use this data in your own addon or tool, please contact the
+-- current maintainer for appropriate guidance and permission.
+-- ----------------------------------------------------------------------------
 ]]
-
 --Libraries--------------------------------------------------------------------
 local LMP = LibMapPins
 local LMD = LibMapData
@@ -476,7 +505,7 @@ local lastMapIpBookshelf = 0
 local lastZoneEidetic = ""
 local lastMapIpEidetic = 0
 
-local lorebooks
+LoreBooks.lorebooks = nil
 local bookshelves
 local eideticBooks
 
@@ -487,7 +516,7 @@ local function UpdateShalidorLorebooksData(mapId, zoneMapId)
     -- internal:dm("Warn", "Shalidor Books Updated")
     lastZoneShalidor = LMD.mapTexture
     lastMapIpShalidor = LMD.mapId
-    lorebooks = LoreBooks_GetLocalData(mapId) -- Shalidor
+    LoreBooks.lorebooks = LoreBooks_GetLocalData(mapId) -- Shalidor
     COMPASS_PINS:RefreshPins(internal.PINS_COMPASS)
     return
   end
@@ -526,8 +555,8 @@ local function ShalidorCompassCallback()
   end
   -- internal:dm("Debug", "ShalidorCompassCallback")
 
-  if lorebooks then
-    for _, pinData in ipairs(lorebooks) do
+  if LoreBooks.lorebooks then
+    for _, pinData in ipairs(LoreBooks.lorebooks) do
       local _, _, known = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_SHALIDOR, pinData[3], pinData[4])
       if not known and LoreBooks.db.filters[internal.PINS_COMPASS] then
         COMPASS_PINS.pinManager:CreatePin(internal.PINS_COMPASS, pinData, pinData[1], pinData[2])
@@ -608,8 +637,8 @@ local function MapCallbackCreateShalidorPins(pinType)
   local shouldDisplay = ShouldDisplayLoreBooks()
 
   -- Shalidor's Books
-  if lorebooks then
-    for _, pinData in ipairs(lorebooks) do
+  if LoreBooks.lorebooks then
+    for _, pinData in ipairs(LoreBooks.lorebooks) do
       local _, _, known = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_SHALIDOR, pinData[3], pinData[4])
       -- Shalidor's Books Collected
       if pinType == internal.PINS_COLLECTED then
