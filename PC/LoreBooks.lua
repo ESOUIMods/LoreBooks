@@ -10,7 +10,8 @@
 --    Sharlikran (current maintainer, contributions starting 2022-11-12)
 --
 -------------------------------------------------------------------------------
--- This addon includes contributions licensed under three licenses:
+-- This addon includes contributions licensed under two Creative Commons licenses
+-- and the original MIT license:
 --
 -- MIT License (Garkin, 2014–2015):
 --   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,14 +21,10 @@
 --   copies of the Software, and to permit persons to whom the Software is
 --   furnished to do so, subject to the conditions in the LICENSE file.
 --
--- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020):
+-- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020 and Sharlikran, 2022–present):
 --   You are free to share and adapt the material with attribution, but not for
 --   commercial purposes. Derivatives must be licensed under the same terms.
 --   Full terms at: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
---
--- BSD 3-Clause License (Sharlikran, 2022–present):
---   Redistribution and use in source and binary forms, with or without
---   modification, are permitted under the conditions detailed in the LICENSE file.
 --
 -------------------------------------------------------------------------------
 -- Maintainer Notice:
@@ -2064,6 +2061,38 @@ local function CreateFakeLorebookPin()
   MyPrint(outText)
 end
 
+local function is_empty_or_nil(t)
+  if t == nil or t == "" then return true end
+  return type(t) == "table" and ZO_IsTableEmpty(t) or false
+end
+
+local function is_in(search_value, search_table)
+  if is_empty_or_nil(search_value) then return false end
+  for k, v in pairs(search_table) do
+    if search_value == v then return true end
+    if type(search_value) == "string" then
+      if string.find(string.lower(v), string.lower(search_value)) then return true end
+    end
+  end
+  return false
+end
+
+function InitializeLocales()
+  internal.supported_locales = { "en", "es", "de", "fr", "ru", "zh", "br", "it", "pl" }
+  internal.supported_bookshelf_locales = { "en", "de", "fr", "ru" }
+
+  internal.current_locale = GetCVar("Language.2")
+  internal.current_bookshelf_locale = GetCVar("Language.2")
+
+  if not is_in(internal.current_locale, internal.supported_locales) then
+    internal.current_locale = "en"
+  end
+
+  if not is_in(internal.current_bookshelf_locale, internal.supported_bookshelf_locales) then
+    internal.current_bookshelf_locale = "en"
+  end
+end
+
 local function OnLoad(eventCode, name)
 
   if name == internal.ADDON_NAME then
@@ -2071,6 +2100,8 @@ local function OnLoad(eventCode, name)
     EVENT_MANAGER:UnregisterForEvent(internal.ADDON_NAME, EVENT_ADD_ON_LOADED)
 
     LoreBooks.db = ZO_SavedVars:NewAccountWide("LBooks_SavedVariables", internal.SAVEDVARIABLES_VERSION, nil, LoreBooks.defaults)
+
+    InitializeLocales()
 
     LoreBooks:CreateLamPanel()
 

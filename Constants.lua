@@ -10,9 +10,10 @@
 --    Sharlikran (current maintainer, contributions starting 2022-11-12)
 --
 -------------------------------------------------------------------------------
--- This addon includes contributions licensed under three licenses:
+-- This addon includes contributions licensed under two Creative Commons licenses
+-- and the original MIT license:
 --
--- MIT License (Garkin, 2014–2015):
+-- MIT License (Garkin, 2014â€“2015):
 --   Permission is hereby granted, free of charge, to any person obtaining a copy
 --   of this software and associated documentation files (the "Software"), to deal
 --   in the Software without restriction, including without limitation the rights
@@ -20,14 +21,10 @@
 --   copies of the Software, and to permit persons to whom the Software is
 --   furnished to do so, subject to the conditions in the LICENSE file.
 --
--- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020):
+-- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015â€“2020 and Sharlikran, 2022â€“present):
 --   You are free to share and adapt the material with attribution, but not for
 --   commercial purposes. Derivatives must be licensed under the same terms.
 --   Full terms at: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
---
--- BSD 3-Clause License (Sharlikran, 2022–present):
---   Redistribution and use in source and binary forms, with or without
---   modification, are permitted under the conditions detailed in the LICENSE file.
 --
 -------------------------------------------------------------------------------
 -- Maintainer Notice:
@@ -63,7 +60,7 @@ internal.collectionInfoCache = internal.collectionInfoCache or {}
 --Local constants -------------------------------------------------------------
 internal.ADDON_NAME = "LoreBooks"
 internal.ADDON_AUTHOR = "Garkin, Ayantir, Kyoma, |cFF9B15Sharlikran|r"
-internal.ADDON_VERSION = "97"
+internal.ADDON_VERSION = "98"
 internal.ADDON_WEBSITE = "http://www.esoui.com/downloads/info288-LoreBooks.html"
 internal.ADDON_PANEL = "LoreBooksPanel"
 internal.SAVEDVARIABLES_VERSION = 3
@@ -96,22 +93,6 @@ end
 
 function LoreBooks:FireCallbacks(...)
   return callbackObject:FireCallbacks(...)
-end
-
-local function is_empty_or_nil(t)
-  if t == nil or t == "" then return true end
-  return type(t) == "table" and ZO_IsTableEmpty(t) or false
-end
-
-local function is_in(search_value, search_table)
-  if is_empty_or_nil(search_value) then return false end
-  for k, v in pairs(search_table) do
-    if search_value == v then return true end
-    if type(search_value) == "string" then
-      if string.find(string.lower(v), string.lower(search_value)) then return true end
-    end
-  end
-  return false
 end
 
 -- Pin Textures
@@ -207,19 +188,6 @@ internal.icon_list_zoneid = {
   [584] = "/esoui/art/icons/housing_cra_fur_bookshelvescombo005.dds", -- imperialcity_base_0
   [267] = "/esoui/art/icons/housing_alt_fur_cabinet004.dds", -- eyevea_base_0
 }
-
-internal.supported_locales = { "en", "es", "de", "fr", "ru", "zh", "br", "it", "pl" }
-internal.current_locale = GetCVar("Language.2")
-internal.supported_bookshelf_locales = { "en", "de", "fr", "ru" }
-internal.current_bookshelf_locale = GetCVar("Language.2")
-do
-  if not is_in(internal.current_locale, internal.supported_locales) then
-    internal.current_locale = "en"
-  end
-  if not is_in(internal.current_bookshelf_locale, internal.supported_bookshelf_locales) then
-    internal.current_bookshelf_locale = "en"
-  end
-end
 
 LoreBooks.defaults = {      --default settings for saved variables
   compassMaxDistance = 0.04,

@@ -10,7 +10,8 @@
 --    Sharlikran (current maintainer, contributions starting 2022-11-12)
 --
 -------------------------------------------------------------------------------
--- This addon includes contributions licensed under three licenses:
+-- This addon includes contributions licensed under two Creative Commons licenses
+-- and the original MIT license:
 --
 -- MIT License (Garkin, 2014–2015):
 --   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,14 +21,10 @@
 --   copies of the Software, and to permit persons to whom the Software is
 --   furnished to do so, subject to the conditions in the LICENSE file.
 --
--- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020):
+-- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020 and Sharlikran, 2022–present):
 --   You are free to share and adapt the material with attribution, but not for
 --   commercial purposes. Derivatives must be licensed under the same terms.
 --   Full terms at: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
---
--- BSD 3-Clause License (Sharlikran, 2022–present):
---   Redistribution and use in source and binary forms, with or without
---   modification, are permitted under the conditions detailed in the LICENSE file.
 --
 -------------------------------------------------------------------------------
 -- Maintainer Notice:

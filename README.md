@@ -15,7 +15,7 @@ This addon incorporates contributions under the following licenses:
 
 - **MIT License** — for original work by Garkin (2014–2015)  
 - **Creative Commons Attribution-NonCommercial-ShareAlike 4.0** — for contributions by Ayantir (2015–2020)  
-- **BSD 3-Clause License** — for contributions by Sharlikran (2022–present)
+- **Creative Commons Attribution-NonCommercial-ShareAlike 4.0** — for contributions by Sharlikran (2022–present)
 
 Please see the LICENSE file for complete terms.
 

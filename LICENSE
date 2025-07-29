@@ -4,7 +4,7 @@ LoreBooks Addon Licensing
 This software incorporates work contributed over many years by different authors and is distributed under multiple licenses as follows:
 
 --------------------------------------------------------------------------------
-MIT License â€” Original Author: Ales Machat (Garkin)
+MIT License — Original Author: Ales Machat (Garkin)
 --------------------------------------------------------------------------------
 
 Copyright (c) 2014, 2015 Ales Machat
@@ -20,13 +20,18 @@ furnished to do so, subject to the following conditions:
 
 --------------------------------------------------------------------------------
 Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-â€” Contributor: Ayantir (contributions starting 2015-11-07)
+— Contributors:
+    Ayantir (contributions starting 2015-11-07)
+    Sharlikran (contributions starting 2022-11-12)
 --------------------------------------------------------------------------------
 
-[CC BY-NC-SA summary and link as provided...]
+You are free to:
+  - **Share** — copy and redistribute the material in any medium or format
+  - **Adapt** — remix, transform, and build upon the material
 
---------------------------------------------------------------------------------
-BSD 3-Clause License â€” Contributor: Sharlikran (contributions starting 2022-11-12)
---------------------------------------------------------------------------------
+Under the following terms:
+  - **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+  - **NonCommercial** — You may not use the material for commercial purposes.
+  - **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license.
 
-[BSD 3-Clause text as provided...]
+Full license text available at: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode

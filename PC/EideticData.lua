@@ -10,7 +10,8 @@
 --    Sharlikran (current maintainer, contributions starting 2022-11-12)
 --
 -------------------------------------------------------------------------------
--- This addon includes contributions licensed under three licenses:
+-- This addon includes contributions licensed under two Creative Commons licenses
+-- and the original MIT license:
 --
 -- MIT License (Garkin, 2014–2015):
 --   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,14 +21,10 @@
 --   copies of the Software, and to permit persons to whom the Software is
 --   furnished to do so, subject to the conditions in the LICENSE file.
 --
--- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020):
+-- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020 and Sharlikran, 2022–present):
 --   You are free to share and adapt the material with attribution, but not for
 --   commercial purposes. Derivatives must be licensed under the same terms.
 --   Full terms at: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
---
--- BSD 3-Clause License (Sharlikran, 2022–present):
---   Redistribution and use in source and binary forms, with or without
---   modification, are permitted under the conditions detailed in the LICENSE file.
 --
 -------------------------------------------------------------------------------
 -- Maintainer Notice:
@@ -61729,17 +61726,20 @@ local function ResolveLocalizedField(valueFromGame, fieldTable)
   if valueFromGame and valueFromGame ~= "" then
     return valueFromGame
   end
+
   if fieldTable then
     local locale = internal.current_locale
-    local localized = fieldTable[locale]
+    local localized = locale and fieldTable[locale]
     if localized and localized ~= "" then
       return localized
     end
+
     local fallback = fieldTable["en"]
     if fallback and fallback ~= "" then
       return fallback
     end
   end
+
   return nil
 end
 
@@ -61757,17 +61757,23 @@ function LoreBooks_GetNewLoreCollectionInfo(categoryIndex, collectionIndex)
 
   name = ResolveLocalizedField(name, data and data.n)
   description = ResolveLocalizedField(description, data and data.d)
-  totalBooks = (totalBooks == nil or totalBooks == 0) and data and data.t or totalBooks
-
-  if name == nil or description == nil or totalBooks == nil then
-    return "", "", 0, 0, true, "/esoui/art/icons/icon_missing.dds", 0
+  if (not totalBooks or totalBooks == 0) and data and data.t then
+    totalBooks = data.t
   end
 
-  -- if data and data.h ~= nil then hidden = data.h end
   hidden = false
 
-  gamepadIcon = (gamepadIcon == nil or gamepadIcon == "") and data and data.g or gamepadIcon
-  collectionId = (collectionId == nil or collectionId == 0) and data and data.k or collectionId
+  if (not gamepadIcon or gamepadIcon == "") and data and data.g then
+    gamepadIcon = data.g
+  end
+
+  if (not collectionId or collectionId == 0) and data and data.k then
+    collectionId = data.k
+  end
+
+  if name == nil or totalBooks == nil then
+    return "", "", 0, 0, true, "/esoui/art/icons/icon_missing.dds", 0
+  end
 
   local numKnownBooks = GetNumKnownBooksInCollection(categoryIndex, collectionIndex, totalBooks)
 
@@ -61784,4 +61790,3 @@ function LoreBooks_GetNewLoreCollectionInfo(categoryIndex, collectionIndex)
   internal.collectionInfoCache[cacheKey] = result
   return unpack(result)
 end
-
