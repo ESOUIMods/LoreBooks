@@ -29,7 +29,6 @@ local LMP = LibMapPins
 local LMD = LibMapData
 local LMDI = LibMapData_Internal
 local GPS = LibGPS3
-local Postmail = {}
 local LoreBooks = _G["LoreBooks"]
 local internal = _G["LoreBooks_Internal"]
 
@@ -1535,11 +1534,11 @@ local function OnRowMouseUp(control, button)
     --self:LockSelection()
 
     if control.known then
-      AddCustomMenuItem(GetString(SI_LORE_LIBRARY_READ), function() ZO_LoreLibrary_ReadBook(control.categoryIndex, control.collectionIndex, control.bookIndex) end)
+      AddMenuItem(GetString(SI_LORE_LIBRARY_READ), function() ZO_LoreLibrary_ReadBook(control.categoryIndex, control.collectionIndex, control.bookIndex) end)
     end
 
     if IsChatSystemAvailableForCurrentPlatform() then
-      AddCustomMenuItem(GetString(SI_ITEM_ACTION_LINK_TO_CHAT), function()
+      AddMenuItem(GetString(SI_ITEM_ACTION_LINK_TO_CHAT), function()
         local link = ZO_LinkHandler_CreateChatLink(GetLoreBookLink, control.categoryIndex, control.collectionIndex, control.bookIndex)
         ZO_LinkHandler_InsertLink(link)
       end)
@@ -1552,7 +1551,7 @@ local function OnRowMouseUp(control, button)
         if resultData.data[5] and resultData.data[5] == 9999 then fakePin = true end
 
         if resultData.mapId and not fakePin then
-          AddCustomMenuItem(zo_strformat("<<1>> : <<2>>x<<3>>", zo_strformat(SI_WINDOW_TITLE_WORLD_MAP, GetMapNameById(resultData.mapId)), (resultData.locX * 100), (resultData.locY * 100)),
+          AddMenuItem(zo_strformat("<<1>> : <<2>>x<<3>>", zo_strformat(SI_WINDOW_TITLE_WORLD_MAP, GetMapNameById(resultData.mapId)), (resultData.locX * 100), (resultData.locY * 100)),
             function()
               SetMapToMapId(resultData.mapId)
               GPS:SetPlayerChoseCurrentMap()
@@ -1600,7 +1599,7 @@ local function OnRowMouseUp(control, button)
             end
             local xTooltip = ("%0.02f"):format(zo_round(xLoc * 10000) / 100)
             local yTooltip = ("%0.02f"):format(zo_round(yLoc * 10000) / 100)
-            AddCustomMenuItem(zo_strformat("<<1>> (<<2>>x<<3>>)", zo_strformat(SI_WINDOW_TITLE_WORLD_MAP, mapName), xTooltip, yTooltip),
+            AddMenuItem(zo_strformat("<<1>> (<<2>>x<<3>>)", zo_strformat(SI_WINDOW_TITLE_WORLD_MAP, mapName), xTooltip, yTooltip),
               function()
                 SetMapToMapId(mapId)
                 GPS:SetPlayerChoseCurrentMap()

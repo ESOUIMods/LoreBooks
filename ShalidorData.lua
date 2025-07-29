@@ -3491,3 +3491,18 @@ end
 function LoreBooks_GetAllData()
   return lorebooksData
 end
+
+-- copy of GetLoreBookInfo
+-- /script d({LoreBooks_GetNewShalidorBookInfo(1, x, x)})
+function LoreBooks_GetNewShalidorBookInfo(categoryIndex, collectionIndex, bookIndex)
+  local title, icon, known, bookId = GetLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
+
+  if (not title or title == "") then
+    title = internal.MISSING_TITLE
+  end
+
+  return title,
+  icon or internal.PLACEHOLDER_TEXTURE,
+  known or false,
+  bookId
+end
