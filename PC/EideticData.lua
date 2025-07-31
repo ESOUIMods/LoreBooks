@@ -1,27 +1,54 @@
 --[[
 -------------------------------------------------------------------------------
--- LoreBooks, by Ayantir
+-- LoreBooks
 -------------------------------------------------------------------------------
-This software is under : CreativeCommons CC BY-NC-SA 4.0
-Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
-
-You are free to:
-
-	Share — copy and redistribute the material in any medium or format
-	Adapt — remix, transform, and build upon the material
-	The licensor cannot revoke these freedoms as long as you follow the license terms.
-
-
-Under the following terms:
-
-	Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-	NonCommercial — You may not use the material for commercial purposes.
-	ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
-	No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
-
-
-Please read full licence at :
-http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+-- Original author: Ales Machat (Garkin), started 2014-04-18
+--
+-- Maintainers:
+--    Ayantir (contributions starting 2015-11-07)
+--    Kyoma (contributions starting 2018-05-30)
+--    Sharlikran (current maintainer, contributions starting 2022-11-12)
+--
+-------------------------------------------------------------------------------
+-- This addon includes contributions licensed under two Creative Commons licenses
+-- and the original MIT license:
+--
+-- MIT License (Garkin, 2014–2015):
+--   Permission is hereby granted, free of charge, to any person obtaining a copy
+--   of this software and associated documentation files (the "Software"), to deal
+--   in the Software without restriction, including without limitation the rights
+--   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+--   copies of the Software, and to permit persons to whom the Software is
+--   furnished to do so, subject to the conditions in the LICENSE file.
+--
+-- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020 and Sharlikran, 2022–present):
+--   You are free to share and adapt the material with attribution, but not for
+--   commercial purposes. Derivatives must be licensed under the same terms.
+--   Full terms at: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+--
+-------------------------------------------------------------------------------
+-- Maintainer Notice:
+-- Redistribution of this addon outside of ESOUI.com or GitHub is discouraged
+-- unless authorized by the current maintainer. While the original MIT license
+-- permits wide redistribution, uncoordinated uploads may cause version
+-- fragmentation or confusion. Please respect the intent of the maintainers and
+-- the ESO addon ecosystem.
+-- ----------------------------------------------------------------------------
+-- Data Integrity and Attribution Notice:
+-- While individual book positions are discoverable via the ESO API, the
+-- comprehensive dataset included in LoreBooks is the result of years of
+-- community effort and contributions from multiple players. Recreating this
+-- dataset independently requires extensive time and dedication.
+--
+-- Direct reuse, extraction, or redistribution of the compiled data tables,
+-- either in whole or substantial part, without permission from the current
+-- maintainer, is prohibited. Claiming ownership or sole authorship over
+-- derived works that include this dataset is considered a violation of the
+-- contributors' efforts and the licenses under which this project is shared.
+--
+-- If you wish to use this data in your own addon or tool, please contact the
+-- current maintainer for appropriate guidance and permission.
+-- ----------------------------------------------------------------------------
 ]]
 local internal = _G["LoreBooks_Internal"]
 
@@ -30,523 +57,523 @@ local libraryData = {
     [1] = {
       ["t"] = 10,
       ["k"] = 3,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Гленумбры.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur la Glénumbrie.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Glenumbra.",
-        ["en"] = "A Mages Guild collection of lore books about Glenumbra.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Гленумбры",
-        ["fr"] = "Connaissance de Glénumbrie",
-        ["de"] = "Über Glenumbra",
         ["en"] = "Glenumbra Lore",
+        ["it"] = "Conoscenza di Glenumbra",
+        ["pl"] = "Wiedza o Glenumbrze",
+        ["br"] = "Conhecimento de Glenumbra",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of lore books about Glenumbra.",
+        ["it"] = "Una collezione di libri di storia della Gilda dei Maghi su Glenumbra.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Glenumbry.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros sobre o folclore de Glenumbra.",
       },
     },
     [2] = {
       ["t"] = 10,
       ["k"] = 5,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Стормхейвена.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur Havre-tempête.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Sturmhafen.",
-        ["en"] = "A Mages Guild collection of lore books about Stormhaven.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Стормхейвена",
-        ["fr"] = "Connaissance de Havre-tempête",
-        ["de"] = "Über Sturmhafen",
         ["en"] = "Stormhaven Lore",
+        ["it"] = "Conoscenza di Stormhaven",
+        ["pl"] = "Wiedza o Burzowej Przystani",
+        ["br"] = "Cultura de Stormhaven",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of lore books about Stormhaven.",
+        ["it"] = "Una collezione di libri di storia della Gilda dei Maghi su Stormhaven.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Burzowej Przystani.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros sobre o folclore de Stormhaven.",
       },
     },
     [3] = {
       ["t"] = 10,
       ["k"] = 6,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории Ривенспайра.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur Fendretour.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Kluftspitze.",
-        ["en"] = "A Mages Guild collection of lore books about Rivenspire.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История Ривенспайра",
-        ["fr"] = "Connaissance de Fendretour",
-        ["de"] = "Über Kluftspitze",
         ["en"] = "Rivenspire Lore",
+        ["it"] = "Conoscenza di Rivenspire",
+        ["pl"] = "Wiedza o Rozdartej Iglicy",
+        ["br"] = "Conhecimento de Rivenspire",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of lore books about Rivenspire.",
+        ["it"] = "Una collezione di libri di storia della Gilda dei Maghi su Rivenspire.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Rozdartej Iglicy.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros sobre o folclore de Rivenspire.",
       },
     },
     [4] = {
       ["t"] = 10,
       ["k"] = 7,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории Бангкорая.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur Bangkoraï.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Bangkorai.",
-        ["en"] = "A Mages Guild collection of lore books about Bangkorai.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Бангкорая",
-        ["fr"] = "Connaissance de Bangkoraï",
-        ["de"] = "Über Bangkorai",
         ["en"] = "Bangkorai Lore",
+        ["it"] = "Conoscenza di Bangkorai",
+        ["pl"] = "Wiedza o Bangkorai",
+        ["br"] = "Conhecimento de Bangkorai",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of lore books about Bangkorai.",
+        ["it"] = "Una collezione della Gilda dei Maghi di libri di storia sul Bangkorai.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Bangkorai.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros sobre o folclore de Bangkorai.",
       },
     },
     [5] = {
       ["t"] = 10,
       ["k"] = 8,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории пустыни Алик'р.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur le désert d'Alik'r.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über die Alik'r-Wüste.",
-        ["en"] = "A Mages Guild collection of lore books about the Alik'r Desert.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи пустыни Алик'р",
-        ["fr"] = "Connaissance du désert d'Alik'r",
-        ["de"] = "Über die Alik'r-Wüste",
         ["en"] = "Alik'r Desert Lore",
+        ["it"] = "Conoscenza del  Deserto Alik'r",
+        ["pl"] = "Wiedza o pustyni Alik'r",
+        ["br"] = "Conhecimento de Alik'r Desert",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of lore books about the Alik'r Desert.",
+        ["it"] = "Una collezione di libri di storia della Gilda dei Maghi sul deserto di Alik'r.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące pustyni Alik'r.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros sobre o folclore do Alik'r Desert.",
       },
     },
     [6] = {
       ["t"] = 10,
       ["k"] = 9,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Тенетопи.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur Fangeombre.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Schattenfenn.",
-        ["en"] = "A Mages Guild collection of lore books about Shadowfen.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Тенетопи",
-        ["fr"] = "Connaissance de Fangeombre",
-        ["de"] = "Über Schattenfenn",
         ["en"] = "Shadowfen Lore",
+        ["it"] = "Conoscenza di Shadowfen",
+        ["pl"] = "Wiedza o Shadowfen",
+        ["br"] = "Conhecimento de Charco Sombrio",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of lore books about Shadowfen.",
+        ["it"] = "Una collezione di libri di storia della Gilda dei Maghi su Shadowfen.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Shadowfen.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros sobre o folclore de Charco Sombrio.",
       },
     },
     [7] = {
       ["t"] = 4,
       ["k"] = 10,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_magic.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, найденная во время выполнения испытаний Безумного Бога.",
-        ["fr"] = "Une collection de livres de la guilde des mages découverts en accomplissant les épreuves du Dieu fou.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern, die man während der Prüfungen des Verrückten Gottes findet.",
-        ["en"] = "A Mages Guild collection of books found while completing the Mad God's trials.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_magic.dds",
       ["n"] = {
-        ["ru"] = "Испытание Айвеи",
-        ["fr"] = "Les épreuves d'Eyévéa",
-        ["de"] = "Die Prüfung von Augvea",
         ["en"] = "The Trial of Eyevea",
+        ["it"] = "Il processo di Eyevea",
+        ["pl"] = "Próba Eyevei",
+        ["br"] = "O Teste de Eyevea",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books found while completing the Mad God's trials.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi trovati durante il completamento delle prove del Dio Folle.",
+        ["pl"] = "Księgi ze zbioru gildii magów znalezione podczas prób Szalonego Boga.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros encontrados durante as provações do Deus Louco.",
       },
     },
     [8] = {
       ["t"] = 10,
       ["k"] = 12,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_daedric.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, посвященных князьям даэдра.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur les princes Daedra.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über daedrische Fürsten.",
-        ["en"] = "A Mages Guild collection of books regarding the Daedric Princes.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_daedric.dds",
       ["n"] = {
-        ["ru"] = "Князья даэдра",
-        ["fr"] = "Princes Daedra",
-        ["de"] = "Daedrische Fürsten",
         ["en"] = "Daedric Princes",
+        ["it"] = "Principi Daedrici",
+        ["pl"] = "Daedryczni książęta",
+        ["br"] = "Príncipe Daédrico",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding the Daedric Princes.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi riguardanti i Principi Daedrici.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące daedrycznych książąt.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito dos Príncipes Daédricos.",
       },
     },
     [9] = {
       ["t"] = 10,
       ["k"] = 13,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов о жизни выдающихся личностей.",
-        ["fr"] = "Une collection de livres de la guilde des mages sur la vie des grands de ce monde.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über die Leben der Großen.",
-        ["en"] = "A Mages Guild collection of books about the lives of the great.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Биографии",
-        ["fr"] = "Biographies",
-        ["de"] = "Biographien",
         ["en"] = "Biographies",
+        ["it"] = "Biografie",
+        ["pl"] = "Biografie",
+        ["br"] = "Biografias",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books about the lives of the great.",
+        ["it"] = "Una collezione di libri della Mages Guild sulla vita dei grandi.",
+        ["pl"] = "Księgi ze zbioru gildii magów o żywocie wielkiego.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros sobre a vida dos grandes.",
       },
     },
     [10] = {
       ["t"] = 10,
       ["k"] = 14,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_divine.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, посвященных богам и прочим божествам.",
-        ["fr"] = "Une collection de livres de la guilde des mages sur les Divins et autres divinités.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über die Göttlichen und andere Gottheiten.",
-        ["en"] = "A Mages Guild collection of books regarding the Divines and other Deities.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_divine.dds",
       ["n"] = {
-        ["ru"] = "Боги и божества",
-        ["fr"] = "Divins et divinités",
-        ["de"] = "Göttliche und Gottheiten",
         ["en"] = "Divines and Deities",
+        ["it"] = "Divini e divinità",
+        ["pl"] = "Bogowie i świętości",
+        ["br"] = "Divinos e Deidades",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding the Divines and other Deities.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi riguardanti i Divini e altre Divinità.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące bogów i innych świętości.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito dos Divinos e outras Divindades.",
       },
     },
     [11] = {
       ["t"] = 17,
       ["k"] = 15,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dungeons.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов касательно истории подземелий.",
-        ["fr"] = "Une collection de livres de la guilde des mages concernant les donjons.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern mit Wissenswertem über Verliese.",
-        ["en"] = "A Mages Guild collection of books regarding dungeon lore.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dungeons.dds",
       ["n"] = {
-        ["ru"] = "История подземелий",
-        ["fr"] = "Connaissance des donjons",
-        ["de"] = "Über Verliese",
         ["en"] = "Dungeon Lore",
+        ["it"] = "Conoscenza del Drago",
+        ["pl"] = "Wiedza o lochach",
+        ["br"] = "Conhecimento de Masmorras",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding dungeon lore.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi che riguardano la tradizione dei dungeon.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące lochów.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito do folclore sobre masmorras.",
       },
     },
     [12] = {
       ["t"] = 16,
       ["k"] = 16,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dwemer.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, посвященных двемерам.",
-        ["fr"] = "Une collection de livres de la guilde des mages concernant les Dwemers.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über die Dwemer.",
-        ["en"] = "A Mages Guild collection of books regarding the Dwemer.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dwemer.dds",
       ["n"] = {
-        ["ru"] = "Двемеры",
-        ["fr"] = "Dwemer",
-        ["de"] = "Die Dwemer",
         ["en"] = "Dwemer",
+        ["it"] = "Dwemer",
+        ["pl"] = "Dwemerowie",
+        ["br"] = "Dwemer",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding the Dwemer.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi riguardanti i Dwemer.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Dwemerów.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito dos Dwemer.",
       },
     },
     [13] = {
       ["t"] = 10,
       ["k"] = 17,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, посвященных древним легендам.",
-        ["fr"] = "Une collection de livres de la guilde des mages concernant d'anciennes légendes.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über die alten Legenden.",
-        ["en"] = "A Mages Guild collection of books regarding ancient legends.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Легенды Нирна",
-        ["fr"] = "Légendes de Nirn",
-        ["de"] = "Legenden von Nirn",
         ["en"] = "Legends of Nirn",
+        ["it"] = "Leggende di Nirn",
+        ["pl"] = "Legendy Nirn",
+        ["br"] = "Lendas de Nirn",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding ancient legends.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi sulle antiche leggende.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące starożytnych legend.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito das lendas antigas.",
       },
     },
     [14] = {
       ["t"] = 10,
       ["k"] = 18,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, представляющих собой значимые литературные труды.",
-        ["fr"] = "Une collection de livres de la guilde des mages recueillant des œuvres majeures de littérature.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern mit bedeutenden literarischen Werken.",
-        ["en"] = "A Mages Guild collection of books that are significant works of literature.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Литература",
-        ["fr"] = "Littérature",
-        ["de"] = "Bekannte Literatur",
         ["en"] = "Literature",
+        ["it"] = "Letteratura",
+        ["pl"] = "Literatura",
+        ["br"] = "Literatura",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books that are significant works of literature.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi che sono opere significative della letteratura.",
+        ["pl"] = "Księgi ze zbioru gildii magów będące istotnymi dziełami literackimi.",
+        ["br"] = "Uma coleção da Guilda dos Magos com obras significativas da literatura.",
       },
     },
     [15] = {
       ["t"] = 10,
       ["k"] = 19,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_magic.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, посвященных магии и тому, что с ней связано.",
-        ["fr"] = "Une collection de livres de la guilde des mages parlant de magie.",
-        ["de"] = "Eine Büchersammlung der Magiergilde, bestehend aus Werken zu Magie und Magicka.",
-        ["en"] = "A Mages Guild books collection of regarding magic and magicka.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_magic.dds",
       ["n"] = {
-        ["ru"] = "Магия и волшебство",
-        ["fr"] = "Magie et sortilèges",
-        ["de"] = "Magie und Magicka",
         ["en"] = "Magic and Magicka",
+        ["it"] = "Magia e Magicka",
+        ["pl"] = "Magia i mana",
+        ["br"] = "Magia e Magicka",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild books collection of regarding magic and magicka.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi per quanto riguarda la magia e la magicka.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące magii i many.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito da mágicka e da magia.",
       },
     },
     [16] = {
       ["t"] = 10,
       ["k"] = 20,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, посвященных древним мифам.",
-        ["fr"] = "Une collection de livres de la guilde des mages regroupant les mythes.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über uralte Mythen.",
-        ["en"] = "A Mages Guild collection of books regarding ancient myths.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Мифы Мундуса",
-        ["fr"] = "Mythes du Mundus",
-        ["de"] = "Mythen des Mundus",
         ["en"] = "Myths of the Mundus",
+        ["it"] = "Miti del Mundus",
+        ["pl"] = "Mity o Mundusie",
+        ["br"] = "Mitos do Mundus",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding ancient myths.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi sui miti antichi.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące starożytnych mitów.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito dos mitos ancestrais.",
       },
     },
     [17] = {
       ["t"] = 10,
       ["k"] = 21,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_daedric.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, посвященных Обливиону.",
-        ["fr"] = "Une collection de livres de la guilde des mages concernant Oblivion.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über das Reich des Vergessens.",
-        ["en"] = "A Mages Guild collection of books regarding Oblivion.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_daedric.dds",
       ["n"] = {
-        ["ru"] = "Обливион",
-        ["fr"] = "Connaissance d'Oblivion",
-        ["de"] = "Über das Reich des Vergessens",
         ["en"] = "Oblivion Lore",
+        ["it"] = "Conoscenza di Oblivion",
+        ["pl"] = "Wiedza o Otchłani",
+        ["br"] = "Conhecimento do Oblivion",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding Oblivion.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi su Oblivion.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Otchłani.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito do Oblivion.",
       },
     },
     [18] = {
       ["t"] = 10,
       ["k"] = 22,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, воздающих дань стихам и песням.",
-        ["fr"] = "Une collection de livres de la guilde des mages recueillant des poèmes et des chants.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Feiern und Liedtexte.",
-        ["en"] = "A Mages Guild collection of books celebrating lyrics and verse.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Поэзия и песни",
-        ["fr"] = "Poésie et chant",
-        ["de"] = "Gedichte und Lieder",
         ["en"] = "Poetry and Song",
+        ["it"] = "Poesia e canzone",
+        ["pl"] = "Poezje i pieśni",
+        ["br"] = "Poesia e Canção",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books celebrating lyrics and verse.",
+        ["it"] = "Una collezione di libri della Mages Guild che celebra i testi e i versi.",
+        ["pl"] = "Księgi ze zbioru gildii magów zawierające odświętne wersy i zwrotki.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros que celebram poemas e canções.",
       },
     },
     [19] = {
       ["t"] = 10,
       ["k"] = 23,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов, посвященных истории Тамриэля.",
-        ["fr"] = "Une collection de livres de la guilde des mages traitant de l'histoire de Tamriel.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über die Geschichte Tamriels.",
-        ["en"] = "A collection of Mages Guild collection of books pertaining to Tamriel's history.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "История Тамриэля",
-        ["fr"] = "Histoire de Tamriel",
-        ["de"] = "Die Geschichte Tamriels",
         ["en"] = "Tamriel History",
+        ["it"] = "Storia di Tamriel",
+        ["pl"] = "Historia Tamriel",
+        ["br"] = "História de Tamriel",
+      },
+      ["d"] = {
+        ["en"] = "A collection of Mages Guild collection of books pertaining to Tamriel's history.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi riguardanti la storia di Tamriel.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące historii Tamriel.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros pertencentes à história de Tamriel.",
       },
     },
     [20] = {
       ["t"] = 10,
       ["k"] = 24,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Стоунфолза.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur les Éboulis.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Steinfälle.",
-        ["en"] = "A Mages Guild collection of books regarding Stonefalls.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Стоунфолза",
-        ["fr"] = "Connaissance des Éboulis",
-        ["de"] = "Über Steinfälle",
         ["en"] = "Stonefalls Lore",
+        ["it"] = "Conoscenza di Stonefalls",
+        ["pl"] = "Wiedza o Kamiennej Kaskadzie",
+        ["br"] = "Cultura de Stonefalls",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding Stonefalls.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi su Stonefalls.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Kamiennej Kaskady.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito de Stonefalls.",
       },
     },
     [21] = {
       ["t"] = 10,
       ["k"] = 26,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Малабал-Тора.",
-        ["fr"] = "Une collection de livres de la guilde des mages découverts à Malabal Tor.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Malabal Tor.",
-        ["en"] = "A collection of Mages Guild books found in Malabal Tor.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Малабал-Тора",
-        ["fr"] = "Connaissance de Malabal Tor",
-        ["de"] = "Über Malabal Tor",
         ["en"] = "Malabal Tor Lore",
+        ["it"] = "Conoscenza di Malabal Tor",
+        ["pl"] = "Wiedza o Malabal Tor",
+        ["br"] = "Conhecimento de Malabal Tor",
+      },
+      ["d"] = {
+        ["en"] = "A collection of Mages Guild books found in Malabal Tor.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi trovati a Malabal Tor.",
+        ["pl"] = "Księgi ze zbioru gildii magów znalezione w Malabal Tor.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros encontrados em Malabal Tor.",
       },
     },
     [22] = {
       ["t"] = 10,
       ["k"] = 27,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Истмарка.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur l'Estemarche.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Ostmarsch.",
-        ["en"] = "A Mages Guild collection of books regarding Eastmarch.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Истмарка",
-        ["fr"] = "Connaissance d'Estemarche",
-        ["de"] = "Über Ostmarsch",
         ["en"] = "Eastmarch Lore",
+        ["it"] = "Conoscenza di Eastmarch",
+        ["pl"] = "Wiedza o Wschodniej Marchii",
+        ["br"] = "Conhecimento de Marcoleste",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding Eastmarch.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi su Eastmarch.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Wschodniej Marchii.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito de Marcoleste.",
       },
     },
     [23] = {
       ["t"] = 10,
       ["k"] = 28,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Дешаана.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur Deshaan.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Deshaan.",
-        ["en"] = "A Mages Guild collection of books regarding Deshaan.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Дешаана",
-        ["fr"] = "Connaissance de Deshaan",
-        ["de"] = "Über Deshaan",
         ["en"] = "Deshaan Lore",
+        ["it"] = "Conoscenza di Deshaan",
+        ["pl"] = "Wiedza o Deshaan",
+        ["br"] = "Conhecimento de Deshaan",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding Deshaan.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi su Deshaan.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Deshaan.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito de Deshaan.",
       },
     },
     [24] = {
       ["t"] = 10,
       ["k"] = 29,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Рифта.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur la Brèche.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Rift.",
-        ["en"] = "A Mages Guild collection of books regarding the Rift.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Рифта",
-        ["fr"] = "Connaissance de la Brèche",
-        ["de"] = "Über Rift",
         ["en"] = "The Rift Lore",
+        ["it"] = "Conoscenza del Rift",
+        ["pl"] = "Wiedza o Rift",
+        ["br"] = "Conhecimento de Rift",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding the Rift.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi riguardanti il Rift.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Rift.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito do Rift.",
       },
     },
     [25] = {
       ["t"] = 10,
       ["k"] = 30,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Ауридона.",
-        ["fr"] = "Une collection de livres de la guilde des mages découverts en Auridia.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Auridon.",
-        ["en"] = "A collection of Mages Guild books found in Auridon.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Ауридона",
-        ["fr"] = "Connaissance d'Auridia",
-        ["de"] = "Über Auridon",
         ["en"] = "Auridon Lore",
+        ["it"] = "Conoscenza di Auridon",
+        ["pl"] = "Wiedza o Auridonie",
+        ["br"] = "Conhecimento de Auridon",
+      },
+      ["d"] = {
+        ["en"] = "A collection of Mages Guild books found in Auridon.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi trovati ad Auridon.",
+        ["pl"] = "Księgi ze zbioru gildii magów znalezione w Auridonie.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros encontrados em Auridon.",
       },
     },
     [26] = {
       ["t"] = 10,
       ["k"] = 32,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Гратвуда.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur le bois de Graht.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Grahtwald.",
-        ["en"] = "A Mages Guild collection of books regarding Grahtwood.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Гратвуда",
-        ["fr"] = "Connaissance du bois de Graht",
-        ["de"] = "Über Grahtwald",
         ["en"] = "Grahtwood Lore",
+        ["it"] = "Conoscenza di Grahtwood",
+        ["pl"] = "Wiedza o Grahtwood",
+        ["br"] = "Conhecimento da Floresta Graht",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding Grahtwood.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi su Grahtwood.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Grahtwood.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito da Floresta Graht.",
       },
     },
     [27] = {
       ["t"] = 10,
       ["k"] = 38,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Гриншейда.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur Prasin.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Grünschatten.",
-        ["en"] = "A Mages Guild collection of books regarding Greenshade.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Гриншейда",
-        ["fr"] = "Connaissance de Prasin",
-        ["de"] = "Über Grünschatten",
         ["en"] = "Greenshade Lore",
+        ["it"] = "Storia di Ombraverde",
+        ["pl"] = "Wiedza o Zielonej Polanie",
+        ["br"] = "Conhecimento de Verdejante",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding Greenshade.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi su Ombraverde.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Zielonej Polany.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito de Verdejante.",
       },
     },
     [28] = {
       ["t"] = 10,
       ["k"] = 39,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Марки Смерти.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur la marche de la Camarde.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Schnittermark.",
-        ["en"] = "A Mages Guild collection of books regarding Reaper's March.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Марки Смерти",
-        ["fr"] = "Connaissance de la Camarde",
-        ["de"] = "Über Schnittermark",
         ["en"] = "Reaper's March Lore",
+        ["it"] = "Conoscenza di Passo del Mietitore",
+        ["pl"] = "Wiedza o Marchii Żniwiarzy",
+        ["br"] = "Conhecimento da Marca do Ceifador",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding Reaper's March.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi sulla Marcia del Mietitore.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Marchii Żniwiarzy.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito da Marca do Ceifador.",
       },
     },
     [29] = {
       ["t"] = 10,
       ["k"] = 40,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_daedric.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг Гильдии магов об истории и обычаях Хладной Гавани.",
-        ["fr"] = "Une série de livres de connaissances de la guilde des mages sur Havreglace.",
-        ["de"] = "Eine Sammlung der Magiergilde mit Büchern über Kalthafen.",
-        ["en"] = "A Mages Guild collection of books regarding Coldharbour.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_daedric.dds",
       ["n"] = {
-        ["ru"] = "История и обычаи Хладной Гавани",
-        ["fr"] = "Connaissance de Havreglace",
-        ["de"] = "Über Kalthafen",
         ["en"] = "Coldharbour Lore",
+        ["it"] = "Conoscenza di Coldharbour",
+        ["pl"] = "Wiedza o Mroźnym Azylu",
+        ["br"] = "Conhecimento de Porto Gélido",
+      },
+      ["d"] = {
+        ["en"] = "A Mages Guild collection of books regarding Coldharbour.",
+        ["it"] = "Una collezione di libri della Gilda dei Maghi su Coldharbour.",
+        ["pl"] = "Księgi ze zbioru gildii magów dotyczące Mroźnego Azylu.",
+        ["br"] = "Uma coleção da Guilda dos Magos com livros a respeito de Porto Gélido.",
       },
     },
   },
@@ -554,1441 +581,2053 @@ local libraryData = {
     [1] = {
       ["t"] = 24,
       ["k"] = 43,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги знаний, относящиеся к различным областям ремесла.",
-        ["fr"] = "Livres de savoir autour des différentes disciplines d'artisanat.",
-        ["de"] = "Bücher, die sich mit den verschiedenen Handwerken beschäftigen.",
-        ["en"] = "Lore books related to the various disciplines of crafting.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Книги о ремеслах",
-        ["fr"] = "Livres d'artisanat",
-        ["de"] = "Handwerksbücher",
         ["en"] = "Crafting Books",
+        ["it"] = "Libri di artigianato",
+        ["pl"] = "Książki o rzemiośle",
+        ["br"] = "Livros de Artesão",
+      },
+      ["d"] = {
+        ["en"] = "Lore books related to the various disciplines of crafting.",
+        ["it"] = "Libri di Lore relativi alle varie discipline dell'artigianato.",
+        ["pl"] = "Księgi wiedzy powiązane z różnymi dziedzinami rzemiosła.",
+        ["br"] = "Livros relacionados a várias disciplinas de criação.",
       },
     },
     [2] = {
       ["t"] = 14,
       ["k"] = 74,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dwemer.dds",
-      ["d"] = {
-        ["ru"] = "",
-        ["fr"] = "",
-        ["de"] = "",
-        ["en"] = "",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dwemer.dds",
       ["n"] = {
-        ["ru"] = "Двемерский стиль",
-        ["fr"] = "Motifs dwemer",
-        ["de"] = "Stil der Dwemer",
         ["en"] = "Dwemer Style",
+        ["it"] = "Stile Dwemer",
+        ["pl"] = "Styl Dwemerów",
+        ["br"] = "Estilo Enânico",
       },
-    },
-    [3] = {
-      ["t"] = 0,
-      ["k"] = 0,
-      ["g"] = "/esoui/art/icons/icon_missing.dds",
       ["d"] = {
-        ["ru"] = "",
-        ["fr"] = "",
-        ["de"] = "",
         ["en"] = "",
-      },
-      ["h"] = true,
-      ["n"] = {
-        ["ru"] = "",
-        ["fr"] = "",
-        ["de"] = "",
-        ["en"] = "",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "",
       },
     },
     [4] = {
       ["t"] = 14,
       ["k"] = 77,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Эти книги позволяют создавать предметы в акавирском стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style akavirois.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil der Akaviri.",
-        ["en"] = "These books enable crafting in the Akaviri style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Акавирский стиль",
-        ["fr"] = "Style akavirois",
-        ["de"] = "Stil der Akaviri",
         ["en"] = "Akaviri Style",
+        ["it"] = "Stile Akaviri",
+        ["pl"] = "Styl Akavirczyków",
+        ["br"] = "Estilo Akaviri",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the Akaviri style.",
+        ["it"] = "Questi libri permettono la creazione nello stile Akaviri.",
+        ["pl"] = "Te książki nauczą cię rzemiosła w stylu Akavirczyków.",
+        ["br"] = "Estes livros permitem a criação de itens no estilo Akaviri.",
       },
     },
     [5] = {
       ["t"] = 14,
       ["k"] = 78,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Эти книги позволяют создавать предметы в йокуданском стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style yokudan.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil der Yokudaner.",
-        ["en"] = "These books enable crafting in the Yokudan style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Йокуданский стиль",
-        ["fr"] = "Style yokudan",
-        ["de"] = "Stil der Yokudaner",
         ["en"] = "Yokudan Style",
+        ["it"] = "Stile Yokudan",
+        ["pl"] = "Styl Yokudan",
+        ["br"] = "Estilo Yokudano",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the Yokudan style.",
+        ["it"] = "Questi libri permettono la creazione nello stile Yokudan.",
+        ["pl"] = "Te książki nauczą cię rzemiosła w stylu Yokudan.",
+        ["br"] = "Estes livros permitem a criação de itens no estilo Yokudano.",
       },
     },
     [6] = {
       ["t"] = 14,
       ["k"] = 79,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стеклянном стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style verrier.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil mit Glasit.",
-        ["en"] = "These book fragments enable crafting in the Glass style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стеклянный стиль",
-        ["fr"] = "Style du verre",
-        ["de"] = "Stil mit Glasit",
         ["en"] = "Glass Style",
+        ["it"] = "Stile di vetro",
+        ["pl"] = "Styl szklany",
+        ["br"] = "Estilo de Cristal",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Glass style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile di Vetro.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu szklanym.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo de Cristal.",
       },
     },
     [7] = {
       ["t"] = 14,
       ["k"] = 80,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в подходящем для боя и практичном стиле наемников.",
-        ["fr"] = "Permet à l'artisan de créer des objets dans le style mercenaire à la fois guerrier et efficace.",
-        ["de"] = "Mit diesem Wissen können Handwerker Gegenstände im kriegerischen und zweckmäßigen Stil berühmter Söldner fertigen.",
-        ["en"] = "This style enables the crafter to create items in the martial and utilitarian Mercenary style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль наемников",
-        ["fr"] = "Style mercenaire",
-        ["de"] = "Stil der Söldner",
         ["en"] = "Mercenary Style",
+        ["it"] = "Stile dei Mercenari",
+        ["pl"] = "Styl najemników",
+        ["br"] = "Estilo do Mercenário",
+      },
+      ["d"] = {
+        ["en"] = "This style enables the crafter to create items in the martial and utilitarian Mercenary style.",
+        ["it"] = "Questo stile permette al crafter di creare oggetti nello stile marziale e utilitaristico del Mercenario.",
+        ["pl"] = "Ten styl umożliwia rzemieślnikowi wytwarzanie użytkowych i wojennych przedmiotów w stylu najemników.",
+        ["br"] = "Este estilo permite ao usuário criar itens no estilo utilitário e marcial dos Mercenários.",
       },
     },
     [8] = {
       ["t"] = 14,
       ["k"] = 81,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в зивкинском стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style Xivkyn.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Xivkyn.",
-        ["en"] = "These book fragments enable crafting in the Xivkyn style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Зивкинский стиль",
-        ["fr"] = "Style Xivkyn",
-        ["de"] = "Stil der Xivkyn",
         ["en"] = "Xivkyn Style",
+        ["it"] = "Stile Xivkyn",
+        ["pl"] = "Styl Xivkyn",
+        ["br"] = "Estilo de Xinvkyn",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Xivkyn style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Xivkyn.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu xivkyn.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo de Xivkyn.",
       },
     },
     [9] = {
       ["t"] = 14,
       ["k"] = 84,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в древнеорочьем стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style orque antique.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Orkahnen.",
-        ["en"] = "These book fragments enable crafting in the Ancient Orc style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Древнеорочий стиль",
-        ["fr"] = "Style orque antique",
-        ["de"] = "Stil der Orkahnen",
         ["en"] = "Ancient Orc Style",
+        ["it"] = "Stile Orchesco Antico",
+        ["pl"] = "Styl starożytnych orków",
+        ["br"] = "Estilo do Orc Ancião",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ancient Orc style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Orchesco Antico.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu starożytnych orków.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo do Orc Ancião.",
       },
     },
     [10] = {
       ["t"] = 14,
       ["k"] = 88,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле разбойников.",
-        ["fr"] = "Ces livres permettent de fabriquer au style hors-la-loi.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Gesetzlosen.",
-        ["en"] = "These book fragments enable crafting in the Outlaw style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль разбойников",
-        ["fr"] = "Style hors-la-loi",
-        ["de"] = "Stil der Gesetzlosen",
         ["en"] = "Outlaw Style",
+        ["it"] = "Stile dei Fuorilegge",
+        ["pl"] = "Styl banitów",
+        ["br"] = "Estilo <<player{do Criminoso/da Criminosa}>>",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Outlaw style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Fuorilegge.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu banitów.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo Criminoso.",
       },
     },
     [11] = {
       ["t"] = 14,
       ["k"] = 89,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Тринимака.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de Trinimac.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Trinimac.",
-        ["en"] = "These book fragments enable crafting in the Trinimac style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Тринимака",
-        ["fr"] = "Style de Trinimac",
-        ["de"] = "Stil des Trinimac",
         ["en"] = "Trinimac Style",
+        ["it"] = "Stile Trinimac",
+        ["pl"] = "Styl Trinimaca",
+        ["br"] = "Estilo de Trinimac",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Trinimac style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Trinimac.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Trinimaca.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo de Trinimac.",
       },
     },
     [12] = {
       ["t"] = 14,
       ["k"] = 90,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Малаката.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de Malacath.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Malacath.",
-        ["en"] = "These book fragments enable crafting in the Malacath style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Малаката",
-        ["fr"] = "Style de Malacath",
-        ["de"] = "Stil des Malacath",
         ["en"] = "Malacath Style",
+        ["it"] = "Stile Malacath",
+        ["pl"] = "Styl Malacatha",
+        ["br"] = "Estilo de Malacath",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Malacath style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Malacath.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Malacatha.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo de Malacath.",
       },
     },
     [13] = {
       ["t"] = 14,
       ["k"] = 91,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Мораг Тонг.",
-        ["fr"] = "Ces livres débloquent le style d'artisanat Morag Tong.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil der Morag Tong.",
-        ["en"] = "These books enable crafting in the Morag Tong style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Мораг Тонг",
-        ["fr"] = "Style Morag Tong",
-        ["de"] = "Stil der Morag Tong",
         ["en"] = "Morag Tong Style",
+        ["it"] = "Stile Morag Tong",
+        ["pl"] = "Styl Morag Tong",
+        ["br"] = "Estilo da Morag Tong",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the Morag Tong style.",
+        ["it"] = "Questi libri permettono di fare artigianato nello stile di Morag Tong.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Morag Tong.",
+        ["br"] = "Estes livros permitem a criação de itens no estilo da Morag Tong.",
       },
     },
     [14] = {
       ["t"] = 14,
       ["k"] = 92,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Альдмерского Доминиона.",
-        ["fr"] = "Ces extraits de livre permettent de fabriquer au style du Domaine aldmeri.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Aldmeri-Dominions.",
-        ["en"] = "These book fragments enable crafting in the Aldmeri Dominion style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Альдмерского Доминиона",
-        ["fr"] = "Style du Domaine aldmeri",
-        ["de"] = "Stil des Aldmeri-Dominions",
         ["en"] = "Aldmeri Dominion Style",
+        ["it"] = "Stile Dominio Aldmeri",
+        ["pl"] = "Styl Aldmerskiego Dominium",
+        ["br"] = "Estilo do Domínio Aldmeri",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Aldmeri Dominion style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Dominio Aldmeri.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Aldmerskiego Dominium.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo do Domínio Aldmeri.",
       },
     },
     [15] = {
       ["t"] = 14,
       ["k"] = 93,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Даггерфолльского Ковенанта.",
-        ["fr"] = "Ces extraits de livre permettent de fabriquer au style de l'Alliance de Daguefilante.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Dolchsturz-Bündnisses.",
-        ["en"] = "These book fragments enable crafting in the Daggerfall Covenant style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Даггерфолльского Ковенанта",
-        ["fr"] = "Style de l'Alliance de Daguefilante",
-        ["de"] = "Stil des Dolchsturz-Bündnisses",
         ["en"] = "Daggerfall Covenant Style",
+        ["it"] = "Stile dell'Alleanza di Daggerfall",
+        ["pl"] = "Styl Przymierza Daggerfall",
+        ["br"] = "Estilo da Coalizão de Daggerfall",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Daggerfall Covenant style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Alleanza di Daggerfall.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Przymierza Daggerfall.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo da Coalizão de Daggerfall.",
       },
     },
     [16] = {
       ["t"] = 14,
       ["k"] = 94,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Эбонхартского Пакта.",
-        ["fr"] = "Ces extraits de livre permettent de fabriquer au style du Pacte de Cœurébène.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Ebenherz-Paktes.",
-        ["en"] = "These book fragments enable crafting in the Ebonheart Pact style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Эбонхартского Пакта",
-        ["fr"] = "Style du Pacte de Cœurébène",
-        ["de"] = "Stil des Ebenherz-Pakts",
         ["en"] = "Ebonheart Pact Style",
+        ["it"] = "Stile del Patto di Ebonheart",
+        ["pl"] = "Styl Paktu Ebonheart",
+        ["br"] = "Estilo do Pacto de Ebonheart.",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ebonheart Pact style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Patto di Ebonheart.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Paktu Ebonheart.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo do Pacto de Ebonheart.",
       },
     },
     [17] = {
       ["t"] = 14,
       ["k"] = 95,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Ра Гада.",
-        ["fr"] = "Ces livres permettent de fabriquer au style Ra Gada.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Ro'Wada.",
-        ["en"] = "These book fragments enable crafting in the Ra Gada style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Ра Гада",
-        ["fr"] = "Style Ra Gada",
-        ["de"] = "Stil der Ro'Wada",
         ["en"] = "Ra Gada Style",
+        ["it"] = "Stile Ra Gada",
+        ["pl"] = "Styl Ra Gada",
+        ["br"] = "Estilo Ra Gada",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ra Gada style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Ra Gada.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Ra Gada.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo Ra Gada.",
       },
     },
     [18] = {
       ["t"] = 14,
       ["k"] = 96,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле дро-м'Атра.",
-        ["fr"] = "Ces livres permettent de fabriquer au style dro-m'Athra.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der dro-m'Athra.",
-        ["en"] = "These book fragments enable crafting in the dro-m'Athra style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль дро-м'Атра",
-        ["fr"] = "Style dro-m'Athra",
-        ["de"] = "Stil der dro-m'Athra",
         ["en"] = "Dro-m'Athra Style",
+        ["it"] = "Stile Dro-m'Athra",
+        ["pl"] = "Styl Dro-m'Athra",
+        ["br"] = "Estilo de Dro-m' Athra",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the dro-m'Athra style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile dro-m'Athra.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu dro-m'Athra.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo dro-m'Athra.",
       },
     },
     [19] = {
       ["t"] = 14,
       ["k"] = 97,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в эбонитовом стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style d'Ébonite.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen aus Ebenerz.",
-        ["en"] = "These book fragments enable crafting in the Ebony style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Эбонитовый стиль",
-        ["fr"] = "Style d'Ébonite",
-        ["de"] = "Stil mit Ebenerz",
         ["en"] = "Ebony Style",
+        ["it"] = "Stile ebano",
+        ["pl"] = "Styl ebonowy",
+        ["br"] = "Estilo de Ébano",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ebony style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Ebano.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu ebonowym.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo de Ébano.",
       },
     },
     [20] = {
       ["t"] = 14,
       ["k"] = 99,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле лиги убийц.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la ligue des assassins.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Assassinenbundes.",
-        ["en"] = "These book fragments enable crafting in the Assassins League style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль лиги убийц",
-        ["fr"] = "Style de la ligue des assassins",
-        ["de"] = "Stil des Assassinenbundes",
         ["en"] = "Assassins League Style",
+        ["it"] = "Stile della Lega degli Assassini",
+        ["pl"] = "Styl Ligi Zabójców",
+        ["br"] = "Estilo da Liga dos Assassinos",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Assassins League style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Lega degli Assassini.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Ligi Zabójców.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo da Liga dos Assassinos.",
       },
     },
     [21] = {
       ["t"] = 14,
       ["k"] = 100,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Гильдии воров.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la guilde des voleurs.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Diebesgilde.",
-        ["en"] = "These book fragments enable crafting in the Thieves Guild style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Гильдии воров",
-        ["fr"] = "Style de la guilde des voleurs",
-        ["de"] = "Stil der Diebesgilde",
         ["en"] = "Thieves Guild Style",
+        ["it"] = "Stile gilda dei ladri",
+        ["pl"] = "Styl Gildii Złodziei",
+        ["br"] = "Estilo da Guilda dos Ladrões",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Thieves Guild style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Gilda dei Ladri.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Gildii Złodziei.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo da Guilda dos Ladrões.",
       },
     },
     [22] = {
       ["t"] = 14,
       ["k"] = 101,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле стражи Причала Абы.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la garde d'Abah.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil von Abahs Wacht.",
-        ["en"] = "These book fragments enable crafting in the Abah's Watch style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль стражи Причала Абы",
-        ["fr"] = "Style de la garde d'Abah",
-        ["de"] = "Stil von Abahs Wacht",
         ["en"] = "Abah's Watch Style",
+        ["it"] = "Stile della Vedetta di Abah",
+        ["pl"] = "Styl Strażnicy Abaha",
+        ["br"] = "Estilo da Vigia de Abah",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Abah's Watch style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile della Vedetta di Abah.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Strażnicy Abaha.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo da Vigia de Abah.",
       },
     },
     [23] = {
       ["t"] = 14,
       ["k"] = 105,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле драугров.",
-        ["fr"] = "Ces livres permettent de fabriquer au style Draugr.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Draugr.",
-        ["en"] = "These book fragments enable crafting in the Draugr style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль драугров",
-        ["fr"] = "Style Draugr",
-        ["de"] = "Stil der Draugr",
         ["en"] = "Draugr Style",
+        ["it"] = "Stile Draugr",
+        ["pl"] = "Styl draugrów",
+        ["br"] = "Estilo de Draugr",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Draugr style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Draugr.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu draugrów.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo Draugr.",
       },
     },
     [24] = {
       ["t"] = 14,
       ["k"] = 106,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле минотавров.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des minotaures.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Minotauren.",
-        ["en"] = "These book fragments enable crafting in the Minotaur style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль минотавров",
-        ["fr"] = "Style des minotaures",
-        ["de"] = "Stil der Minotauren",
         ["en"] = "Minotaur Style",
+        ["it"] = "Stile del Minotauro",
+        ["pl"] = "Styl minotaurów",
+        ["br"] = "Estilo de Minotauro",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Minotaur style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Minotauro.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu minotaurów.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo de Minotauro.",
       },
     },
     [25] = {
       ["t"] = 14,
       ["k"] = 107,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле ордена Часа.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de l'Ordre des Heures.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Ordens der Stunde.",
-        ["en"] = "These book fragments enable crafting in the Order of the Hour style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль ордена Часа",
-        ["fr"] = "Motif de l'Ordre des Heures",
-        ["de"] = "Stil des Ordens der Stunde",
         ["en"] = "Order Hour Style",
+        ["it"] = "Ora d'ordine Stile",
+        ["pl"] = "Styl Zakonu Godziny",
+        ["br"] = "Estilo da Ordem das Horas",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Order of the Hour style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione di oggetti in stile Ordine dell'Ora.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Zakonu Godziny.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo da Ordem das Horas.",
       },
     },
     [26] = {
       ["t"] = 14,
       ["k"] = 108,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Небожителей.",
-        ["fr"] = "Ces livres permettent de fabriquer au style céleste.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Himmlischen.",
-        ["en"] = "These book fragments enable crafting in the Celestial style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Небожителей",
-        ["fr"] = "Style céleste",
-        ["de"] = "Stil der Himmlischen",
         ["en"] = "Celestial Style",
+        ["it"] = "Stile Celestiale",
+        ["pl"] = "Styl Niebiańskich",
+        ["br"] = "Estilo Celestial",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Celestial style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Celestiale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Niebiańskich.",
+        ["br"] = "Estes fragmentos de livro permitem a criação de itens no estilo Celestial.",
       },
     },
     [27] = {
       ["t"] = 14,
       ["k"] = 109,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Пустоголового Джека.",
-        ["fr"] = "Ces livres permettent de fabriquer au style d'Hallowjack.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil von Kürbisfratze.",
-        ["en"] = "These book fragments enable crafting in the Hollowjack style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Пустоголового Джека",
-        ["fr"] = "Style d'Hallowjack",
-        ["de"] = "Stil von Kürbisfratze",
         ["en"] = "Hollowjack Style",
+        ["it"] = "Stile Hollowjack",
+        ["pl"] = "Styl Dyniogłowego",
+        ["br"] = "Estilo do Hollowjack",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Hollowjack style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Hollowjack.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Dyniogłowego.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo do Hollowjack.",
       },
     },
     [28] = {
       ["t"] = 14,
       ["k"] = 110,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Темного Братства.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la Confrérie noire.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Dunklen Bruderschaft.",
-        ["en"] = "These book fragments enable crafting in the Dark Brotherhood style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Темного Братства",
-        ["fr"] = "Style de la Confrérie noire",
-        ["de"] = "Stil der Dunklen Bruderschaft",
         ["en"] = "Dark Brotherhood Style",
+        ["it"] = "Stile della Confraternita Oscura",
+        ["pl"] = "Styl Mrocznego Bractwa",
+        ["br"] = "Estilo Irmandade Sombria",
       },
-    },
-    [29] = {
-      ["t"] = 0,
-      ["k"] = 0,
-      ["g"] = "/esoui/art/icons/icon_missing.dds",
       ["d"] = {
-        ["ru"] = "",
-        ["fr"] = "",
-        ["de"] = "",
-        ["en"] = "",
-      },
-      ["h"] = true,
-      ["n"] = {
-        ["ru"] = "",
-        ["fr"] = "",
-        ["de"] = "",
-        ["en"] = "",
+        ["en"] = "These book fragments enable crafting in the Dark Brotherhood style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Confraternita Oscura.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Mrocznego Bractwa.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo da Irmandade Sombria.",
       },
     },
     [30] = {
       ["t"] = 14,
       ["k"] = 112,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле оборотней.",
-        ["fr"] = "Ces livres permettent de fabriquer au style changepeau.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Gestaltwandler.",
-        ["en"] = "These book fragments enable crafting in the Skinchanger style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль оборотней",
-        ["fr"] = "Style changepeau",
-        ["de"] = "Stil der Gestaltwandler",
         ["en"] = "Skinchanger Style",
+        ["it"] = "Stile Cambiapelle",
+        ["pl"] = "Styl Zmiennokształtnych",
+        ["br"] = "Estilo do Troca-peles",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Skinchanger style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Cambiapelle.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Zmiennokształtnych.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo do Troca-peles.",
       },
     },
     [31] = {
       ["t"] = 14,
       ["k"] = 113,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Шелкового Круга.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de l'Anneau de soie.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Seidenrings.",
-        ["en"] = "These book fragments enable crafting in the Silken Ring style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Шелкового Круга",
-        ["fr"] = "Style de l'Anneau de soie",
-        ["de"] = "Stil des Seidenrings",
         ["en"] = "Silken Ring Style",
+        ["it"] = "Stile dell'Anello di Seta",
+        ["pl"] = "Styl Jedwabnego Pierścienia",
+        ["br"] = "Estilo do Anel de Seda",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Silken Ring style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Anello di Seta.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Jedwabnego Pierścienia.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo do Anel de Seda.",
       },
     },
     [32] = {
       ["t"] = 14,
       ["k"] = 114,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Маззатуна.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de Mazzatun.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil von Mazzatun.",
-        ["en"] = "These book fragments enable crafting in the Mazzatun style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Маззатуна",
-        ["fr"] = "Style de Mazzatun",
-        ["de"] = "Stil von Mazzatun",
         ["en"] = "Mazzatun Style",
+        ["it"] = "Stile Mazzatun",
+        ["pl"] = "Styl Mazzatun",
+        ["br"] = "Estilo de Mazzatun",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Mazzatun style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile di Mazzatun.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Mazzatun.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo Mazzatun.",
       },
     },
     [33] = {
       ["t"] = 14,
       ["k"] = 116,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле дома Телванни.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la Maison Telvanni.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil des Hauses Telvanni.",
-        ["en"] = "These books enable crafting in the House Telvanni style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль дома Телванни",
-        ["fr"] = "Style de la Maison Telvanni",
-        ["de"] = "Stil des Hauses Telvanni",
         ["en"] = "House Telvanni Style",
+        ["it"] = "Casa stile Telvanni",
+        ["pl"] = "Styl rodu Telvanni",
+        ["br"] = "Estilo da Casa Telvanni",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the House Telvanni style.",
+        ["it"] = "Questi libri permettono il crafting nello stile della Casa Telvanni.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu rodu Telvanni.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo da Casa Telvanni.",
       },
     },
     [34] = {
       ["t"] = 14,
       ["k"] = 117,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле боевых ординаторов.",
-        ["fr"] = "Ces livres débloquent le style d'artisanat des Ordonnateurs.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil der kriegerischen Ordinatoren.",
-        ["en"] = "These books enable crafting in the Militant Ordinator style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль боевых ординаторов",
-        ["fr"] = "Style d'Ordonnateur militant",
-        ["de"] = "Stil der kriegerischen Ordinatoren",
         ["en"] = "Militant Ordinator Style",
+        ["it"] = "Stile del Coordinatore Militante",
+        ["pl"] = "Styl Strażników Świątynnych",
+        ["br"] = "Estilo do Ordenador Militante",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the Militant Ordinator style.",
+        ["it"] = "Questi libri permettono il crafting nello stile del Coordinatore Militante.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Strażników Świątynnych.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo do Ordenador Militante.",
       },
     },
     [35] = {
       ["t"] = 14,
       ["k"] = 118,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Вечной стражи.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des Exaltés.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil der Kriegswappenträger.",
-        ["en"] = "These books enable crafting in the Buoyant Armiger style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Вечной стражи",
-        ["fr"] = "Style d'Exalté",
-        ["de"] = "Stil der Kriegswappenträger",
         ["en"] = "Buoyant Armiger Style",
+        ["it"] = "Stile Armigeri del Tribunale",
+        ["pl"] = "Styl Gwardzistów Viveka",
+        ["br"] = "Estilo dos Armígeros Exaltados",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the Buoyant Armiger style.",
+        ["it"] = "Questi libri permettono di creare oggetti in stile Armigeri del Tribunale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Gwardzistów Viveka.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo dos Armígeros Exaltados.",
       },
     },
     [36] = {
       ["t"] = 14,
       ["k"] = 119,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле эшлендеров.",
-        ["fr"] = "Ces livres permettent de fabriquer au style cendrais.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil der Aschländer.",
-        ["en"] = "These books enable crafting in the Ashlander style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль эшлендеров",
-        ["fr"] = "Le style cendrais",
-        ["de"] = "Stil der Aschländer",
         ["en"] = "Ashlander Style",
+        ["it"] = "Stile Ashlander",
+        ["pl"] = "Styl Popielnych",
+        ["br"] = "Estilo de Andarilho das Cinzas",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the Ashlander style.",
+        ["it"] = "Questi libri permettono di fare artigianato nello stile Ashlander.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Popielnych.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo dos Andarilhos das Cinzas.",
       },
     },
     [37] = {
       ["t"] = 14,
       ["k"] = 121,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле дома Хлаалу.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la Maison Hlaalu.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil des Hauses Hlaalu.",
-        ["en"] = "These books enable crafting in the House Hlaalu style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль дома Хлаалу",
-        ["fr"] = "Style de la Maison Hlaalu",
-        ["de"] = "Stil des Hauses Hlaalu",
         ["en"] = "House Hlaalu Style",
+        ["it"] = "Casa Hlaalu Style",
+        ["pl"] = "Styl rodu Hlaalu",
+        ["br"] = "Estilo da Casa Hlaalu",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the House Hlaalu style.",
+        ["it"] = "Questi libri permettono il crafting nello stile di Casa Hlaalu.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu rodu Hlaalu.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo da Casa Hlaalu.",
       },
     },
     [38] = {
       ["t"] = 14,
       ["k"] = 122,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле дома Редоран.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la Maison Rédoran.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil des Hauses Redoran.",
-        ["en"] = "These books enable crafting in the House Redoran style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль дома Редоран",
-        ["fr"] = "Style de la Maison Rédoran",
-        ["de"] = "Stil des Hauses Redoran",
         ["en"] = "House Redoran Style",
+        ["it"] = "Casa stile Redoran",
+        ["pl"] = "Styl rodu Redoran",
+        ["br"] = "Estilo da Casa Redoran",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the House Redoran style.",
+        ["it"] = "Questi libri permettono il crafting nello stile di Casa Redoran.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu rodu Redoran.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo da Casa Redoran.",
       },
     },
     [39] = {
       ["t"] = 14,
       ["k"] = 124,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в рефабрикационном стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style Refabriqué.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil der Rekonstruktion.",
-        ["en"] = "These books enable crafting in the Refabricated style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Рефабрикационный стиль",
-        ["fr"] = "Style refabriqué",
-        ["de"] = "Stil der Rekonstruktion",
         ["en"] = "Refabricated Style",
+        ["it"] = "Stile Rifabbricato",
+        ["pl"] = "Styl Refabrykowanych",
+        ["br"] = "Estilo Refabricado",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the Refabricated style.",
+        ["it"] = "Questi libri permettono la costruzione di oggetti in stile Rifabbricato.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Refabrykowanych.",
+        ["br"] = "Estes fragmentos de livros permitem fabricar no estilo Refabricado.",
       },
     },
     [40] = {
       ["t"] = 14,
       ["k"] = 125,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Кровавой кузницы.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la Forgesang.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Blutquellschmiede.",
-        ["en"] = "These book fragments enable crafting in the Bloodforge style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Кровавой кузницы",
-        ["fr"] = "Style Forgesang",
-        ["de"] = "Stil der Blutquellschmiede",
         ["en"] = "Bloodforge Style",
+        ["it"] = "Stile Forgia del Sangue",
+        ["pl"] = "Styl Krwawej Kuźni",
+        ["br"] = "Estilo Forjasangue",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Bloodforge style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Forgia del Sangue.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Krwawej Kuźni.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo Forjasangue.",
       },
     },
     [41] = {
       ["t"] = 14,
       ["k"] = 126,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Грозного Рога.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des Corneffroi.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Grauenshorn-Klans.",
-        ["en"] = "These book fragments enable crafting in the Dreadhorn style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Грозного Рога",
-        ["fr"] = "Style Corneffroi",
-        ["de"] = "Stil des Grauenshorn-Klans",
         ["en"] = "Dreadhorn Style",
+        ["it"] = "Stile Dreadhorn",
+        ["pl"] = "Styl Strasznego Rogu",
+        ["br"] = "Estilo do Chifre Temível",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Dreadhorn style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Dreadhorn.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Strasznego Rogu.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo do Chifre Temível.",
       },
     },
     [42] = {
       ["t"] = 14,
       ["k"] = 127,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле апостолов.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des Apôtres.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Apostel.",
-        ["en"] = "These book fragments enable crafting in the Apostle style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль апостолов",
-        ["fr"] = "Style des Apôtres",
-        ["de"] = "Stil der Apostel",
         ["en"] = "Apostle Style",
+        ["it"] = "Stile dell'Apostolo",
+        ["pl"] = "Styl Orędowników",
+        ["br"] = "Estilo do Apóstolo",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Apostle style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile dell'Apostolo.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Orędowników.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo do Apóstolo.",
       },
     },
     [43] = {
       ["t"] = 14,
       ["k"] = 128,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле эбонитовой тени.",
-        ["fr"] = "Ces livres permettent de fabriquer au style d'Ombrébène.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Ebenschattens.",
-        ["en"] = "These book fragments enable crafting in the Ebonshadow style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль эбонитовой тени",
-        ["fr"] = "Style d'Ombrébène",
-        ["de"] = "Stil des Ebenschattens",
         ["en"] = "Ebonshadow Style",
+        ["it"] = "Stile Ombra d'Ebano",
+        ["pl"] = "Styl ebocieniowy",
+        ["br"] = "Estilo de Ébanumbra",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ebonshadow style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Ombra d'Ebano.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu ebocieniowym.",
+        ["br"] = "Esses fragmentos de livros permitem fabricar no estilo de Ébanumbra.",
       },
     },
     [44] = {
       ["t"] = 14,
       ["k"] = 130,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Ремесленные мотивы для создания предметов в стиле культа Червя.",
-        ["fr"] = "Ces livres de style permettent de fabriquer des objets au style du Culte du Ver.",
-        ["de"] = "Stilkapitel, die es Euch erlauben, Gegenstände im Stil des Wurmkults herzustellen.",
-        ["en"] = "Motif books that enable crafting in the Worm Cult style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль культа Червя",
-        ["fr"] = "Le style du Culte du Ver",
-        ["de"] = "Stil des Wurmkults",
         ["en"] = "Worm Cult Style",
+        ["it"] = "Stile Culto del Verme",
+        ["pl"] = "Styl Kultu Czerwia",
+        ["br"] = "Estilo do Culto do Verme",
+      },
+      ["d"] = {
+        ["en"] = "Motif books that enable crafting in the Worm Cult style.",
+        ["it"] = "Libri di motivi che permettono la costruzione oggetti nello stile Culto del Verme.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Kultu Czerwia.",
+        ["br"] = "Livros de motivos que permitem criar no estilo do Culto do Verme.",
       },
     },
     [45] = {
       ["t"] = 14,
       ["k"] = 131,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "",
-        ["fr"] = "",
-        ["de"] = "",
-        ["en"] = "",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Логова Клыка",
-        ["fr"] = "Style du Repaire du croc",
-        ["de"] = "Stil des Krallenhorts",
         ["en"] = "Fang Lair Style",
+        ["it"] = "Stile della Tana delle Zanne",
+        ["pl"] = "Styl Jamy Kłów",
+        ["br"] = "Estilo do Covil da Presa",
+      },
+      ["d"] = {
+        ["en"] = "",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "",
       },
     },
     [46] = {
       ["t"] = 14,
       ["k"] = 132,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Воспевательницы Дракона.",
-        ["fr"] = "Ces livres débloquent le style d'artisanat de la Mandécailles.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil der Schuppenruferin.",
-        ["en"] = "These books enable crafting in the Scalecaller style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Воспевательницы Дракона",
-        ["fr"] = "Style de la Mandécailles",
-        ["de"] = "Stil der Schuppenruferin",
         ["en"] = "Scalecaller Style",
+        ["it"] = "Stile dell'Evoca-Draghi",
+        ["pl"] = "Styl Łuskowatych",
+        ["br"] = "Estilo da Arauta das Escamas",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the Scalecaller style.",
+        ["it"] = "Questi libri permettono di creare nello stile dell'Evoca-Draghi.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Łuskowatych.",
+        ["br"] = "Esses livros permitem fabricar no estilo da Arauta das Escamas.",
       },
     },
     [47] = {
       ["t"] = 14,
       ["k"] = 133,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "",
-        ["fr"] = "",
-        ["de"] = "",
-        ["en"] = "",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Псиджиков",
-        ["fr"] = "Le Style psijique",
-        ["de"] = "Stil der Psijiker",
         ["en"] = "Psijic Style",
+        ["it"] = "Stile Psijic",
+        ["pl"] = "Styl Psijic",
+        ["br"] = "Estilo Psijico",
+      },
+      ["d"] = {
+        ["en"] = "",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "",
       },
     },
     [48] = {
       ["t"] = 14,
       ["k"] = 134,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "",
-        ["fr"] = "",
-        ["de"] = "",
-        ["en"] = "",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль сапиархов",
-        ["fr"] = "Le Style sapiarque",
-        ["de"] = "Stil der Sapiarchen",
         ["en"] = "Sapiarch Style",
+        ["it"] = "Stile del Sapiarca",
+        ["pl"] = "Styl Sapiarchów",
+        ["br"] = "Estilo do Sapiarca",
+      },
+      ["d"] = {
+        ["en"] = "",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "",
       },
     },
     [49] = {
       ["t"] = 14,
       ["k"] = 137,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в пиандонейском стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style pyandonéen.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Pyandonesier.",
-        ["en"] = "These book fragments enable crafting in the Pyandonean style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Пиандонейский стиль",
-        ["fr"] = "Style pyandonéen",
-        ["de"] = "Stil der Pyandonesier",
         ["en"] = "Pyandonean Style",
+        ["it"] = "Stile pyandonean",
+        ["pl"] = "Styl Pyandoneański",
+        ["br"] = "Estilo Pyandoneano",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Pyandonean style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Pyandonean.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu pyandoneańskim.",
+        ["br"] = "Esses livros permitem fabricar no estilo Pyandoneano.",
       },
     },
     [50] = {
       ["t"] = 14,
       ["k"] = 138,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле дремора.",
-        ["fr"] = "Ces livres permettent de fabriquer au style Drémora.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Welkynare.",
-        ["en"] = "These book fragments enable crafting in the Dremora style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль дремора",
-        ["fr"] = "Motif Drémora",
-        ["de"] = "Stil der Dremora",
         ["en"] = "Dremora Style",
+        ["it"] = "Stile Dremora",
+        ["pl"] = "Styl dremor",
+        ["br"] = "Estilo Dremora",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Dremora style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Dremora.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu dremor.",
+        ["br"] = "Estes fragmentos de livros permitem criar no estilo Dremora.",
       },
     },
     [51] = {
       ["t"] = 14,
       ["k"] = 139,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Охотника.",
-        ["fr"] = "Ces fragments de livres permettent de fabriquer des objets au style du Chasseur.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Jägers.",
-        ["en"] = "These book fragments enable crafting in the Huntsman style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Охотника",
-        ["fr"] = "Style du chasseur",
-        ["de"] = "Stil des Jägers",
         ["en"] = "Huntsman Style",
+        ["it"] = "Stile Cacciatore",
+        ["pl"] = "Styl Łowczych",
+        ["br"] = "Estilo do Caçador",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Huntsman style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Cacciatore.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Łowczych.",
+        ["br"] = "Estes fragmentos de livros permitem criar no estilo do Caçador.",
       },
     },
     [52] = {
       ["t"] = 14,
       ["k"] = 140,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Серебряного Рассвета.",
-        ["fr"] = "Ces fragments de livres permettent de fabriquer des objets au style de l'Aube d'argent.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Silbermorgens.",
-        ["en"] = "These book fragments enable crafting in the Silver Dawn style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Серебряного Рассвета",
-        ["fr"] = "Style de l'Aube d'argent",
-        ["de"] = "Stil des Silbermorgens",
         ["en"] = "Silver Dawn Style",
+        ["it"] = "Stile Alba d'Argento",
+        ["pl"] = "Styl Srebrnego Brzasku",
+        ["br"] = "Estilo da Alvorada Prateada",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Silver Dawn style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Alba d'Argento.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Srebrnego Brzasku.",
+        ["br"] = "Estes fragmentos de livros permitem criar no estilo da Alvorada Prateada.",
       },
     },
     [53] = {
       ["t"] = 14,
       ["k"] = 141,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле велкинаров.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des Welkynars.",
-        ["de"] = "Diese Bücher ermöglichen die Herstellung von Gegenständen im Stil der Welkynare.",
-        ["en"] = "These books enable crafting in the Welkynar style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль велкинаров",
-        ["fr"] = "Le style des Welkynars",
-        ["de"] = "Stil der Welkynare",
         ["en"] = "Welkynar Style",
+        ["it"] = "Stile Welkynar",
+        ["pl"] = "Styl Welkynarów",
+        ["br"] = "Estilo Welkinar",
+      },
+      ["d"] = {
+        ["en"] = "These books enable crafting in the Welkynar style.",
+        ["it"] = "Questi libri permettono il crafting nello stile di Welkynar.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Welkynarów.",
+        ["br"] = "Estes livros permitem elaborar no estilo Welkynar.",
       },
     },
     [54] = {
       ["t"] = 14,
       ["k"] = 143,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле почетной стражи.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la Garde d'Honneur.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Ehrengarde.",
-        ["en"] = "These book fragments enable crafting in the Honor Guard style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль почетной стражи",
-        ["fr"] = "Le style de la garde d'honneur",
-        ["de"] = "Stil der Ehrengarde",
         ["en"] = "Honor Guard Style",
+        ["it"] = "Stile della Guardia d'Onore",
+        ["pl"] = "Styl Strażników Honorowych",
+        ["br"] = "Estilo da Guarda de Honra",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Honor Guard style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Guardi d'Onore.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Strażników Honorowych.",
+        ["br"] = "Estes fragmentos de livros permitem fabricar no estilo da Guarda de Honra",
       },
     },
     [55] = {
       ["t"] = 14,
       ["k"] = 144,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле мертвой-воды.",
-        ["fr"] = "Ces livres permettent de fabriquer au style d'Aiguemortes.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Totwasser.",
-        ["en"] = "These book fragments enable crafting in the Dead-Water style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль мертвой-воды",
-        ["fr"] = "Style d'Aiguemortes",
-        ["de"] = "Stil der Totwasser",
         ["en"] = "Dead-Water Style",
+        ["it"] = "Stile Acqua-Morta",
+        ["pl"] = "Styl Martwej Wody",
+        ["br"] = "Estilo da Água-Morta",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Dead-Water style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Acqua-Morta.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Martwej Wody.",
+        ["br"] = "Estes fragmentos de livros permitem fabricar no estilo da Água-Morta.",
       },
     },
     [56] = {
       ["t"] = 14,
       ["k"] = 145,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в древнеаргонианском стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des Aînés argoniens.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der alten Argonier.",
-        ["en"] = "These book fragments enable crafting in the Elder Argonian style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Древнеаргонианский стиль",
-        ["fr"] = "Style des Aînés argoniens",
-        ["de"] = "Stil der alten Argonier",
         ["en"] = "Elder Argonian Style",
+        ["it"] = "Stile Argoniano Antico",
+        ["pl"] = "Styl pradawnych Argonian",
+        ["br"] = "Estilo do Argoniano Ancião",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Elder Argonian style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Argoniano Antico.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu pradawnych Argonian.",
+        ["br"] = "Estes fragmentos de livros permitem criar no estilo do Argoniano Ancião.",
       },
     },
     [57] = {
       ["t"] = 14,
       ["k"] = 146,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле ледохватов.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la Glaciation.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Kälteknacker.",
-        ["en"] = "These book fragments enable crafting in the Coldsnap style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль ледохватов",
-        ["fr"] = "Style de la Glaciation",
-        ["de"] = "Stil der Kälteknacker",
         ["en"] = "Coldsnap Style",
+        ["it"] = "Stile Onda Glaciale",
+        ["pl"] = "Styl Mroźnego Chwytu",
+        ["br"] = "Estilo da Onda-de-Frio",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Coldsnap style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Onda Glaciale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Mroźnego Chwytu.",
+        ["br"] = "Estes fragmentos de livros permitem a elaboração no estilo da Onda-de-Frio.",
       },
     },
     [58] = {
       ["t"] = 14,
       ["k"] = 147,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле служителей Меридии.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de Méridia.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil von Meridia.",
-        ["en"] = "These book fragments enable crafting in the Meridian style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль служителей Меридии",
-        ["fr"] = "Style de Méridia",
-        ["de"] = "Stil von Meridia",
         ["en"] = "Meridian Style",
+        ["it"] = "Stile di Meridia",
+        ["pl"] = "Styl Meridii",
+        ["br"] = "Estilo de Meridia",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Meridian style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile di Meridia.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Meridii.",
+        ["br"] = "Estes fragmentos de livros permitem criar no estilo de Meridia.",
       },
     },
     [59] = {
       ["t"] = 14,
       ["k"] = 148,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Анеквины.",
-        ["fr"] = "Ces fragments de livre permettent de fabriquer au style d'Anequina.",
-        ["de"] = "Diese Buchfragmente erlauben Handwerk im Stil aus Anequina",
-        ["en"] = "These book fragments enable crafting in the Anequina style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Анеквины",
-        ["fr"] = "Style d'Anequina",
-        ["de"] = "Stil aus Anequina",
         ["en"] = "Anequina Style",
+        ["it"] = "Stile di Anequina",
+        ["pl"] = "Styl Anequiny",
+        ["br"] = "Estilo de Anequina",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Anequina style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Anequina.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Anequiny.",
+        ["br"] = "Estes fragmentos de livros permitem criar no estilo Anequina.",
       },
     },
     [60] = {
       ["t"] = 14,
       ["k"] = 149,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Пеллитина.",
-        ["fr"] = "Ces fragments de livre permettent de fabriquer au style de Pellitine.",
-        ["de"] = "Diese Buchfragmente erlauben Handwerk im Stil aus Pellitine",
-        ["en"] = "These book fragments enable crafting in the Pellitine style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Пеллитина",
-        ["fr"] = "Style de Pellitine",
-        ["de"] = "Stil aus Pellitine",
         ["en"] = "Pellitine Style",
+        ["it"] = "Stile Pellitine",
+        ["pl"] = "Styl Pellitine",
+        ["br"] = "Estilo de Pellitine",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Pellitine style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Pellitine.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Pellitine.",
+        ["br"] = "Esses fragmentos de livros permitem a elaboração no estilo de Pellitine.",
       },
     },
     [61] = {
       ["t"] = 14,
       ["k"] = 150,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Солнечного Шпиля.",
-        ["fr"] = "Ces fragments de livres permettent de fabriquer au style de Sollance.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil aus Sonnspitz.",
-        ["en"] = "These book fragments enable crafting in the Sunspire style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Солнечного Шпиля",
-        ["fr"] = "Style de Sollance",
-        ["de"] = "Stil aus Sonnspitz",
         ["en"] = "Sunspire Style",
+        ["it"] = "Stile Sunspire",
+        ["pl"] = "Styl Słonecznej Iglicy",
+        ["br"] = "Estilo do Apogeu Solar",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Sunspire style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Sunspire.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Słonecznej Iglicy.",
+        ["br"] = "Esses fragmentos de livro permitem a elaboração no estilo do Apogeu Solar.",
       },
     },
     [62] = {
       ["t"] = 14,
       ["k"] = 153,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Драконьей стражи.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la Garde du dragon.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Drachengarde.",
-        ["en"] = "These book fragments enable crafting in the Dragonguard style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Драконьей стражи",
-        ["fr"] = "Garde du dragon",
-        ["de"] = "Stil der Drachengarde",
         ["en"] = "Dragonguard Style",
+        ["it"] = "Stile Guardia del Drago",
+        ["pl"] = "Styl Smoczej Straży",
+        ["br"] = "Estilo da Guarda Dracônica",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Dragonguard style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Guardia del Drago.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Smoczej Straży.",
+        ["br"] = "Estes fragmentos de livros permitem fabricar no estilo da Guarda Dracônica.",
       },
     },
     [63] = {
       ["t"] = 14,
       ["k"] = 154,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Оленей З'ена.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des Cerfs de Z'en.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Hirsche von Z'en.",
-        ["en"] = "These book fragments enable crafting in the Stags of Z'en style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Оленей З'ена",
-        ["fr"] = "Style des Cerfs de Z'en",
-        ["de"] = "Stil der Hirsche von Z'en",
         ["en"] = "Stags of Z'en Style",
+        ["it"] = "Stile dei Cervi di Z'en",
+        ["pl"] = "Styl Rogaczy Z'ena",
+        ["br"] = "Estilo dos Cervos de Z'en",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Stags of Z'en style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Cervi di Z'en.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Rogaczy Z'ena.",
+        ["br"] = "Esses fragmentos de livro permitem a elaboração no estilo dos Cervos de Z'en.",
       },
     },
     [64] = {
       ["t"] = 14,
       ["k"] = 155,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле храма Погребенных Лун.",
-        ["fr"] = "Ces livres permettent de fabriquer au style du reliquaire des Lunes funèbres.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Mondgrab-Tempelstadt.",
-        ["en"] = "These book fragments enable crafting in the Moongrave Fane style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль храма Погребенных Лун",
-        ["fr"] = "Style du reliquaire des Lunes funèbres",
-        ["de"] = "Stil der Mondgrab-Tempelstadt",
         ["en"] = "Moongrave Fane Style",
+        ["it"] = "Stile del Sepolcro Lunare",
+        ["pl"] = "Styl Świątyni Księżycowego Grobu",
+        ["br"] = "Estilo do Santuário dos Túmulos Lunares",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Moongrave Fane style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile del Tempio del Sepolcro Lunare.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Świątyni Księżycowego Grobu.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo do Santuário dos Túmulos Lunares.",
       },
     },
     [65] = {
       ["t"] = 14,
       ["k"] = 156,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле жрецов Новой Луны.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de Prêtre de la Nouvelle Lune.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen der Priester des Neuen Mondes.",
-        ["en"] = "These book fragments enable crafting in the New Moon Priest style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль жрецов Новой Луны",
-        ["fr"] = "Style de Prêtre de la Nouvelle Lune",
-        ["de"] = "Stil der Priester des Neuen Mondes",
         ["en"] = "New Moon Priest Style",
+        ["it"] = "Stile Sacerdote della Luna Nuova",
+        ["pl"] = "Styl Kapłanów Nowego Księżyca",
+        ["br"] = "Estilo do Sacerdote da Lua Nova",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the New Moon Priest style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Sacerdote della Luna Nuova.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu kapłanów Nowego Księżyca.",
+        ["br"] = "Estes fragmentos de livros permitem fabricar no estilo do Sacerdote da Lua Nova.",
       },
     },
     [66] = {
       ["t"] = 14,
       ["k"] = 157,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Щитов Сенчала.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des Boucliers de Senchal.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Schilde von Senchal.",
-        ["en"] = "These book fragments enable crafting in the Shield of Senchal style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Щитов Сенчала",
-        ["fr"] = "Style des Boucliers de Senchal",
-        ["de"] = "Stil der Schilde von Senchal",
         ["en"] = "Shield of Senchal Style",
+        ["it"] = "Scudo di stile Senchal",
+        ["pl"] = "Styl Tarcz z Senchal",
+        ["br"] = "Estilo do Escudo de Senchal",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Shield of Senchal style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Scudo di Senchal.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Tarcz z Senchal.",
+        ["br"] = "Estes fragmentos de livros permitem fabricar no estilo do Escudo de Senchal",
       },
     },
     [67] = {
       ["t"] = 14,
       ["k"] = 160,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле ковена Ледяного Предела.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des sorcières de Crève-Nève.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil des Eiskap-Zirkels.",
-        ["en"] = "These book fragments enable crafting in the Icereach Coven style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль ковена Ледяного Предела",
-        ["fr"] = "Style des sorcières de Crève-Nève",
-        ["de"] = "Stil des Eiskap-Zirkels",
         ["en"] = "Icereach Coven Style",
+        ["it"] = "Stile Congrega di Distesa Glaciale",
+        ["pl"] = "Styl Sabatu Lodowego Pogranicza",
+        ["br"] = "Estilo do Coven de Icereach",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Icereach Coven style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Congrega della Distesa Glaciale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Sabatu Lodowego Pogranicza.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo do Coven de Icereach.",
       },
     },
     [68] = {
       ["t"] = 14,
       ["k"] = 161,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Погребального Дозора.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de Vigie du bûcher.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Schürwacht.",
-        ["en"] = "These book fragments enable crafting in the Pyre Watch style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Погребального Дозора",
-        ["fr"] = "Style de la Vigie du bûcher",
-        ["de"] = "Stil der Schürwacht",
         ["en"] = "Pyre Watch Style",
+        ["it"] = "Stile Pyre Watch",
+        ["pl"] = "Styl Straży Stosów",
+        ["br"] = "Estilo da Vigia da Pira",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Pyre Watch style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Pyre Watch.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Straży Stosów.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo da Vigia da Pira.",
       },
     },
     [69] = {
       ["t"] = 14,
       ["k"] = 163,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле авангарда Черного Предела.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de l'avant-garde de Griffenoire.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Schwarzweite-Vorhut.",
-        ["en"] = "These book fragments enable crafting in the Blackreach Vanguard style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль авангарда Черного Предела",
-        ["fr"] = "Style de l'avant-garde de Griffenoire",
-        ["de"] = "Stil der Schwarzweite-Vorhut",
         ["en"] = "Blackreach Vanguard Style",
+        ["it"] = "Stile dell'Avanguardia del Blackreach",
+        ["pl"] = "Styl Awangardy Czarnej Przystani",
+        ["br"] = "Estilo Vanguarda Blackreach",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Blackreach Vanguard style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Avanguardia del Blackreach.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Awangardy Czarnej Przystani.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo da Vanguarda de Blackreach.",
       },
     },
     [70] = {
       ["t"] = 14,
       ["k"] = 164,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Греймура.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de Griselande.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Welkynare.",
-        ["en"] = "These book fragments enable crafting in the Greymoor style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Греймура",
-        ["fr"] = "Style de Griselande",
-        ["de"] = "Stil von Graumoor",
         ["en"] = "Greymoor Style",
+        ["it"] = "Stile Greymoor",
+        ["pl"] = "Styl Szarego Wrzosowiska",
+        ["br"] = "Estilo de Greymoor",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Greymoor style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Greymoor.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Szarego Wrzosowiska.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo de Greymoor.",
       },
     },
     [71] = {
       ["t"] = 14,
       ["k"] = 165,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле морских великанов.",
-        ["fr"] = "Ces fragments de livres permettent de fabriquer des objets au style géant des mers.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Seeriesen.",
-        ["en"] = "These book fragments enable crafting in the Sea Giant style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль морских великанов",
-        ["fr"] = "Style de Géant des mers",
-        ["de"] = "Stil der Seeriesen",
         ["en"] = "Sea Giant Style",
+        ["it"] = "Stile Gigante del Mare",
+        ["pl"] = "Styl morskich gigantów",
+        ["br"] = "Estilo do Gigante do Mar",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Sea Giant style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Gigante del Mare.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu morskich gigantów.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo do Gigante do Mar.",
       },
     },
     [72] = {
       ["t"] = 14,
       ["k"] = 166,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в старинном нордском стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style nordique ancestral.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der einstigen Nord.",
-        ["en"] = "These book fragments enable crafting in the Ancestral Nord style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Старинный нордский стиль",
-        ["fr"] = "Style nordique ancestral",
-        ["de"] = "Stil der einstigen Nord",
         ["en"] = "Ancestral Nord Style",
+        ["it"] = "Stile Nord Ancestrale",
+        ["pl"] = "Styl pradawnych Nordów",
+        ["br"] = "Estilo do Nórdico Ancestral",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ancestral Nord style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Nord Ancestrale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu pradawnych Nordów.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo do Nórdico Ancestral.",
       },
     },
     [73] = {
       ["t"] = 14,
       ["k"] = 167,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в старинном стиле высоких эльфов.",
-        ["fr"] = "Ces livres permettent de fabriquer au style haut-elfe ancestral.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der einstigen Hochelfen.",
-        ["en"] = "These book fragments enable crafting in the Ancestral High Elf style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Старинный альтмерский стиль",
-        ["fr"] = "Style altmer antique",
-        ["de"] = "Stil der einstigen Hochelfen",
         ["en"] = "Ancestral High Elf Style",
+        ["it"] = "Stile Elfo Alto Ancestrale",
+        ["pl"] = "Styl pradawnych wysokich elfów",
+        ["br"] = "Estilo do Alto Elfo Ancestral",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ancestral High Elf style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Elfo Alto Ancestrale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu pradawnych wysokich elfów.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo do Alto Elfo Ancestral",
       },
     },
     [74] = {
       ["t"] = 14,
       ["k"] = 168,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в старинном орочьем стиле.",
-        ["fr"] = "Ces livres permettent de fabriquer au style orque ancestral.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der einstigen Orks.",
-        ["en"] = "These book fragments enable crafting in the Ancestral Orc style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Старинный орочий стиль",
-        ["fr"] = "Style orque ancestral",
-        ["de"] = "Stil der einstigen Orks",
         ["en"] = "Ancestral Orc Style",
+        ["it"] = "Stile Orchesco Ancestrale",
+        ["pl"] = "Styl pradawnych orków",
+        ["br"] = "Estilo Orc Ancestral",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ancestral Orc style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Orchesco Ancestrale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu pradawnych orków.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo do Orc Ancestral.",
       },
     },
     [75] = {
       ["t"] = 14,
       ["k"] = 171,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле легиона Шипов.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de la Légion de Ronce.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Dornlegion.",
-        ["en"] = "These book fragments enable crafting in the Thorn Legion style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль легиона Шипов",
-        ["fr"] = "Style de la Légion de Ronce",
-        ["de"] = "Stil der Dornlegion",
         ["en"] = "Thorn Legion Style",
+        ["it"] = "Stile della Legione di Thorn",
+        ["pl"] = "Styl Legionu Cierni",
+        ["br"] = "Estilo da Legião de Espinhos",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Thorn Legion style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Legione di Thorn.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Legionu Cierni.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo da Legião de Espinhos.",
       },
     },
     [76] = {
       ["t"] = 14,
       ["k"] = 172,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле гибельной алхимии.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de l'Alchimie hasardeuse.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der gefährlichen Alchemie.",
-        ["en"] = "These book fragments enable crafting in the Hazardous Alchemy style.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль гибельной алхимии",
-        ["fr"] = "Style d'Alchimie hasardeuse",
-        ["de"] = "Stil der gefährlichen Alchemie",
         ["en"] = "Hazardous Alchemy Style",
+        ["it"] = "Stile dell'Alchimia Audace",
+        ["pl"] = "Styl ryzykownej alchemii",
+        ["br"] = "Estilo da Alquimia Perigosa",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Hazardous Alchemy style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Alchimia Audace.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu ryzykownej alchemii.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo da Alquimia Perigosa",
       },
     },
     [77] = {
       ["t"] = 14,
-      ["k"] = 176,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в старинном стиле предельцев.",
-        ["fr"] = "Ces livres permettent de fabriquer au style crevassais ancestral.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der einstigen Reikmannen.",
-        ["en"] = "These book fragments enable crafting in the Ancestral Reach style.",
-      },
+      ["k"] = 173,
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Старинный стиль предельцев",
-        ["fr"] = "La Crevasse ancestrale",
-        ["de"] = "Stil der einstige Reikmannen",
-        ["en"] = "Ancestral Reach",
+        ["en"] = "Ancestral Akaviri Style",
+        ["it"] = "Stile Akaviri Ancestrale",
+        ["pl"] = "Styl pradawnych Akavirczyków",
+        ["br"] = "Estilo do Akaviri Ancestral",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ancestral Akaviri style.",
+        ["it"] = "Questi frammenti di libro permettono la lavorazione nello stile Akaviri Ancestrale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu pradawnych Akavirczyków.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo do Akaviri Ancestral.",
       },
     },
     [78] = {
       ["t"] = 14,
-      ["k"] = 177,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Ночной Пустоты.",
-        ["fr"] = "Ces livres permettent de fabriquer au style du Creux de nuit.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Nachttiefen.",
-        ["en"] = "These book fragments enable crafting in the Nighthollow style.",
-      },
+      ["k"] = 174,
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Ночной Пустоты",
-        ["fr"] = "Style du Creux de nuit",
-        ["de"] = "Stil der Nachttiefen",
-        ["en"] = "Nighthollow Style",
+        ["en"] = "Ancestral Breton Style",
+        ["it"] = "Stile Bretone Ancestrale",
+        ["pl"] = "Styl pradawnych Bretonów",
+        ["br"] = "Estilo do Bretão Ancestral",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ancestral Breton style.",
+        ["it"] = "Questi frammenti di libri consentono la lavorazione nello stile Bretone Ancestrale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu pradawnych Bretonów.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo do Bretão Ancestral.",
       },
     },
     [79] = {
       ["t"] = 14,
-      ["k"] = 178,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле арсенала Арктзанда.",
-        ["fr"] = "Ces livres permettent de fabriquer au style de l'Armurerie d'Arkthzand.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Waffenkammer von Arkthzand.",
-        ["en"] = "These book fragments enable crafting in the Arkthzand Armory style.",
-      },
+      ["k"] = 176,
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль арсенала Арктзанда",
-        ["fr"] = "Style de l'Armurerie d'Arkthzand",
-        ["de"] = "Stil der Rüstkammer von Arkthzand",
-        ["en"] = "Arkthzand Armory Style",
+        ["en"] = "Ancestral Reach",
+        ["it"] = "Reach Ancestrale",
+        ["pl"] = "Styl pradawnego Pogranicza",
+        ["br"] = "Reach Ancestral",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ancestral Reach style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Reach Ancestrale.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu pradawnego Pogranicza.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo do Reach Ancestral",
       },
     },
     [80] = {
       ["t"] = 14,
-      ["k"] = 179,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Страницы этой книги позволяют создавать предметы в стиле Непокорных Стражей.",
-        ["fr"] = "Ces livres permettent de fabriquer au style des Gardiens égarés.",
-        ["de"] = "Diese Buchfragmente ermöglichen die Herstellung von Gegenständen im Stil der Unbezähmbaren Hüter.",
-        ["en"] = "These book fragments enable crafting in the Wayward Guardian style.",
-      },
+      ["k"] = 177,
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Стиль Непокорных Стражей",
-        ["fr"] = "Style des Gardiens égarés",
-        ["de"] = "Stil der Unbezähmbaren Hüter",
+        ["en"] = "Nighthollow Style",
+        ["it"] = "Stile Valle della Notte",
+        ["pl"] = "Styl Nocnej Czeluści",
+        ["br"] = "Estilo do Vazio Noturno",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Nighthollow style.",
+        ["it"] = "Questi frammenti di libro permettono la creazione nello stile Valle della Notte.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Nocnej Czeluści.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo do Vazio Noturno",
+      },
+    },
+    [81] = {
+      ["t"] = 14,
+      ["k"] = 178,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Arkthzand Armory Style",
+        ["it"] = "Stile dell'armeria Arkthzand",
+        ["pl"] = "Styl Zbrojowni Arkthzand",
+        ["br"] = "Estilo do Arsenal de Arkthzand",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Arkthzand Armory style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile dell'Armeria Arkthzand.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Zbrojowni Arkthzand.",
+        ["br"] = "Esses fragmentos de livro permitem criar no estilo do Arsenal de Arkthzand.",
+      },
+    },
+    [82] = {
+      ["t"] = 14,
+      ["k"] = 179,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
         ["en"] = "Wayward Guardian Style",
+        ["it"] = "Stile del Guardiano Errante",
+        ["pl"] = "Styl Samowolnych Strażników",
+        ["br"] = "Estilo do Guardião Rebelde",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Wayward Guardian style.",
+        ["it"] = "Questi frammenti di libro permettono di creare con lo stile ddel Guardiano Errante.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Samowolnych Strażników.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo do Guardião Rebelde.",
+      },
+    },
+    [83] = {
+      ["t"] = 14,
+      ["k"] = 180,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "House Hexos Style",
+        ["it"] = "Stile della Casa Hexos",
+        ["pl"] = "Styl rodu Hexos",
+        ["br"] = "Estilo da Casa Hexos",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the House Hexos style.",
+        ["it"] = "Questi frammenti di libro permettono di creare oggetti nello stile della Casa Hexos.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu rodu Hexos.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo da Casa Hexos",
+      },
+    },
+    [84] = {
+      ["t"] = 14,
+      ["k"] = 182,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "True-Sworn Style",
+        ["it"] = "Stile dei Veri-Giurati",
+        ["pl"] = "Styl Prawdziwie Zaprzysiężonych",
+        ["br"] = "Estilo do Verdadeiro Juramentado",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the True-Sworn style.",
+        ["it"] = "Questi frammenti di libro permettono la creazione nello stile dei Veri-Giurati.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Prawdziwie Zaprzysiężonych.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo do Verdadeiro Juramentado",
+      },
+    },
+    [85] = {
+      ["t"] = 14,
+      ["k"] = 183,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Waking Flame Style",
+        ["it"] = "Stile Risveglio della Fiamma",
+        ["pl"] = "Styl Przebudzonego Płomienia",
+        ["br"] = "Estilo da Chama Desperta",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Waking Flame style.",
+        ["it"] = "Questi frammenti di libro permettono la creazione in stile Risveglio della Fiamma.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Przebudzonego Płomienia.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo Chama Desperta.",
+      },
+    },
+    [86] = {
+      ["t"] = 14,
+      ["k"] = 184,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Ancient Daedric Style",
+        ["it"] = "Stile Daedrico Antico",
+        ["pl"] = "Styl starożytnych daedr",
+        ["br"] = "Estilo Daédrico Ancião",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ancient Daedric style.",
+        ["it"] = "Questi frammenti di libro permettono di fare artigianato nello stile degli Antichi Daedra.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu starożytnych daedr.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo Daédrico Ancião",
+      },
+    },
+    [87] = {
+      ["t"] = 14,
+      ["k"] = 185,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Black Fin Legion Style",
+        ["it"] = "Stile Legione Pinna Nera",
+        ["pl"] = "Styl Legionu Czarnej Płetwy",
+        ["br"] = "Estilo da Legião da Barbatana Negra",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Black Fin Legion style.",
+        ["it"] = "Questi frammenti di libro permettono di fare crafting nello stile della Legione Pinna Nera.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Legionu Czarnej Płetwy.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo da Legião da Barbatana Negra.",
+      },
+    },
+    [88] = {
+      ["t"] = 14,
+      ["k"] = 186,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Ivory Brigade Style",
+        ["it"] = "Stile della Brigata d'Avorio",
+        ["pl"] = "Styl Brygady Białej Kości",
+        ["br"] = "Estilo da Brigada de Marfim",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ivory Brigade style.",
+        ["it"] = "Questi frammenti di libro permettono di creare in stile Brigata d'Avorio.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Brygady Białej Kości.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo da Brigada de Marfim.",
+      },
+    },
+    [89] = {
+      ["t"] = 14,
+      ["k"] = 187,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Sul-Xan Style",
+        ["it"] = "Stile Sul-Xan",
+        ["pl"] = "Styl Sul-Xan",
+        ["br"] = "Estilo dos Sul-Xan",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Sul-Xan style.",
+        ["it"] = "Questi frammenti di libro permettono la creazione nello stile Sul-Xan.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Sul-Xan.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo dos Sul-Xan.",
+      },
+    },
+    [90] = {
+      ["t"] = 14,
+      ["k"] = 189,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Crimson Oath Style",
+        ["it"] = "Stile Giuramento Cremisi",
+        ["pl"] = "Styl Karmazynowej Przysięgi",
+        ["br"] = "Estilo do Juramento Carmesin",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Crimson Oath style.",
+        ["it"] = "Questi frammenti di libro permette di creare oggetti nello stile del Giuramento Cremisi.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Karmazynowej Przysięgi.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo do Juramento Carmesin",
+      },
+    },
+    [91] = {
+      ["t"] = 14,
+      ["k"] = 190,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Silver Rose Style",
+        ["it"] = "Stile Rosa d'Argento",
+        ["pl"] = "Styl Srebrnej Róży",
+        ["br"] = "Estilo da Rosa de Prata",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Silver Rose style.",
+        ["it"] = "Questi frammenti di libro permettono la creazione nello stile Rosa d'Argento.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Srebrnej Róży.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo da Rosa de Prata",
+      },
+    },
+    [92] = {
+      ["t"] = 14,
+      ["k"] = 191,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Annihilarch's Chosen Style",
+        ["it"] = "Stile Prescelto dell'Annihilarca",
+        ["pl"] = "Styl wybrańców Anihilarchii",
+        ["br"] = "Estilo Escolhido do Aniquilarca",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Annihilarch's Chosen style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile Prescelto dell'Annihilarca.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Wybrańców Anihilarchii.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo do Escolhido do Aniquilarca.",
+      },
+    },
+    [93] = {
+      ["t"] = 14,
+      ["k"] = 192,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Fargrave Guardian Style",
+        ["it"] = "Stile Guardiano di Fargrave",
+        ["pl"] = "Styl strażników Odległego Kurhanu",
+        ["br"] = "Estilo do Guardião de Fargrave",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Fargrave Guardian style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione in stile Guardiano di Fargrave.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu strażników Odległego Kurhanu.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo do Guardião de Fargrave.",
+      },
+    },
+    [94] = {
+      ["t"] = 14,
+      ["k"] = 195,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Dreadsails Style",
+        ["it"] = "Stile Vele del Terrore",
+        ["pl"] = "Styl Ponurych Żagli",
+        ["br"] = "Estilo dos Velas Fúnebres",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Dreadsails style.",
+        ["it"] = "Questi frammenti di libro consentono di creare in stile Vele del Terrore.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Ponurych Żagli.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo dos Velas Fúnebres.",
+      },
+    },
+    [95] = {
+      ["t"] = 14,
+      ["k"] = 196,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Ascendant Order Style",
+        ["it"] = "Stile Ordine Ascendente",
+        ["pl"] = "Styl Wywyższonego Zakonu",
+        ["br"] = "Estilo da Ordem Ascendente",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Ascendant Order style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile dell'Ordine Ascendente.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Wywyższonego Zakonu.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo da Ordem Ascendente.",
+      },
+    },
+    [96] = {
+      ["t"] = 14,
+      ["k"] = 197,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Syrabanic Marine Style",
+        ["it"] = "Stile del Marinaio di Syrabane",
+        ["pl"] = "Styl Syrabanowej Marynarki",
+        ["br"] = "Estilo do Marinheiro Sirabânico",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Syrabanic Marine style.",
+        ["it"] = "Questi frammenti di libro abilitano la creazione nello stile del Marinaio di Syrabane.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Syrabanowej Marynarki.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo do Marinheiro Sirabânico.",
+      },
+    },
+    [97] = {
+      ["t"] = 14,
+      ["k"] = 198,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Steadfast Society Style",
+        ["it"] = "Stile Società dei Risoluti",
+        ["pl"] = "Styl Stowarzyszenia Nieugiętych",
+        ["br"] = "Estilo da Sociedade dos Inabaláveis",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Steadfast Society style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello Stile della Società dei Risoluti.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Stowarzyszenia Nieugiętych.",
+        ["br"] = "Esses fragmentos de livros permitem a criação no estilo da Sociedade dos Inabaláveis.",
+      },
+    },
+    [98] = {
+      ["t"] = 14,
+      ["k"] = 199,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Systres Guardian Style",
+        ["it"] = "Stile Guardiano delle Systres",
+        ["pl"] = "Styl Strażników Systres",
+        ["br"] = "Estilo do Guardião de Systres",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Systres Guardian style.",
+        ["it"] = "Questi frammenti di libro consentono di creare nello stile Guardiano delle Systres.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Strażników Systres.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo do Guardião de Systres.",
+      },
+    },
+    [99] = {
+      ["t"] = 14,
+      ["k"] = 201,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Y'ffre's Will Style",
+        ["it"] = "Stile della Volontà di Y'ffre",
+        ["pl"] = "Styl Woli Y'ffre",
+        ["br"] = "Estilo da Vontade de Y'ffre",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Y'ffre's Will style.",
+        ["it"] = "Questi frammenti di libro abilitano la creazione di oggetti nello stile Volontà di Y'ffre",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Woli Y'ffre.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo da Vontade de Y'ffre.",
+      },
+    },
+    [100] = {
+      ["t"] = 14,
+      ["k"] = 202,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Drowned Mariner Style",
+        ["it"] = "Stile del Marinaio Annegato",
+        ["pl"] = "Styl Utopionego Marynarza",
+        ["br"] = "Estilo do Marinheiro Afogado",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Drowned Mariner style.",
+        ["it"] = "Questi frammenti di libro abilitano la creazione nello stile del Marinaio Annegato.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Utopionego Marynarza.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo do Marinheiro Afogado.",
+      },
+    },
+    [101] = {
+      ["t"] = 14,
+      ["k"] = 204,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Firesong Style",
+        ["it"] = "Stile Canto del Fuoco",
+        ["pl"] = "Styl Ognistej Pieśni",
+        ["br"] = "Estilo Canção Flamejante",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Firesong style.",
+        ["it"] = "Questi frammenti di libro consentono di creare con lo Stile Canto del Fuoco.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Ognistej Pieśni.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo Canção Flamejante.",
+      },
+    },
+    [102] = {
+      ["t"] = 14,
+      ["k"] = 205,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "House Mornard Style",
+        ["it"] = "Stile di Casa Mornard",
+        ["pl"] = "Styl rodu Mornardów",
+        ["br"] = "Estilo da Casa Mornard",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the House Mornard style.",
+        ["it"] = "Questi frammenti di libri consentono la creazione in stile Casa Mornard.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu rodu Mornardów.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo da Casa Mornard.",
+      },
+    },
+    [103] = {
+      ["t"] = 14,
+      ["k"] = 208,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Scribes of Mora Style",
+        ["it"] = "Stile Scribi di Mora",
+        ["pl"] = "Styl Skrybów Mory",
+        ["br"] = "Estilo dos Escribas de Mora",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Scribes of Mora style.",
+        ["it"] = "Questi frammenti di libro consentono di creare in stile Scribi di Mora.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Skrybów Mory.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo dos Escribas de Mora.",
+      },
+    },
+    [104] = {
+      ["t"] = 14,
+      ["k"] = 209,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Blessed Inheritor Style",
+        ["it"] = "Stile dell'Erede Benedetto",
+        ["pl"] = "Styl błogosławionych dziedziców",
+        ["br"] = "Estilo do Herdeiro Abençoado",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Blessed Inheritor style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione nello stile dell'Erede Benedetto.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu błogosławionych dziedziców.",
+        ["br"] = "Esses fragmentos de livros permitem a criação no estilo do Herdeiro Abençoado.",
+      },
+    },
+    [105] = {
+      ["t"] = 14,
+      ["k"] = 212,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Clan Dreamcarver Style",
+        ["it"] = "Stile del Clan Intagliatori del Sogno",
+        ["pl"] = "Styl Klanu Rzeźbiarzy Snów",
+        ["br"] = "Estilo do Clã Talhasonhos",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Clan Dreamcarver style.",
+        ["it"] = "Questi frammenti di libri consentono la creazione nello stile del Clan Intagliatori del Sogno.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Klanu Rzeźbiarzy Snów.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo do Clã Talhasonhos.",
+      },
+    },
+    [106] = {
+      ["t"] = 14,
+      ["k"] = 213,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Dead Keeper Style",
+        ["it"] = "Stile Custode dei Morti",
+        ["pl"] = "Styl Opiekunów Zmarłych",
+        ["br"] = "Estilo dos Guardiões dos Mortos",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Dead Keeper style.",
+        ["it"] = "Questi frammenti di libro consentono di creare in stile Custode dei Morti.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Opiekunów Zmarłych.",
+        ["br"] = "Esses fragmentos de livro permitem a criação no estilo do Guardião dos Mortos.",
+      },
+    },
+    [107] = {
+      ["t"] = 14,
+      ["k"] = 214,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Kindred's Concord Style",
+        ["it"] = "Stile dell'Armonia dei Fratelli",
+        ["pl"] = "Styl Ugody Braci",
+        ["br"] = "Estilo da Concórdia dos Membros",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Kindred's Concord style.",
+        ["it"] = "Questi frammenti di libri consentono la creazione nello stile Armonia dei Fratelli.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Ugody Braci.",
+        ["br"] = "Esses fragmentos de livro permitem a elaboração no estilo da Concórdia dos Membros.",
+      },
+    },
+    [108] = {
+      ["t"] = 14,
+      ["k"] = 216,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "The Recollection Style",
+        ["it"] = "Stile dei Rimembranti",
+        ["pl"] = "Styl Wspomnienia",
+        ["br"] = "O Estilo da Recoleção",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in The Recollection style.",
+        ["it"] = "Questi frammenti di libro consentono la creazione in stile Rimembranti.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Wspomnienia.",
+        ["br"] = "Esses fragmentos de livro permitem a elaboração no estilo da Recoleção.",
+      },
+    },
+    [109] = {
+      ["t"] = 14,
+      ["k"] = 217,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Blind Path Cultist Style",
+        ["it"] = "Stile Cultista del Sentiero Buio",
+        ["pl"] = "Styl kultystów Ślepej Ścieżki",
+        ["br"] = "Estilo Cultista do Caminho Cego",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Blind Path Cultist style.",
+        ["it"] = "Questi frammenti di libri consentono la creazione in stile Cultista del Sentiero Buio.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu kultystów Ślepej Ścieżki.",
+        ["br"] = "Esses fragmentos de livro permitem a elaboração no estilo do Cultista do Caminho Cego.",
+      },
+    },
+    [110] = {
+      ["t"] = 14,
+      ["k"] = 218,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Shardborn Style",
+        ["it"] = "Shardborn Style",
+        ["pl"] = "Styl Dzieci Odłamków",
+        ["br"] = "Estilo dos Filhos do Fragmento",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Shardborn style.",
+        ["it"] = "These book fragments enable crafting in the Shardborn style.",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Dzieci Odłamków.",
+        ["br"] = "Estes fragmentos de livro permitem fabricar no estilo Filhos do Fragmento.",
+      },
+    },
+    [111] = {
+      ["t"] = 14,
+      ["k"] = 219,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "West Weald Legion Style",
+        ["it"] = "",
+        ["pl"] = "Styl Legionu Zachodniej Kniei",
+        ["br"] = "Estilo da Legião do Bosque Oeste",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the West Weald Legion style.",
+        ["it"] = "",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Legionu Zachodniej Kniei.",
+        ["br"] = "Esses fragmentos de livros permitem a fabricação no estilo da Legião do Bosque Oeste.",
+      },
+    },
+    [112] = {
+      ["t"] = 14,
+      ["k"] = 220,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Lucent Sentinel Style",
+        ["it"] = "",
+        ["pl"] = "Styl Luminitowych Wartowników",
+        ["br"] = "Estilo de Sentinela Lucente",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Lucent Sentinel style.",
+        ["it"] = "",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu Luminitowych Wartowników.",
+        ["br"] = "Esses fragmentos de livro permitem a elaboração no estilo de Sentinela Lucente.",
+      },
+    },
+    [113] = {
+      ["t"] = 14,
+      ["k"] = 221,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Hircine Bloodhunter Style",
+        ["it"] = "",
+        ["pl"] = "Styl łowców krwi Hircyna",
+        ["br"] = "Estilo Caçador Sangrento de Hircine",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Hircine Bloodhunter style.",
+        ["it"] = "",
+        ["pl"] = "Te fragmenty książki nauczą cię rzemiosła w stylu łowców krwi Hircyna.",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo do Caçador Sangrento de Hircine.",
+      },
+    },
+    [114] = {
+      ["t"] = 14,
+      ["k"] = 224,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Exile's Revenge Style",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "Estilo da Vingança do Exílio",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Exile's Revenge style.",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo da Vingança do Exilado.",
+      },
+    },
+    [115] = {
+      ["t"] = 14,
+      ["k"] = 225,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Militant Monk Style",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "Estilo do Monge Militante",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Militant Monk style.",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação no estilo Monge Militante.",
+      },
+    },
+    [116] = {
+      ["t"] = 14,
+      ["k"] = 229,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
+      ["n"] = {
+        ["en"] = "Tide-Born Style",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "Estilo Filhos-da-Maré",
+      },
+      ["d"] = {
+        ["en"] = "These book fragments enable crafting in the Tide-Born style.",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "Esses fragmentos de livro permitem a fabricação do estilo dos Filhos-da-Maré.",
       },
     },
   },
@@ -1996,775 +2635,1014 @@ local libraryData = {
     [1] = {
       ["t"] = 117,
       ["k"] = 44,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Тайны и откровения «нейтральной территории» Краглорна.",
-        ["fr"] = "Mystères et révélations de la région désolée de Raidelorn.",
-        ["de"] = "Mysterien und Enthüllungen der Region Kargstein.",
-        ["en"] = "Mysteries and revelations from the no-man's-region of Craglorn.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "Тайны Краглорна",
-        ["fr"] = "Secrets de Raidelorn",
-        ["de"] = "Geheimnisse von Kargstein",
         ["en"] = "Craglorn Secrets",
+        ["it"] = "Segreti del Craglorn",
+        ["pl"] = "Sekrety Craglorn",
+        ["br"] = "Segredos de Craglorn",
+      },
+      ["d"] = {
+        ["en"] = "Mysteries and revelations from the no-man's-region of Craglorn.",
+        ["it"] = "Misteri e rivelazioni dalla regione di nessuno del Craglorn.",
+        ["pl"] = "Tajemnice i odkrycia z ziemi niczyjej zwanej Craglorn.",
+        ["br"] = "Mistérios e revelações sobre a terra-de-ninguém chamada Craglorn",
       },
     },
     [2] = {
-      ["t"] = 97,
+      ["t"] = 98,
       ["k"] = 45,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги, заметки и журналы, связанные с преступниками и преступными организациями.",
-        ["fr"] = "Livres, notes et rapports relatifs au crime et aux organisations criminelles.",
-        ["de"] = "Bücher, Notizen und Aufzeichnungen, die sich mit Verbrechen und kriminellen Organisationen beschäftigen.",
-        ["en"] = "Books, notes, and ledgers related to crime and criminal organizations.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Переписка преступников",
-        ["fr"] = "Correspondance criminelle",
-        ["de"] = "Verbrecherischer Schriftverkehr",
         ["en"] = "Criminal Correspondence",
+        ["it"] = "Corrispondenza penale",
+        ["pl"] = "Korespondencja kryminalna",
+        ["br"] = "Correspondência Criminal",
+      },
+      ["d"] = {
+        ["en"] = "Books, notes, and ledgers related to crime and criminal organizations.",
+        ["it"] = "Libri, appunti e registri relativi al crimine e alle organizzazioni criminali.",
+        ["pl"] = "Książki, notatki i rejestry powiązane z organizacjami przestępczymi i przestępczością.",
+        ["br"] = "Livros, notas e registros relacionados ao crime e às organizações criminosas.",
       },
     },
     [3] = {
-      ["t"] = 97,
+      ["t"] = 120,
       ["k"] = 46,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_daedric.dds",
-      ["d"] = {
-        ["ru"] = "Книги, записки и дневники, написанные последователями даэдра или рассказывающие о них.",
-        ["fr"] = "Livres, notes et journaux par et à propos des adorateurs de Daedra.",
-        ["de"] = "Bücher, Notizen und Tagebücher, von und über Anhänger daedrischer Kulte.",
-        ["en"] = "Books, notes, and journals by and about Daedra worshipers.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_daedric.dds",
       ["n"] = {
-        ["ru"] = "Даэдрические культы",
-        ["fr"] = "Sectes daedriques",
-        ["de"] = "Daedrische Kulte",
         ["en"] = "Daedric Cults",
+        ["it"] = "Culti Daedrici",
+        ["pl"] = "Kulty daedr",
+        ["br"] = "Cultos Daedricos",
+      },
+      ["d"] = {
+        ["en"] = "Books, notes, and journals by and about Daedra worshipers.",
+        ["it"] = "Libri, note e diari di e sugli adoratori del Daedra.",
+        ["pl"] = "Księgi, notatki i dzienniki napisane przez i o czcicielach daedr.",
+        ["br"] = "Livros, notas e diários de e sobre adoradores de Daedra.",
       },
     },
     [4] = {
-      ["t"] = 80,
+      ["t"] = 84,
       ["k"] = 47,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Жители Тамриэля считают своим долгом записывать события своей жизни.",
-        ["fr"] = "Les habitants de Tamriel estiment qu'il est de leur devoir de tenir un journal de leur vie.",
-        ["de"] = "Die Völker Tamriels haben das Gefühl, dass sie die Geschehnisse ihres Lebens aufzeichnen müssen.",
-        ["en"] = "Tamrielic peoples feel they have a duty to record the events of their lives.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Дневники и журналы",
-        ["fr"] = "Journaux et journaux de bord",
-        ["de"] = "Tagebücher und Aufzeichnungen",
         ["en"] = "Diaries and Logs",
+        ["it"] = "Diari e registri",
+        ["pl"] = "Pamiętniki i dzienniki",
+        ["br"] = "Diários e Registros",
+      },
+      ["d"] = {
+        ["en"] = "Tamrielic peoples feel they have a duty to record the events of their lives.",
+        ["it"] = "I popoli tamrielici sentono il dovere di registrare gli eventi della loro vita.",
+        ["pl"] = "Tamrielscy obywatele czują, iż ich obowiązkiem jest spisanie wydarzeń z ich życia.",
+        ["br"] = "As pessoas tamriélicas sentem-se na obrigação de registrar os eventos de suas vidas.",
       },
     },
     [5] = {
       ["t"] = 121,
       ["k"] = 48,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Объявления о розыске, афиши арены, листовки с объявлениями о вознаграждении, предупреждающие знаки, надгробные эпитафии, официальные объявления, дверные таблички и так далее.",
-        ["fr"] = "Avis de recherche, journaux de l'arène, primes, pancartes d'alerte, épitaphes, annonces officielles, inscriptions au-dessus des portes, etc.",
-        ["de"] = "Steckbriefe, Arenawerbung, Kopfgeldschreiben, Warnschilder, Grabinschriften, offizielle Ankündigungen, Türbeschriftungen und mehr.",
-        ["en"] = "Wanted posters, arena broadsheets, bounty flyers, warning signs, gravestone epitaphs, official announcements, inscriptions over doorways, and so forth.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Листовки, плакаты и указы",
-        ["fr"] = "Affichages privés et officiels",
-        ["de"] = "Zettel, Aushänge und Erlasse",
         ["en"] = "Handbills, Posters, and Decrees",
+        ["it"] = "Volantini, manifesti e decreti",
+        ["pl"] = "Ulotki, plakaty i dekrety",
+        ["br"] = "Folhetos, Cartazes e Decretos",
+      },
+      ["d"] = {
+        ["en"] = "Wanted posters, arena broadsheets, bounty flyers, warning signs, gravestone epitaphs, official announcements, inscriptions over doorways, and so forth.",
+        ["it"] = "I manifesti dei ricercati, i fogli dell'arena, i volantini delle taglie, i cartelli di avvertimento, gli epitaffi sulle tombe, gli annunci ufficiali, le iscrizioni sulle porte e così via.",
+        ["pl"] = "Listy gończe, plakaty na arenie, ulotki o nagrodach, znaki ostrzegawcze, epitafia z nagrobków, oficjalne ogłoszenia, napisy na drzwiach i tak dalej.",
+        ["br"] = "Cartazes de procurados, anúncios de arena, folhetos de multas, avisos de perigo, epitáfios, decretos oficiais, inscrições sobre portais, entre outros.",
       },
     },
     [6] = {
-      ["t"] = 79,
+      ["t"] = 84,
       ["k"] = 49,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Любовные и романтические письма, заметки и дневники.",
-        ["fr"] = "Lettres, notes et journaux parlant d'amour.",
-        ["de"] = "Briefe, Notizen und Tagebücher, die sich mit Liebe und Romanzen beschäftigen.",
-        ["en"] = "Letters, notes, and journals about love and romance.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Сердца и цветы",
-        ["fr"] = "Cœurs et petites fleurs",
-        ["de"] = "Herzen und Blumen",
         ["en"] = "Hearts and Flowers",
+        ["it"] = "Cuori e fiori",
+        ["pl"] = "Serduszka i kwiatki",
+        ["br"] = "Corações e Flores",
+      },
+      ["d"] = {
+        ["en"] = "Letters, notes, and journals about love, romance, and friendship.",
+        ["it"] = "Lettere, appunti e diari sull'amore, sul romanticismo e sull'amicizia.",
+        ["pl"] = "Listy, notatki i dzienniki o miłości, romansach i przyjaźni.",
+        ["br"] = "Cartas, notas e diários sobre amor e romance.",
       },
     },
     [7] = {
-      ["t"] = 86,
+      ["t"] = 87,
       ["k"] = 50,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Рецепты, списки, купчие, контракты, подсказки по ведению домашнего хозяйства, счета, книги учета и так далее.",
-        ["fr"] = "Recettes, listes, actes de vente, contrats, conseils domestiques, reçus, livres de compte, etc.",
-        ["de"] = "Rezepte, Prüflisten, Rechnungen, Verträge, Haushaltsnotizen, Aufzeichnungen und ähnliches.",
-        ["en"] = "Recipes, checklists, bills of sale, contracts, household hints, receipts, ledgers, and so forth.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Дома, магазины и торговля",
-        ["fr"] = "Maisons, boutiques et commerce",
-        ["de"] = "Häuser, Läden und Handel",
         ["en"] = "Houses, Shops, and Trade",
+        ["it"] = "Case, negozi e commercio",
+        ["pl"] = "Domy, sklepy i handel",
+        ["br"] = "Casas, Lojas e Comércio",
+      },
+      ["d"] = {
+        ["en"] = "Recipes, checklists, bills of sale, contracts, household hints, receipts, ledgers, and so forth.",
+        ["it"] = "Ricette, liste di controllo, fatture di vendita, contratti, consigli per la casa, ricevute, registri e così via.",
+        ["pl"] = "Przepisy, listy kontrolne, rachunki sprzedaży, kontrakty, wskazówki dla gospodarstw domowych, kwity, rejestry i tak dalej.",
+        ["br"] = "Receitas, listas, comprovantes de venda, contratos, conselhos domésticos, recibos, registros, entre outros.",
       },
     },
     [8] = {
       ["t"] = 126,
       ["k"] = 51,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция писем, которые можно считать в той или иной мере официальными.",
-        ["fr"] = "Une collection de lettres relativement officielles.",
-        ["de"] = "Eine Sammlung recht förmlicher Briefe.",
-        ["en"] = "A collection of relatively formal letters.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Письма и послания",
-        ["fr"] = "Lettres et missives",
-        ["de"] = "Briefe und Sendschreiben",
         ["en"] = "Letters and Missives",
+        ["it"] = "Lettere e missive",
+        ["pl"] = "Listy i pisma",
+        ["br"] = "Cartas e Missivas",
+      },
+      ["d"] = {
+        ["en"] = "A collection of relatively formal letters.",
+        ["it"] = "Una collezione di lettere relativamente formali.",
+        ["pl"] = "Zbiór względnie oficjalnych listów.",
+        ["br"] = "Uma coleção de cartas relativamente formais.",
       },
     },
     [9] = {
-      ["t"] = 110,
+      ["t"] = 111,
       ["k"] = 52,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги о тамриэльской культуре и обычаях.",
-        ["fr"] = "Livres à propos des cultures et coutumes sociales de Tamriel.",
-        ["de"] = "Bücher, die sich mit den Kulturen Tamriels und sozialen Praktiken beschäftigen.",
-        ["en"] = "Books about Tamrielic cultures and social practices.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "История, обычаи и культура",
-        ["fr"] = "Connaissance et culture",
-        ["de"] = "Wissenswertes und Kultur",
         ["en"] = "Lore and Culture",
+        ["it"] = "Storia e cultura",
+        ["pl"] = "Wiedza i kultura",
+        ["br"] = "Conhecimento e Cultura",
+      },
+      ["d"] = {
+        ["en"] = "Books about Tamrielic cultures and social practices.",
+        ["it"] = "Libri sulle Culture Tamrieliche e le pratiche sociali.",
+        ["pl"] = "Księgi o kulturze i zwyczajach społecznych w Tamriel.",
+        ["br"] = "Livros sobre culturas tamriélicas e hábitos sociais.",
       },
     },
     [10] = {
-      ["t"] = 104,
+      ["t"] = 106,
       ["k"] = 53,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Переписка командиров, солдат и моряков, связанная с военными действиями.",
-        ["fr"] = "Correspondance de commandants, soldats et marins à propos de la guerre.",
-        ["de"] = "Schriften von Kommandanten, Soldaten und Seeleuten, die sich mit mit dem Krieg beschäftigen.",
-        ["en"] = "Correspondence by commanders, soldiers, and sailors relating to warfare.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Военные приказы и отчеты",
-        ["fr"] = "Ordres et rapports militaires",
-        ["de"] = "Militärische Befehle & Berichte",
         ["en"] = "Military Orders and Reports",
+        ["it"] = "Ordini e rapporti militari",
+        ["pl"] = "Wojskowe rozkazy i raporty",
+        ["br"] = "Ordens Militares e Relatórios",
+      },
+      ["d"] = {
+        ["en"] = "Correspondence by commanders, soldiers, and sailors relating to warfare.",
+        ["it"] = "Corrispondenza di comandanti, soldati e marinai relativa alla guerra.",
+        ["pl"] = "Listy napisane przez dowódców, żołnierzy i żeglarzy dotyczące wojny.",
+        ["br"] = "Correspondências entre comandantes, soldados e marinheiros relativas à guerra.",
       },
     },
     [11] = {
       ["t"] = 118,
       ["k"] = 54,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги о тайнах и загадках, включающие коды, шифры, книги подсказок, письменные улики и таинственные надписи.",
-        ["fr"] = "Livres traitant de mystères et d'énigmes, dont des codes, messages cryptés, livres d'indices, preuves de culpabilité et inscriptions mystérieuses.",
-        ["de"] = "Bücher mit Mysterien und Rätseln, welche Codes, Chiffren, Hinweisbücher, Schuldhinweise und mysteriöse Inschriften beinhalten.",
-        ["en"] = "Books about mysteries and puzzles, including codes, ciphers, clue books, proofs of guilt, and mysterious inscriptions.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Тайны и подсказки",
-        ["fr"] = "Mystères et indices",
-        ["de"] = "Geheimnisse und Hinweise",
         ["en"] = "Mysteries and Clues",
+        ["it"] = "Misteri e indizi",
+        ["pl"] = "Zagadki i wskazówki",
+        ["br"] = "Mistérios e Pistas",
+      },
+      ["d"] = {
+        ["en"] = "Books about mysteries and puzzles, including codes, ciphers, clue books, proofs of guilt, and mysterious inscriptions.",
+        ["it"] = "Libri su misteri ed enigmi, inclusi codici, cifrari, libri di indizi, prove di colpevolezza e iscrizioni misteriose.",
+        ["pl"] = "Księgi zawierające tajemnice i zagadki, w tym kody, szyfry, wskazówki, dowody winy i tajemnicze inskrypcje.",
+        ["br"] = "Livros sobre mistérios e enigmas, incluindo códigos, cifras, pistas, provas criminais e inscrições misteriosas.",
       },
     },
     [12] = {
       ["t"] = 123,
       ["k"] = 55,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Неофициальная переписка и заметки на клочках бумаги.",
-        ["fr"] = "Communications informelles et notes personnelles sur bouts de papier.",
-        ["de"] = "Informelle Schreiben und hastige Notizen für später.",
-        ["en"] = "Informal communications and notes-to-self on scraps of paper.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Записки и заметки",
-        ["fr"] = "Notes et mémoranda",
-        ["de"] = "Notizen und Erinnerungen",
         ["en"] = "Notes and Memos",
+        ["it"] = "Note e promemoria",
+        ["pl"] = "Liściki i notatki",
+        ["br"] = "Notas e Memorandos",
+      },
+      ["d"] = {
+        ["en"] = "Informal communications and notes-to-self on scraps of paper.",
+        ["it"] = "Comunicazioni informali e note a se stessi su pezzi di carta.",
+        ["pl"] = "Nieformalne przekazy i prywatne notatki na skrawkach papieru.",
+        ["br"] = "Comunicação informal e notas pessoais em pedaços de papel.",
       },
     },
     [13] = {
       ["t"] = 107,
       ["k"] = 56,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Деяния, размышления и откровения разных жителей Тамриэля.",
-        ["fr"] = "Les activités, pensées et confessions d'individus de Tamriel.",
-        ["de"] = "Mehr zu Aktivitäten, Gedanken und Bekenntnissen einzelner Bürger Tamriels.",
-        ["en"] = "The activities, thoughts, and confessions of individual Tamrielics.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Личные дневники",
-        ["fr"] = "Journaux personnels",
-        ["de"] = "Persönliche Aufzeichnungen",
         ["en"] = "Personal Journals",
+        ["it"] = "Diari personali",
+        ["pl"] = "Osobiste dzienniki",
+        ["br"] = "Diário Pessoal",
+      },
+      ["d"] = {
+        ["en"] = "The activities, thoughts, and confessions of individual Tamrielics.",
+        ["it"] = "Le attività, i pensieri e le confessioni dei singoli Tamrielici.",
+        ["pl"] = "Zapiski działań, myśli i spowiedzi pojedynczych mieszkańców Tamriel.",
+        ["br"] = "As atividades, pensamentos e confissões de tamriélicos específicos.",
       },
     },
     [14] = {
       ["t"] = 89,
       ["k"] = 57,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Политические интриги, мятежи, массовые отравления, заговоры с целью вернуть в мир древнее зло и т. д.",
-        ["fr"] = "Machinations politiques, rebellions, empoisonnements de masse, complots visant à ramener d'antiques maux dans le monde, etc.",
-        ["de"] = "Politische Intrigen, Rebellionen, Massenvergiftungen, Pläne Böses zurück in die Welt zu bringen und vieles mehr.",
-        ["en"] = "Political machinations, rebellions, mass poisonings, plots to bring ancient evil back into the world, etc.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Заговоры и интриги",
-        ["fr"] = "Complots et manigances",
-        ["de"] = "Pläne und Ränke",
         ["en"] = "Plots and Schemes",
+        ["it"] = "Trame e schemi",
+        ["pl"] = "Spiski i intrygi",
+        ["br"] = "Tramas e Conspirações",
+      },
+      ["d"] = {
+        ["en"] = "Political machinations, rebellions, mass poisonings, plots to bring ancient evil back into the world, etc.",
+        ["it"] = "Macchinazioni politiche, ribellioni, avvelenamenti di massa, complotti per riportare il male antico nel mondo, ecc.",
+        ["pl"] = "Polityczne machinacje, rebelie, masowe zatrucia, spiski dążące do przywrócenia starożytnego zła na świat itd.",
+        ["br"] = "Maquinações políticas, rebeliões, envenenamento em massa, complôs visando trazer males antigos de volta ao mundo, etc.",
       },
     },
     [15] = {
       ["t"] = 107,
       ["k"] = 58,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Заметки и дневники исследователей о магии, двемерских руинах, экспериментах на людях, алхимические трактаты и тому подобное.",
-        ["fr"] = "Notes et journaux de chercheurs en magie, explorateurs de ruines dwemers, expérimentateurs sur sujets humains, tracts alchimiques, etc.",
-        ["de"] = "Notizen und Tagebücher über die Erforschung der Magie, das Erkunden von Dwemerruinen, das Experimentieren an Menschen, alchemistische Abhandlungen und vieles mehr.",
-        ["en"] = "Notes and journals of magical researchers, explorers of Dwarven ruins, experimenters on human subjects, alchemical tracts, and so on.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Исследовательские заметки",
-        ["fr"] = "Notes de recherche",
-        ["de"] = "Forschungsnotizen",
         ["en"] = "Research Notes",
+        ["it"] = "Note di ricerca",
+        ["pl"] = "Notatki badawcze",
+        ["br"] = "Notas de Pesquisa",
+      },
+      ["d"] = {
+        ["en"] = "Notes and journals of magical researchers, explorers of Dwarven ruins, experimenters on human subjects, alchemical tracts, and so on.",
+        ["it"] = "Note e diari di ricercatori magici, esploratori di rovine Naniche, sperimentatori su soggetti umani, trattati alchemici e così via.",
+        ["pl"] = "Notatki i dzienniki badaczy magii, eksperymentatorów prowadzących badania na ludzkich obiektach, odkrywców krasnoludzkich ruin, a także alchemicze rozprawy naukowe i tak dalej.",
+        ["br"] = "Notas e diários de pesquisadores mágicos, exploradores de ruínas Enânicas, experimentação em cobaias humanas, tratados alquímicos, entre outros.",
       },
     },
     [16] = {
       ["t"] = 94,
       ["k"] = 59,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_magic.dds",
-      ["d"] = {
-        ["ru"] = "Заклинания и ритуалы, инструкции по управлению магическими устройствами, гримуары и книги заклинаний, трактаты по истории магии.",
-        ["fr"] = "Sorts et rituels, instructions d'emploi d'appareils infernaux, grimoires, livres de sorts et autres traités sur l'histoire de la magie.",
-        ["de"] = "Zauber und Rituale, Anleitungen für infernale Geräte, Grimoire und Zauberbücher, und Berichte über magische Geschichte.",
-        ["en"] = "Spells and rituals, instructions for operating infernal devices, grimoires and spellbooks, and treatises on magical history.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_magic.dds",
       ["n"] = {
-        ["ru"] = "Ритуалы и откровения",
-        ["fr"] = "Rituels et révélations",
-        ["de"] = "Rituale und Offenbarungen",
         ["en"] = "Rituals and Revelations",
+        ["it"] = "Rituali e rivelazioni",
+        ["pl"] = "Rytuały i objawienia",
+        ["br"] = "Rituais e Revelações",
+      },
+      ["d"] = {
+        ["en"] = "Spells and rituals, instructions for operating infernal devices, grimoires and spellbooks, and treatises on magical history.",
+        ["it"] = "Incantesimi e rituali, istruzioni per operare dispositivi infernali, grimori e libri di incantesimi e trattati di storia magica.",
+        ["pl"] = "Zaklęcia i rytuały, wskazówki jak wymawiać niebezpieczne inkantacje, grymuary i księgi czarów oraz rozprawy naukowe na temat historii magii.",
+        ["br"] = "Feitiços e rituais, instruções para operar dispositivos infernais, grimórios, livros de feitiço e tratados sobre a história da magia.",
       },
     },
     [17] = {
       ["t"] = 118,
       ["k"] = 60,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Истории и легенды древности, ужасающие рассказы о кровопролитиях, а также сказки на ночь для самых маленьких.",
-        ["fr"] = "Histoires et légendes anciennes, horribles récits de massacres et histoires pour endormir les petits.",
-        ["de"] = "Geschichten von uralten Legenden, entsetzliche Erklärungen von Massakern und Bettgeschichten für die ganz kleinen.",
-        ["en"] = "Stories and ancient legends, horrific accounts of massacres, and bedtime tales for the wee ones.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Сказания Тамриэля",
-        ["fr"] = "Récits de Tamriel",
-        ["de"] = "Erzählungen Tamriels",
         ["en"] = "Tales of Tamriel",
+        ["it"] = "Racconti di Tamriel",
+        ["pl"] = "Opowieści z Tamriel",
+        ["br"] = "Contos de Tamriel",
+      },
+      ["d"] = {
+        ["en"] = "Stories and ancient legends, horrific accounts of massacres, and bedtime tales for the wee ones.",
+        ["it"] = "Storie e leggende antiche, racconti orribili di massacri e favole della buonanotte per i più piccoli.",
+        ["pl"] = "Opowieści i starożytne legendy, przerażające opisy masakr oraz bajki na dobranoc dla najmłodszych.",
+        ["br"] = "Histórias e lendas antigas, horríveis contos de massacres, e contos para assustar os pequenos na hora de dormir.",
       },
     },
     [18] = {
-      ["t"] = 96,
+      ["t"] = 102,
       ["k"] = 61,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Трактаты, заметки, книги и журналы, написанные теми или о тех, кто силен в своей вере и/или заблуждениях.",
-        ["fr"] = "Tracts, notes, livres et journaux par ou à propos de ceux pour qui accordent une grande importance à la foi et/ou leurs illusions.",
-        ["de"] = "Abhandlungen, Notizen, Bücher und Tagebücher von und über diejenigen, die dem Glauben und/oder dessen Illusionen verfallen sind.",
-        ["en"] = "Tracts, notes, books, and journals by and about those who are strong in their faith and/or their delusions.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Верующие и помешанные",
-        ["fr"] = "Les dévots et les déments",
-        ["de"] = "Die Gesalbten und die Gestörten",
         ["en"] = "The Devoted and the Deranged",
+        ["it"] = "Il devoto e lo squilibrato",
+        ["pl"] = "Poświęceni i obłąkani",
+        ["br"] = "O Devotado e o Desordenado",
+      },
+      ["d"] = {
+        ["en"] = "Tracts, notes, books, and journals by and about those who are strong in their faith and/or their delusions.",
+        ["it"] = "Tratti, note, libri e diari di e su coloro che sono forti nella loro fede e/o nei loro deliri.",
+        ["pl"] = "Traktaty, notatki, książki i dzienniki napisane przez tych i o tych, którzy są silni w swojej wierze i/lub w swoich imaginacjach.",
+        ["br"] = "Tratados, notas, livros e diários de e sobre aqueles que são fortes em sua fé e/ou seus delírios.",
       },
     },
     [19] = {
       ["t"] = 19,
       ["k"] = 62,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги, связанные с историей возвращения души героя из когтей Молага Бала.",
-        ["fr"] = "Livres à propos de la quête d'un héros pour reprendre son âme à Molag Bal.",
-        ["de"] = "Bücher, die von der Reise eines Helden, seine Seele von Molag Bal zurückzuerlangen, handeln.",
-        ["en"] = "Books relating to a hero's quest to recover a lost soul from Molag Bal.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Пять соратников",
-        ["fr"] = "Les Cinq Compagnons",
-        ["de"] = "Die Fünf Gefährten",
         ["en"] = "The Five Companions",
+        ["it"] = "I cinque compagni",
+        ["pl"] = "Pięcioro Towarzyszy",
+        ["br"] = "Os Cinco Companheiros",
+      },
+      ["d"] = {
+        ["en"] = "Books relating to a hero's quest to recover a lost soul from Molag Bal.",
+        ["it"] = "Libri relativi alla ricerca di un eroe per recuperare un'anima perduta da Molag Bal.",
+        ["pl"] = "Księgi związane z dążeniem bohatera do odzyskania zagubionej duszy od Molag Bala.",
+        ["br"] = "Livros relatando a jornada de um herói para recuperar sua alma perdida das garras de Molag Bal.",
       },
     },
     [20] = {
       ["t"] = 80,
       ["k"] = 63,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги про многочисленные и разнообразные земли Тамриэля, а также про существ, которые там обитают.",
-        ["fr"] = "Guides des faunes et flores variées Tamriel.",
-        ["de"] = "Bücher, die von den abwechslungsreichen Gegenden Tamriels und deren Bewohnern berichten.",
-        ["en"] = "Books about the many and varied environments of Tamriel and the creatures that live in them.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Мир и его обитатели",
-        ["fr"] = "Le Monde et ses créatures",
-        ["de"] = "Die Welt und ihre Bewohner",
         ["en"] = "The World and Its Creatures",
+        ["it"] = "Il mondo e le sue creature",
+        ["pl"] = "Świat i jego stworzenia",
+        ["br"] = "O Mundo e Suas Criaturas",
+      },
+      ["d"] = {
+        ["en"] = "Books about the many and varied environments of Tamriel and the creatures that live in them.",
+        ["it"] = "Libri sui molti e variegati ambienti di Tamriel e sulle creature che li abitano.",
+        ["pl"] = "Księgi o wielu różnorodnych środowiskach Tamriel i stworzeniach, które tam żyją.",
+        ["br"] = "Livros sobre os muitos e variados ambientes de Tamriel e as criaturas que vivem neles.",
       },
     },
     [21] = {
       ["t"] = 73,
       ["k"] = 64,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги стихов и песен.",
-        ["fr"] = "Recueils de poèmes et de chants.",
-        ["de"] = "Bücher mit Poesie und Liedern.",
-        ["en"] = "Books of poetry and song.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Слова поэтов",
-        ["fr"] = "Paroles des poètes",
-        ["de"] = "Die Worte des Propheten",
         ["en"] = "Words of the Poets",
+        ["it"] = "Parole dei Poeti",
+        ["pl"] = "Słowa poetów",
+        ["br"] = "Mundo dos Poetas",
+      },
+      ["d"] = {
+        ["en"] = "Books of poetry and song.",
+        ["it"] = "Libri di poesia e canto.",
+        ["pl"] = "Księgi poezji i pieśni.",
+        ["br"] = "Livros de poesia e canção.",
       },
     },
     [22] = {
       ["t"] = 78,
       ["k"] = 65,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги, записки и дневники самоубийц и слишком самоуверенных персон.",
-        ["fr"] = "Livres, notes et journaux des suicidaires et des intrépides.",
-        ["de"] = "Bücher, Notizen und Tagebücher von Selbstmödern und allzu Selbstsicheren.",
-        ["en"] = "Books, notes, and journals of the suicidal and the overconfident.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Последние слова",
-        ["fr"] = "Dernières paroles",
-        ["de"] = "Letzte Worte",
         ["en"] = "Final Words",
+        ["it"] = "Parole finali",
+        ["pl"] = "Ostatnie słowa",
+        ["br"] = "Palavras finais",
+      },
+      ["d"] = {
+        ["en"] = "Books, notes, and journals of the suicidal and the overconfident.",
+        ["it"] = "Libri, appunti e diari dei suicidi e degli iperconfidenti.",
+        ["pl"] = "Książki, notatki i dzienniki samobójców oraz zbyt pewnych siebie.",
+        ["br"] = "Livros, notas e diários dos suicidas e dos intrépidos.",
       },
     },
     [23] = {
       ["t"] = 89,
       ["k"] = 66,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги, которые повышают уровень навыков читателя.",
-        ["fr"] = "Livres qui améliorent les compétences de leur lecteur.",
-        ["de"] = "Bücher, die das Können des Lesers in Bezug auf verschiedene Dinge verbessern.",
-        ["en"] = "Books that endow the reader with skill improvements.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Книги навыков",
-        ["fr"] = "Manuels de compétence",
-        ["de"] = "Lehrbücher",
         ["en"] = "Skill Books",
+        ["it"] = "Libri di abilità",
+        ["pl"] = "Książki umiejętności",
+        ["br"] = "Livros de Habilidades",
+      },
+      ["d"] = {
+        ["en"] = "Books that endow the reader with skill improvements.",
+        ["it"] = "Libri che dotano il lettore di miglioramenti di abilità.",
+        ["pl"] = "Książki, które pomagają czytelnikowi w poprawie umiejętności.",
+        ["br"] = "Livros que dotam o leitor com melhoria de habilidades.",
       },
     },
     [24] = {
       ["t"] = 127,
       ["k"] = 67,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Истории, легенды и письма из южных регионов Чернотопья.",
-        ["fr"] = "Légendes, récits et lettres des royaumes du sud du marais noir.",
-        ["de"] = "Geschichten, Legenden und Briefe aus den südlichen Arealen von Schwarzmarsch.",
-        ["en"] = "Tales, legends, and letters from the southern realms of Black Marsh.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "Литература Мрачных Трясин",
-        ["fr"] = "Savoir de Tourbevase",
-        ["de"] = "Rund um Trübmoor",
         ["en"] = "Lore of Murkmire",
+        ["it"] = "Lore di Murkmire",
+        ["pl"] = "Wiedza o Mętnych Moczarach",
+        ["br"] = "História de Mangueturvo",
+      },
+      ["d"] = {
+        ["en"] = "Tales, legends, and letters from the southern realms of Black Marsh.",
+        ["it"] = "Racconti, leggende e lettere dai regni meridionali di Black Marsh.",
+        ["pl"] = "Opowieści, legendy i listy z południowych krain Czarnych Mokradeł.",
+        ["br"] = "Contos, lendas e cartas dos reinos ao sul do Pântano Negro.",
       },
     },
     [25] = {
-      ["t"] = 114,
+      ["t"] = 115,
       ["k"] = 68,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Тексты, как примитивные, так и нетривиальные, из земель дальнего Ротгара.",
-        ["fr"] = "Discussions sur les sauvages et les civilisés du royaume frontalier de Wrothgar.",
-        ["de"] = "Diskurse wilder sowie anspruchsvoller Natur aus dem Grenzreich Wrothgar.",
-        ["en"] = "Discourses savage and sophisticated from the border realm of Wrothgar.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Тексты Ротгара",
-        ["fr"] = "Écrits de Wrothgar",
-        ["de"] = "Worte aus Wrothgar",
         ["en"] = "Wrothgar Writings",
+        ["it"] = "Scritti di Wrothgar",
+        ["pl"] = "Zapiski z Wrothgaru",
+        ["br"] = "Escritos de Wrothgar",
+      },
+      ["d"] = {
+        ["en"] = "Discourses savage and sophisticated from the border realm of Wrothgar.",
+        ["it"] = "Discorsi selvaggi e sofisticati dal regno di confine di Wrothgar.",
+        ["pl"] = "Dyskursy dzikie i wyrafinowane z pogranicza królestwa Wrothgaru.",
+        ["br"] = "Discursos selvagens e sofisticados do reino fronteiriço de Wrothgar.",
       },
     },
     [26] = {
       ["t"] = 20,
       ["k"] = 69,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги и переписка из Имперского города.",
-        ["fr"] = "Livres et lettres de la cité impériale.",
-        ["de"] = "Schriften und Briefe aus der Kaiserstadt.",
-        ["en"] = "Tomes and correspondence from the Imperial City.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Имперская библиотека",
-        ["fr"] = "Bibliothèque impériale",
-        ["de"] = "Kaiserliche Bibliothek",
         ["en"] = "Imperial Library",
+        ["it"] = "Biblioteca Imperiale",
+        ["pl"] = "Cesarska biblioteka",
+        ["br"] = "Biblioteca Imperial",
+      },
+      ["d"] = {
+        ["en"] = "Tomes and correspondence from the Imperial City.",
+        ["it"] = "Tomi e corrispondenza della Città Imperiale.",
+        ["pl"] = "Tomy i listy z Cesarskiego Miasta.",
+        ["br"] = "Tomos e correspondência da Cidade Imperial.",
       },
     },
     [27] = {
-      ["t"] = 54,
+      ["t"] = 59,
       ["k"] = 85,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
-      ["d"] = {
-        ["ru"] = "Книги, свитки и переписка, связанные с великим городом орков и окружающими его землями.",
-        ["fr"] = "Livres, parchemins et correspondance relatifs à la grande cité des Orques et sa région.",
-        ["de"] = "Bücher, Schriftrollen und Briefwechsel, die mit der imposanten Stadt der Orks und ihrem Umland in Verbindung stehen.",
-        ["en"] = "Books, scrolls, and correspondence relating to the great city of the Orcs and its surrounding region.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_craftingstyle.dds",
       ["n"] = {
-        ["ru"] = "Архив Орсиниума",
-        ["fr"] = "Archives d'Orsinium",
-        ["de"] = "Orsinium-Archiv",
         ["en"] = "Orsinium Archive",
+        ["it"] = "Archivio Orsinium",
+        ["pl"] = "Archiwum Orsinium",
+        ["br"] = "Arquivos de Orsinium",
+      },
+      ["d"] = {
+        ["en"] = "Books, scrolls, and correspondence relating to the great city of the Orcs and its surrounding region.",
+        ["it"] = "Libri, pergamene e corrispondenza relativi alla grande città degli Orchi e alla regione circostante.",
+        ["pl"] = "Książki, zwoje i listy dotyczące wielkiego miasta orków i okolicznych regionów.",
+        ["br"] = "Livros, pergaminhos e correspondências relacionados à grande cidade dos orcs e seus arredores.",
       },
     },
     [28] = {
       ["t"] = 78,
       ["k"] = 86,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг, найденных в регионе Хаммерфелла, известном как Проклятие Хью.",
-        ["fr"] = "Un ensemble de livres que l'on trouve au Trépas des Cognées, à Martelfell.",
-        ["de"] = "Eine Sammlung von Büchern, die in der Hammerfall-Region Hews Fluch gefunden wurden.",
-        ["en"] = "A collection of books found in the Hammerfell region of Hew's Bane.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "Полка с книгами Проклятия Хью",
-        ["fr"] = "Étagère du Trépas des Cognées",
-        ["de"] = "Bücherregal: Hews Fluch",
         ["en"] = "Hew's Bane Bookshelf",
+        ["it"] = "Libreria Sventura di Hew",
+        ["pl"] = "Biblioteczka Zmory Hew",
+        ["br"] = "Estante de livros do Lamento de Hew",
+      },
+      ["d"] = {
+        ["en"] = "A collection of books found in the Hammerfell region of Hew's Bane.",
+        ["it"] = "Una collezione di libri trovati nella regione di Hammerfell di Sventura di Hew.",
+        ["pl"] = "Zbiór ksiąg znalezionych w Zmorze Hew w prowincji Hammerfell.",
+        ["br"] = "Uma coleção de livros encontrados na região da Lamento de Hew, na Queda do Martelo.",
       },
     },
     [29] = {
       ["t"] = 103,
       ["k"] = 87,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
-      ["d"] = {
-        ["ru"] = "Коллекция книг, найденных в западном районе Сиродила, известном как Золотой Берег.",
-        ["fr"] = "Une série de livres trouvés sur la Côte d'or, la région occidentale de Cyrodiil.",
-        ["de"] = "Eine Sammlung Bücher, die an der Goldküste, der westlichen Region Cyrodiils, gefunden wurde.",
-        ["en"] = "A collection of books found in the western Cyrodiil region of the Gold Coast.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "Библиотека Золотого Берега",
-        ["fr"] = "Volumes de la Côte d'or",
-        ["de"] = "Goldküsten-Wälzer",
         ["en"] = "Gold Coast Tomes",
+        ["it"] = "Tomi della Costa d'Oro",
+        ["pl"] = "Tomy Złotego Wybrzeża",
+        ["br"] = "Tomos da Costa de Ouro",
+      },
+      ["d"] = {
+        ["en"] = "A collection of books found in the western Cyrodiil region of the Gold Coast.",
+        ["it"] = "Una collezione di libri trovati nella regione occidentale di Cyrodiil della Costa d'Oro.",
+        ["pl"] = "Zbiór ksiąg znalezionych w zachodnim Cyrodiil w regionie Złotego Wybrzeża.",
+        ["br"] = "Uma coleção de livros encontrados na Costa de Ouro, região ocidental de Cyrodiil.",
       },
     },
     [30] = {
       ["t"] = 126,
       ["k"] = 102,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги, дневники и письма, найденные на огромном вулканическом острове в сердце Морровинда или имеющие к нему отношение.",
-        ["fr"] = "Tomes, journaux et lettres relatives à ou trouvées sur la grande île volcanique au cœur de Morrowind.",
-        ["de"] = "Folianten, Tagebücher und Briefe von der oder zur großen Vulkaninsel im Herzen von Morrowind.",
-        ["en"] = "Tomes, journals, and letters relating to or found in the great volcanic island at the heart of Morrowind.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Литература Вварденфелла",
-        ["fr"] = "Volumes de Vvardenfell",
-        ["de"] = "Werke aus Vvardenfell",
         ["en"] = "Vvardenfell Volumes",
+        ["it"] = "Volumi di Vvardenfell",
+        ["pl"] = "Woluminy Vvardenfell",
+        ["br"] = "Volumes de Vvardenfell",
+      },
+      ["d"] = {
+        ["en"] = "Tomes, journals, and letters relating to or found in the great volcanic island at the heart of Morrowind.",
+        ["it"] = "Tomi, diari e lettere relativi o trovati nella grande isola vulcanica nel cuore di Morrowind.",
+        ["pl"] = "Tomy, dzienniki i listy związane lub znalezione na wielkiej wulkanicznej wyspie w sercu Morrowind.",
+        ["br"] = "Tomos, diários e cartas encontradas em ou falando sobre a grande ilha vulcânica no coração de Morrowind.",
       },
     },
     [31] = {
       ["t"] = 36,
       ["k"] = 103,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_tutorial_idexicon_morrowind.dds",
-      ["d"] = {
-        ["ru"] = "Тридцать шесть уроков-проповедей воина-поэта Вивека, живого бога Трибунала Морровинда.",
-        ["fr"] = "Les trente-six leçons, ou sermons, du guerrier-poète Vivec, dieu vivant du Tribunal de Morrowind.",
-        ["de"] = "Die 36 Lehren oder Lektionen des Kriegerpoeten Vivec, des lebenden Gottes des Tribunals von Morrowind.",
-        ["en"] = "The thirty-six lessons, or sermons, of the warrior-poet Vivec, living god of the Tribunal of Morrowind.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_tutorial_idexicon_morrowind.dds",
       ["n"] = {
-        ["ru"] = "36 уроков Вивека",
-        ["fr"] = "Les 36 leçons de Vivec",
-        ["de"] = "Vivecs 36 Lehren",
         ["en"] = "Vivec's 36 Lessons",
+        ["it"] = "Le 36 lezioni di Vivec",
+        ["pl"] = "36 Lekcji Viveka",
+        ["br"] = "As 36 Lições de Vivec",
+      },
+      ["d"] = {
+        ["en"] = "The thirty-six lessons, or sermons, of the warrior-poet Vivec, living god of the Tribunal of Morrowind.",
+        ["it"] = "Le trentasei lezioni, o sermoni, del poeta-guerriero Vivec, dio vivente del Tribunale di Morrowind.",
+        ["pl"] = "Trzydzieści sześć lekcji lub kazań poety-wojownika Viveka, żywego boga Trójcy Morrowind.",
+        ["br"] = "As trinta e seis lições, ou sermões, do guerreiro-poeta Vivec, deus vivente do Tribunal de Morrowind.",
       },
     },
     [32] = {
-      ["t"] = 82,
+      ["t"] = 123,
       ["k"] = 104,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dungeons.dds",
-      ["d"] = {
-        ["ru"] = "Различные дневники, книги, письма и свитки, собранные учеными и архивариусами со всего Тамриэля.",
-        ["fr"] = "Différents tomes obscurs, journaux, libres, lettres et parchemins rassemblés par les érudits et archivistes de tout Tamriel.",
-        ["de"] = "Verschiedene Folianten, Zeitschriften, Bücher, Briefe und Schriftrollen, die von Gelehrten und Archivaren aus allen Reichen Tamriels zusammengetragen wurden.",
-        ["en"] = "Various and sundry tomes, journals, books, letters, and scrolls gathered by scholars and archivists across all the realms of Tamriel.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dungeons.dds",
       ["n"] = {
-        ["ru"] = "Библиотека редких книг",
-        ["fr"] = "Bibliothèque des Incunables",
-        ["de"] = "Bücherei der Inkunabeln",
         ["en"] = "Library of Incunabula",
+        ["it"] = "Biblioteca degli incunaboli",
+        ["pl"] = "Biblioteka inkunabułów",
+        ["br"] = "Biblioteca de Incunabula",
+      },
+      ["d"] = {
+        ["en"] = "Various and sundry tomes, journals, books, letters, and scrolls gathered by scholars and archivists across all the realms of Tamriel.",
+        ["it"] = "Vari e vari tomi, diari, libri, lettere e pergamene raccolti da studiosi e archivisti in tutti i regni di Tamriel.",
+        ["pl"] = "Wielostronne i rozmaite tomy, dzienniki, książki, listy i zwoje zebrane przez uczonych i archiwistów ze wszystkich zakątków Tamriel.",
+        ["br"] = "Variados e diversificados tomos, diários, livros, cartas e pergaminhos reunidos por eruditos e arquivistas de todos o reinos de Tamriel.",
       },
     },
     [33] = {
       ["t"] = 3,
       ["k"] = 115,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Книги, описывающие работу, которая никогда не кончается, — задания, которые искатели приключений могут выполнять хоть каждый день.",
-        ["fr"] = "Des livres qui décrivent les tâches sans fin, le genre de quête que les aventuriers peuvent accomplir chaque jour.",
-        ["de"] = "Bücher, die nie endende Aufgaben beschreiben, die Art von Aufgaben, die Abenteurer jeden Tag angehen können.",
-        ["en"] = "Books that describe tasks without end, the kind of quests that adventurers can complete every day.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Альманах искателя приключений",
-        ["fr"] = "Almanach de l'aventurier",
-        ["de"] = "Almanach des Abenteurers",
         ["en"] = "Adventurer's Almanac",
+        ["it"] = "Almanacco dell'avventuriero",
+        ["pl"] = "Almanach podróżnika",
+        ["br"] = "Almanaque do Aventureiro",
+      },
+      ["d"] = {
+        ["en"] = "Books that describe tasks without end, the kind of quests that adventurers can complete every day.",
+        ["it"] = "Libri che descrivono compiti senza fine, il tipo di missioni che gli avventurieri possono completare ogni giorno.",
+        ["pl"] = "Książki opisujące misje bez końca, rodzaj zadań, które poszukiwacze przygód mogą wykonywać każdego dnia.",
+        ["br"] = "Livros que descrevem tarefas sem fim. O tipo de missões que os aventureiros podem completar todos os dias.",
       },
     },
     [34] = {
       ["t"] = 82,
       ["k"] = 120,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dwemer.dds",
-      ["d"] = {
-        ["ru"] = "Собрание книг и записей, посвященных Сота Силу и его Заводному городу.",
-        ["fr"] = "Archive de volumes et de registres relatifs à Sotha Sil et à sa Cité mécanique.",
-        ["de"] = "Ein Archiv von Folianten und Aufzeichnungen, die mit Sotha Sil und seiner gleichnamigen Stadt zu tun haben.",
-        ["en"] = "An archive of tomes and records relating to Sotha Sil and his city of the same name.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dwemer.dds",
       ["n"] = {
-        ["ru"] = "Мнемоника Заводного города",
-        ["fr"] = "Mnemonix mécanique",
-        ["de"] = "Uhrwerk-Memorabilien",
         ["en"] = "Clockwork Mnemonix",
+        ["it"] = "Mnemonix di Città Meccanica",
+        ["pl"] = "Mechaniczna mnemonika",
+        ["br"] = "Mnemonix Mecânico",
+      },
+      ["d"] = {
+        ["en"] = "An archive of tomes and records relating to Sotha Sil and his city of the same name.",
+        ["it"] = "Un archivio di tomi e documenti relativi a Sotha Sil e alla sua città omonima.",
+        ["pl"] = "Archiwalne tomy i zapiski dotyczące Sotha Sila i jego miasta o takiej samej nazwie.",
+        ["br"] = "Um arquivo de volumes e tomos relativos a Sotha Sil e sua cidade de mesmo nome.",
       },
     },
     [35] = {
       ["t"] = 128,
       ["k"] = 129,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
-      ["d"] = {
-        ["ru"] = "Размышления, истории, хроники, байки и рассказы, касающиеся жизни, культуры и общества Саммерсета.",
-        ["fr"] = "Réflexions, histoires, chroniques, anecdotes et narrations relatives à la vie, la culture et la société de l'Archipel du Couchant.",
-        ["de"] = "Träumereien, Geschichten, Chroniken, Anekdoten und Erzählungen zu Leben, Kultur und Gesellschaft von Sommersend",
-        ["en"] = "Musings, histories, chronicles, anecdotes, and narratives pertaining to Summerset life, culture, and society.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
       ["n"] = {
-        ["ru"] = "Свитки Саммерсета",
-        ["fr"] = "Parchemins du Couchant",
-        ["de"] = "Sommersend-Schriftrollen",
         ["en"] = "Summerset Scrolls",
+        ["it"] = "Pergamene di Summerset",
+        ["pl"] = "Zwoje Summerset",
+        ["br"] = "Pergaminhos de Summerset",
+      },
+      ["d"] = {
+        ["en"] = "Musings, histories, chronicles, anecdotes, and narratives pertaining to Summerset life, culture, and society.",
+        ["it"] = "Riflessioni, storie, cronache, aneddoti e racconti relativi alla vita, alla cultura e alla società di Summerset.",
+        ["pl"] = "Rozmyślania, historie, kroniki, anegdoty oraz narracje dotyczące życia, kultury i społeczeństwa Summerset.",
+        ["br"] = "Reflexões, histórias, crônicas, anedotas e narrativas pertencentes à vida, cultura e sociedade de Summerset",
       },
     },
     [36] = {
       ["t"] = 21,
       ["k"] = 136,
-      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_magic.dds",
-      ["d"] = {
-        ["ru"] = "Описания реликвий, собранных в хранилище Моавиты.",
-        ["fr"] = "Descriptions des reliques collectées dans la crypte de moawita",
-        ["de"] = "Beschreibungen der gesammelten Relikte des Gewölbes von Moawita.",
-        ["en"] = "Descriptions of the collected relics of the Vault of Moawita.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_magic.dds",
       ["n"] = {
-        ["ru"] = "Воспоминания Моавиты",
-        ["fr"] = "Souvenirs de Moawita",
-        ["de"] = "Moawita-Memoiren",
         ["en"] = "Moawita Memories",
+        ["it"] = "Ricordi di Moawita",
+        ["pl"] = "Wspomnienia Moawity",
+        ["br"] = "Memórias de Moawita",
+      },
+      ["d"] = {
+        ["en"] = "Descriptions of the collected relics of the Vault of Moawita.",
+        ["it"] = "Descrizioni delle reliquie raccolte nella Cripta di Moawita.",
+        ["pl"] = "Opisy skolekcjonowanych reliktów z Krypty Moawity.",
+        ["br"] = "Descrições das relíquias coletadas nos Cofres de Moawita.",
       },
     },
     [37] = {
       ["t"] = 116,
       ["k"] = 142,
-      ["g"] = "/esoui/art/icons/icon_missing.dds",
-      ["d"] = {
-        ["ru"] = "Книги знаний, заметки, дневники и документы, связанные с северным регионом Эльсвейра.",
-        ["fr"] = "Livres de savoir, notes, journaux et curiosités associés à la région nord d'Elsweyr.",
-        ["de"] = "Bücher, Notizen, Tagebücher und Vermerke aus den nördlichen Teilen von Elsweyr.",
-        ["en"] = "Lore books, notes, journals, and memoranda associated with the northern region of Elsweyr.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "Архивы Анеквины",
-        ["fr"] = "Archives d'Anequina",
-        ["de"] = "Archive von Anequina",
         ["en"] = "Anequina Archives",
+        ["it"] = "Archivi di Anequina",
+        ["pl"] = "Archiwa Anequiny",
+        ["br"] = "Arquivos de Anequina",
+      },
+      ["d"] = {
+        ["en"] = "Lore books, notes, journals, and memoranda associated with the northern region of Elsweyr.",
+        ["it"] = "Libri di storia, note, diari e memorandum associati alla regione settentrionale di Elsweyr.",
+        ["pl"] = "Księgi wiedzy, notatki, dzienniki i memoranda związane z północnym regionem Elsweyr.",
+        ["br"] = "Livros de História, notas, revistas e memorandos associados com a região norte de Elsweyr.",
       },
     },
     [38] = {
-      ["t"] = 76,
+      ["t"] = 78,
       ["k"] = 151,
-      ["g"] = "/esoui/art/icons/icon_missing.dds",
-      ["d"] = {
-        ["ru"] = "Книги знаний, заметки, дневники и документы, связанные с южным регионом Эльсвейра.",
-        ["fr"] = "Livres de savoir, notes, journaux et curiosités associés à la région sud d'Elsweyr.",
-        ["de"] = "Bücher, Notizen, Tagebücher und Vermerke aus den südlichen Teilen von Elsweyr.",
-        ["en"] = "Lore books, notes, journals, and memoranda associated with the southern region of Elsweyr.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "Публицистика Пеллитина",
-        ["fr"] = "Annonces de Pellitine",
-        ["de"] = "Pellitine-Aushänge",
         ["en"] = "Pellitine Postings",
+        ["it"] = "Annunci a Pellitine",
+        ["pl"] = "Wiadomości z Pellitine",
+        ["br"] = "Acontecimento de Pellitine",
+      },
+      ["d"] = {
+        ["en"] = "Lore books, notes, journals, and memoranda associated with the southern region of Elsweyr.",
+        ["it"] = "Libri di storia, note, diari e memorandum associati alla regione meridionale di Elsweyr.",
+        ["pl"] = "Księgi wiedzy, notatki, dzienniki i memoranda związane z południowym regionem Elsweyr.",
+        ["br"] = "Livros de folclore, notas, jornais e memorandos associados à região sul de Elsweyr",
       },
     },
     [39] = {
       ["t"] = 118,
       ["k"] = 158,
-      ["g"] = "/esoui/art/icons/icon_missing.dds",
-      ["d"] = {
-        ["ru"] = "Тексты, связанные с владениями и окрестностями Западного Скайрима.",
-        ["fr"] = "Des écrits liés aux forteresses et environs du Bordeciel occidental",
-        ["de"] = "Schriften, die mit den Jarltümern und Gegenden des westlichen Himmelsrand zu tun haben.",
-        ["en"] = "Writings related to the holds and environs of Western Skyrim.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "Монологи Солитьюда",
-        ["fr"] = "Soliloques de Solitude",
-        ["de"] = "Monologe in Einsamkeit",
         ["en"] = "Solitude Soliloquies",
+        ["it"] = "Monologhi di Solitude",
+        ["pl"] = "Monologi Samotni",
+        ["br"] = "Solilóquios de Solitude",
+      },
+      ["d"] = {
+        ["en"] = "Writings related to the holds and environs of Western Skyrim.",
+        ["it"] = "Scritti relativi alle stive e ai dintorni di Skyrim Occidentale.",
+        ["pl"] = "Pisma dotyczące terenów i okolic Zachodniego Skyrim.",
+        ["br"] = "Escritos relacionados aos condados e arredores de Skyrim Ocidental.",
       },
     },
     [40] = {
       ["t"] = 42,
       ["k"] = 169,
-      ["g"] = "/esoui/art/icons/icon_missing.dds",
-      ["d"] = {
-        ["ru"] = "Сообщения и записки из различных уголков Западного Скайрима.",
-        ["fr"] = "Nouvelles et notes des châtelleries du Bordeciel occidental",
-        ["de"] = "Neuigkeiten und Aufzeichnungen aus den Jarltümern des westlichen Himmelsrand.",
-        ["en"] = "News and notes from the holds of Western Skyrim.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "Архив Западного Скайрима",
-        ["fr"] = "Registre du Bordeciel occidental",
-        ["de"] = "Über das westliche Himmelsrand",
         ["en"] = "Western Skyrim Register",
+        ["it"] = "Registro occidentale di Skyrim",
+        ["pl"] = "Rejestry Zachodniego Skyrim",
+        ["br"] = "Registro de Skyrim Ocidental",
+      },
+      ["d"] = {
+        ["en"] = "News and notes from the holds of Western Skyrim.",
+        ["it"] = "Notizie e note dalle tenute di Skyrim Occidentale.",
+        ["pl"] = "Aktualności i notatki z terenów Zachodniego Skyrim.",
+        ["br"] = "Notícias e notas dos condados de Skyrim Ocidental.",
       },
     },
     [41] = {
-      ["t"] = 70,
+      ["t"] = 71,
       ["k"] = 170,
-      ["g"] = "/esoui/art/icons/icon_missing.dds",
-      ["d"] = {
-        ["ru"] = "Книги, письма и другие записи, связанные с Пределом и его народом.",
-        ["fr"] = "Livres, lettres et autres documents écrits liés à la Crevasse et ses habitants.",
-        ["de"] = "Bücher, Briefe und andere schriftlich festgehaltene Werke aus dem Reik und von dessen Bewohnern.",
-        ["en"] = "Books, letters, and other written material related to the Reach and its people.",
-      },
       ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
       ["n"] = {
-        ["ru"] = "Письменные источники Предела",
-        ["fr"] = "Lectures sur la Crevasse",
-        ["de"] = "Recherche im Reik",
         ["en"] = "The Reach Reader",
+        ["it"] = "Il lettore Reach",
+        ["pl"] = "Czytelnik Pogranicza",
+        ["br"] = "O leitor do Reach",
+      },
+      ["d"] = {
+        ["en"] = "Books, letters, and other written material related to the Reach and its people.",
+        ["it"] = "Libri, lettere e altro materiale scritto relativo al Reach e alla sua gente.",
+        ["pl"] = "Książki, listy i inne pisma dotyczące Pogranicza i jego mieszkańców.",
+        ["br"] = "Livros, cartas e outros materiais escritos relacionados ao Reach e seu povo.",
+      },
+    },
+    [42] = {
+      ["t"] = 118,
+      ["k"] = 175,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
+      ["n"] = {
+        ["en"] = "Books of Blackwood",
+        ["it"] = "Libri di Blackwood",
+        ["pl"] = "Księgi Czarnego Lasu",
+        ["br"] = "Livros da Floresta Negra",
+      },
+      ["d"] = {
+        ["en"] = "Notes, letters, journals, and tomes related to the region known as Blackwood and nearby locations around Topal Bay.",
+        ["it"] = "Note, lettere, diari e tomi relativi alla regione conosciuta come Blackwood e alle località vicine intorno a Topal Bay.",
+        ["pl"] = "Notatki, listy, dzienniki i tomy dotyczące regionu zwanego Czarnym Lasem oraz pobliskich lokacji wokół Zatoki Topal.",
+        ["br"] = "Notas, cartas, diários e tomos relacionados à região conhecida como Floresta Negra e locais próximos, ao redor da Baía Topal.",
+      },
+    },
+    [43] = {
+      ["t"] = 17,
+      ["k"] = 188,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
+      ["n"] = {
+        ["en"] = "The Impresario's Catalogue",
+        ["it"] = "Catalogo dell'Impresario",
+        ["pl"] = "Katalog Impresario",
+        ["br"] = "O Catálogo da Empresária",
+      },
+      ["d"] = {
+        ["en"] = "Tomes, letters, and other missives relating to festivals, celebrations, contests, prologues, and other events happening throughout Tamriel.",
+        ["it"] = "Tomi, lettere e altre missive relative a festival, celebrazioni, gare, prologhi e altri eventi che accadono in tutta Tamriel.",
+        ["pl"] = "Tomy, listy i inne pisma związane z festiwalami, świętami, konkursami, prologami i innymi wydarzeniami odbywającymi się w całym Tamriel.",
+        ["br"] = "Tomos, cartas e outras missivas relacionadas a festivais, celebrações, concursos e outros eventos que acontecem em Tamriel.",
+      },
+    },
+    [44] = {
+      ["t"] = 81,
+      ["k"] = 193,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
+      ["n"] = {
+        ["en"] = "Dispatches from the Deadlands",
+        ["it"] = "Dispacci dalle Terre Morte",
+        ["pl"] = "Meldunki z Martwych Ziem",
+        ["br"] = "Despachos das Terras Mortas",
+      },
+      ["d"] = {
+        ["en"] = "Notes, scrolls, letters, and books pertaining to the Oblivion realm of Mehrunes Dagon, the Deadlands, as well as the Celestial Palanquin, Fargrave.",
+        ["it"] = "Note, pergamene, lettere e libri relativi al regno dell'Oblivion di Mehrunes Dagon, le Terre Morte, così come la Portantina Celeste, Fargrave.",
+        ["pl"] = "Notatki, zwoje, listy i książki dotyczące królestwa Mehrunesa Dagona w Otchłani – Martwych Ziem, a także Niebiańskiej Lektyki – Odległego Kurhanu.",
+        ["br"] = "Notas, pergaminhos, cartas e livros pertencentes ao reino de Oblivion de Mehrunes Dagon, as Terras Mortas, bem como o Palanquim Celestial, de Fargrave .",
+      },
+    },
+    [45] = {
+      ["t"] = 128,
+      ["k"] = 200,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
+      ["n"] = {
+        ["en"] = "Systres Tomes and Scrolls",
+        ["it"] = "Tomi e Pergamene delle Systres",
+        ["pl"] = "Księgi i zwoje Systres",
+        ["br"] = "Tomos e Pergaminhos de Systres",
+      },
+      ["d"] = {
+        ["en"] = "Books, notes, and other writings prominent on High Isles and Amenos in the Systres Archipelago.",
+        ["it"] = "Libri, appunti e altri scritti prominenti sull'Isola Alta e Amenos nell'Arcipelago delle Systres.",
+        ["pl"] = "Książki, notatki i inne pisma znane na Wysokiej Wyspie i Amenos w archipelagu Systres.",
+        ["br"] = "Livros, notas e outros escritos proeminentes nas Altas Ilhas e Amenos no arquipélago de Systres.",
+      },
+    },
+    [46] = {
+      ["t"] = 30,
+      ["k"] = 203,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
+      ["n"] = {
+        ["en"] = "Tomes of Tributes",
+        ["it"] = "Tomi dei Tributi",
+        ["pl"] = "Tomy Trybutów",
+        ["br"] = "Tomos de Tributos",
+      },
+      ["d"] = {
+        ["en"] = "Books, pamphlets, and notices concerning the Tales of Tribute card game.",
+        ["it"] = "Libri, opuscoli e avvisi riguardanti il gioco di carte Storie del Tributo.",
+        ["pl"] = "Książki, broszury i ogłoszenia dotyczące gry karcianej Dzieje Trybutu.",
+        ["br"] = "Livros, panfletos, e avisos sobre o jogo de cartas Contos do Tributo.",
+      },
+    },
+    [47] = {
+      ["t"] = 76,
+      ["k"] = 206,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_places.dds",
+      ["n"] = {
+        ["en"] = "Archipelago Books and Almanacs",
+        ["it"] = "Libri e Almanacchi dell'Arcipelago",
+        ["pl"] = "Książki i almanachy archipelagu",
+        ["br"] = "Livros e Almanaques do Arquipélago",
+      },
+      ["d"] = {
+        ["en"] = "Books, notes, and other writings available on Galen and Y'ffelon in the Systres Archipelago.",
+        ["it"] = "Libri, appunti e altri scritti disponibili su Galen e Y'ffelon nell'Arcipelago delle Systres.",
+        ["pl"] = "Książki, notatki i inne pisma dostępne na wyspach Galen i Y'ffelon w archipelagu Systres.",
+        ["br"] = "Livros, notas e outros escritos disponíveis sobre Galen e Y'ffelon no arquipélago de Systres.",
+      },
+    },
+    [48] = {
+      ["t"] = 97,
+      ["k"] = 210,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
+      ["n"] = {
+        ["en"] = "Telvanni Tomes",
+        ["it"] = "Tomi Telvanni",
+        ["pl"] = "Tomy Telvanni",
+        ["br"] = "Tomos de Telvanni",
+      },
+      ["d"] = {
+        ["en"] = "Letters, journals, and other books created in or pertaining to the inhabitants of the Telvanni Peninsula.",
+        ["it"] = "Lettere, diari e altri libri creati o relativi agli abitanti della Penisola Telvanni.",
+        ["pl"] = "Listy, dzienniki i książki, które powstały na Półwyspie Telvanni lub odnoszą się do jego mieszkańców.",
+        ["br"] = "Cartas, diários e outros livros criados ou pertencentes aos habitantes da Península Telvanni.",
+      },
+    },
+    [49] = {
+      ["t"] = 74,
+      ["k"] = 211,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_daedric.dds",
+      ["n"] = {
+        ["en"] = "Apocryphal Pages",
+        ["it"] = "Pagine Apocrife",
+        ["pl"] = "Apokryficzne strony",
+        ["br"] = "Páginas de Apocrypha",
+      },
+      ["d"] = {
+        ["en"] = "Books of forbidden knowledge, lost secrets, and the mysteries of reality, found throughout the libraries of Hermaeus Mora's Oblivion realm, Apocrypha.",
+        ["it"] = "Libri di conoscenza proibita, segreti perduti e misteri della realtà, trovati nelle biblioteche del regno dell'Oblivion di Hermaeus Mora, Apocrypha.",
+        ["pl"] = "Księgi zakazanej wiedzy, zapomnianych sekretów i tajemnic rzeczywistości, znalezione w bibliotekach wymiaru Hermaeusa Mory, Apokryfu.",
+        ["br"] = "Livros de conhecimento proibido, segredos perdidos e mistérios da realidade encontrados nas bibliotecas de Hermaeus Mora em seu domínio de Apocrypha, Oblivion.",
+      },
+    },
+    [50] = {
+      ["t"] = 126,
+      ["k"] = 215,
+      ["h"] = false,
+      ["g"] = "/esoui/art/icons/icon_missing.dds",
+      ["n"] = {
+        ["en"] = "West Weald Writings",
+        ["it"] = "West Weald Writings",
+        ["pl"] = "Zapiski z Zachodniej Kniei",
+        ["br"] = "Escrituras do Bosque Oeste",
+      },
+      ["d"] = {
+        ["en"] = "Books, journals, documents, and other writings associated with the province of West Weald and locations along the Gold Road.",
+        ["it"] = "Books, journals, documents, and other writings associated with the province of West Weald and locations along the Gold Road.",
+        ["pl"] = "Książki, dzienniki, dokumenty i inne pisma związane z Zachodnią Knieją i miejscami wzdłuż Złotej Drogi.",
+        ["br"] = "Livros, diários, documentos e outros escritos associados à província do Bosque Oeste e locais ao longo da Estrada do Ouro.",
+      },
+    },
+    [51] = {
+      ["t"] = 37,
+      ["k"] = 222,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_dungeons.dds",
+      ["n"] = {
+        ["en"] = "Dungeon Delver Documents",
+        ["it"] = "Documenti dell'Esploratore di Dungeon",
+        ["pl"] = "Dokumenty badacza lochów",
+        ["br"] = "Documentos dos Exploradores de Masmorras",
+      },
+      ["d"] = {
+        ["en"] = "Tomes, journals, books, letters, and scrolls related to the vast dungeons that pepper the lands of Tamriel and beyond.",
+        ["it"] = "Tomi, diari, libri, lettere e pergamene legati ai vasti dungeon che costellano le terre di Tamriel e oltre.",
+        ["pl"] = "Tomy, dzienniki, książki, listy i zwoje związane z obszernymi lochami, które otaczają ziemie Tamriel i nie tylko.",
+        ["br"] = "Tomos, diários, livros, cartas e pergaminhos relacionados às vastas masmorras que povoam as terras de Tamriel e além.",
+      },
+    },
+    [52] = {
+      ["t"] = 72,
+      ["k"] = 223,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_magic.dds",
+      ["n"] = {
+        ["en"] = "Scholarium Scribblings",
+        ["it"] = "Scholarium Scribblings",
+        ["pl"] = "Spisy Scholarium",
+        ["br"] = "Notas do Scholarium",
+      },
+      ["d"] = {
+        ["en"] = "Rare first-era tomes, mystic fables, and other esoterica from the legendary collection of Ulfsild's Scholarium beneath Eyevea.",
+        ["it"] = "Rare first-era tomes, mystic fables, and other esoterica from the legendary collection of Ulfsild's Scholarium beneath Eyevea.",
+        ["pl"] = "Rzadkie księgi z pierwszej ery, mistyczne baśnie i inne formy ezoteryki z legendarnej kolekcji Scholarium Ulfsild pod Eyeveą.",
+        ["br"] = "Tomos raros da primeira era, fábulas místicas e outros textos esotéricos da lendária coleção do Scholarium de Ulfsild, abaixo de Eyevea.",
+      },
+    },
+    [53] = {
+      ["t"] = 39,
+      ["k"] = 226,
+      ["h"] = false,
+      ["g"] = "/esoui/art/treeicons/gamepad/gp_lorelibrary_categoryicon_literature.dds",
+      ["n"] = {
+        ["en"] = "Companions Correspondence",
+        ["it"] = "",
+        ["pl"] = "Korespondencja towarzyszów",
+        ["br"] = "Correspondência de Companheiros",
+      },
+      ["d"] = {
+        ["en"] = "Notes, letters, and other written texts related to companions you meet throughout Tamriel and beyond.",
+        ["it"] = "",
+        ["pl"] = "Notatki, listy i inne teksty pisane związane z towarzyszami spotkanymi w Tamriel i nie tylko.",
+        ["br"] = "Notas, cartas e outros textos escritos relacionados a companheiros que você encontra em Tamriel e além.",
+      },
+    },
+    [54] = {
+      ["t"] = 8,
+      ["k"] = 232,
+      ["h"] = false,
+      ["g"] = "/esoui/art/icons/icon_missing.dds",
+      ["n"] = {
+        ["en"] = "Elusive Manuscripts",
+        ["it"] = "",
+        ["pl"] = "Nieuchwytne manuskrypty",
+        ["br"] = "Manuscritos Elusivos",
+      },
+      ["d"] = {
+        ["en"] = "Only the most dedicated book collectors and hunters of rare tomes ever get their hands on these elusive manuscripts from all over Tamriel, across Nirn, and even beyond.",
+        ["it"] = "",
+        ["pl"] = "Tylko najbardziej oddani kolekcjonerzy książek i łowcy rzadkich tomów mogą dostać w swoje ręce te nieuchwytne manuskrypty z całego Tamriel, całego Nirn i nie tylko.",
+        ["br"] = "Somente os mais dedicados colecionadores de livros e caçadores de tomos raros conseguem colocar as mãos nesses manuscritos indescritíveis de toda Tamriel, de Nirn e de outros lugares.",
+      },
+    },
+    [55] = {
+      ["t"] = 81,
+      ["k"] = 233,
+      ["h"] = false,
+      ["g"] = "/esoui/art/icons/icon_missing.dds",
+      ["n"] = {
+        ["en"] = "Solstice Summations",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "Compêndios de Solstício",
+      },
+      ["d"] = {
+        ["en"] = "Books, notes, letters, and other written material pertaining to life on the isolated island of Solstice's western half.",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "Livros, notas, cartas, e outros materiais escritos sobre a vida na metade oeste da ilha isolada de Solstício.",
+      },
+    },
+    [56] = {
+      ["t"] = 25,
+      ["k"] = 235,
+      ["h"] = false,
+      ["g"] = "/esoui/art/icons/icon_missing.dds",
+      ["n"] = {
+        ["en"] = "Jewelry Crafting Surveys",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "",
+      },
+      ["d"] = {
+        ["en"] = "Surveys revealing potential locations for acquiring jewelry crafting materials.",
+        ["it"] = "",
+        ["pl"] = "",
+        ["br"] = "",
       },
     },
   },
 }
 
--- uses mapId for key, ZoneId for z to get texture
-local bookshelfData = {
-  [1940] = { -- u30_leyawiincity_base
-    { ["x"] = 0.402493, ["y"] = 0.456695, ["z"] = 1261 },
-    { ["x"] = 0.255003, ["y"] = 0.453110, ["z"] = 1261 },
-    { ["x"] = 0.163941, ["y"] = 0.579486, ["z"] = 1261 },
-  },
-  [1887] = { -- blackwood_base
-    { ["x"] = 0.213265, ["y"] = 0.545964, ["z"] = 1261 }, -- Nine Commands of the Eight Divines
-  },
-  [10] = { -- rivenspire_base
-    { ["x"] = 0.715786, ["y"] = 0.488517, ["z"] = 20 },
-  },
-  [8] = {
-    { ["x"] = 0.7958272099, ["y"] = 0.4694717824, ["z"] = 280, },
-    { ["x"] = 0.7136975527, ["y"] = 0.2590188980, ["z"] = 280, },
-  },
-  [1288] = {
-    { ["x"] = 0.6968059540, ["y"] = 0.6332955956, ["z"] = 849, },
-    { ["x"] = 0.3771406114, ["y"] = 0.2950019538, ["z"] = 849, },
-  },
-  [605] = {
-    { ["x"] = 0.6917211413, ["y"] = 0.8503540158, ["z"] = 537, },
-  },
-}
-
---[[ TODO Why was the interaction type ever used
-INTERACTION_MAIL = 7
-INTERACTION_BOOK = 12
-INTERACTION_NONE = 0
-]]--
 local bookData = {
   [20] = {
     ["c"] = true,
@@ -32796,6 +33674,51 @@ local bookData = {
       },
     },
   },
+  [3086] = {
+    ["c"] = true,
+    ["cn"] = "Orsinium Archive",
+    ["n"] = "Torug ag Krazak, Uhz",
+    ["e"] = {
+      [1] = { ["px"] = 0.3131595878, ["py"] = 0.2102155996, ["pm"] = 964, ["d"] = true, },
+      [2] = { ["px"] = 0.3108407950, ["py"] = 0.2104704030, ["pm"] = 667, ["fp"] = true, },
+    },
+  },
+  [3087] = {
+    ["c"] = true,
+    ["cn"] = "Orsinium Archive",
+    ["n"] = "Torug ag Krazak, Uhg",
+    ["e"] = {
+      [1] = { ["px"] = 0.3127264113, ["py"] = 0.2102191999, ["pm"] = 967, ["d"] = true, },
+      [2] = { ["px"] = 0.3108407950, ["py"] = 0.2104704030, ["pm"] = 667, ["fp"] = true, },
+    },
+  },
+  [3088] = {
+    ["c"] = true,
+    ["cn"] = "Orsinium Archive",
+    ["n"] = "Torug ag Krazak, Aht",
+    ["e"] = {
+      [1] = { ["px"] = 0.3126272113, ["py"] = 0.2100759999, ["pm"] = 967, ["d"] = true, },
+      [2] = { ["px"] = 0.3108407950, ["py"] = 0.2104704030, ["pm"] = 667, ["fp"] = true, },
+    },
+  },
+  [3089] = {
+    ["c"] = true,
+    ["cn"] = "Orsinium Archive",
+    ["n"] = "Torug ag Krazak, Uz",
+    ["e"] = {
+      [1] = { ["px"] = 0.3132524130, ["py"] = 0.2103968031, ["pm"] = 966, ["d"] = true, },
+      [2] = { ["px"] = 0.3108407950, ["py"] = 0.2104704030, ["pm"] = 667, ["fp"] = true, },
+    },
+  },
+  [3091] = {
+    ["c"] = true,
+    ["cn"] = "Orsinium Archive",
+    ["n"] = "Kharsthun's Translation, Second Stanza",
+    ["e"] = {
+      [1] = { ["px"] = 0.3127264113, ["py"] = 0.2102211999, ["pm"] = 967, ["d"] = true, },
+      [2] = { ["px"] = 0.3108407950, ["py"] = 0.2104704030, ["pm"] = 667, ["fp"] = true, },
+    },
+  },
   [3107] = {
     ["c"] = true,
     ["e"] = {
@@ -51120,11 +52043,10 @@ local bookData = {
       [3] = { ["px"] = 0.2397768018, ["py"] = 0.7334356212, ["pm"] = 243, },
       [4] = { ["px"] = 0.7660343723, ["py"] = 0.3722679981, ["pm"] = 1287, },
       [5] = { ["px"] = 0.0712072039, ["py"] = 0.7486172005, ["pm"] = 1349, },
-      [6] = { ["px"] = 0.5648263727, ["py"] = 0.6244903963, ["pm"] = 1576, },
-      [7] = { ["px"] = 0.4230880140, ["py"] = 0.2180412007, ["pm"] = 1719, },
-      [8] = { ["px"] = 0.6093396052, ["py"] = 0.6771480073, ["pm"] = 1940, },
-      [9] = { ["px"] = 0.0709308026, ["py"] = 0.6023104052, ["pm"] = 2163, },
-      [10] = { ["px"] = 0.9414088162, ["py"] = 0.3932148050, ["pm"] = 2343, },
+      [6] = { ["px"] = 0.4230880140, ["py"] = 0.2180412007, ["pm"] = 1719, },
+      [7] = { ["px"] = 0.6093396052, ["py"] = 0.6771480073, ["pm"] = 1940, },
+      [8] = { ["px"] = 0.0709308026, ["py"] = 0.6023104052, ["pm"] = 2163, },
+      [9] = { ["px"] = 0.9414088162, ["py"] = 0.3932148050, ["pm"] = 2343, },
     },
   },
   [6253] = {
@@ -58268,6 +59190,15 @@ local bookData = {
       [1] = { ["px"] = 0.4261787894, ["py"] = 0.5027267941, ["pm"] = 2427, },
     },
   },
+  [7792] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Notes on Tho'at Replicanum",
+    ["e"] = {
+      [1] = { ["px"] = 0.1758555953, ["py"] = -0.0311927934, ["pm"] = 2407, ["d"] = true, },
+      [2] = { ["px"] = 0.1752616046, ["py"] = -0.0298643984, ["pm"] = 2275, ["fp"] = true, },
+    },
+  },
   [7793] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
@@ -58504,7 +59435,7 @@ local bookData = {
   },
   [7823] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Haldain's Journal",
     ["e"] = {
       [1] = { ["px"] = 0.4426791997, ["py"] = 0.5536704001, ["pm"] = 2453, ["d"] = true, },
@@ -58957,6 +59888,15 @@ local bookData = {
       [1] = { ["px"] = 0.4171859934, ["py"] = 0.4765495926, ["pm"] = 2427, },
     },
   },
+  [7897] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Dawnwood Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.3822859957, ["py"] = 0.5460716072, ["pm"] = 2506, ["d"] = true, },
+      [2] = { ["px"] = 0.3821764113, ["py"] = 0.5461732030, ["pm"] = 2604, ["fp"] = true, },
+    },
+  },
   [7898] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
@@ -58964,6 +59904,15 @@ local bookData = {
     ["q"] = 7080,
     ["e"] = {
       [1] = { ["px"] = 0.3822099862, ["py"] = 0.5461336111, ["pm"] = 2506, ["d"] = true, },
+      [2] = { ["px"] = 0.3821764113, ["py"] = 0.5461732030, ["pm"] = 2604, ["fp"] = true, },
+    },
+  },
+  [7899] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Note to Nantharion",
+    ["e"] = {
+      [1] = { ["px"] = 0.3822435957, ["py"] = 0.5461496072, ["pm"] = 2506, ["d"] = true, },
       [2] = { ["px"] = 0.3821764113, ["py"] = 0.5461732030, ["pm"] = 2604, ["fp"] = true, },
     },
   },
@@ -59047,6 +59996,14 @@ local bookData = {
       [2] = { ["px"] = 0.4222247855, ["py"] = 0.6932991878, ["pm"] = 9, ["fp"] = true, },
     },
   },
+  [7940] = {
+    ["c"] = true,
+    ["cn"] = "Lore and Culture",
+    ["n"] = "All Our Perfect Forms",
+    ["e"] = {
+      [1] = { ["px"] = 0.4570592057, ["py"] = 0.6174995946, ["pm"] = 312, },
+    },
+  },
   [7941] = {
     ["c"] = true,
     ["cn"] = "Tomes of Tributes",
@@ -59073,6 +60030,14 @@ local bookData = {
       [2] = { ["px"] = 0.2128399972, ["py"] = 0.2703303973, ["pm"] = 667, ["fp"] = true, },
     },
   },
+  [7959] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Rites of the Order of the Hidden Moon",
+    ["e"] = {
+      [1] = { ["px"] = 0.4571368056, ["py"] = 0.6179267949, ["pm"] = 312, },
+    },
+  },
   [7995] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
@@ -59090,6 +60055,14 @@ local bookData = {
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
+  },
+  [7998] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Scrawled Ceythalmor Orders",
+    ["e"] = {
+      [1] = { ["px"] = 0.2042724073, ["py"] = 0.7062780074, ["pm"] = 2575, },
+    },
   },
   [7999] = {
     ["c"] = true,
@@ -59137,9 +60110,41 @@ local bookData = {
     ["r"] = true,
     ["m"] = { [2427] = 1, },
   },
+  [8006] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Missive from Grand Inquisitor Arsalan",
+    ["e"] = {
+      [1] = { ["px"] = 0.5001484070, ["py"] = 0.8007183861, ["pm"] = 744, ["d"] = true, },
+    },
+  },
+  [8007] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Scrap of Paper",
+    ["e"] = {
+      [1] = { ["px"] = 0.2225259985, ["py"] = 0.7230720172, ["pm"] = 143, },
+    },
+  },
+  [8008] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Reeve Nardarmor's Private Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.2488623960, ["py"] = 0.6742591976, ["pm"] = 545, },
+    },
+  },
+  [8009] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Ceythalmor Interrogation Log",
+    ["e"] = {
+      [1] = { ["px"] = 0.0875452036, ["py"] = 0.7920607738, ["pm"] = 2579, },
+    },
+  },
   [8012] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Mystic Tarim's Notes",
     ["e"] = {
       [1] = { ["px"] = 0.3422616142, ["py"] = 0.5191527916, ["pm"] = 2468, ["d"] = true, },
@@ -59147,7 +60152,7 @@ local bookData = {
   },
   [8013] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "The Awful Truth About the Green Pact",
     ["e"] = {
       [1] = { ["px"] = 0.4396283998, ["py"] = 0.5531760000, ["pm"] = 2453, ["d"] = true, },
@@ -59158,7 +60163,7 @@ local bookData = {
   },
   [8014] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Open Tabs: 2E 579",
     ["q"] = 7084,
     ["e"] = {
@@ -59167,7 +60172,7 @@ local bookData = {
   },
   [8015] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Old Monk's Diary",
     ["q"] = 7084,
     ["e"] = {
@@ -59176,7 +60181,7 @@ local bookData = {
   },
   [8016] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Lumber Camp Journal 1",
     ["e"] = {
       [1] = { ["px"] = 0.4398059997, ["py"] = 0.5536144001, ["pm"] = 2453, ["d"] = true, },
@@ -59185,7 +60190,7 @@ local bookData = {
   },
   [8017] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Lumber Camp Journal 2",
     ["e"] = {
       [1] = { ["px"] = 0.4395591998, ["py"] = 0.5561716001, ["pm"] = 2453, ["d"] = true, },
@@ -59194,7 +60199,7 @@ local bookData = {
   },
   [8018] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Lumber Camp Journal 3",
     ["e"] = {
       [1] = { ["px"] = 0.4427491998, ["py"] = 0.5558908000, ["pm"] = 2453, ["d"] = true, },
@@ -59203,7 +60208,7 @@ local bookData = {
   },
   [8019] = {
     ["c"] = true,
-    ["cn"] = "West Weal Writings",
+    ["cn"] = "West Weald Writings",
     ["n"] = "Save Skingrad!",
     ["e"] = {
       [1] = { ["px"] = 0.4367936088, ["py"] = 0.5275451956, ["pm"] = 2514, },
@@ -59285,6 +60290,14 @@ local bookData = {
     ["n"] = "Memorial to Uriel Weatherleah",
     ["e"] = {
       [1] = { ["px"] = 0.4275175933, ["py"] = 0.4919683922, ["pm"] = 2427, },
+    },
+  },
+  [8046] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Snapdragon's Research Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.3547703996, ["py"] = 0.7003403990, ["pm"] = 387, },
     },
   },
   [8048] = {
@@ -59378,6 +60391,49 @@ local bookData = {
       [1] = { ["px"] = 0.4996227937, ["py"] = 0.4175995936, ["pm"] = 2427, },
     },
   },
+  [8061] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Snapdragon's Revealed Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.1867563981, ["py"] = 0.6289020126, ["pm"] = 540, },
+    },
+  },
+  [8062] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Trapper's Note",
+    ["q"] = 7208,
+    ["e"] = {
+      [1] = { ["px"] = 0.4088519874, ["py"] = 0.4923404107, ["pm"] = 2592, },
+    },
+  },
+  [8063] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Cantor Izalgo's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.4033855977, ["py"] = 0.7051611865, ["pm"] = 2610, ["d"] = true, },
+    },
+  },
+  [8064] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Trapper's Offer",
+    ["q"] = 7209,
+    ["e"] = {
+      [1] = { ["px"] = 0.4088519874, ["py"] = 0.4923404107, ["pm"] = 2592, },
+    },
+  },
+  [8065] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Marcien's Message",
+    ["q"] = 7210,
+    ["e"] = {
+      [1] = { ["px"] = 0.4088519874, ["py"] = 0.4923404107, ["pm"] = 2592, },
+    },
+  },
   [8066] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
@@ -59412,6 +60468,14 @@ local bookData = {
     ["q"] = 7203,
     ["e"] = {
       [1] = { ["px"] = 0.0204339998, ["py"] = 0.1736816014, ["pm"] = 2515, },
+    },
+  },
+  [8070] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "The Strike on Alinor",
+    ["e"] = {
+      [1] = { ["px"] = 0.1741207975, ["py"] = 0.8166832118, ["pm"] = 2581, ["d"] = true, },
     },
   },
   [8071] = {
@@ -59502,6 +60566,14 @@ local bookData = {
     ["q"] = 7217,
     ["e"] = {
       [1] = { ["px"] = 0.0182363995, ["py"] = 0.1709776003, ["pm"] = 2522, ["d"] = true, },
+    },
+  },
+  [8087] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Ceythalmor Captain's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.4072928123, ["py"] = 0.7710995932, ["pm"] = 2576, },
     },
   },
   [8088] = {
@@ -59625,6 +60697,30 @@ local bookData = {
       [1] = { ["px"] = 0.0187488007, ["py"] = 0.1724692001, ["pm"] = 2523, ["d"] = true, },
     },
   },
+  [8108] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Riddles of the Dragon (Solutions)",
+    ["e"] = {
+      [1] = { ["px"] = 0.0187488007, ["py"] = 0.1724692001, ["pm"] = 2523, ["d"] = true, },
+    },
+  },
+  [8109] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Pocket Ballista Design Document",
+    ["e"] = {
+      [1] = { ["px"] = 0.3018235943, ["py"] = 0.6947703796, ["pm"] = 2578, },
+    },
+  },
+  [8111] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Notes on the Fable of the Netch",
+    ["e"] = {
+      [1] = { ["px"] = 0.0157027997, ["py"] = 0.1708236002, ["pm"] = 2521, ["d"] = true, },
+    },
+  },
   [8116] = {
     ["c"] = true,
     ["cn"] = "Tomes of Tributes",
@@ -59664,6 +60760,14 @@ local bookData = {
     ["n"] = "Taking Care of Your Bear",
     ["e"] = {
       [1] = { ["px"] = 0.4415964088, ["py"] = 0.5281943963, ["pm"] = 2514, },
+    },
+  },
+  [8129] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Dabienne's Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.4413324094, ["py"] = 0.5283303957, ["pm"] = 2514, },
     },
   },
   [8130] = {
@@ -59718,12 +60822,28 @@ local bookData = {
     ["r"] = true,
     ["m"] = { [2427] = 1, },
   },
+  [8137] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Scroll of the Crescent Blade",
+    ["e"] = {
+      [1] = { ["px"] = 0.4606355797, ["py"] = 0.6497140036, ["pm"] = 256, },
+    },
+  },
   [8138] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Rite of Theft Song",
     ["e"] = {
       [1] = { ["px"] = 0.4080775869, ["py"] = 0.4935612103, ["pm"] = 2592, },
+    },
+  },
+  [8139] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Scroll of Evensong",
+    ["e"] = {
+      [1] = { ["px"] = 0.4604879850, ["py"] = 0.6495200017, ["pm"] = 256, },
     },
   },
   [8140] = {
@@ -59744,12 +60864,20 @@ local bookData = {
       [2] = { ["px"] = 0.4421360095, ["py"] = 0.5200491959, ["pm"] = 2514, },
     },
   },
-  [8141] = {
+  [8143] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
     ["n"] = "Gleaner's Claim",
     ["e"] = {
       [1] = { ["px"] = 0.8394324200, ["py"] = 0.9369076056, ["pm"] = 2509, ["d"] = true, },
+    },
+  },
+  [8145] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "In Memory of Zerith-var",
+    ["e"] = {
+      [1] = { ["px"] = 0.4314388090, ["py"] = 0.6597832164, ["pm"] = 2607, ["d"] = true, },
     },
   },
   [8146] = {
@@ -59895,6 +61023,87 @@ local bookData = {
       [2] = { ["px"] = 0.4017211862, ["py"] = 0.5110415922, ["pm"] = 2427, ["fp"] = true, },
     },
   },
+  [8170] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "A Mother's Lament",
+    ["e"] = {
+      [1] = { ["px"] = 0.3990664070, ["py"] = 0.5111347962, ["pm"] = 2439, ["d"] = true, },
+      [2] = { ["px"] = 0.4499275932, ["py"] = 0.5009555968, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8171] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Prime Sorcerer Vandorallen's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.4492379859, ["py"] = 0.5017599986, ["pm"] = 2600, ["d"] = true, },
+      [2] = { ["px"] = 0.4499275932, ["py"] = 0.5009555968, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8172] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Unsent Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.4493711859, ["py"] = 0.5017655986, ["pm"] = 2600, ["d"] = true, },
+      [2] = { ["px"] = 0.4499275932, ["py"] = 0.5009555968, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8173] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "The Journal of Cato Albus",
+    ["e"] = {
+      [1] = { ["px"] = 0.4493471859, ["py"] = 0.5015835986, ["pm"] = 2600, ["d"] = true, },
+      [2] = { ["px"] = 0.4499275932, ["py"] = 0.5009555968, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8174] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Prisoner Procedure",
+    ["e"] = {
+      [1] = { ["px"] = 0.4494631859, ["py"] = 0.5017387986, ["pm"] = 2600, ["d"] = true, },
+      [2] = { ["px"] = 0.4499275932, ["py"] = 0.5009555968, ["pm"] = 2427, ["fp"] = true, },
+    },
+  },
+  [8177] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "History of Lep Seclusa",
+    ["e"] = {
+      [1] = { ["px"] = 0.2742431920, ["py"] = 0.5278628153, ["pm"] = 2624, ["d"] = true, },
+      [2] = { ["px"] = 0.2478084028, ["py"] = 0.5053299972, ["pm"] = 993, ["fp"] = true, },
+    },
+  },
+  [8178] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Khafdeed's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.2737815959, ["py"] = 0.5270304143, ["pm"] = 2631, ["d"] = true, },
+      [2] = { ["px"] = 0.2478084028, ["py"] = 0.5053299972, ["pm"] = 993, ["fp"] = true, },
+    },
+  },
+  [8179] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Letter to Orpheon",
+    ["e"] = {
+      [1] = { ["px"] = 0.2737679959, ["py"] = 0.5268536143, ["pm"] = 2631, ["d"] = true, },
+      [2] = { ["px"] = 0.2478084028, ["py"] = 0.5053299972, ["pm"] = 993, ["fp"] = true, },
+    },
+  },
+  [8180] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "The Sacking of Bruma",
+    ["e"] = {
+      [1] = { ["px"] = 0.2738291960, ["py"] = 0.5269612143, ["pm"] = 2631, ["d"] = true, },
+      [2] = { ["px"] = 0.2478084028, ["py"] = 0.5053299972, ["pm"] = 993, ["fp"] = true, },
+    },
+  },
   [8184] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
@@ -60030,6 +61239,14 @@ local bookData = {
       [1] = { ["px"] = 0.0202267996, ["py"] = 0.1738280014, ["pm"] = 2515, },
     },
   },
+  [8204] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Snapdragon's Research Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.3547703996, ["py"] = 0.7003403990, ["pm"] = 387, },
+    },
+  },
   [8206] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
@@ -60126,16 +61343,252 @@ local bookData = {
       [1] = { ["px"] = 0.0201359997, ["py"] = 0.1737316012, ["pm"] = 2515, },
     },
   },
+  [8220] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Torn Out Journal Entry",
+    ["e"] = {
+      [1] = { ["px"] = 0.3452032006, ["py"] = 0.6760031952, ["pm"] = 300, },
+    },
+  },
+  [8241] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Ceythalmor Mission Orders",
+    ["e"] = {
+      [1] = { ["px"] = 0.3016847943, ["py"] = 0.6948175796, ["pm"] = 2578, },
+    },
+  },
+  [8286] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Skywatch Guard Report",
+    ["e"] = {
+      [1] = { ["px"] = 0.2487763957, ["py"] = 0.6742607979, ["pm"] = 545, },
+    },
+  },
+  [8293] = {
+    ["c"] = true,
+    ["cn"] = "Daedric Cults",
+    ["n"] = "Worm Cult Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.1900079987, ["py"] = 0.2113976028, ["pm"] = 2640, ["d"] = true, },
+    },
+  },
+  [8294] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Scribing for the Aldmeri Dominion",
+    ["e"] = {
+      [1] = { ["px"] = 0.5282684038, ["py"] = 0.5593519885, ["pm"] = 576, },
+    },
+  },
+  [8296] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Scribing for the Ebonheart Pact",
+    ["e"] = {
+      [1] = { ["px"] = 0.6264244259, ["py"] = 0.4564004054, ["pm"] = 574, }
+    },
+  },
+  [8297] = {
+    ["c"] = true,
+    ["cn"] = "Daedric Cults",
+    ["n"] = "Resurrection and Revelation",
+    ["e"] = {
+      [1] = { ["px"] = 0.1894623987, ["py"] = 0.2127424028, ["pm"] = 2640, ["d"] = true, },
+    },
+  },
+  [8298] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "Scribing for the Daggerfall Covenant",
+    ["e"] = {
+      [1] = { ["px"] = 0.4905007878, ["py"] = 0.4173135914, ["pm"] = 572, },
+    },
+  },
+  [8307] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Snapdragon's Burnt Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.1869059979, ["py"] = 0.6286820131, ["pm"] = 540, },
+    },
+  },
+  [8311] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Bogcup's Letter from Hyacinth",
+    ["e"] = {
+      [1] = { ["px"] = 0.3859055960, ["py"] = 0.6676624182, ["pm"] = 2574, },
+    },
+  },
+  [8319] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Unfinished Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.4570440058, ["py"] = 0.6178931953, ["pm"] = 312, },
+      [2] = { ["px"] = 0.4309184089, ["py"] = 0.6594640164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8322] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "In Memory of Moon-Singer Talbira",
+    ["e"] = {
+      [1] = { ["px"] = 0.5586687748, ["py"] = 0.6330004050, ["pm"] = 2614, ["d"] = true, },
+      [2] = { ["px"] = 0.4314164090, ["py"] = 0.6597140164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8324] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Strange Inscription",
+    ["e"] = {
+      [1] = { ["px"] = 0.4950392122, ["py"] = 0.6290663949, ["pm"] = 2616, ["d"] = true, },
+      [2] = { ["px"] = 0.4309412089, ["py"] = 0.6594012164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8325] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Viti's Notes: Order of the Hidden Moon, Part I",
+    ["e"] = {
+      [1] = { ["px"] = 0.4623975829, ["py"] = 0.6504532036, ["pm"] = 256, },
+      [2] = { ["px"] = 0.4319236090, ["py"] = 0.6593884164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8326] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Viti's Notes: Moon Beasts",
+    ["e"] = {
+      [1] = { ["px"] = 0.4618855838, ["py"] = 0.6509072016, ["pm"] = 256, },
+      [2] = { ["px"] = 0.4319472090, ["py"] = 0.6597020164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8327] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Krin'ze's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.4614091814, ["py"] = 0.6505380013, ["pm"] = 256, },
+      [2] = { ["px"] = 0.4313160089, ["py"] = 0.6596264164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8328] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Inquisitor Orders",
+    ["e"] = {
+      [1] = { ["px"] = 0.5022427901, ["py"] = 0.6106779950, ["pm"] = 2653, ["d"] = true, },
+    },
+  },
+  [8330] = {
+    ["c"] = true,
+    ["cn"] = "Military Orders and Reports",
+    ["n"] = "Guildmaster Merric's Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.6497804191, ["py"] = 0.2771851944, ["pm"] = 61, },
+    },
+  },
+  [8386] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Viti's Notes: Song of Binding",
+    ["e"] = {
+      [1] = { ["px"] = 0.4615463851, ["py"] = 0.6505848042, ["pm"] = 256, },
+      [2] = { ["px"] = 0.4319192089, ["py"] = 0.6596924164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8387] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Viti's Notes: Order of the Hidden Moon, Part II",
+    ["e"] = {
+      [1] = { ["px"] = 0.4623607832, ["py"] = 0.6503248002, ["pm"] = 256, },
+      [2] = { ["px"] = 0.4319368090, ["py"] = 0.6593884164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8388] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Translation of Strange Inscription",
+    ["e"] = {
+      [1] = { ["px"] = 0.4950304122, ["py"] = 0.6289695947, ["pm"] = 2616, ["d"] = true, },
+      [2] = { ["px"] = 0.4309772089, ["py"] = 0.6594036164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8389] = {
+    ["c"] = true,
+    ["cn"] = "Daedric Cults",
+    ["n"] = "Summons to the Remnant",
+    ["e"] = {
+      [1] = { ["px"] = 0.1656948005, ["py"] = 0.2532948016, ["pm"] = 2641, ["d"] = true, },
+    },
+  },
+  [8409] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "Garden of Sacred Numbers Temporal Tome",
+    ["e"] = {
+      [1] = { ["px"] = 0.1643100075, ["py"] = 0.7610976051, ["pm"] = 1349, },
+    },
+  },
+  [8410] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "Coral Aerie Temporal Tome",
+    ["e"] = {
+      [1] = { ["px"] = 0.1177795966, ["py"] = 0.6309816085, ["pm"] = 2110, ["d"] = true,
+              ["zx"] = 0.1178388044, ["zy"] = 0.6371344010, ["zm"] = 1349, },
+    },
+  },
+  [8411] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "Traitor's Vault Temporal Tome",
+    ["e"] = {
+      [1] = { ["px"] = 0.8074231930, ["py"] = -0.0356931963, ["pm"] = 1471, ["d"] = true, },
+    },
+  },
+  [8412] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "Karnwasten Temporal Tome",
+    ["e"] = {
+      [1] = { ["px"] = 0.0840664002, ["py"] = 0.6517408141, ["pm"] = 1397, ["d"] = true, },
+    },
+  },
+  [8413] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "Vault of Moawita Temporal Tome",
+    ["e"] = {
+      [1] = { ["px"] = 0.8433787892, ["py"] = -0.0272048047, ["pm"] = 1492, ["d"] = true, },
+    },
+  },
+  [8444] = {
+    ["c"] = true,
+    ["cn"] = "Scholarium Scribblings",
+    ["n"] = "On the Development of Banner Bearer",
+    ["e"] = {
+      [1] = { ["px"] = 0.0189139998, ["py"] = 0.1750120010, ["pm"] = 2515, },
+    },
+  },
+  [8445] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Note from Cantor Krin'ze",
+    ["e"] = {
+      [1] = { ["px"] = 0.4314244089, ["py"] = 0.6595060164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
 }
 
 function LoreBooks_GetBookData()
   return bookData
-end
-
---Global API
-function LoreBooks_GetBookshelfDataFromMapId(mapId)
-  if not bookshelfData[mapId] then return {} end
-  return bookshelfData[mapId]
 end
 
 function LoreBooks_GetNewEideticDataFromBookId(bookId)
@@ -60146,40 +61599,63 @@ function LoreBooks_GetNewEideticDataFromBookId(bookId)
 end
 
 function LoreBooks_GetNewEideticData(categoryIndex, collectionIndex, bookIndex)
-  local _, _, _, bookId = GetLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
+  local _, _, _, bookId = LoreBooks_GetNewLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
   return LoreBooks_GetNewEideticDataFromBookId(bookId)
 end
 
+local eideticDataCache = {}        -- mapId → data
+local eideticDataCacheOrder = {}   -- ordered list of recent mapIds
+local eideticDataCacheLimit = 3    -- max cache size
+
+local function TouchEideticCacheOrder(mapId)
+  for i, id in ipairs(eideticDataCacheOrder) do
+    if id == mapId then
+      table.remove(eideticDataCacheOrder, i)
+      break
+    end
+  end
+  table.insert(eideticDataCacheOrder, 1, mapId)
+
+  if #eideticDataCacheOrder > eideticDataCacheLimit then
+    local oldestMapId = table.remove(eideticDataCacheOrder)
+    eideticDataCache[oldestMapId] = nil
+  end
+end
+
 function LoreBooks_GetEideticData(mapId, z_mapId)
-  local _, numCollections = GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC) -- Only Eidetic
   local eideticInZone = {}
+  if not mapId then return eideticInZone end
+  if eideticDataCache[mapId] then
+    TouchEideticCacheOrder(mapId)
+    return eideticDataCache[mapId]
+  end
+
+  local _, numCollections = GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC)
+
   for collectionIndex = 1, numCollections do
-    local _, _, _, totalBooks = GetLoreCollectionInfo(internal.LORE_LIBRARY_EIDETIC, collectionIndex)
+    local _, _, _, totalBooks = LoreBooks_GetNewLoreCollectionInfo(internal.LORE_LIBRARY_EIDETIC, collectionIndex)
     for bookIndex = 1, totalBooks do
       local eideticBookZoneData = LoreBooks_GetNewEideticData(internal.LORE_LIBRARY_EIDETIC, collectionIndex, bookIndex)
-      local _, _, _, bookId = GetLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, collectionIndex, bookIndex)
-      local eideticBooks
-      if eideticBookZoneData and eideticBookZoneData.c and eideticBookZoneData.e then
-        eideticBooks = eideticBookZoneData.c and NonContiguousCount(eideticBookZoneData.e) > 0
-      end
-      if eideticBooks then
-        local eideticData = eideticBookZoneData.e
-        for _, booksData in ipairs(eideticData) do
-          local hasZoneData = booksData["pm"] == mapId or booksData["zm"] == z_mapId
-          if hasZoneData then
-            booksData.c = collectionIndex -- Add collectionIndex
-            booksData.b = bookIndex -- Add bookIndex
-            booksData.k = bookId -- Add bookId
-            if eideticBookZoneData.q then booksData.q = eideticBookZoneData.q end -- Add quest info
-            eideticInZone[#eideticInZone + 1] = booksData
+      local _, _, _, bookId = LoreBooks_GetNewLoreBookInfo(internal.LORE_LIBRARY_EIDETIC, collectionIndex, bookIndex)
+      if eideticBookZoneData and eideticBookZoneData.e then
+        for _, booksData in ipairs(eideticBookZoneData.e) do
+          if booksData.pm == mapId or booksData.zm == z_mapId then
+            booksData.c = collectionIndex
+            booksData.b = bookIndex
+            booksData.k = bookId
+            if eideticBookZoneData.q then
+              booksData.q = eideticBookZoneData.q
+            end
+            table.insert(eideticInZone, booksData)
           end
         end
       end
     end
   end
 
+  eideticDataCache[mapId] = eideticInZone
+  TouchEideticCacheOrder(mapId)
   return eideticInZone
-
 end
 
 local function GetNumKnownBooksInCollection(categoryIndex, collectionIndex, booksInCollection)
@@ -60187,7 +61663,7 @@ local function GetNumKnownBooksInCollection(categoryIndex, collectionIndex, book
   local numKnownBooks = 0
   if categoryIndex and collectionIndex and booksInCollection then
     for bookIndex = 1, booksInCollection do
-      local known = select(3, GetLoreBookInfo(categoryIndex, collectionIndex, bookIndex))
+      local known = select(3, LoreBooks_GetNewLoreBookInfo(categoryIndex, collectionIndex, bookIndex))
       if known then
         numKnownBooks = numKnownBooks + 1
       end
@@ -60205,13 +61681,13 @@ local function GetMissingEideticBooks()
 
   for collectionIndex = 1, numCollections do
 
-    local collectionName, _, _, totalBooks, hidden = GetLoreCollectionInfo(categoryIndex, collectionIndex)
+    local collectionName, _, _, totalBooks, hidden = LoreBooks_GetNewLoreCollectionInfo(categoryIndex, collectionIndex)
 
     if not hidden then
 
       for bookIndex = 1, totalBooks do
 
-        local _, _, _, bookId = GetLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
+        local _, _, _, bookId = LoreBooks_GetNewLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
         if not bookData[bookId].c then
           df("Book |H1:book:%s|h|h (#%d) is still Unknown. Collection %s (3/%d)", tostring(bookId), bookId, collectionName, collectionIndex)
           --elseif not bookData[bookId].q and not bookData[bookId].e or #bookData[bookId].e == 0 then
@@ -60226,17 +61702,91 @@ end
 
 SLASH_COMMANDS["/lunk"] = GetMissingEideticBooks
 
+-- copy of GetLoreBookInfo
+-- /script d({LoreBooks_GetNewLoreBookInfo(3, 46, 12)})
+function LoreBooks_GetNewLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
+  local title, icon, known, bookId = GetLoreBookInfo(categoryIndex, collectionIndex, bookIndex)
+
+  if (not title or title == "") then
+    local fallback = bookData[bookId]
+    if fallback and fallback.en then
+      title = fallback.en
+    else
+      title = internal.MISSING_TITLE
+    end
+  end
+
+  return title,
+  icon or internal.PLACEHOLDER_TEXTURE,
+  known or false,
+  bookId
+end
+
+local function ResolveLocalizedField(valueFromGame, fieldTable)
+  if valueFromGame and valueFromGame ~= "" then
+    return valueFromGame
+  end
+
+  if fieldTable then
+    local locale = internal.current_locale
+    local localized = locale and fieldTable[locale]
+    if localized and localized ~= "" then
+      return localized
+    end
+
+    local fallback = fieldTable["en"]
+    if fallback and fallback ~= "" then
+      return fallback
+    end
+  end
+
+  return nil
+end
+
 -- copy of GetLoreCollectionInfo
 -- Returns: string name, string description, number numKnownBooks, number totalBooks, boolean hidden, textureName gamepadIcon, number collectionId
+-- /script d({LoreBooks_GetNewLoreCollectionInfo(3, 46)})
 function LoreBooks_GetNewLoreCollectionInfo(categoryIndex, collectionIndex)
-  if libraryData[categoryIndex] and libraryData[categoryIndex][collectionIndex] then
-    local collectionData = libraryData[categoryIndex][collectionIndex]
-    return collectionData.n[GetCVar("Language.2")], -- name
-    collectionData.d[GetCVar("Language.2")], -- description
-    GetNumKnownBooksInCollection(categoryIndex, collectionIndex, collectionData.t), -- numKnownBooks
-    collectionData.t, -- totalBooks
-    collectionData.h, -- hidden
-    collectionData.g, -- gamepadIcon
-    collectionData.k  -- collectionId
+  local cacheKey = categoryIndex .. ":" .. collectionIndex
+  local cached = internal.collectionInfoCache[cacheKey]
+  if cached then return unpack(cached) end
+
+  local name, description, _, totalBooks, hidden, gamepadIcon, collectionId = GetLoreCollectionInfo(categoryIndex, collectionIndex)
+  local category = libraryData[categoryIndex]
+  local data = category and category[collectionIndex]
+
+  name = ResolveLocalizedField(name, data and data.n)
+  description = ResolveLocalizedField(description, data and data.d)
+  if (not totalBooks or totalBooks == 0) and data and data.t then
+    totalBooks = data.t
   end
+
+  hidden = false
+
+  if (not gamepadIcon or gamepadIcon == "") and data and data.g then
+    gamepadIcon = data.g
+  end
+
+  if (not collectionId or collectionId == 0) and data and data.k then
+    collectionId = data.k
+  end
+
+  if name == nil or totalBooks == nil then
+    return "", "", 0, 0, true, "/esoui/art/icons/icon_missing.dds", 0
+  end
+
+  local numKnownBooks = GetNumKnownBooksInCollection(categoryIndex, collectionIndex, totalBooks)
+
+  local result = {
+    name,
+    description,
+    numKnownBooks,
+    totalBooks,
+    hidden,
+    gamepadIcon,
+    collectionId
+  }
+
+  internal.collectionInfoCache[cacheKey] = result
+  return unpack(result)
 end

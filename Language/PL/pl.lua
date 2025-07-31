@@ -90,7 +90,7 @@ ZO_CreateStringId("LBOOKS_UNLOCK_EIDETIC_WARNING", "This option is disabled beca
 --worldmap filters
 ZO_CreateStringId("LBOOKS_FILTER_UNKNOWN", "niepoznane księgi fabularne")
 ZO_CreateStringId("LBOOKS_FILTER_COLLECTED", "Zebrane księgi fabularne")
-ZO_CreateStringId("LBOOKS_FILTER_EICOLLECTED", "<<1>> (Poznano)")
+ZO_CreateStringId("LBOOKS_FILTER_COLLECTED_FORMATTER", "<<1>> (Poznano)")
 ZO_CreateStringId("LBOOKS_FILTER_BOOKSHELF", "Lorebooks Bookshelf")
 
 --research

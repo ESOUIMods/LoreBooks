@@ -1,3 +1,55 @@
+--[[
+-------------------------------------------------------------------------------
+-- LoreBooks
+-------------------------------------------------------------------------------
+-- Original author: Ales Machat (Garkin), started 2014-04-18
+--
+-- Maintainers:
+--    Ayantir (contributions starting 2015-11-07)
+--    Kyoma (contributions starting 2018-05-30)
+--    Sharlikran (current maintainer, contributions starting 2022-11-12)
+--
+-------------------------------------------------------------------------------
+-- This addon includes contributions licensed under two Creative Commons licenses
+-- and the original MIT license:
+--
+-- MIT License (Garkin, 2014–2015):
+--   Permission is hereby granted, free of charge, to any person obtaining a copy
+--   of this software and associated documentation files (the "Software"), to deal
+--   in the Software without restriction, including without limitation the rights
+--   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+--   copies of the Software, and to permit persons to whom the Software is
+--   furnished to do so, subject to the conditions in the LICENSE file.
+--
+-- Creative Commons BY-NC-SA 4.0 (Ayantir, 2015–2020 and Sharlikran, 2022–present):
+--   You are free to share and adapt the material with attribution, but not for
+--   commercial purposes. Derivatives must be licensed under the same terms.
+--   Full terms at: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+--
+-------------------------------------------------------------------------------
+-- Maintainer Notice:
+-- Redistribution of this addon outside of ESOUI.com or GitHub is discouraged
+-- unless authorized by the current maintainer. While the original MIT license
+-- permits wide redistribution, uncoordinated uploads may cause version
+-- fragmentation or confusion. Please respect the intent of the maintainers and
+-- the ESO addon ecosystem.
+-- ----------------------------------------------------------------------------
+-- Data Integrity and Attribution Notice:
+-- While individual book positions are discoverable via the ESO API, the
+-- comprehensive dataset included in LoreBooks is the result of years of
+-- community effort and contributions from multiple players. Recreating this
+-- dataset independently requires extensive time and dedication.
+--
+-- Direct reuse, extraction, or redistribution of the compiled data tables,
+-- either in whole or substantial part, without permission from the current
+-- maintainer, is prohibited. Claiming ownership or sole authorship over
+-- derived works that include this dataset is considered a violation of the
+-- contributors' efforts and the licenses under which this project is shared.
+--
+-- If you wish to use this data in your own addon or tool, please contact the
+-- current maintainer for appropriate guidance and permission.
+-- ----------------------------------------------------------------------------
+]]
 local LoreBooks = _G["LoreBooks"]
 local internal = _G["LoreBooks_Internal"]
 
@@ -104,7 +156,7 @@ function LoreBooks:CreateLamPanel()
   }
   optionsTable[#optionsTable + 1] = {
     type = "dropdown",
-    name = zo_strformat(LBOOKS_PIN_TEXTURE_EIDETIC, GetLoreCategoryInfo(3)),
+    name = zo_strformat(LBOOKS_PIN_TEXTURE_EIDETIC, GetLoreCategoryInfo(internal.LORE_LIBRARY_EIDETIC)),
     tooltip = GetString(LBOOKS_PIN_TEXTURE_DESC),
     choices = pinTexturesList,
     choicesValues = pinTexturesValues,
@@ -142,6 +194,8 @@ function LoreBooks:CreateLamPanel()
       LoreBooks.db.pinTexture.size = size
       unknownIcon:SetDimensions(size, size)
       collectedIcon:SetDimensions(size, size)
+      unknownIconEidetic:SetDimensions(size, size)
+      collectedIconEidetic:SetDimensions(size, size)
       SetLayoutKeyAndRefresh(internal.PINS_UNKNOWN, "size", size)
       SetLayoutKeyAndRefresh(internal.PINS_COLLECTED, "size", size)
       SetLayoutKeyAndRefresh(internal.PINS_EIDETIC, "size", size)
@@ -320,49 +374,6 @@ function LoreBooks:CreateLamPanel()
     end,
     default = immersiveChoices[LoreBooks.defaults.immersiveMode],
   }
-  --[[
-  {
-    type = "checkbox",
-    name = GetString(LBOOKS_UNLOCK_EIDETIC),
-    tooltip = function()
-      if LoreBooks.CanEmulateLibrary() then
-        return GetString(LBOOKS_UNLOCK_EIDETIC_DESC)
-      else
-        return GetString(LBOOKS_UNLOCK_EIDETIC_WARNING)
-      end
-    end,
-    getFunc = function() return LoreBooks.db.unlockEidetic end,
-    setFunc = function(state)
-      LoreBooks.db.unlockEidetic = state
-      LORE_LIBRARY:BuildCategoryList()
-    end,
-    default = LoreBooks.defaults.unlockEidetic,
-    disabled = function() return not LoreBooks.CanEmulateLibrary() end,
-  },
-  {
-    type = "checkbox",
-    name = GetString(LBOOKS_USE_QUEST_BOOKS),
-    tooltip = GetString(LBOOKS_USE_QUEST_BOOKS_DESC),
-    getFunc = function() return LoreBooks.db.useQuestBooks end,
-    setFunc = function(state)
-      LoreBooks.db.useQuestBooks = state
-      LoreBooks.ToggleUseQuestBooks()
-    end,
-    default = LoreBooks.defaults.useQuestBooks,
-  },
-  {
-    type = "checkbox",
-    name = GetString(LBOOKS_SHARE_DATA),
-    tooltip = GetString(LBOOKS_SHARE_DATA_DESC),
-    getFunc = function() return LoreBooks.db.shareData end,
-    setFunc = function(state)
-      LoreBooks.db.shareData = state
-      LoreBooks.ToggleShareData()
-    end,
-    default = LoreBooks.defaults.shareData,
-    disabled = GetWorldName() ~= "EU Megaserver" or not internal.SUPPORTED_LANG[lang],
-  },
-  --]]
   LAM:RegisterOptionControls(internal.ADDON_PANEL, optionsTable)
 
 end
