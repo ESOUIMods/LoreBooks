@@ -62081,6 +62081,32 @@ local bookData = {
       [1] = { ["px"] = 0.6703856069, ["py"] = 0.9082139837, ["pm"] = 2603, },
     },
   },
+  [8468] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "The Fallacy of Undeath",
+    ["e"] = {
+      [1] = { ["px"] = 0.2895324041, ["py"] = 0.3340748001, ["pm"] = 212, ["d"] = true, },
+      [2] = { ["px"] = 0.2896440053, ["py"] = 0.3348095997, ["pm"] = 20, ["fp"] = true, },
+    },
+  },
+  [8469] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "Thibeaut's Cairn Temporal Tome",
+    ["e"] = {
+      [1] = { ["px"] = 0.5561204018, ["py"] = 0.3462367988, ["pm"] = 211, ["d"] = true, },
+      [2] = { ["px"] = 0.4387703842, ["py"] = 0.5982268050, ["pm"] = 256, ["fp"] = true, },
+    },
+  },
+  [8470] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "Shroud Hearth Barrow Temporal Tome",
+    ["e"] = {
+      [1] = { ["px"] = 0.5561204018, ["py"] = 0.3462367988, ["pm"] = 211, ["d"] = true, ["zx"] = 0.5559443970, ["zy"] = 0.3462135948, ["zm"] = 125, },
+    },
+  },
   [8472] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
