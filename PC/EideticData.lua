@@ -53957,6 +53957,7 @@ local bookData = {
     ["cn"] = "Dispatches from the Deadlands",
     ["n"] = "The Penitent's Tale",
     ["e"] = {
+      [1] = { ["px"] = 1.0675860301, ["py"] = 0.7549968153, ["pm"] = 2021, },
     },
     ["r"] = true,
     ["m"] = {
@@ -55571,6 +55572,7 @@ local bookData = {
   [7100] = {
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Kiv's Journal",
+    ["q"] = 6789,
     ["e"] = {
       [1] = { ["px"] = 0.1641764007, ["py"] = 0.5435359912, ["pm"] = 530, ["zm"] = 201, },
     },
@@ -59231,6 +59233,7 @@ local bookData = {
     ["cn"] = "West Weald Writings",
     ["n"] = "Saga of Varen's Rebellion, Part 1",
     ["e"] = {
+      [1] = { ["px"] = 0.4272499951, ["py"] = 0.4776003956, ["pm"] = 2427, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
@@ -59276,6 +59279,7 @@ local bookData = {
     ["cn"] = "West Weald Writings",
     ["n"] = "Wood Elf Nicknames and Bynames",
     ["e"] = {
+      [1] = { ["px"] = 0.4177587903, ["py"] = 0.5403815957, ["pm"] = 2427, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
@@ -59327,6 +59331,16 @@ local bookData = {
     ["cn"] = "West Weald Writings",
     ["n"] = "The Footsteps of Shezarr",
     ["e"] = {
+      [1] = { ["px"] = 0.4563963880, ["py"] = 0.5232023925, ["pm"] = 2427, },
+    },
+  },
+  [7808] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "On Rotmeth",
+    ["e"] = {
+      [1] = { ["px"] = 0.3803664114, ["py"] = 0.5451164033, ["pm"] = 2604, },
+      [2] = { ["px"] = 0.3803663904, ["py"] = 0.5451163987, ["pm"] = 2427, ["fp"] = true, },
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
@@ -59608,6 +59622,7 @@ local bookData = {
     ["n"] = "The Day of Remembering",
     ["e"] = {
       [1] = { ["px"] = 0.3686036007, ["py"] = 0.5339540038, ["pm"] = 2505, ["d"] = true, },
+      [2] = { ["px"] = 0.3681351909, ["py"] = 0.5240015932, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [7854] = {
@@ -59780,6 +59795,14 @@ local bookData = {
       [2] = { ["px"] = 0.4510175933, ["py"] = 0.4511131938, ["pm"] = 2427, ["fp"] = true, },
     },
   },
+  [7881] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Beware the Wandering Spirit",
+    ["e"] = {
+      [1] = { ["px"] = 0.6609592092, ["py"] = 0.9270651816, ["pm"] = 2603, },
+    },
+  },
   [7882] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
@@ -59860,6 +59883,15 @@ local bookData = {
     ["q"] = 7180,
     ["e"] = {
       [1] = { ["px"] = 0.4098807864, ["py"] = 0.4907676107, ["pm"] = 2592, },
+    },
+  },
+  [7893] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Nonungalo Ritual Scroll",
+    ["e"] = {
+      [1] = { ["px"] = 0.4009456069, ["py"] = 0.5122243961, ["pm"] = 2439, ["d"] = true, },
+      [2] = { ["px"] = 0.4017211862, ["py"] = 0.5110415922, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [7894] = {
@@ -60122,6 +60154,7 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "Companions Correspondence",
     ["n"] = "Scrap of Paper",
+    ["q"] = 7186,
     ["e"] = {
       [1] = { ["px"] = 0.2225259985, ["py"] = 0.7230720172, ["pm"] = 143, },
     },
@@ -60148,6 +60181,7 @@ local bookData = {
     ["n"] = "Mystic Tarim's Notes",
     ["e"] = {
       [1] = { ["px"] = 0.3422616142, ["py"] = 0.5191527916, ["pm"] = 2468, ["d"] = true, },
+      [2] = { ["px"] = 0.3420783880, ["py"] = 0.5189767919, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [8013] = {
@@ -60264,6 +60298,7 @@ local bookData = {
     ["n"] = "King Nantharion's Orders",
     ["e"] = {
       [1] = { ["px"] = 0.3422616142, ["py"] = 0.5191575915, ["pm"] = 2468, ["d"] = true, },
+      [2] = { ["px"] = 0.3420783880, ["py"] = 0.5189767919, ["pm"] = 2427, ["fp"] = true, },
     },
   },
   [8028] = {
@@ -60711,7 +60746,19 @@ local bookData = {
     ["n"] = "Pocket Ballista Design Document",
     ["e"] = {
       [1] = { ["px"] = 0.3018235943, ["py"] = 0.6947703796, ["pm"] = 2578, },
+      [2] = { ["px"] = 0.3026864031, ["py"] = 0.6954807937, ["pm"] = 300, ["fp"] = true, },
     },
+  },
+  [8110] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Green Pact Song",
+    ["e"] = {
+      [1] = { ["px"] = 0.3996204100, ["py"] = 0.5514043948, ["pm"] = 2432, ["d"] = true, },
+      [2] = { ["px"] = 0.4061411873, ["py"] = 0.5511335993, ["pm"] = 2427, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2427] = 1, },
   },
   [8111] = {
     ["c"] = true,
@@ -60727,6 +60774,31 @@ local bookData = {
     ["n"] = "Challenge of the Paladin",
     ["e"] = {
       [1] = { ["px"] = 0.4367128093, ["py"] = 0.5271075953, ["pm"] = 2514, },
+    },
+  },
+  [8119] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Our Final Act",
+    ["e"] = {
+      [1] = { ["px"] = 0.6707799952, ["py"] = 0.9082128012, ["pm"] = 2671, ["d"] = true, },
+      [2] = { ["px"] = 0.6718480087, ["py"] = 0.9081511841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8120] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Ship Won't Last",
+    ["e"] = {
+      [1] = { ["px"] = 0.6624256096, ["py"] = 0.9316999853, ["pm"] = 2603, },
+    },
+  },
+  [8121] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Storm Getting Closer",
+    ["e"] = {
+      [1] = { ["px"] = 0.6620724080, ["py"] = 0.9340951813, ["pm"] = 2603, },
     },
   },
   [8124] = {
@@ -60752,6 +60824,14 @@ local bookData = {
     ["n"] = "Skingrad Widow's Lament",
     ["e"] = {
       [1] = { ["px"] = 0.4443644097, ["py"] = 0.5269679952, ["pm"] = 2514, },
+    },
+  },
+  [8127] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Y'ffre's Hymn",
+    ["e"] = {
+      [1] = { ["px"] = 0.3801072113, ["py"] = 0.5457216035, ["pm"] = 2604, },
     },
   },
   [8128] = {
@@ -60885,18 +60965,16 @@ local bookData = {
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "An Argument For Common Sense",
     ["e"] = {
+      [1] = { ["px"] = 0.0149835998, ["py"] = 0.1739736012, ["pm"] = 2515, },
     },
-    ["r"] = true,
-    ["m"] = { [2427] = 1, },
   },
   [8147] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "The Atmoran Cult Writings",
     ["e"] = {
+      [1] = { ["px"] = 0.0170551999, ["py"] = 0.1749868011, ["pm"] = 2515, },
     },
-    ["r"] = true,
-    ["m"] = { [2427] = 1, },
   },
   [8148] = {
     ["c"] = true,
@@ -60937,9 +61015,8 @@ local bookData = {
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "We Sail for the Horizon",
     ["e"] = {
+      [1] = { ["px"] = 0.0183100002, ["py"] = 0.1738720013, ["pm"] = 2515, },
     },
-    ["r"] = true,
-    ["m"] = { [2427] = 1, },
   },
   [8157] = {
     ["c"] = true,
@@ -60949,6 +61026,15 @@ local bookData = {
     },
     ["r"] = true,
     ["m"] = { [2427] = 1, },
+  },
+  [8158] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Auridon Target Brief",
+    ["q"] = 7186,
+    ["e"] = {
+      [1] = { ["px"] = 0.2391804012, ["py"] = 0.7381020217, ["pm"] = 243, ["qc"] = true, },
+    },
   },
   [8159] = {
     ["c"] = true,
@@ -61347,9 +61433,107 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "Companions Correspondence",
     ["n"] = "Torn Out Journal Entry",
+    ["q"] = 7189,
     ["e"] = {
       [1] = { ["px"] = 0.3452032006, ["py"] = 0.6760031952, ["pm"] = 300, },
     },
+  },
+  [8223] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Hoglund's Contributions to Nordic Profanity",
+    ["e"] = {
+      [1] = { ["px"] = 0.6846363744, ["py"] = 0.9211436119, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6847520056, ["py"] = 0.9209039868, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8224] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Sanguine's Party",
+    ["e"] = {
+      [1] = { ["px"] = 0.6603680072, ["py"] = 0.9377787863, ["pm"] = 2603, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8226] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "History of Clan Corelanya, Pt. 1",
+    ["e"] = {
+      [1] = { ["px"] = 0.6779444077, ["py"] = 0.9250755824, ["pm"] = 2603, },
+    },
+  },
+  [8227] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "History of Clan Corelanya, Pt. 2",
+    ["e"] = {
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8228] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "History of Clan Corelanya, Pt. 3",
+    ["e"] = {
+      [1] = { ["px"] = 0.6786111740, ["py"] = 0.9170808121, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6786112084, ["py"] = 0.9170807846, ["pm"] = 2603, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8229] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "History of Clan Corelanya, Pt. 4",
+    ["e"] = {
+      [1] = { ["px"] = 0.6862244100, ["py"] = 0.9319771865, ["pm"] = 2603, },
+    },
+  },
+  [8230] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "History of Clan Corelanya, Pt. 5",
+    ["e"] = {
+      [1] = { ["px"] = 0.6632976096, ["py"] = 0.9280383846, ["pm"] = 2603, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8232] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Mending of Ervald's Sail",
+    ["e"] = {
+      [1] = { ["px"] = 0.6806463739, ["py"] = 0.9194124122, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6810200069, ["py"] = 0.9191963846, ["pm"] = 2603, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8236] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Varieties of Faith: Solstice",
+    ["e"] = {
+      [1] = { ["px"] = 0.6800483812, ["py"] = 0.9445788295, ["pm"] = 2734, },
+      [2] = { ["px"] = 0.6800260077, ["py"] = 0.9445799847, ["pm"] = 2603, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8238] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Libation to Sanguine",
+    ["e"] = {
+      [1] = { ["px"] = 0.6776348072, ["py"] = 0.9409711810, ["pm"] = 2603, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
   },
   [8241] = {
     ["c"] = true,
@@ -61357,6 +61541,23 @@ local bookData = {
     ["n"] = "Ceythalmor Mission Orders",
     ["e"] = {
       [1] = { ["px"] = 0.3016847943, ["py"] = 0.6948175796, ["pm"] = 2578, },
+      [2] = { ["px"] = 0.3026864031, ["py"] = 0.6954807937, ["pm"] = 300, ["fp"] = true, },
+    },
+  },
+  [8245] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Sunport Seeks Adventurers!",
+    ["e"] = {
+      [1] = { ["px"] = 0.6807639740, ["py"] = 0.9189488122, ["pm"] = 2654, },
+    },
+  },
+  [8280] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Join the Order of the Black Worm!",
+    ["e"] = {
+      [1] = { ["px"] = 0.6743080097, ["py"] = 0.9461607857, ["pm"] = 2603, },
     },
   },
   [8286] = {
@@ -61365,6 +61566,32 @@ local bookData = {
     ["n"] = "Skywatch Guard Report",
     ["e"] = {
       [1] = { ["px"] = 0.2487763957, ["py"] = 0.6742607979, ["pm"] = 545, },
+    },
+  },
+  [8287] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Truth of Sanguine's Parties",
+    ["e"] = {
+      [1] = { ["px"] = 0.6776940136, ["py"] = 0.9406487935, ["pm"] = 2634, ["d"] = true, },
+      [2] = { ["px"] = 0.6776608070, ["py"] = 0.9407231841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8288] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Sea Elf Ambassador",
+    ["e"] = {
+      [1] = { ["px"] = 0.6782671740, ["py"] = 0.9195572119, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6782596076, ["py"] = 0.9195411812, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8292] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Last Revel",
+    ["e"] = {
+      [1] = { ["px"] = 0.6819788102, ["py"] = 0.9382787849, ["pm"] = 2603, },
     },
   },
   [8293] = {
@@ -61383,12 +61610,21 @@ local bookData = {
       [1] = { ["px"] = 0.5282684038, ["py"] = 0.5593519885, ["pm"] = 576, },
     },
   },
+  [8295] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Feud of Hoglund and Hjefnarr",
+    ["e"] = {
+      [1] = { ["px"] = 0.6624892074, ["py"] = 0.9212347781, ["pm"] = 2721, },
+      [2] = { ["px"] = 0.6624948087, ["py"] = 0.9212283858, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
   [8296] = {
     ["c"] = true,
     ["cn"] = "Scholarium Scribblings",
     ["n"] = "Scribing for the Ebonheart Pact",
     ["e"] = {
-      [1] = { ["px"] = 0.6264244259, ["py"] = 0.4564004054, ["pm"] = 574, }
+      [1] = { ["px"] = 0.6264244259, ["py"] = 0.4564004054, ["pm"] = 574, },
     },
   },
   [8297] = {
@@ -61407,6 +61643,23 @@ local bookData = {
       [1] = { ["px"] = 0.4905007878, ["py"] = 0.4173135914, ["pm"] = 572, },
     },
   },
+  [8305] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Wormblood's Orders",
+    ["e"] = {
+      [1] = { ["px"] = 0.0133927998, ["py"] = 0.1450360000, ["pm"] = 2694, },
+      [2] = { ["px"] = 0.6841812104, ["py"] = 0.9188795842, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8306] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Partially Burned Missive",
+    ["e"] = {
+      [1] = { ["px"] = 0.6884288094, ["py"] = 0.9311079829, ["pm"] = 2603, },
+    },
+  },
   [8307] = {
     ["c"] = true,
     ["cn"] = "Companions Correspondence",
@@ -61415,12 +61668,47 @@ local bookData = {
       [1] = { ["px"] = 0.1869059979, ["py"] = 0.6286820131, ["pm"] = 540, },
     },
   },
+  [8308] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Together Stew Recipe",
+    ["e"] = {
+      [1] = { ["px"] = 0.6628100072, ["py"] = 0.9194583781, ["pm"] = 2721, },
+      [2] = { ["px"] = 0.6630608081, ["py"] = 0.9203027853, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
   [8311] = {
     ["c"] = true,
     ["cn"] = "Companions Correspondence",
     ["n"] = "Bogcup's Letter from Hyacinth",
     ["e"] = {
       [1] = { ["px"] = 0.3859055960, ["py"] = 0.6676624182, ["pm"] = 2574, },
+    },
+  },
+  [8313] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Charge of Shor",
+    ["e"] = {
+      [1] = { ["px"] = 0.6629912072, ["py"] = 0.9203347779, ["pm"] = 2721, },
+      [2] = { ["px"] = 0.6629876073, ["py"] = 0.9203279848, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8314] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "On the Tradition of Brawls",
+    ["e"] = {
+      [1] = { ["px"] = 0.6632676076, ["py"] = 0.9205135781, ["pm"] = 2721, },
+      [2] = { ["px"] = 0.6632680098, ["py"] = 0.9205139856, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8318] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Brunnduhl's Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.6598715874, ["py"] = 0.9385131960, ["pm"] = 2685, ["d"] = true, },
     },
   },
   [8319] = {
@@ -61493,6 +61781,33 @@ local bookData = {
       [1] = { ["px"] = 0.6497804191, ["py"] = 0.2771851944, ["pm"] = 61, },
     },
   },
+  [8380] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Report of Carisea",
+    ["e"] = {
+      [1] = { ["px"] = 0.6709064015, ["py"] = 0.9081763812, ["pm"] = 2731, ["d"] = true, },
+      [2] = { ["px"] = 0.6718480087, ["py"] = 0.9081511841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8383] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Water-Damaged Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6706808015, ["py"] = 0.9082295812, ["pm"] = 2672, ["d"] = true, },
+      [2] = { ["px"] = 0.6718480087, ["py"] = 0.9081511841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8384] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Soiled Journal Page",
+    ["e"] = {
+      [1] = { ["px"] = 0.6707224015, ["py"] = 0.9082103812, ["pm"] = 2672, ["d"] = true, },
+      [2] = { ["px"] = 0.6718480087, ["py"] = 0.9081511841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
   [8386] = {
     ["c"] = true,
     ["cn"] = "Companions Correspondence",
@@ -61526,6 +61841,77 @@ local bookData = {
     ["n"] = "Summons to the Remnant",
     ["e"] = {
       [1] = { ["px"] = 0.1656948005, ["py"] = 0.2532948016, ["pm"] = 2641, ["d"] = true, },
+    },
+  },
+  [8392] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Letter from Ilhidel of Clan Corelanya",
+    ["e"] = {
+      [1] = { ["px"] = 0.6790700166, ["py"] = 0.9327219949, ["pm"] = 2656, ["d"] = true, },
+      [2] = { ["px"] = 0.6789568084, ["py"] = 0.9317271841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8394] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Siluran's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6790572227, ["py"] = 0.9326212215, ["pm"] = 2724, ["d"] = true, },
+      [2] = { ["px"] = 0.6789568084, ["py"] = 0.9317271841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8397] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Storm Coming In",
+    ["e"] = {
+      [1] = { ["px"] = 0.6782204069, ["py"] = 0.9267175824, ["pm"] = 2603, },
+    },
+  },
+  [8398] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Forging of the Dolorous Cista",
+    ["e"] = {
+      [1] = { ["px"] = 0.6761156220, ["py"] = 0.9435055892, ["pm"] = 2688, ["d"] = true, },
+      [2] = { ["px"] = 0.6759616067, ["py"] = 0.9441743817, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8399] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Analysis of Ossein Cage Sketches",
+    ["e"] = {
+      [1] = { ["px"] = 0.6767551843, ["py"] = 0.9438836228, ["pm"] = 2689, ["d"] = true, },
+      [2] = { ["px"] = 0.6759616067, ["py"] = 0.9441743817, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8400] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Letter to Captain Lyn Georick",
+    ["e"] = {
+      [1] = { ["px"] = 0.6766779942, ["py"] = 0.9432227810, ["pm"] = 2687, ["d"] = true, },
+      [2] = { ["px"] = 0.6759616067, ["py"] = 0.9441743817, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8401] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Skorkhif's Conundrum",
+    ["e"] = {
+      [1] = { ["px"] = 0.6760936220, ["py"] = 0.9433783892, ["pm"] = 2688, ["d"] = true, },
+      [2] = { ["px"] = 0.6759616067, ["py"] = 0.9441743817, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8402] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Letter to Bane of My Existence",
+    ["e"] = {
+      [1] = { ["px"] = 0.6767319843, ["py"] = 0.9437640228, ["pm"] = 2689, ["d"] = true, },
+      [2] = { ["px"] = 0.6759616067, ["py"] = 0.9441743817, ["pm"] = 2603, ["fp"] = true, },
     },
   },
   [8409] = {
@@ -61583,6 +61969,397 @@ local bookData = {
     ["n"] = "Note from Cantor Krin'ze",
     ["e"] = {
       [1] = { ["px"] = 0.4314244089, ["py"] = 0.6595060164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8449] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Crumpled Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.6843907744, ["py"] = 0.9187732123, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6841844056, ["py"] = 0.9188763829, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8450] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Praise for the Fourteen",
+    ["e"] = {
+      [1] = { ["px"] = 0.6631888075, ["py"] = 0.9204627782, ["pm"] = 2721, },
+      [2] = { ["px"] = 0.6631756074, ["py"] = 0.9204383870, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8451] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Founding of Shor's Stand",
+    ["e"] = {
+      [1] = { ["px"] = 0.6622208074, ["py"] = 0.9205923781, ["pm"] = 2721, },
+      [2] = { ["px"] = 0.6622364075, ["py"] = 0.9205827830, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8452] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Cursed Island",
+    ["e"] = {
+      [1] = { ["px"] = 0.6622208074, ["py"] = 0.9205923781, ["pm"] = 2721, },
+      [2] = { ["px"] = 0.6825128089, ["py"] = 0.9176239855, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8453] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Collegium Praxis",
+    ["e"] = {
+      [1] = { ["px"] = 0.6825075743, ["py"] = 0.9203380119, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6825224067, ["py"] = 0.9203447825, ["pm"] = 2603, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8455] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Captain Nilail's Log",
+    ["e"] = {
+      [1] = { ["px"] = 0.6612903988, ["py"] = 0.9129411727, ["pm"] = 2632, ["d"] = true, },
+      [2] = { ["px"] = 0.6571728098, ["py"] = 0.9147299837, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8457] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Bismuth Experiment #3",
+    ["e"] = {
+      [1] = { ["px"] = 0.6590091988, ["py"] = 0.9140891727, ["pm"] = 2632, ["d"] = true, },
+      [2] = { ["px"] = 0.6571728098, ["py"] = 0.9147299837, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8458] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Not My Journal of an Ill-Omened Cavern",
+    ["e"] = {
+      [1] = { ["px"] = 0.6614835989, ["py"] = 0.9123819728, ["pm"] = 2632, ["d"] = true, },
+      [2] = { ["px"] = 0.6571728098, ["py"] = 0.9147299837, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8460] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Deem-Ra's Diary",
+    ["e"] = {
+      [1] = { ["px"] = 0.6385043922, ["py"] = 0.9228712285, ["pm"] = 2642, ["d"] = true, },
+      [2] = { ["px"] = 0.6608360080, ["py"] = 0.9289175846, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8461] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Necromancer Nardirin's Report",
+    ["e"] = {
+      [1] = { ["px"] = 0.6385111922, ["py"] = 0.9224680285, ["pm"] = 2642, ["d"] = true, },
+      [2] = { ["px"] = 0.6608360080, ["py"] = 0.9289175846, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8463] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Keeshka's Remedy Book",
+    ["e"] = {
+      [1] = { ["px"] = 0.6822068258, ["py"] = 0.9119228176, ["pm"] = 2644, ["d"] = true, },
+      [2] = { ["px"] = 0.6813212056, ["py"] = 0.9121211834, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8465] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Bell and the Hymn",
+    ["e"] = {
+      [1] = { ["px"] = 0.6703856069, ["py"] = 0.9082139837, ["pm"] = 2603, },
+    },
+  },
+  [8468] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "The Fallacy of Undeath",
+    ["e"] = {
+      [1] = { ["px"] = 0.2895324041, ["py"] = 0.3340748001, ["pm"] = 212, ["d"] = true, },
+      [2] = { ["px"] = 0.2896440053, ["py"] = 0.3348095997, ["pm"] = 20, ["fp"] = true, },
+    },
+  },
+  [8469] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "Thibeaut's Cairn Temporal Tome",
+    ["e"] = {
+      [1] = { ["px"] = 0.5561204018, ["py"] = 0.3462367988, ["pm"] = 211, ["d"] = true, },
+      [2] = { ["px"] = 0.4387703842, ["py"] = 0.5982268050, ["pm"] = 256, ["fp"] = true, },
+    },
+  },
+  [8470] = {
+    ["c"] = true,
+    ["cn"] = "Elusive Manuscripts",
+    ["n"] = "Shroud Hearth Barrow Temporal Tome",
+    ["e"] = {
+      [1] = { ["px"] = 0.5561204018, ["py"] = 0.3462367988, ["pm"] = 211, ["d"] = true, ["zx"] = 0.5559443970, ["zy"] = 0.3462135948, ["zm"] = 125, },
+    },
+  },
+  [8472] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Worm Cultist Musings",
+    ["e"] = {
+      [1] = { ["px"] = 0.6900260095, ["py"] = 0.9422007829, ["pm"] = 2603, },
+    },
+  },
+  [8480] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Turtle and the Sloth",
+    ["e"] = {
+      [1] = { ["px"] = 0.6806959741, ["py"] = 0.9194540121, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6810200069, ["py"] = 0.9191963846, ["pm"] = 2603, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8481] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Brave Little Scrib Sneaks Out",
+    ["e"] = {
+      [1] = { ["px"] = 0.6623436076, ["py"] = 0.9214131779, ["pm"] = 2721, },
+      [2] = { ["px"] = 0.6623360098, ["py"] = 0.9214119825, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8482] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Notes on Exhumation",
+    ["e"] = {
+      [1] = { ["px"] = 0.6836068091, ["py"] = 0.9397835825, ["pm"] = 2603, },
+    },
+  },
+  [8490] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Wisdom of the Tides",
+    ["e"] = {
+      [1] = { ["px"] = 0.6818399813, ["py"] = 0.9451756296, ["pm"] = 2734, },
+      [2] = { ["px"] = 0.6818400073, ["py"] = 0.9451755808, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8491] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Argonians of Western Solstice",
+    ["e"] = {
+      [1] = { ["px"] = 0.6824575742, ["py"] = 0.9187240119, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6824576078, ["py"] = 0.9187239835, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8492] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Tide-Born Funerary Practices",
+    ["e"] = {
+      [1] = { ["px"] = 0.6798411811, ["py"] = 0.9450156297, ["pm"] = 2734, },
+      [2] = { ["px"] = 0.6797960074, ["py"] = 0.9450127865, ["pm"] = 2603, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8493] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Corelanya Love Song",
+    ["e"] = {
+      [1] = { ["px"] = 0.6818979740, ["py"] = 0.9183140120, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6818980110, ["py"] = 0.9183139834, ["pm"] = 2603, ["fp"] = true, },
+    },
+    ["r"] = true,
+    ["m"] = { [2603] = 1, },
+  },
+  [8495] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Corelanyan Cuisine, Vol. 1",
+    ["e"] = {
+      [1] = { ["px"] = 0.6823763741, ["py"] = 0.9168276121, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6823764099, ["py"] = 0.9168275840, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8496] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Lessons of Kyne, Wisdom of Shor",
+    ["e"] = {
+      [1] = { ["px"] = 0.6609408075, ["py"] = 0.9208911782, ["pm"] = 2721, },
+      [2] = { ["px"] = 0.6609244088, ["py"] = 0.9208807865, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8498] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Invocation to the Three Queens",
+    ["e"] = {
+      [1] = { ["px"] = 0.6788428094, ["py"] = 0.9218659853, ["pm"] = 2603, },
+    },
+  },
+  [8499] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Corelanyan Cuisine, Vol. 2",
+    ["e"] = {
+      [1] = { ["px"] = 0.6746876098, ["py"] = 0.9389131831, ["pm"] = 2603, },
+    },
+  },
+  [8505] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Note for Klukeeshta",
+    ["e"] = {
+      [1] = { ["px"] = 0.6877024074, ["py"] = 0.9315099860, ["pm"] = 2603, },
+    },
+  },
+  [8515] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Letter to my Egg-Kin",
+    ["e"] = {
+      [1] = { ["px"] = 0.6812667810, ["py"] = 0.9442828296, ["pm"] = 2734, },
+      [2] = { ["px"] = 0.6812736092, ["py"] = 0.9442803805, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8516] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Discarded Dream Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6844796064, ["py"] = 0.9440343828, ["pm"] = 2603, },
+    },
+  },
+  [8517] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Reward for Missing Steed!",
+    ["e"] = {
+      [1] = { ["px"] = 0.6731528076, ["py"] = 0.9207027829, ["pm"] = 2603, },
+    },
+  },
+  [8518] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Our Darkbinder Allies",
+    ["e"] = {
+      [1] = { ["px"] = 0.6679692099, ["py"] = 0.9307295849, ["pm"] = 2603, },
+    },
+  },
+  [8519] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "A Grand Time Awaits!",
+    ["e"] = {
+      [1] = { ["px"] = 0.6827699741, ["py"] = 0.9197736121, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6827476081, ["py"] = 0.9197771824, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8520] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Rite of the Everlasting Revel",
+    ["e"] = {
+      [1] = { ["px"] = 0.6606692089, ["py"] = 0.9369839855, ["pm"] = 2603, },
+    },
+  },
+  [8521] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Search Instructions",
+    ["e"] = {
+      [1] = { ["px"] = 0.6788647828, ["py"] = 0.9328403866, ["pm"] = 2673, ["d"] = true, },
+      [2] = { ["px"] = 0.6802040082, ["py"] = 0.9310251844, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8522] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Tombs of the Kinrulers",
+    ["e"] = {
+      [1] = { ["px"] = 0.6788119828, ["py"] = 0.9327787866, ["pm"] = 2673, ["d"] = true, },
+      [2] = { ["px"] = 0.6802040082, ["py"] = 0.9310251844, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8523] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Tarnur Mine Report",
+    ["e"] = {
+      [1] = { ["px"] = 0.6907567804, ["py"] = 0.9380227712, ["pm"] = 2659, ["d"] = true, },
+      [2] = { ["px"] = 0.6878184087, ["py"] = 0.9377895861, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8526] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Visitor's Guide to Western Solstice",
+    ["e"] = {
+      [1] = { ["px"] = 0.6785879740, ["py"] = 0.9184008121, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6785996083, ["py"] = 0.9183939853, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8530] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "To Solstice We Came",
+    ["e"] = {
+      [1] = { ["px"] = 0.6777735740, ["py"] = 0.9171508122, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6777920084, ["py"] = 0.9171507841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8531] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "The Humble Fanik Goc",
+    ["e"] = {
+      [1] = { ["px"] = 0.6806231812, ["py"] = 0.9433092296, ["pm"] = 2734, },
+      [2] = { ["px"] = 0.6806136067, ["py"] = 0.9433139848, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8538] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "About Floofer",
+    ["e"] = {
+      [1] = { ["px"] = 0.6787979740, ["py"] = 0.9176668120, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6787724083, ["py"] = 0.9176639834, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8542] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Hoagrick's Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.6827743743, ["py"] = 0.9197688120, ["pm"] = 2654, },
+      [2] = { ["px"] = 0.6827476081, ["py"] = 0.9197771824, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8543] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Swallow Thy Remedy and Find Peace",
+    ["e"] = {
+      [1] = { ["px"] = 0.6623876079, ["py"] = 0.9340667866, ["pm"] = 2603, },
+    },
+  },
+  [8544] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Scribbled Notes of the Reveler",
+    ["e"] = {
+      [1] = { ["px"] = 0.6624412083, ["py"] = 0.9339911818, ["pm"] = 2603, },
     },
   },
 }
