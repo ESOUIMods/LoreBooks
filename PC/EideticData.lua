@@ -62114,6 +62114,51 @@ local bookData = {
       [1] = { ["px"] = 0.6900260095, ["py"] = 0.9422007829, ["pm"] = 2603, },
     },
   },
+  [8473] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Prayer to the Voskrona Guardians",
+    ["e"] = {
+      [1] = { ["px"] = 0.6719779786, ["py"] = 0.9211200195, ["pm"] = 2697, ["d"] = true, },
+	  [2] = { ["px"] = 0.6725708077, ["py"] = 0.9208063838, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8474] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Talen-Lah's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6720183786, ["py"] = 0.9210964195, ["pm"] = 2697, ["d"] = true, },
+      [2] = { ["px"] = 0.6725708077, ["py"] = 0.9208063838, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8475] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Seeksxilt's Notes on Bar-Sakka",
+    ["e"] = {
+      [1] = { ["px"] = 0.6716183931, ["py"] = 0.9212803872, ["pm"] = 2698, ["d"] = true, },
+      [2] = { ["px"] = 0.6725708077, ["py"] = 0.9208063838, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8476] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Why the Wind Howlsa",
+    ["e"] = {
+      [1] = { ["px"] = 0.6716171844, ["py"] = 0.9209531869, ["pm"] = 2696, ["d"] = true, },
+      [2] = { ["px"] = 0.6725708077, ["py"] = 0.9208063838, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8477] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Seekxilts' Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6716743844, ["py"] = 0.9208531869, ["pm"] = 2696, ["d"] = true, },
+      [2] = { ["px"] = 0.6725708077, ["py"] = 0.9208063838, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
   [8480] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -62140,6 +62185,42 @@ local bookData = {
     ["n"] = "Notes on Exhumation",
     ["e"] = {
       [1] = { ["px"] = 0.6836068091, ["py"] = 0.9397835825, ["pm"] = 2603, },
+    },
+  },
+  [8483] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "5 Things List",
+    ["e"] = {
+      [1] = { ["px"] = 0.6792115938, ["py"] = 0.9362400078, ["pm"] = 2705, ["d"] = true, },
+      [2] = { ["px"] = 0.6800468070, ["py"] = 0.9368795813, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8484] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Misura's Missive to Quarrymaster Saldezaar",
+    ["e"] = {
+      [1] = { ["px"] = 0.6793199938, ["py"] = 0.9362656078, ["pm"] = 2705, ["d"] = true, },
+      [2] = { ["px"] = 0.6800468070, ["py"] = 0.9368795813, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8485] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Atronach Needs and Allocations",
+    ["e"] = {
+      [1] = { ["px"] = 0.6796888294, ["py"] = 0.9365304023, ["pm"] = 2706, ["d"] = true, },
+      [2] = { ["px"] = 0.6800468070, ["py"] = 0.9368795813, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8489] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Notes on Black Gem Prismatics and Refracted Souls",
+    ["e"] = {
+      [1] = { ["px"] = 0.6792268295, ["py"] = 0.9363528211, ["pm"] = 2761, ["d"] = true, },
+      [2] = { ["px"] = 0.6800468070, ["py"] = 0.9368795813, ["pm"] = 2603, ["fp"] = true, },
     },
   },
   [8490] = {
@@ -62360,6 +62441,17 @@ local bookData = {
     ["n"] = "Scribbled Notes of the Reveler",
     ["e"] = {
       [1] = { ["px"] = 0.6624412083, ["py"] = 0.9339911818, ["pm"] = 2603, },
+    },
+  },
+  [8553] = {
+    ["c"] = true,
+    ["cn"] = "Dungeon Delver Documents",
+    ["n"] = "Notes on Our Secret Project",
+    ["e"] = {
+      [1] = { ["px"] = 0.6796731742, ["py"] = 0.9361139730, ["pm"] = 2708, ["d"] = true, },
+      [2] = { ["px"] = 0.6797752294, ["py"] = 0.9364852023, ["pm"] = 2706, ["d"] = true, },
+      [3] = { ["px"] = 0.6794284007, ["py"] = 0.9366927820, ["pm"] = 2707, ["d"] = true, },
+      [4] = { ["px"] = 0.6800468070, ["py"] = 0.9368795813, ["pm"] = 2603, ["fp"] = true, },
     },
   },
 }
