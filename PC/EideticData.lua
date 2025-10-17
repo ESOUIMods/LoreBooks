@@ -62263,6 +62263,14 @@ local bookData = {
     ["r"] = true,
     ["m"] = { [2603] = 1, },
   },
+  [8494] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Tide Returns You",
+    ["e"] = {
+      [1] = { ["px"] = 0.6790624188, ["py"] = 0.9152979949, ["pm"] = 2603, },
+    },
+  },
   [8495] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -62303,6 +62311,22 @@ local bookData = {
     ["n"] = "Note for Klukeeshta",
     ["e"] = {
       [1] = { ["px"] = 0.6877024074, ["py"] = 0.9315099860, ["pm"] = 2603, },
+    },
+  },
+  [8513] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Gabrielle's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6843903740, ["py"] = 0.9188484123, ["pm"] = 2654, },
+    },
+  },
+  [8514] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Gabrielle's Research Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.6843783743, ["py"] = 0.9188600121, ["pm"] = 2654, },
     },
   },
   [8515] = {
