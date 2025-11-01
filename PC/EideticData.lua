@@ -62467,6 +62467,15 @@ local bookData = {
       [1] = { ["px"] = 0.6624412083, ["py"] = 0.9339911818, ["pm"] = 2603, },
     },
   },
+  [8549] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Cultist Orders",
+    ["q"] = 7249,
+    ["e"] = {
+      [1] = { ["px"] = 0.4257035839, ["py"] = 0.7724515841, ["pm"] = 9, },
+    },
+  },
   [8553] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
