@@ -17,4 +17,5 @@ LoreBooks.locationDetails = {
   [12] = "Associate Zannon's Workshop",
   [13] = "Derelict Laboratory",
   [14] = "Hall Of Refined Techniques",
+  [15] = "Mistress Dreloth's Chambers",
 }

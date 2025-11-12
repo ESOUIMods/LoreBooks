@@ -355,7 +355,8 @@ local lorebooksData = {
     { 0.552, 0.530, 9, 6 }, -- Triumphs of a Monarch, Ch. 6
     { 0.559, 0.592, 9, 6 },
     { 0.565, 0.558, 9, 6 },
-    { 0.521, 0.547, 9, 6 },
+    -- { 0.521, 0.547, 9, 6 },
+	{ 0.5181661844, 0.5449923873, 9, 6}, -- Triumphs of a Monarch, Ch. 6, auridon/auridon_base_0
     { 0.4958, 0.5458, 9, 7 }, -- Triumphs of a Monarch, Ch. 10
     { 0.4532, 0.5154, 9, 7 },
     { 0.4428, 0.5532, 9, 7 },
@@ -3250,13 +3251,12 @@ local lorebooksData = {
     { 0.3140, 0.4720, 2, 10 }, --Wayrest, Jewel of the Bay
     { 0.6010, 0.8660, 1, 7 }, --Varieties of Faith: The Bretons
     { 0.1960, 0.6160, 1, 9 }, --Wyresses: The Name-Daughters
-    { 0.1620, 0.7550, 2, 3 }, --The Knightly Orders of High Rock
+    { 0.1620, 0.7550, 2, 3, ld = { 9999, } }, --The Knightly Orders of High Rock
     { 0.6640, 0.2300, 9, 5 }, --Triumphs of a Monarch, Ch. 3
     { 0.8530, 0.2670, 9, 6 }, --Triumphs of a Monarch, Ch. 6
     { 0.8550, 0.3370, 18, 5 }, --Flesh to Cut from Bone
-    { 0.5086468458, 0.8415690064, 1, 5, ["ld"] = { 9999, } }, -- Guide to the Daggerfall Covenant, systres/u34_systreszone_base_0
+    { 0.5086468458, 0.8415690064, 1, 5, ld = { 9999, } }, -- Guide to the Daggerfall Covenant, systres/u34_systreszone_base_0
   },
-
   [2212] = { -- galen/u36_galenisland_base_0
     { 0.5230, 0.4810, 2, 4 }, --The Bretons: Mongrels or Paragons?
     { 0.2810, 0.7380, 1, 5 }, --Guide to the Daggerfall Covenant
@@ -3264,6 +3264,7 @@ local lorebooksData = {
     { 0.5740, 0.1740, 9, 7 }, --Triumphs of a Monarch, Ch. 10
     { 0.5360, 0.5710, 18, 5 }, --Flesh to Cut from Bone
   },
+  [2219] = { 0.3963344693, 0.5498281717, 2, 3, worldY = 3790 }, -- The Knightly Orders of High Rock, systres/u34_navirecommander_base_0
 
   -- guild maps
   [563] = { -- abagarlas_base
@@ -3305,8 +3306,9 @@ local lorebooksData = {
     { 0.4495556355, 0.5568020940, 11, 8 }, -- Where Magical Paths Meet
     { 0.787, 0.355, 8, 1 }, -- Aedra and Daedra
     { 0.840, 0.343, 8, 4 }, --The House of Troubles
-    { 0.588, 0.681, 20, 1 }, -- Ancestors and the Dunmer (Abridged)
+    { 0.5881690382, 0.6865075826, 20, 1, ld = { 9999, 15 } }, -- Ancestors and the Dunmer (Abridged)
   },
+  [2401] = { 0.4168690443, 0.6903295517, 20, 1 }, -- Ancestors and the Dunmer (Abridged)
   [2317] = { -- apocrypha/u38_disquiet_study_base_0
     { 0.4920897484, 0.3628119528, 8, 6 }, -- Modern Heretics
   },

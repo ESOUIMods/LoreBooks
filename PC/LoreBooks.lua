@@ -1944,15 +1944,17 @@ local bookLocalization = {
   ["fr"] = "Livre",
   ["ru"] = "Книга",
 }
+
 local function CreateEideticLorebookLocation()
   SetMapToPlayerLocation()
   CALLBACK_MANAGER:FireCallbacks("OnWorldMapChanged")
   LMDI:UpdateMapInfo()
   local zone = LMP:GetZoneAndSubzone(true, false, true)
-  local x, y = GetMapPlayerPosition("player")
-  local xpos, ypos = GPS:LocalToGlobal(x, y)
   local outText = GetString(LBOOKS_LBPOS_ERROR)
   local zoneId = LMD.zoneId
+  local _, worldX, worldY, worldZ = GetUnitWorldPosition("player")
+  local x, y = GetNormalizedWorldPosition(zoneId, worldX, worldY, worldZ)
+  local xpos, ypos = GPS:LocalToGlobal(x, y)
   local mapIndex = LMD.mapIndex
   local mapId = LMD.mapId
   local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
@@ -1993,7 +1995,7 @@ local function CreateEideticLorebookLocation()
   -- /script d({GetLoreBookIndicesFromBookId(151)})
   -- /script d({LoreBooks_GetNewLoreBookInfo(3, 21, 1)})
   if categoryIndex and categoryIndex == internal.LORE_LIBRARY_SHALIDOR then
-    outText = string.format("[%d] = { %.10f, %.10f, %s, %s, moreInfo }, -- %s, %s", mapId, x, y, collectionIndex, bookIndex, bookName, zone)
+    outText = string.format("[%d] = { %.10f, %.10f, %s, %s, moreInfo }, -- worldY = %d, %s, %s", mapId, x, y, collectionIndex, bookIndex, worldY, bookName, zone)
   elseif categoryIndex and categoryIndex == internal.LORE_LIBRARY_EIDETIC then
     local cnf = '"cn"' -- used for Collection Name
     local nf = '"n"' -- used for Book Name
