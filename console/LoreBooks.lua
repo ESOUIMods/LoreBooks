@@ -518,7 +518,7 @@ local function InitializePins()
   LMP:SetPinFilterHidden(internal.PINS_COLLECTED, LIBMAPPINS_BATTLEGROUND_MAPGROUP, true)
   LMP:SetPinFilterHidden(internal.PINS_BOOKSHELF, LIBMAPPINS_BATTLEGROUND_MAPGROUP, true)
 
-  -- add handler for the left click
+  -- add handler for the left click, LoreBooks_GetNewShalidorBookInfo for console
   LMP:SetClickHandlers(internal.PINS_UNKNOWN, {
     [1] = {
       name = function(pin)
@@ -545,6 +545,13 @@ local function InitializePins()
   COMPASS_PINS:RefreshPins(internal.PINS_COMPASS_BOOKSHELF)
 end
 
+local function OnGamepadPreferredModeChanged()
+  if IsInGamepadPreferredMode() then
+    INFORMATION_TOOLTIP = ZO_MapLocationTooltip_Gamepad
+  else
+    INFORMATION_TOOLTIP = InformationTooltip
+  end
+end
 local function OnBookLearned(eventCode, categoryIndex, collectionIndex, bookIndex, guildIndex, isMaxRank)
   local cacheKey = categoryIndex .. ":" .. collectionIndex
   if internal.collectionInfoCache then
@@ -566,13 +573,7 @@ local function OnBookLearned(eventCode, categoryIndex, collectionIndex, bookInde
   end
 end
 
-local function OnGamepadPreferredModeChanged()
-  if IsInGamepadPreferredMode() then
-    INFORMATION_TOOLTIP = ZO_MapLocationTooltip_Gamepad
-  else
-    INFORMATION_TOOLTIP = InformationTooltip
-  end
-end
+
 
 local function OnLoad(eventCode, name)
 

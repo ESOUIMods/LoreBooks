@@ -546,7 +546,7 @@ local function UpdateEideticLorebooksData(mapId, zoneMapId)
 end
 
 local function ShalidorCompassCallback()
-  if LMD.isWorld then
+  if LMD.isMacroMap then
     -- internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
@@ -563,7 +563,7 @@ local function ShalidorCompassCallback()
 end
 
 local function BookshelfCompassCallback()
-  if LMD.isWorld then
+  if LMD.isMacroMap then
     -- internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
@@ -579,7 +579,7 @@ local function BookshelfCompassCallback()
 end
 
 local function EideticMemoryCompassCallback()
-  if LMD.isWorld then
+  if LMD.isMacroMap then
     -- internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
@@ -622,14 +622,14 @@ local function EideticMemoryCompassCallback()
 end
 
 local function MapCallbackCreateShalidorPins(pinType)
-  if LMD.isWorld then
+  if LMD.isMacroMap then
     -- internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
   -- internal:dm("Debug", "MapCallbackCreateShalidorPins: " .. pinType)
 
   local mapId = LMD.mapId
-  local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
+  local zoneMapId = LMD:GetParentMapIdFromZoneId(LMD.zoneId)
   UpdateShalidorLorebooksData(mapId, zoneMapId)
   local shouldDisplay = ShouldDisplayLoreBooks()
 
@@ -655,14 +655,14 @@ local function MapCallbackCreateShalidorPins(pinType)
 end
 
 local function MapCallbackCreateBookshelfPins(pinType)
-  if LMD.isWorld then
+  if LMD.isMacroMap then
     -- internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
   -- internal:dm("Debug", "MapCallbackCreateBookshelfPins")
 
   local mapId = LMD.mapId
-  local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
+  local zoneMapId = LMD:GetParentMapIdFromZoneId(LMD.zoneId)
   UpdateBookshelfLorebooksData(mapId, zoneMapId)
 
   -- Bookshelves
@@ -680,13 +680,13 @@ local function MapCallbackCreateBookshelfPins(pinType)
 end
 
 local function MapCallbackCreateEideticPins(pinType)
-  if LMD.isWorld then
+  if LMD.isMacroMap then
     -- internal:dm("Debug", "Tamriel or Aurbis reached, stopped")
     return
   end
   -- internal:dm("Debug", "MapCallbackCreateEideticPins: " .. pinType)
 
-  local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
+  local zoneMapId = LMD:GetParentMapIdFromZoneId(LMD.zoneId)
   UpdateEideticLorebooksData(LMD.mapId, zoneMapId)
   local isDungeon = LMD.isDungeon
   local shouldDisplay = ShouldDisplayLoreBooks()
@@ -1952,12 +1952,12 @@ local function CreateEideticLorebookLocation()
   local zone = LMP:GetZoneAndSubzone(true, false, true)
   local outText = GetString(LBOOKS_LBPOS_ERROR)
   local zoneId = LMD.zoneId
-  local _, worldX, worldY, worldZ = GetUnitWorldPosition("player")
-  local x, y = GetNormalizedWorldPosition(zoneId, worldX, worldY, worldZ)
-  local xpos, ypos = GPS:LocalToGlobal(x, y)
+  local worldX, worldY, worldZ = LMD.worldX, LMD.worldY, LMD.worldZ 
+  local x, y = LMD.normalizedX, LMD.normalizedY
+  local xpos, ypos = LMD.libGPSX, LMD.libGPSY
   local mapIndex = LMD.mapIndex
   local mapId = LMD.mapId
-  local zoneMapId = LMD:GetZoneMapIdFromZoneId(LMD.zoneId)
+  local parentZoneMapId = LMD.parentZoneMapId
   local isMainZone = LMD.isMainZone
   local isDungeon = LMD.isDungeon
   local bookName = ""
@@ -2021,7 +2021,7 @@ local function CreateEideticLorebookLocation()
     -- the bookshelf data uses the zoneId to determine the icon
     if isBookshelf then
       outText = string.format("[%d] = { [%s] = { [%d] = 1, }, }, [%d] = { { [%s] = %.10f, [%s] = %.10f, [%s] = %d, }, },  -- Bookshelf: %s, %s",
-        shownBookId, mf, zoneMapId, mapId, xf, x, yf, y, zf, zoneId, bookName, zone)
+        shownBookId, mf, parentZoneMapId, mapId, xf, x, yf, y, zf, zoneId, bookName, zone)
     end
   end
   MyPrint(outText)
@@ -2030,8 +2030,8 @@ end
 local function CreateFakeEideticLorebookLocation()
   LMDI:UpdateMapInfo()
   local zone = LMP:GetZoneAndSubzone(true, false, true)
-  local x, y = GetMapPlayerPosition("player")
-  local xpos, ypos = GPS:LocalToGlobal(x, y)
+  local x, y = LMD.normalizedX, LMD.normalizedY
+  local xpos, ypos = LMD.libGPSX, LMD.libGPSY
   local mapId = LMD.mapId
 
   local ef = '"e"'
@@ -2052,8 +2052,8 @@ end
 local function CreateFakeLorebookPin()
   LMDI:UpdateMapInfo()
   local zone = LMP:GetZoneAndSubzone(true, false, true)
-  local x, y = GetMapPlayerPosition("player")
-  local xpos, ypos = GPS:LocalToGlobal(x, y)
+  local x, y = LMD.normalizedX, LMD.normalizedY
+  local xpos, ypos = LMD.libGPSX, LMD.libGPSY
   local mapId = LMD.mapId
 
   local shownBookId = "fake"

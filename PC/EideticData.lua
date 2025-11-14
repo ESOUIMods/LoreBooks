@@ -62535,7 +62535,7 @@ local bookData = {
   [8542] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
-    ["n"] = "Hoagrick's Note",
+    ["n"] = "Hoagrik's Note",
     ["e"] = {
       [1] = { ["px"] = 0.6827743743, ["py"] = 0.9197688120, ["pm"] = 2654, },
       [2] = { ["px"] = 0.6827476081, ["py"] = 0.9197771824, ["pm"] = 2603, ["fp"] = true, },
