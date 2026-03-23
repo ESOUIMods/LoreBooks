@@ -32431,6 +32431,14 @@ local bookData = {
     ["n"] = "Battered Note",
     ["cn"] = "Imperial Library",
   },
+  [2925] = {
+    ["c"] = true,
+    ["cn"] = "Military Orders and Reports",
+    ["n"] = "Investigator's Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.5509048158, ["py"] = 0.4752031915, ["pm"] = 916, ["d"] = true, },
+    },
+  },
   [2931] = {
     ["c"] = true,
     ["e"] = {
@@ -48182,6 +48190,7 @@ local bookData = {
     ["n"] = "Benevolent Necromancy, it Exists",
     ["r"] = true,
     ["e"] = {
+		[1] = { ["px"] = 0.6472140121, ["py"] = 0.3780964010, ["pm"] = 198, },
     },
     ["m"] = {
       [36] = 1,
@@ -55831,6 +55840,7 @@ local bookData = {
     ["cn"] = "Systres Tomes and Scrolls",
     ["n"] = "Noble Ranks and Titles",
     ["e"] = {
+		[1] = { ["px"] = 0.0609924019, ["py"] = 0.5844860023, ["pm"] = 2114, },
     },
     ["r"] = true,
     ["m"] = {
@@ -61605,6 +61615,22 @@ local bookData = {
     ["r"] = true,
     ["m"] = { [2603] = 1, },
   },
+  [8234] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The First Dialogue of Mannimarco and Galerion",
+    ["e"] = {
+      [1] = { ["px"] = 0.7145140213, ["py"] = 0.9054043955, ["pm"] = 2603, },
+    },
+  },
+  [8235] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Second Dialogue of Mannimarco and Galerion",
+    ["e"] = {
+      [1] = { ["px"] = 0.7150972209, ["py"] = 0.9053803929, ["pm"] = 2603, },
+    },
+  },
   [8236] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -61685,6 +61711,22 @@ local bookData = {
       [2] = { ["px"] = 0.6782596076, ["py"] = 0.9195411812, ["pm"] = 2603, ["fp"] = true, },
     },
   },
+  [8289] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Secret Stone Guardians",
+    ["e"] = {
+      [1] = { ["px"] = 0.7092152183, ["py"] = 0.9220723966, ["pm"] = 2603, },
+    },
+  },
+  [8290] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Report on the Improved Reapers",
+    ["e"] = {
+      [1] = { ["px"] = 0.6988408080, ["py"] = 0.9230731876, ["pm"] = 2713, ["d"] = true, },
+    },
+  },
   [8292] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -61742,6 +61784,22 @@ local bookData = {
       [1] = { ["px"] = 0.4905007878, ["py"] = 0.4173135914, ["pm"] = 572, },
     },
   },
+  [8303] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Shipment Manifest",
+    ["e"] = {
+      [1] = { ["px"] = 0.6924992210, ["py"] = 0.9247539953, ["pm"] = 2603, },
+    },
+  },
+  [8304] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Prisoner Manifest",
+    ["e"] = {
+      [1] = { ["px"] = 0.6934808202, ["py"] = 0.9257955965, ["pm"] = 2603, },
+    },
+  },
   [8305] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -61776,6 +61834,22 @@ local bookData = {
       [2] = { ["px"] = 0.6630608081, ["py"] = 0.9203027853, ["pm"] = 2603, ["fp"] = true, },
     },
   },
+  [8309] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Note to Gabrielle",
+    ["e"] = {
+      [1] = { ["px"] = 0.7052016200, ["py"] = 0.9196963929, ["pm"] = 2603, },
+    },
+  },
+  [8310] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Worm Cult Mine Orders",
+    ["e"] = {
+      [1] = { ["px"] = 0.7124319990, ["py"] = 0.9211816139, ["pm"] = 2735, ["d"] = true, },
+    },
+  },
   [8311] = {
     ["c"] = true,
     ["cn"] = "Companions Correspondence",
@@ -61800,6 +61874,30 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.6632676076, ["py"] = 0.9205135781, ["pm"] = 2721, },
       [2] = { ["px"] = 0.6632680098, ["py"] = 0.9205139856, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8315] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Soul Flayer Perimeter Plan",
+    ["e"] = {
+      [1] = { ["px"] = 0.7069804198, ["py"] = 0.9331991925, ["pm"] = 2603, },
+    },
+  },
+  [8316] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Burial Site Orders",
+    ["e"] = {
+      [1] = { ["px"] = 0.6943420198, ["py"] = 0.9350939934, ["pm"] = 2603, },
+    },
+  },
+  [8317] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Village Report",
+    ["e"] = {
+      [1] = { ["px"] = 0.7039432194, ["py"] = 0.9028727929, ["pm"] = 2603, },
     },
   },
   [8318] = {
@@ -61878,6 +61976,14 @@ local bookData = {
     ["n"] = "Guildmaster Merric's Notes",
     ["e"] = {
       [1] = { ["px"] = 0.6497804191, ["py"] = 0.2771851944, ["pm"] = 61, },
+    },
+  },
+  [8347] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Love Letter from Adrolir",
+    ["e"] = {
+      [1] = { ["px"] = 0.6872756168, ["py"] = 0.9045055935, ["pm"] = 2603, },
     },
   },
   [8380] = {
@@ -62013,6 +62119,30 @@ local bookData = {
       [2] = { ["px"] = 0.6759616067, ["py"] = 0.9441743817, ["pm"] = 2603, ["fp"] = true, },
     },
   },
+  [8405] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Ritual of Zyv-Elehk (Ritual Fires Dormant)",
+    ["e"] = {
+      [1] = { ["px"] = 0.6825507740, ["py"] = 0.9203328119, ["pm"] = 2654, },
+    },
+  },
+  [8406] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Ritual of Zyv-Elehk (Ritual Fires Lit)",
+    ["e"] = {
+      [1] = { ["px"] = 0.6825403742, ["py"] = 0.9203384122, ["pm"] = 2654, },
+    },
+  },
+  [8408] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Sahmazim's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.7032168191, ["py"] = 0.9360939953, ["pm"] = 2603, },
+    },
+  },
   [8409] = {
     ["c"] = true,
     ["cn"] = "Elusive Manuscripts",
@@ -62070,6 +62200,30 @@ local bookData = {
       [1] = { ["px"] = 0.4314244089, ["py"] = 0.6595060164, ["pm"] = 2607, ["d"] = true, },
     },
   },
+  [8446] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Guardians of Mor Naril",
+    ["e"] = {
+      [1] = { ["px"] = 0.6900048034, ["py"] = 0.9209479768, ["pm"] = 2802, ["d"] = true, },
+    },
+  },
+  [8447] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Chronicles of Kinlord Orlemar, Part IV",
+    ["e"] = {
+      [1] = { ["px"] = 0.6900068034, ["py"] = 0.9209171768, ["pm"] = 2802, ["d"] = true, },
+    },
+  },
+  [8448] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Kinlord Orlemar's Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.6938555989, ["py"] = 0.9121375725, ["pm"] = 2759, ["d"] = true, },
+    },
+  },
   [8449] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -62116,6 +62270,14 @@ local bookData = {
     },
     ["r"] = true,
     ["m"] = { [2603] = 1, },
+  },
+  [8454] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "An Ex-Pirate",
+    ["e"] = {
+      [1] = { ["px"] = 0.6852880174, ["py"] = 0.9111523958, ["pm"] = 2603, },
+    },
   },
   [8455] = {
     ["c"] = true,
@@ -62185,6 +62347,14 @@ local bookData = {
     ["n"] = "The Bell and the Hymn",
     ["e"] = {
       [1] = { ["px"] = 0.6703856069, ["py"] = 0.9082139837, ["pm"] = 2603, },
+    },
+  },
+  [8467] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Fading Builder's Journal I",
+    ["e"] = {
+      [1] = { ["px"] = 0.7139771942, ["py"] = 0.9285411926, ["pm"] = 2726, ["d"] = true, },
     },
   },
   [8468] = {
@@ -62428,6 +62598,14 @@ local bookData = {
       [1] = { ["px"] = 0.6843903740, ["py"] = 0.9188484123, ["pm"] = 2654, },
     },
   },
+  [8513] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Gabrielle's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6843923742, ["py"] = 0.9188520118, ["pm"] = 2654, },
+    },
+  },
   [8514] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -62522,6 +62700,30 @@ local bookData = {
       [2] = { ["px"] = 0.6785996083, ["py"] = 0.9183939853, ["pm"] = 2603, ["fp"] = true, },
     },
   },
+  [8527] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Mannimarco's Directive",
+    ["e"] = {
+      [1] = { ["px"] = 0.7102108217, ["py"] = 0.9099503957, ["pm"] = 2603, },
+    },
+  },
+  [8528] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Acolyte's Report",
+    ["e"] = {
+      [1] = { ["px"] = 0.7088868221, ["py"] = 0.9111719940, ["pm"] = 2603, },
+    },
+  },
+  [8529] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Hezsatari's Instructions",
+    ["e"] = {
+      [1] = { ["px"] = 0.6872912239, ["py"] = 0.9423723722, ["pm"] = 2709, ["d"] = true, },
+    },
+  },
   [8530] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -62538,6 +62740,22 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.6806231812, ["py"] = 0.9433092296, ["pm"] = 2734, },
       [2] = { ["px"] = 0.6806136067, ["py"] = 0.9433139848, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8533] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Fading Builder's Journal II",
+    ["e"] = {
+      [1] = { ["px"] = 0.7140319942, ["py"] = 0.9286415926, ["pm"] = 2726, ["d"] = true, },
+    },
+  },
+  [8534] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Fading Builder's Journal II",
+    ["e"] = {
+      [1] = { ["px"] = 0.7140247942, ["py"] = 0.9284403926, ["pm"] = 2726, ["d"] = true, },
     },
   },
   [8538] = {
@@ -62583,6 +62801,30 @@ local bookData = {
       [1] = { ["px"] = 0.4257035839, ["py"] = 0.7724515841, ["pm"] = 9, },
     },
   },
+  [8550] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Prince Naemon and the Staff of Magnus",
+    ["e"] = {
+      [1] = { ["px"] = 0.7106032229, ["py"] = 0.8951127951, ["pm"] = 2603, },
+    },
+  },
+  [8551] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Letter to Vicereeve Nirenorwe",
+    ["e"] = {
+      [1] = { ["px"] = 0.7105852217, ["py"] = 0.8957875947, ["pm"] = 2603, },
+    },
+  },
+  [8552] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Terinvel's Notebook",
+    ["e"] = {
+      [1] = { ["px"] = 0.6989224224, ["py"] = 0.9075583953, ["pm"] = 2603, },
+    },
+  },
   [8553] = {
     ["c"] = true,
     ["cn"] = "Dungeon Delver Documents",
@@ -62592,6 +62834,388 @@ local bookData = {
       [2] = { ["px"] = 0.6797752294, ["py"] = 0.9364852023, ["pm"] = 2706, ["d"] = true, },
       [3] = { ["px"] = 0.6794284007, ["py"] = 0.9366927820, ["pm"] = 2707, ["d"] = true, },
       [4] = { ["px"] = 0.6800468070, ["py"] = 0.9368795813, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8555] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Sahmazim's Vos-Toh Translations",
+    ["e"] = {
+      [1] = { ["px"] = 0.7030228207, ["py"] = 0.9360875954, ["pm"] = 2603, },
+    },
+  },
+  [8557] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Khag's Head Count",
+    ["e"] = {
+      [1] = { ["px"] = 0.6852564194, ["py"] = 0.9079607948, ["pm"] = 2603, },
+    },
+  },
+  [8558] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "An Offer of Protection",
+    ["e"] = {
+      [1] = { ["px"] = 0.6989484175, ["py"] = 0.9076031945, ["pm"] = 2603, },
+    },
+  },
+  [8562] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "A Trick to the Doors",
+    ["e"] = {
+      [1] = { ["px"] = 0.6991388178, ["py"] = 0.9108684270, ["pm"] = 2752, ["d"] = true, },
+    },
+  },
+  [8563] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Dirty Abandoned Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6992144178, ["py"] = 0.9112616270, ["pm"] = 2752, ["d"] = true, },
+    },
+  },
+  [8564] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Rotting Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6983964178, ["py"] = 0.9113504270, ["pm"] = 2752, ["d"] = true, },
+    },
+  },
+  [8565] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Terinvel's Lost Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.6992791715, ["py"] = 0.9100512181, ["pm"] = 2755, ["d"] = true, },
+    },
+  },
+  [8567] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Vahath Hunter's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.7140192218, ["py"] = 0.9311535925, ["pm"] = 2603, },
+    },
+  },
+  [8569] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Wormblood's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.7096184029, ["py"] = 0.9121604004, ["pm"] = 2782, ["d"] = true, },
+    },
+  },
+  [8572] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Caterwaul Logbook",
+    ["e"] = {
+      [1] = { ["px"] = 0.6842200196, ["py"] = 0.9055347934, ["pm"] = 2603, },
+    },
+  },
+  [8576] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "We Were Undaunted",
+    ["e"] = {
+      [1] = { ["px"] = 0.7039316180, ["py"] = 0.9107199953, ["pm"] = 2603, },
+    },
+  },
+  [8579] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Note About Paths",
+    ["e"] = {
+      [1] = { ["px"] = 0.7007336046, ["py"] = 0.9091483902, ["pm"] = 2754, ["d"] = true, },
+    },
+  },
+  [8582] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Hastily Written Observations",
+    ["e"] = {
+      [1] = { ["px"] = 0.6997076013, ["py"] = 0.9103095897, ["pm"] = 2783, ["d"] = true, },
+    },
+  },
+  [8583] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Hurriedly Written Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.6991752178, ["py"] = 0.9108724270, ["pm"] = 2752, ["d"] = true, },
+    },
+  },
+  [8585] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Missive to Mor Naril",
+    ["e"] = {
+      [1] = { ["px"] = 0.6987672080, ["py"] = 0.9232463876, ["pm"] = 2713, ["d"] = true, },
+    },
+  },
+  [8587] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Visitor's Guide to Eastern Solstice",
+    ["e"] = {
+      [1] = { ["px"] = 0.6898880212, ["py"] = 0.9322871952, ["pm"] = 2603, },
+    },
+  },
+  [8589] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Triumph of the Darkbinders",
+    ["e"] = {
+      [1] = { ["px"] = 0.6900952034, ["py"] = 0.9205367768, ["pm"] = 2699, ["d"] = true, },
+    },
+  },
+  [8590] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "To Anchorite Odska, From Black Mage Tacitus.",
+    ["e"] = {
+       [1] = { ["px"] = 0.7130720190, ["py"] = 0.9335299977, ["pm"] = 2603, },
+    },
+  },
+  [8591] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Anchorite Odska's Report, Morndas Eve.",
+    ["e"] = {
+       [1] = { ["px"] = 0.7084712183, ["py"] = 0.9294103937, ["pm"] = 2603, },
+    },
+  },
+  [8592] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Anchorite Odska's Final Report",
+    ["e"] = {
+       [1] = { ["px"] = 0.7127168188, ["py"] = 0.9337851966, ["pm"] = 2603, },
+    },
+  },
+  [8593] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Origins of the Stone-Nest: A Fable",
+    ["e"] = {
+       [1] = { ["px"] = 0.7023260229, ["py"] = 0.9059771953, ["pm"] = 2603, },
+    },
+  },
+  [8594] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Vaedinhill, the Kinlord's Folly",
+    ["e"] = {
+      [1] = { ["px"] = 0.6938068194, ["py"] = 0.9146035941, ["pm"] = 2603, },
+    },
+  },
+  [8596] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Bonnie Spriggan Logbook",
+    ["e"] = {
+      [1] = { ["px"] = 0.6878472211, ["py"] = 0.9037831932, ["pm"] = 2603, },
+    },
+  },
+  [8599] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Misplaced Journal",
+    ["e"] = {
+       [1] = { ["px"] = 0.7008320046, ["py"] = 0.9090367903, ["pm"] = 2754, ["d"] = true, },
+    },
+  },
+  [8609] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Scouting Report on Gristmung Hold",
+    ["e"] = {
+       [1] = { ["px"] = 0.7150828211, ["py"] = 0.9057271948, ["pm"] = 2603, },
+    },
+  },
+  [8610] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Peace of Xor-Hist",
+    ["e"] = {
+       [1] = { ["px"] = 0.6902328035, ["py"] = 0.9203027768, ["pm"] = 2800, ["d"] = true, },
+    },
+  },
+  [8612] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Scouting Report on Soul Flayers",
+    ["e"] = {
+       [1] = { ["px"] = 0.7143800189, ["py"] = 0.9053031957, ["pm"] = 2603, },
+    },
+  },
+  [8613] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Panicked Note",
+    ["e"] = {
+       [1] = { ["px"] = 0.6999892045, ["py"] = 0.9090087902, ["pm"] = 2754, ["d"] = true, },
+    },
+  },
+  [8615] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Vitrified Souls Ritual Status Report",
+    ["e"] = {
+       [1] = { ["px"] = 0.6954807836, ["py"] = 0.9055419909, ["pm"] = 2633, ["d"] = true, },
+    },
+  },
+  [8620] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Death-Dancer Recitations",
+    ["e"] = {
+       [1] = { ["px"] = 0.7042064181, ["py"] = 0.9026027927, ["pm"] = 2603, },
+    },
+  },
+  [8621] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Amber Egg and Cerulean Sea",
+    ["e"] = {
+       [1] = { ["px"] = 0.7006180175, ["py"] = 0.9288415938, ["pm"] = 2603, },
+    },
+  },
+  [8622] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "On Shackled Titans",
+    ["e"] = {
+      [1] = { ["px"] = 0.6981748209, ["py"] = 0.9066319952, ["pm"] = 2603, },
+    },
+  },
+  [8629] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Songs of the Stone-Nest People",
+    ["e"] = {
+      [1] = { ["px"] = 0.7052864187, ["py"] = 0.9193019963, ["pm"] = 2603, },
+    },
+  },
+  [8764] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Introduction",
+    ["e"] = {
+      [1] = { ["px"] = 0.2385660020, ["py"] = 0.7381680213, ["pm"] = 243, },
+	  [2] = { ["px"] = 0.0645712002, ["py"] = 0.3833144060, ["pm"] = 63, },
+	  [3] = { ["px"] = 0.7896988000, ["py"] = 0.4340128095, ["pm"] = 24, },
+    },
+  },
+  [8765] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 1, Horses",
+    ["e"] = {
+      [1] = { ["px"] = 0.4400184085, ["py"] = 0.7303544239, ["pm"] = 445, },
+    },
+  },
+  [8766] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 2, Wolves and Foxes",
+    ["e"] = {
+      [1] = { ["px"] = 0.2388880022, ["py"] = 0.7383264219, ["pm"] = 243, },
+	  [2] = { ["px"] = 0.0644464019, ["py"] = 0.3830088060, ["pm"] = 63, },
+	  [3] = { ["px"] = 0.5975032047, ["py"] = 0.6752132072, ["pm"] = 1940, },
+	  [4] = { ["px"] = 0.0487807998, ["py"] = 0.5696264111, ["pm"] = 2227, },
+    },
+  },
+  [8768] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 4, Big Cats",
+    ["e"] = {
+      [1] = { ["px"] = 0.3593379993, ["py"] = 0.6944167987, ["pm"] = 387, },
+	  [2] = { ["px"] = 0.4512616065, ["py"] = 0.6181339949, ["pm"] = 312, },
+	  [3] = { ["px"] = 0.1759464029, ["py"] = 0.2498784048, ["pm"] = 85, },
+	  [4] = { ["px"] = 0.2811591989, ["py"] = 0.3179944046, ["pm"] = 84, },
+	  [5] = { ["px"] = 0.4221716017, ["py"] = 0.3795675941, ["pm"] = 1131, },
+	  [6] = { ["px"] = 0.1489459995, ["py"] = 0.7285172119, ["pm"] = 1431, },
+	  [7] = { ["px"] = 0.4254400011, ["py"] = 0.2162976016, ["pm"] = 1773, },
+    },
+  },
+  [8769] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 5, Kagouti and Guar",
+    ["e"] = {
+      [1] = { ["px"] = 0.7625735857, ["py"] = 0.5183011875, ["pm"] = 205, },
+	  [2] = { ["px"] = 0.7519479852, ["py"] = 0.5432616112, ["pm"] = 217, },
+	  [3] = { ["px"] = 0.7631284137, ["py"] = 0.7962976123, ["pm"] = 1560, },
+    },
+  },
+  [8770] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 6, Camels",
+    ["e"] = {
+      [1] = { ["px"] = 0.1464555923, ["py"] = 0.4002064034, ["pm"] = 83, },
+	  [2] = { ["px"] = 0.2397308030, ["py"] = 0.5055455977, ["pm"] = 993, },
+    },
+  },
+  [8771] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 7, Durzogs",
+    ["e"] = {
+      [1] = { ["px"] = -0.1056988024, ["py"] = 0.2610900032, ["pm"] = 422, },
+	  [2] = { ["px"] = 0.8640220066, ["py"] = 1.0313840248, ["pm"] = 2035, },
+	  [3] = { ["px"] = 0.6800959741, ["py"] = 0.9172308120, ["pm"] = 2654, },
+    },
+  },
+  [8772] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 8, Elk",
+    ["e"] = {
+      [1] = { ["px"] = 0.4064676087, ["py"] = 0.6027272083, ["pm"] = 282, },
+	  [2] = { ["px"] = 0.4512616065, ["py"] = 0.6181339949, ["pm"] = 312, },
+	  [3] = { ["px"] = 0.0689204026, ["py"] = 0.6026108052, ["pm"] = 2163, },
+    },
+  },
+  [8773] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 9, Senche-raht",
+    ["e"] = {
+      [1] = { ["px"] = 0.5641139728, ["py"] = 0.6197687964, ["pm"] = 1576, },
+	  [2] = { ["px"] = 0.5533672034, ["py"] = 0.7556995885, ["pm"] = 1675, },
+    },
+  },
+  [8774] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 10, Rams",
+    ["e"] = {
+      [1] = { ["px"] = 0.2192536023, ["py"] = 0.3279736071, ["pm"] = 33, },
+	  [2] = { ["px"] = 0.6364296278, ["py"] = 0.2681539995, ["pm"] = 160, },
+	  [3] = { ["px"] = 0.6514476118, ["py"] = 0.3812824005, ["pm"] = 198, },
+    },
+  },
+  [8775] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 11, Bears",
+    ["e"] = {
+      [1] = { ["px"] = 0.2827827985, ["py"] = 0.2542852020, ["pm"] = 895, },
+	  [2] = { ["px"] = 0.3472784014, ["py"] = 0.2843019962, ["pm"] = 1858, },
+    },
+  },
+  [8776] = {
+    ["c"] = true,
+    ["cn"] = "The World and Its Creatures",
+    ["n"] = "Mounts of Tamriel: Volume 12, Constructs",
+    ["e"] = {
+      [1] = { ["px"] = 0.2642819950, ["py"] = 1.0239655899, ["pm"] = 1348, },
     },
   },
 }
