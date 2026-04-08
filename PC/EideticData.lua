@@ -60902,6 +60902,14 @@ local bookData = {
       [1] = { ["px"] = 0.6620724080, ["py"] = 0.9340951813, ["pm"] = 2603, },
     },
   },
+  [8122] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Golvyni's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.7050416226, ["py"] = 0.9126383943, ["pm"] = 2603, },
+    },
+  },
   [8124] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
@@ -62349,6 +62357,14 @@ local bookData = {
       [1] = { ["px"] = 0.6703856069, ["py"] = 0.9082139837, ["pm"] = 2603, },
     },
   },
+  [8466] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Coldharbour's Conquests",
+    ["e"] = {
+      [1] = { ["px"] = 0.7048324215, ["py"] = 0.9186043955, ["pm"] = 2603, },
+    },
+  },
   [8467] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations, Part 2",
@@ -62916,6 +62932,14 @@ local bookData = {
       [1] = { ["px"] = 0.6842200196, ["py"] = 0.9055347934, ["pm"] = 2603, },
     },
   },
+  [8574] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Mural Dedication",
+    ["e"] = {
+      [1] = { ["px"] = 0.7110996224, ["py"] = 0.9280567975, ["pm"] = 2603, },
+    },
+  },
   [8576] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations, Part 2",
@@ -62956,12 +62980,28 @@ local bookData = {
       [1] = { ["px"] = 0.6987672080, ["py"] = 0.9232463876, ["pm"] = 2713, ["d"] = true, },
     },
   },
+  [8586] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Letter from Ezhkel",
+    ["e"] = {
+      [1] = { ["px"] = 0.6816711774, ["py"] = 0.9199928016, ["pm"] = 2670, ["d"] = true, },
+    },
+  },
   [8587] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations, Part 2",
     ["n"] = "Visitor's Guide to Eastern Solstice",
     ["e"] = {
       [1] = { ["px"] = 0.6898880212, ["py"] = 0.9322871952, ["pm"] = 2603, },
+    },
+  },
+  [8588] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Scouting Report: Northeast Solstice",
+    ["e"] = {
+      [1] = { ["px"] = 0.7057300190, ["py"] = 0.9314347925, ["pm"] = 2603, },
     },
   },
   [8589] = {
@@ -63020,12 +63060,28 @@ local bookData = {
       [1] = { ["px"] = 0.6878472211, ["py"] = 0.9037831932, ["pm"] = 2603, },
     },
   },
+  [8597] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Accursed Temple",
+    ["e"] = {
+      [1] = { ["px"] = 0.6958147836, ["py"] = 0.9058135909, ["pm"] = 2633, ["d"] = true, },
+    },
+  },
   [8599] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations, Part 2",
     ["n"] = "Misplaced Journal",
     ["e"] = {
        [1] = { ["px"] = 0.7008320046, ["py"] = 0.9090367903, ["pm"] = 2754, ["d"] = true, },
+    },
+  },
+  [8607] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Sorrow of Stone and Tide",
+    ["e"] = {
+       [1] = { ["px"] = 0.6953768196, ["py"] = 0.9403319974, ["pm"] = 2603, },
     },
   },
   [8609] = {
@@ -63042,6 +63098,14 @@ local bookData = {
     ["n"] = "Peace of Xor-Hist",
     ["e"] = {
        [1] = { ["px"] = 0.6902328035, ["py"] = 0.9203027768, ["pm"] = 2800, ["d"] = true, },
+    },
+  },
+  [8611] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Scouting Report on Worm Cult Activity",
+    ["e"] = {
+       [1] = { ["px"] = 0.6952192191, ["py"] = 0.9189167950, ["pm"] = 2603, },
     },
   },
   [8612] = {
@@ -63066,6 +63130,30 @@ local bookData = {
     ["n"] = "Vitrified Souls Ritual Status Report",
     ["e"] = {
        [1] = { ["px"] = 0.6954807836, ["py"] = 0.9055419909, ["pm"] = 2633, ["d"] = true, },
+    },
+  },
+  [8616] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Sorrow of Stone and Tide",
+    ["e"] = {
+       [1] = { ["px"] = 0.6953768196, ["py"] = 0.9403319974, ["pm"] = 2603, },
+    },
+  },
+  [8617] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Stone-Nest Funerary Practices",
+    ["e"] = {
+       [1] = { ["px"] = 0.6951876211, ["py"] = 0.9353515953, ["pm"] = 2603, },
+    },
+  },
+  [8619] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Water Cuts Stone, A Textual Analysis",
+    ["e"] = {
+       [1] = { ["px"] = 0.6988972183, ["py"] = 0.9165707953, ["pm"] = 2603, },
     },
   },
   [8620] = {
