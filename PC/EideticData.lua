@@ -63188,6 +63188,166 @@ local bookData = {
       [1] = { ["px"] = 0.7052864187, ["py"] = 0.9193019963, ["pm"] = 2603, },
     },
   },
+  [8631] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Reward for Missing Mortals",
+    ["e"] = {
+      [1] = { ["px"] = 0.8568479815, ["py"] = 0.9799996136, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
+  [8633] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Burn the False Propaganda",
+    ["e"] = {
+      [1] = { ["px"] = 0.8555255813, ["py"] = 0.9799580137, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
+  [8638] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Abandoned Requisition Request",
+    ["e"] = {
+      [1] = { ["px"] = 0.8564227814, ["py"] = 0.9796804137, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
+  [8642] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Blunt Their Weapons",
+    ["e"] = {
+      [1] = { ["px"] = 0.8570776216, ["py"] = 0.9691384202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
+  [8663] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "The True Nature of the Night Market",
+    ["e"] = {
+      [1] = { ["px"] = 0.8602899704, ["py"] = 0.9749323871, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8675] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Free the Caged",
+    ["e"] = {
+      [1] = { ["px"] = 0.8649520269, ["py"] = 0.9745380105, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8676] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "IT'S NOT A POTION!",
+    ["e"] = {
+      [1] = { ["px"] = 0.8658640270, ["py"] = 0.9751652105, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8678] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Desperate for the Fantastical",
+    ["e"] = {
+      [1] = { ["px"] = 0.8559288217, ["py"] = 0.9687560202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
+  [8685] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Work Order: Spider Deterrent Devices",
+    ["e"] = {
+      [1] = { ["px"] = 0.8554827813, ["py"] = 0.9803476138, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
+  [8718] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Thieves in the Starlit Plaza",
+    ["e"] = {
+      [1] = { ["px"] = 0.8559379813, ["py"] = 0.9798664136, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8720] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Checklist for Challenging the Opulent",
+    ["e"] = {
+      [1] = { ["px"] = 0.8603651704, ["py"] = 0.9749407870, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8722] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "A Meeting Between Friends",
+    ["e"] = {
+      [1] = { ["px"] = 0.8601483704, ["py"] = 0.9749595870, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8723] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "I've Had It",
+    ["e"] = {
+      [1] = { ["px"] = 0.8658736270, ["py"] = 0.9756472107, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8724] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Thieves in the Starlit Plaza",
+    ["e"] = {
+      [1] = { ["px"] = 0.8596631704, ["py"] = 0.9739955870, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8738] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Letter for Moon-Eye",
+    ["e"] = {
+      [1] = { ["px"] = 0.8612951704, ["py"] = 0.9737179870, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8740] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Report on Sorrow's Friend",
+    ["e"] = {
+      [1] = { ["px"] = 0.8574480217, ["py"] = 0.9689072203, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
+  [8741] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Scamp Eyes Hurt",
+    ["e"] = {
+      [1] = { ["px"] = 0.8557672217, ["py"] = 0.9676668202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
+  [8744] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Report on the Skittering Precinct",
+    ["e"] = {
+      [1] = { ["px"] = 0.8571111813, ["py"] = 0.9798168137, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
+  [8745] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "In Need of Mortal Implements",
+    ["e"] = {
+      [1] = { ["px"] = 0.8559607814, ["py"] = 0.9787084137, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
+  [8746] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "A Study in Glinting and Gleaming",
+    ["e"] = {
+      [1] = { ["px"] = 0.8568056216, ["py"] = 0.9685748202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
   [8764] = {
     ["c"] = true,
     ["cn"] = "The World and Its Creatures",
