@@ -63228,6 +63228,14 @@ local bookData = {
       [1] = { ["px"] = 0.8602899704, ["py"] = 0.9749323871, ["pm"] = 2771, ["d"] = true, },
     },
   },
+  [8673] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Urgent! Food Needed",
+    ["e"] = {
+      [1] = { ["px"] = 0.8566404216, ["py"] = 0.9696216202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
   [8675] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63244,6 +63252,14 @@ local bookData = {
       [1] = { ["px"] = 0.8658640270, ["py"] = 0.9751652105, ["pm"] = 2772, ["d"] = true, },
     },
   },
+  [8677] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Add to the Collector's Villa",
+    ["e"] = {
+      [1] = { ["px"] = 0.8664884271, ["py"] = 0.9724884106, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
   [8678] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63258,6 +63274,22 @@ local bookData = {
     ["n"] = "Work Order: Spider Deterrent Devices",
     ["e"] = {
       [1] = { ["px"] = 0.8554827813, ["py"] = 0.9803476138, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
+  [8705] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Thoughts about the Windglass",
+    ["e"] = {
+      [1] = { ["px"] = 0.8669536268, ["py"] = 0.9734812107, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8710] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Night Market Report",
+    ["e"] = {
+      [1] = { ["px"] = 0.8568416216, ["py"] = 0.9684836202, ["pm"] = 2774, ["d"] = true, },
     },
   },
   [8718] = {
@@ -63308,6 +63340,14 @@ local bookData = {
       [1] = { ["px"] = 0.8612951704, ["py"] = 0.9737179870, ["pm"] = 2771, ["d"] = true, },
     },
   },
+  [8739] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Something Is Eating Our Eyes",
+    ["e"] = {
+      [1] = { ["px"] = 0.8568892218, ["py"] = 0.9690716202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
   [8740] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63346,6 +63386,14 @@ local bookData = {
     ["n"] = "A Study in Glinting and Gleaming",
     ["e"] = {
       [1] = { ["px"] = 0.8568056216, ["py"] = 0.9685748202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
+  [8747] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Join the Thousand Eyes",
+    ["e"] = {
+      [1] = { ["px"] = 0.8603111704, ["py"] = 0.9747071869, ["pm"] = 2771, ["d"] = true, },
     },
   },
   [8764] = {
