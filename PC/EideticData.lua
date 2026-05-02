@@ -63220,6 +63220,14 @@ local bookData = {
       [1] = { ["px"] = 0.8570776216, ["py"] = 0.9691384202, ["pm"] = 2774, ["d"] = true, },
     },
   },
+  [8658] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Join the Glittering Goad",
+    ["e"] = {
+      [1] = { ["px"] = 0.8606195703, ["py"] = 0.9749319870, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
   [8663] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63268,6 +63276,38 @@ local bookData = {
       [1] = { ["px"] = 0.8559288217, ["py"] = 0.9687560202, ["pm"] = 2774, ["d"] = true, },
     },
   },
+  [8679] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Curious Missive",
+    ["e"] = {
+      [1] = { ["px"] = 0.8644804270, ["py"] = 0.9756072107, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8680] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Curious Missive II",
+    ["e"] = {
+      [1] = { ["px"] = 0.8642332270, ["py"] = 0.9738736106, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8681] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Curious Missive III",
+    ["e"] = {
+      [1] = { ["px"] = 0.8658288268, ["py"] = 0.9735088107, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8682] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Curious Missive IV",
+    ["e"] = {
+      [1] = { ["px"] = 0.8669612268, ["py"] = 0.9735560107, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
   [8685] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63282,6 +63322,14 @@ local bookData = {
     ["n"] = "Thoughts about the Windglass",
     ["e"] = {
       [1] = { ["px"] = 0.8669536268, ["py"] = 0.9734812107, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8706] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "List of Items to be Auctioned off in House Malenel",
+    ["e"] = {
+      [1] = { ["px"] = 0.8564163814, ["py"] = 0.9806412137, ["pm"] = 2773, ["d"] = true, },
     },
   },
   [8710] = {
@@ -63332,6 +63380,38 @@ local bookData = {
       [1] = { ["px"] = 0.8596631704, ["py"] = 0.9739955870, ["pm"] = 2771, ["d"] = true, },
     },
   },
+  [8725] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Essential Knots for Sailing",
+    ["e"] = {
+      [1] = { ["px"] = 0.8597635704, ["py"] = 0.9736491870, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8728] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Rules of the Night Market",
+    ["e"] = {
+      [1] = { ["px"] = 0.8604739705, ["py"] = 0.9748999870, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8729] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Join the Ruckus",
+    ["e"] = {
+      [1] = { ["px"] = 0.8603731704, ["py"] = 0.9745375870, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8730] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Myshka's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.8645408270, ["py"] = 0.9753588106, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
   [8738] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63362,6 +63442,22 @@ local bookData = {
     ["n"] = "Scamp Eyes Hurt",
     ["e"] = {
       [1] = { ["px"] = 0.8557672217, ["py"] = 0.9676668202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
+  [8742] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Marifah's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.8563243813, ["py"] = 0.9789040136, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
+  [8743] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "In Memory of the Pathfinders",
+    ["e"] = {
+      [1] = { ["px"] = 0.8604959703, ["py"] = 0.9748007870, ["pm"] = 2771, ["d"] = true, },
     },
   },
   [8744] = {
