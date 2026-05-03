@@ -63332,6 +63332,14 @@ local bookData = {
       [1] = { ["px"] = 0.8564163814, ["py"] = 0.9806412137, ["pm"] = 2773, ["d"] = true, },
     },
   },
+  [8707] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Esetev's Report on the Parch",
+    ["e"] = {
+      [1] = { ["px"] = 0.8654816270, ["py"] = 0.9750368107, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
   [8710] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63388,6 +63396,14 @@ local bookData = {
       [1] = { ["px"] = 0.8597635704, ["py"] = 0.9736491870, ["pm"] = 2771, ["d"] = true, },
     },
   },
+  [8727] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Relics of the Night Market: The Egg of Arac",
+    ["e"] = {
+      [1] = { ["px"] = 0.8570551814, ["py"] = 0.9802024136, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
   [8728] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63410,6 +63426,14 @@ local bookData = {
     ["n"] = "Myshka's Journal",
     ["e"] = {
       [1] = { ["px"] = 0.8645408270, ["py"] = 0.9753588106, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8736] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Curator Dossier",
+    ["e"] = {
+      [1] = { ["px"] = 0.8566755814, ["py"] = 0.9797244136, ["pm"] = 2773, ["d"] = true, },
     },
   },
   [8738] = {
