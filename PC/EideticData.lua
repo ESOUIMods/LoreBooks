@@ -63428,12 +63428,28 @@ local bookData = {
       [1] = { ["px"] = 0.8645408270, ["py"] = 0.9753588106, ["pm"] = 2772, ["d"] = true, },
     },
   },
+  [8735] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Elegy of Forgotten Fatelines",
+    ["e"] = {
+      [1] = { ["px"] = 0.8537768235, ["py"] = 0.9687815981, ["pm"] = 2797, ["d"] = true, },
+    },
+  },
   [8736] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
     ["n"] = "Curator Dossier",
     ["e"] = {
       [1] = { ["px"] = 0.8566755814, ["py"] = 0.9797244136, ["pm"] = 2773, ["d"] = true, },
+    },
+  },
+  [8737] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Gilded B'Kyfxi's Research",
+    ["e"] = {
+      [1] = { ["px"] = 0.8690683852, ["py"] = 0.9748660208, ["pm"] = 2795, ["d"] = true, },
     },
   },
   [8738] = {
