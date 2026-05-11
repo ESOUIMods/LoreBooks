@@ -62614,14 +62614,6 @@ local bookData = {
       [1] = { ["px"] = 0.6843903740, ["py"] = 0.9188484123, ["pm"] = 2654, },
     },
   },
-  [8513] = {
-    ["c"] = true,
-    ["cn"] = "Solstice Summations",
-    ["n"] = "Gabrielle's Journal",
-    ["e"] = {
-      [1] = { ["px"] = 0.6843923742, ["py"] = 0.9188520118, ["pm"] = 2654, },
-    },
-  },
   [8514] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
