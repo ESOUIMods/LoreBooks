@@ -63348,6 +63348,14 @@ local bookData = {
       [1] = { ["px"] = 0.8559379813, ["py"] = 0.9798664136, ["pm"] = 2771, ["d"] = true, },
     },
   },
+  [8719] = {
+    ["c"] = true,
+    ["cn"] = "Night Market Miscellanea",
+    ["n"] = "Slumbering Danger: Who are the Opulent?",
+    ["e"] = {
+      [1] = { ["px"] = 0.8606028264, ["py"] = 0.9769547767, ["pm"] = 2796, ["d"] = true, },
+    },
+  },
   [8720] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
