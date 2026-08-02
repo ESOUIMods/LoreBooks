@@ -63309,6 +63309,14 @@ local bookData = {
       [1] = { ["px"] = 0.8554827813, ["py"] = 0.9803476138, ["pm"] = 2773, ["d"] = true, },
     },
   },
+  [8686] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Librarian Henard's Research Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.0614948010, ["py"] = 0.3867548010, ["pm"] = 807, ["d"] = true, },
+    },
+  },
   [8705] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63533,6 +63541,14 @@ local bookData = {
       [1] = { ["px"] = 0.8603111704, ["py"] = 0.9747071869, ["pm"] = 2771, ["d"] = true, },
     },
   },
+  [8762] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "Resonant Ritual Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.4476271837, ["py"] = 0.6549296032, ["pm"] = 256, },
+    },
+  },
   [8764] = {
     ["c"] = true,
     ["cn"] = "The World and Its Creatures",
@@ -63667,6 +63683,142 @@ local bookData = {
     ["n"] = "Mounts of Tamriel: Volume 12, Constructs",
     ["e"] = {
       [1] = { ["px"] = 0.2642819950, ["py"] = 1.0239655899, ["pm"] = 1348, },
+    },
+  },
+  [8784] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "Letter to Holgunn One-Eye",
+    ["e"] = {
+      [1] = { ["px"] = 0.6694983977, ["py"] = 0.3762271935, ["pm"] = 125, },
+    },
+  },
+  [8849] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "A Letter from Mizrali",
+    ["e"] = {
+      [1] = { ["px"] = 0.7372064060, ["py"] = 0.4524472114, ["pm"] = 511, },
+    },
+  },
+  [8850] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "A Letter from Suriel",
+    ["e"] = {
+      [1] = { ["px"] = 0.7371324055, ["py"] = 0.4524112120, ["pm"] = 511, },
+    },
+  },
+  [8851] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "A Letter from Gathotar",
+    ["e"] = {
+      [1] = { ["px"] = 0.7371408058, ["py"] = 0.4524088119, ["pm"] = 511, },
+    },
+  },
+  [8853] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Hogrog's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.1988595957, ["py"] = 0.3064583969, ["pm"] = 2787, ["d"] = true, },
+    },
+  },
+  [8869] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "A Letter from Jurak-dar",
+    ["e"] = {
+      [1] = { ["px"] = 0.2366891956, ["py"] = 0.6767467978, ["pm"] = 545, },
+    },
+  },
+  [8870] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "A Letter from Captain Khammo",
+    ["e"] = {
+      [1] = { ["px"] = 0.2365871956, ["py"] = 0.6767887973, ["pm"] = 545, },
+    },
+  },
+  [8871] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "A Letter from Yinz-Hei",
+    ["e"] = {
+      [1] = { ["px"] = 0.2366391956, ["py"] = 0.6767719975, ["pm"] = 545, },
+    },
+  },
+  [8872] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Annual Artisan Cheese Festival",
+    ["e"] = {
+      [1] = { ["px"] = 0.8090896257, ["py"] = 0.2840084037, ["pm"] = 1060, },
+    },
+  },
+  [8873] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Violet Vvardvark Cheese Lover's Menu",
+    ["e"] = {
+      [1] = { ["px"] = 0.8096140298, ["py"] = 0.2769340065, ["pm"] = 1060, },
+    },
+  },
+  [8874] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "An Ode to the Prince of Madness",
+    ["e"] = {
+      [1] = { ["px"] = 0.1991963957, ["py"] = 0.3070123968, ["pm"] = 2787, ["d"] = true, },
+    },
+  },
+  [8875] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "Short-Tail's Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.1023112033, ["py"] = 0.3538112056, ["pm"] = 531, },
+    },
+  },
+  [8876] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "Gendinora's Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.1023508034, ["py"] = 0.3538104053, ["pm"] = 531, },
+    },
+  },
+  [8877] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "Vyctorelle's Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.1023112033, ["py"] = 0.3538112056, ["pm"] = 531, },
+    },
+  },
+  [8878] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "Sergeant Rakhad's Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.1023272029, ["py"] = 0.3537808052, ["pm"] = 531, },
+    },
+  },
+  [8879] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "Lady Arabelle's Addendum",
+    ["e"] = {
+      [1] = { ["px"] = 0.1023560032, ["py"] = 0.3538728054, ["pm"] = 531, },
+    },
+  },
+  [8889] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Mylen Dechery's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.0613252009, ["py"] = 0.3866672011, ["pm"] = 807, ["d"] = true, },
     },
   },
 }
