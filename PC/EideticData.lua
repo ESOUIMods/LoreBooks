@@ -63205,6 +63205,15 @@ local bookData = {
       [1] = { ["px"] = 0.8564227814, ["py"] = 0.9796804137, ["pm"] = 2773, ["d"] = true, },
     },
   },
+  [8641] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Plunderer Instructions",
+    ["q"] = 7440,
+    ["e"] = {
+      [1] = { ["px"] = 0.2194632029, ["py"] = 0.3279856069, ["pm"] = 33, },
+    },
+  },
   [8642] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63221,12 +63230,29 @@ local bookData = {
       [1] = { ["px"] = 0.8606195703, ["py"] = 0.9749319870, ["pm"] = 2771, ["d"] = true, },
     },
   },
+  [8659] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Violet Vvardvark Tavern Receipt",
+    ["q"] = 7436,
+    ["e"] = {
+      [1] = { ["px"] = 0.8065260048, ["py"] = 0.2821807978, ["pm"] = 2792, ["d"] = true, },
+    },
+  },
   [8663] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
     ["n"] = "The True Nature of the Night Market",
     ["e"] = {
       [1] = { ["px"] = 0.8602899704, ["py"] = 0.9749323871, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8672] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Othuk's Note",
+    ["e"] = {
+      [1] = { ["px"] = 0.8100400284, ["py"] = 0.2887936031, ["pm"] = 1060, },
     },
   },
   [8673] = {
@@ -63315,6 +63341,14 @@ local bookData = {
     ["n"] = "Librarian Henard's Research Notes",
     ["e"] = {
       [1] = { ["px"] = 0.0614948010, ["py"] = 0.3867548010, ["pm"] = 807, ["d"] = true, },
+    },
+  },
+  [8689] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "The Garbled Grimoire",
+    ["e"] = {
+      [1] = { ["px"] = 0.2248900024, ["py"] = 0.3374456075, ["pm"] = 33, },
     },
   },
   [8705] = {
