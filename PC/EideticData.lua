@@ -61736,6 +61736,15 @@ local bookData = {
       [1] = { ["px"] = 0.6988408080, ["py"] = 0.9230731876, ["pm"] = 2713, ["d"] = true, },
     },
   },
+  [8291] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Koldane Cartel Correspondence",
+	["q"] = 7169,
+    ["e"] = {
+      [1] = { ["px"] = 0.0746260010, ["py"] = 0.3824139950, ["pm"] = 2831, ["d"] = true, },
+    },
+  },
   [8292] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -63239,12 +63248,75 @@ local bookData = {
       [1] = { ["px"] = 0.8065260048, ["py"] = 0.2821807978, ["pm"] = 2792, ["d"] = true, },
     },
   },
+  [8662] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Mathiery: Archway and Flame",
+    ["q"] = 7442,
+    ["e"] = {
+      [1] = { ["px"] = 0.0852087963, ["py"] = 0.3549639959, ["pm"] = 724, ["d"] = true, },
+    },
+  },
   [8663] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
     ["n"] = "The True Nature of the Night Market",
     ["e"] = {
       [1] = { ["px"] = 0.8602899704, ["py"] = 0.9749323871, ["pm"] = 2771, ["d"] = true, },
+    },
+  },
+  [8665] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Relics of Sage Voernet",
+    ["q"] = 7442,
+    ["e"] = {
+      [1] = { ["px"] = 0.0852780017, ["py"] = 0.3563380007, ["pm"] = 2803, ["d"] = true, },
+    },
+  },
+  [8667] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Captain Sansonne's Journal",
+    ["q"] = 7442,
+    ["e"] = {
+      [1] = { ["px"] = 0.1116275997, ["py"] = 0.3098516025, ["pm"] = 2804, ["d"] = true, },
+    },
+  },
+  [8668] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Arrest Report",
+    ["q"] = 7442,
+    ["e"] = {
+      [1] = { ["px"] = 0.1112699998, ["py"] = 0.3094964026, ["pm"] = 2804, ["d"] = true, },
+    },
+  },
+  [8669] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Dibella's Test",
+    ["q"] = 7442,
+    ["e"] = {
+      [1] = { ["px"] = 0.0850776017, ["py"] = 0.3565744007, ["pm"] = 2803, ["d"] = true, },
+    },
+  },
+  [8670] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Zenithar's Test",
+    ["q"] = 7442,
+    ["e"] = {
+      [1] = { ["px"] = 0.0848512017, ["py"] = 0.3563620007, ["pm"] = 2803, ["d"] = true, },
+    },
+  },
+  [8671] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Phynaster's Test",
+    ["q"] = 7442,
+    ["e"] = {
+      [1] = { ["px"] = 0.0853084017, ["py"] = 0.3563560007, ["pm"] = 2803, ["d"] = true, },
     },
   },
   [8672] = {
@@ -63261,6 +63333,15 @@ local bookData = {
     ["n"] = "Urgent! Food Needed",
     ["e"] = {
       [1] = { ["px"] = 0.8566404216, ["py"] = 0.9696216202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
+  [8668] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Rols' List of Valuables",
+    ["q"] = 7453,
+    ["e"] = {
+      [1] = { ["px"] = 0.0502544013, ["py"] = 0.3789036058, ["pm"] = 63, },
     },
   },
   [8675] = {
@@ -63339,8 +63420,18 @@ local bookData = {
     ["c"] = true,
     ["cn"] = "Season One Books",
     ["n"] = "Librarian Henard's Research Notes",
+	["q"] = 7169,
     ["e"] = {
       [1] = { ["px"] = 0.0614948010, ["py"] = 0.3867548010, ["pm"] = 807, ["d"] = true, },
+    },
+  },
+  [8687] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "A Word About the Lens",
+    ["q"] = 7442,
+    ["e"] = {
+      [1] = { ["px"] = 0.0848528017, ["py"] = 0.3563716007, ["pm"] = 2803, ["d"] = true, },
     },
   },
   [8689] = {
@@ -63727,6 +63818,15 @@ local bookData = {
       [1] = { ["px"] = 0.6694983977, ["py"] = 0.3762271935, ["pm"] = 125, },
     },
   },
+  [8800] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Lord Damar's Orders",
+    ["q"] = 7484,
+    ["e"] = {
+      [1] = { ["px"] = 0.2438856027, ["py"] = 0.5124163973, ["pm"] = 993, },
+    },
+  },
   [8849] = {
     ["c"] = true,
     ["cn"] = "Favors for the Freerunners",
@@ -63845,6 +63945,15 @@ local bookData = {
     ["n"] = "Lady Arabelle's Addendum",
     ["e"] = {
       [1] = { ["px"] = 0.1023560032, ["py"] = 0.3538728054, ["pm"] = 531, },
+    },
+  },
+  [8887] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Response to Rols Boron",
+    ["q"] = 7419,
+    ["e"] = {
+      [1] = { ["px"] = 0.0869623984, ["py"] = 0.3210112072, ["pm"] = 2818, ["d"] = true, },
     },
   },
   [8889] = {
