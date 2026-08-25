@@ -63947,6 +63947,14 @@ local bookData = {
       [1] = { ["px"] = 0.1023560032, ["py"] = 0.3538728054, ["pm"] = 531, },
     },
   },
+  [8880] = {
+    ["c"] = true,
+    ["cn"] = "Favors for the Freerunners",
+    ["n"] = "Ring of Daggers Torn Logbook",
+    ["e"] = {
+      [1] = { ["px"] = 0.1991416010, ["py"] = 0.3429200081, ["pm"] = 12, },
+    },
+  },
   [8887] = {
     ["c"] = true,
     ["cn"] = "Season One Books",
