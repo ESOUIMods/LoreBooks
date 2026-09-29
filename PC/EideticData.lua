@@ -27514,6 +27514,7 @@ local bookData = {
         ["pm"] = 16,
       },
       [4] = { ["px"] = 0.6098267951, ["py"] = 0.4200544109, ["pm"] = 573, ["zm"] = 16, },
+      [5] = { ["px"] = 0.5313096041, ["py"] = 0.5591111885, ["pm"] = 576, ["zm"] = 16, },
     },
     ["n"] = "Those Who Stood at Chalman Keep",
     ["cn"] = "Tales of Tamriel",
@@ -61053,6 +61054,14 @@ local bookData = {
       [2] = { ["px"] = 0.4421360095, ["py"] = 0.5200491959, ["pm"] = 2514, },
     },
   },
+  [8142] = {
+    ["c"] = true,
+    ["cn"] = "West Weald Writings",
+    ["n"] = "Letter from Aradros",
+    ["e"] = {
+      [1] = { ["px"] = 0.4367036093, ["py"] = 0.5271763948, ["pm"] = 2514, },
+    },
+  },
   [8143] = {
     ["c"] = true,
     ["cn"] = "West Weald Writings",
@@ -61802,6 +61811,14 @@ local bookData = {
       [1] = { ["px"] = 0.4905007878, ["py"] = 0.4173135914, ["pm"] = 572, },
     },
   },
+  [8299] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Items Needed for Curative",
+    ["e"] = {
+      [1] = { ["px"] = 0.6820392258, ["py"] = 0.9119840176, ["pm"] = 2644, ["d"] = true, },
+    },
+  },
   [8303] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations, Part 2",
@@ -61933,6 +61950,14 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.4570440058, ["py"] = 0.6178931953, ["pm"] = 312, },
       [2] = { ["px"] = 0.4309184089, ["py"] = 0.6594640164, ["pm"] = 2607, ["d"] = true, },
+    },
+  },
+  [8320] = {
+    ["c"] = true,
+    ["cn"] = "Companions Correspondence",
+    ["n"] = "Inventory Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.4310368089, ["py"] = 0.6595972164, ["pm"] = 2607, ["d"] = true, },
     },
   },
   [8322] = {
