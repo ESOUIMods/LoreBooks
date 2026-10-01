@@ -62959,6 +62959,14 @@ local bookData = {
       [1] = { ["px"] = 0.6992791715, ["py"] = 0.9100512181, ["pm"] = 2755, ["d"] = true, },
     },
   },
+  [8566] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Baar-Jasa's Enigma Totem Solution",
+    ["e"] = {
+      [1] = { ["px"] = 0.7015112226, ["py"] = 0.9229171949, ["pm"] = 2603, },
+    },
+  },
   [8567] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations, Part 2",
@@ -62973,6 +62981,14 @@ local bookData = {
     ["n"] = "Wormblood's Journal",
     ["e"] = {
       [1] = { ["px"] = 0.7096184029, ["py"] = 0.9121604004, ["pm"] = 2782, ["d"] = true, },
+    },
+  },
+  [8570] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Mannimarco's Notes",
+    ["e"] = {
+      [1] = { ["px"] = 0.7123864211, ["py"] = 0.9033099933, ["pm"] = 2603, },
     },
   },
   [8572] = {
