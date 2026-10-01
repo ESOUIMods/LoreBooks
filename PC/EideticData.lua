@@ -61703,6 +61703,14 @@ local bookData = {
       [1] = { ["px"] = 0.6743080097, ["py"] = 0.9461607857, ["pm"] = 2603, },
     },
   },
+  [8282] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Letter to Zerith-var",
+    ["e"] = {
+      [1] = { ["px"] = 0.4897304087, ["py"] = 0.5876935927, ["pm"] = 533, },
+    },
+  },
   [8286] = {
     ["c"] = true,
     ["cn"] = "Companions Correspondence",
@@ -62331,6 +62339,14 @@ local bookData = {
       [2] = { ["px"] = 0.6571728181, ["py"] = 0.9147299950, ["pm"] = 2603, ["fp"] = true, },
     },
   },
+  [8456] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Letter from the Stirk Fellowship",
+    ["e"] = {
+      [1] = { ["px"] = 0.6809463740, ["py"] = 0.9196468122, ["pm"] = 2654, },
+    },
+  },
   [8457] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -62631,6 +62647,14 @@ local bookData = {
     ["n"] = "Corelanyan Cuisine, Vol. 2",
     ["e"] = {
       [1] = { ["px"] = 0.6746876098, ["py"] = 0.9389131831, ["pm"] = 2603, },
+    },
+  },
+  [8502] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations",
+    ["n"] = "Worm Cult Correspondence",
+    ["e"] = {
+      [1] = { ["px"] = 0.6846287744, ["py"] = 0.9211616123, ["pm"] = 2654, },
     },
   },
   [8505] = {
@@ -63995,6 +64019,30 @@ local bookData = {
     ["n"] = "Mylen Dechery's Journal",
     ["e"] = {
       [1] = { ["px"] = 0.0613252009, ["py"] = 0.3866672011, ["pm"] = 807, ["d"] = true, },
+    },
+  },
+  [9028] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "From the Memoirs of Baroness Althea Guy Mard",
+    ["e"] = {
+      [1] = { ["px"] = 0.3660000047, ["py"] = 0.5614279899, ["pm"] = 1064, },
+    },
+  },
+  [9042] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "A Blade, A Bottle, and a Tale to Spend",
+    ["e"] = {
+      [1] = { ["px"] = 0.3118724141, ["py"] = 0.5785444120, ["pm"] = 1006, },
+    },
+  },
+  [9076] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "The Sea Can Never Claim Our Home",
+    ["e"] = {
+      [1] = { ["px"] = 0.3121084157, ["py"] = 0.5790732125, ["pm"] = 1006, },
     },
   },
 }
