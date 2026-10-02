@@ -64037,6 +64037,14 @@ local bookData = {
       [1] = { ["px"] = 0.0613252009, ["py"] = 0.3866672011, ["pm"] = 807, ["d"] = true, },
     },
   },
+  [8889] = {
+    ["c"] = true,
+    ["cn"] = "Messages in Bottles",
+    ["n"] = "Message in a Bottle: Under Attack",
+    ["e"] = {
+      [1] = { ["px"] = 0.2905080068, ["py"] = 0.5761856072, ["pm"] = 2822, ["d"] = true, },
+    },
+  },
   [9025] = {
     ["c"] = true,
     ["cn"] = "Season One Books",
@@ -64055,7 +64063,7 @@ local bookData = {
   },
   [9029] = {
     ["c"] = true,
-    ["cn"] = "Season One Books",
+    ["cn"] = "Messages in Bottles",
     ["n"] = "Message in a Bottle: The Stars Led Me Here",
     ["e"] = {
       [1] = { ["px"] = 0.2882972069, ["py"] = 0.5740708073, ["pm"] = 2822, ["d"] = true, },
@@ -64063,7 +64071,7 @@ local bookData = {
   },
   [9031] = {
     ["c"] = true,
-    ["cn"] = "Season One Books",
+    ["cn"] = "Messages in Bottles",
     ["n"] = "Message in a Bottle: The Island Appears at Dawn",
     ["e"] = {
       [1] = { ["px"] = 0.2865508071, ["py"] = 0.5766660072, ["pm"] = 2822, ["d"] = true, },
@@ -64071,7 +64079,7 @@ local bookData = {
   },
   [9032] = {
     ["c"] = true,
-    ["cn"] = "Season One Books",
+    ["cn"] = "Messages in Bottles",
     ["n"] = "Message in a Bottle: The Island Appears at Dawn",
     ["e"] = {
       [1] = { ["px"] = 0.2826339857, ["py"] = 0.5832520039, ["pm"] = 2823, ["d"] = true, },
@@ -64079,7 +64087,7 @@ local bookData = {
   },
   [9033] = {
     ["c"] = true,
-    ["cn"] = "Season One Books",
+    ["cn"] = "Messages in Bottles",
     ["n"] = "Message in a Bottle: The Song the Ocean Sings",
     ["e"] = {
       [1] = { ["px"] = 0.2946420115, ["py"] = 0.5816028100, ["pm"] = 2824, ["d"] = true, },
@@ -64087,7 +64095,7 @@ local bookData = {
   },
   [9033] = {
     ["c"] = true,
-    ["cn"] = "Season One Books",
+    ["cn"] = "Messages in Bottles",
     ["n"] = "Message in a Bottle: The Song the Ocean Sings",
     ["e"] = {
       [1] = { ["px"] = 0.2946420115, ["py"] = 0.5816028100, ["pm"] = 2824, ["d"] = true, },
@@ -64095,7 +64103,7 @@ local bookData = {
   },
   [9036] = {
     ["c"] = true,
-    ["cn"] = "Season One Books",
+    ["cn"] = "Messages in Bottles",
     ["n"] = "Message in a Bottle: Shallows of the Abyssal Sea",
     ["e"] = {
       [1] = { ["px"] = 0.2939020112, ["py"] = 0.5786536101, ["pm"] = 2824, ["d"] = true, },
@@ -64103,7 +64111,7 @@ local bookData = {
   },
   [9037] = {
     ["c"] = true,
-    ["cn"] = "Season One Books",
+    ["cn"] = "Messages in Bottles",
     ["n"] = "Message in a Bottle: Shadow Over the Midday Sun",
     ["e"] = {
       [1] = { ["px"] = 0.2970919867, ["py"] = 0.5695300012, ["pm"] = 2825, ["d"] = true, },
@@ -64111,7 +64119,7 @@ local bookData = {
   },
   [9038] = {
     ["c"] = true,
-    ["cn"] = "Season One Books",
+    ["cn"] = "Messages in Bottles",
     ["n"] = "Message in a Bottle: Gold Colder than the Sea",
     ["e"] = {
       [1] = { ["px"] = 0.2880840073, ["py"] = 0.5765092072, ["pm"] = 2822, ["d"] = true, },
