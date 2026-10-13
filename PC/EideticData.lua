@@ -23617,6 +23617,7 @@ local bookData = {
       [3] = { ["px"] = 0.4730187796, ["py"] = 0.5727820058, ["pm"] = 256, ["qc"] = true, },
       [4] = { ["px"] = 0.7622020010, ["py"] = 0.4960840165, ["pm"] = 13, ["qc"] = true, },
       [5] = { ["px"] = 0.0827464001, ["py"] = 0.3922388025, ["pm"] = 1, ["qc"] = true, },
+	  [6] = { ["px"] = 0.2252268032, ["py"] = 0.3448936074, ["pm"] = 33, },
     },
   },
   [2062] = {
@@ -62037,6 +62038,14 @@ local bookData = {
       [1] = { ["px"] = 0.6872756168, ["py"] = 0.9045055935, ["pm"] = 2603, },
     },
   },
+  [8379] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Burglary in Camlorn!",
+    ["e"] = {
+      [1] = { ["px"] = 0.0660188016, ["py"] = 0.3954224057, ["pm"] = 63, },
+    },
+  },
   [8380] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -62044,6 +62053,22 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.6709064015, ["py"] = 0.9081763812, ["pm"] = 2731, ["d"] = true, },
       [2] = { ["px"] = 0.6718480087, ["py"] = 0.9081511841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8381] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Adrone, You Idiot!",
+    ["e"] = {
+      [1] = { ["px"] = 0.0609400009, ["py"] = 0.3868172011, ["pm"] = 807, ["d"] = true, },
+    },
+  },
+  [8382] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Missing Scholar",
+    ["e"] = {
+      [1] = { ["px"] = 0.4669968150, ["py"] = 0.5561303892, ["pm"] = 535, },
     },
   },
   [8383] = {
@@ -62062,6 +62087,14 @@ local bookData = {
     ["e"] = {
       [1] = { ["px"] = 0.6707224015, ["py"] = 0.9082103812, ["pm"] = 2672, ["d"] = true, },
       [2] = { ["px"] = 0.6718480087, ["py"] = 0.9081511841, ["pm"] = 2603, ["fp"] = true, },
+    },
+  },
+  [8385] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Shasien-jo's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.4628939956, ["py"] = 0.5831871918, ["pm"] = 343, ["d"] = true, },
     },
   },
   [8386] = {
@@ -62097,6 +62130,14 @@ local bookData = {
     ["n"] = "Summons to the Remnant",
     ["e"] = {
       [1] = { ["px"] = 0.1656948005, ["py"] = 0.2532948016, ["pm"] = 2641, ["d"] = true, },
+    },
+  },
+  [8390] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Suitors Please Apply!",
+    ["e"] = {
+      [1] = { ["px"] = 0.2356932009, ["py"] = 0.7425160217, ["pm"] = 243, },
     },
   },
   [8392] = {
@@ -63531,12 +63572,60 @@ local bookData = {
       [1] = { ["px"] = 0.8654816270, ["py"] = 0.9750368107, ["pm"] = 2772, ["d"] = true, },
     },
   },
+  [8709] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Unknown Fates",
+    ["e"] = {
+      [1] = { ["px"] = 0.3095864049, ["py"] = 0.6226240139, ["pm"] = 275, },
+    },
+  },
   [8710] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
     ["n"] = "Night Market Report",
     ["e"] = {
       [1] = { ["px"] = 0.8568416216, ["py"] = 0.9684836202, ["pm"] = 2774, ["d"] = true, },
+    },
+  },
+  [8711] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Barrister's Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.2280056013, ["py"] = 0.3933799951, ["pm"] = 538, },
+    },
+  },
+  [8712] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "I'm Sorry, My Dear",
+    ["e"] = {
+      [1] = { ["px"] = 0.3664812135, ["py"] = 0.3265143936, ["pm"] = 1132, },
+    },
+  },
+  [8714] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "My Dearest Beritta",
+    ["e"] = {
+      [1] = { ["px"] = 0.4543068058, ["py"] = 0.6130095950, ["pm"] = 312, },
+    },
+  },
+  [8716] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Zamsha's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6148196013, ["py"] = 0.3754980045, ["pm"] = 214, ["d"] = true, },
+    },
+  },
+  [8717] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Dragon Tongue's Message",
+    ["e"] = {
+      [1] = { ["px"] = 0.2839251897, ["py"] = 0.3155123949, ["pm"] = 813, ["d"] = true, },
     },
   },
   [8718] = {
@@ -63595,6 +63684,14 @@ local bookData = {
       [1] = { ["px"] = 0.8597635704, ["py"] = 0.9736491870, ["pm"] = 2771, ["d"] = true, },
     },
   },
+  [8726] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Anis Tirethi's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.7673479898, ["py"] = 0.5571439918, ["pm"] = 26, },
+    },
+  },
   [8727] = {
     ["c"] = true,
     ["cn"] = "Night Market Miscellanea",
@@ -63625,6 +63722,14 @@ local bookData = {
     ["n"] = "Myshka's Journal",
     ["e"] = {
       [1] = { ["px"] = 0.8645408270, ["py"] = 0.9753588106, ["pm"] = 2772, ["d"] = true, },
+    },
+  },
+  [8734] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "My Award-Winning Chili Recipe!",
+    ["e"] = {
+      [1] = { ["px"] = 0.4402572080, ["py"] = 0.7285316237, ["pm"] = 445, },
     },
   },
   [8735] = {
@@ -63731,12 +63836,44 @@ local bookData = {
       [1] = { ["px"] = 0.8603111704, ["py"] = 0.9747071869, ["pm"] = 2771, ["d"] = true, },
     },
   },
+  [8757] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Dralis Tirethi Found Dead",
+    ["e"] = {
+      [1] = { ["px"] = 0.7901031990, ["py"] = 0.4276768087, ["pm"] = 24, },
+    },
+  },
+  [8758] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Job Opportunity in Glenumbra",
+    ["e"] = {
+      [1] = { ["px"] = 0.0609836016, ["py"] = 0.3792860056, ["pm"] = 63, },
+    },
+  },
+  [8760] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Vanel Tirethi's Ledger",
+    ["e"] = {
+      [1] = { ["px"] = 0.2728607950, ["py"] = 0.2553759996, ["pm"] = 667, },
+    },
+  },
   [8762] = {
     ["c"] = true,
     ["cn"] = "Favors for the Freerunners",
     ["n"] = "Resonant Ritual Notes",
     ["e"] = {
       [1] = { ["px"] = 0.4476271837, ["py"] = 0.6549296032, ["pm"] = 256, },
+    },
+  },
+  [8763] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Use of Wayrest Rare Components",
+    ["e"] = {
+      [1] = { ["px"] = 0.2248856019, ["py"] = 0.3377952065, ["pm"] = 33, },
     },
   },
   [8764] = {
@@ -63892,6 +64029,14 @@ local bookData = {
       [1] = { ["px"] = 0.2438856027, ["py"] = 0.5124163973, ["pm"] = 993, },
     },
   },
+  [8847] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "A Letter from Mosinkel",
+    ["e"] = {
+      [1] = { ["px"] = 0.2251964027, ["py"] = 0.3380912071, ["pm"] = 33, },
+    },
+  },
   [8849] = {
     ["c"] = true,
     ["cn"] = "Favors for the Freerunners",
@@ -64020,6 +64165,46 @@ local bookData = {
       [1] = { ["px"] = 0.1991416010, ["py"] = 0.3429200081, ["pm"] = 12, },
     },
   },
+  [8881] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "A Discreet Notice",
+    ["e"] = {
+      [1] = { ["px"] = 0.3694860048, ["py"] = 0.5539131904, ["pm"] = 1064, },
+    },
+  },
+  [8882] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "A Considerate Offer",
+    ["e"] = {
+      [1] = { ["px"] = 0.3386632152, ["py"] = 0.5536084121, ["pm"] = 1006, },
+    },
+  },
+  [8883] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Eye of the Queen Report",
+    ["e"] = {
+      [1] = { ["px"] = 0.1865823974, ["py"] = 0.6492276139, ["pm"] = 143, },
+    },
+  },
+  [8884] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Letter to Sealord Esun",
+    ["e"] = {
+      [1] = { ["px"] = 0.3801171993, ["py"] = 0.6084592153, ["pm"] = 22, },
+    },
+  },
+  [8886] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Zaisu's Letter",
+    ["e"] = {
+      [1] = { ["px"] = 0.7597759923, ["py"] = 0.5994743954, ["pm"] = 26, },
+    },
+  },
   [8887] = {
     ["c"] = true,
     ["cn"] = "Season One Books",
@@ -64027,6 +64212,14 @@ local bookData = {
     ["q"] = 7419,
     ["e"] = {
       [1] = { ["px"] = 0.0869623984, ["py"] = 0.3210112072, ["pm"] = 2818, ["d"] = true, },
+    },
+  },
+  [8888] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Bulletin on Magpie Ravik",
+    ["e"] = {
+      [1] = { ["px"] = 0.0600900013, ["py"] = 0.3939956046, ["pm"] = 63, },
     },
   },
   [8889] = {
@@ -64037,12 +64230,156 @@ local bookData = {
       [1] = { ["px"] = 0.0613252009, ["py"] = 0.3866672011, ["pm"] = 807, ["d"] = true, },
     },
   },
-  [8889] = {
+  [8890] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Local Legends of the Rift",
+    ["e"] = {
+      [1] = { ["px"] = 0.6327160003, ["py"] = 0.3888235907, ["pm"] = 125, },
+    },
+  },
+  [8892] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Tattered Recipe Book",
+    ["e"] = {
+      [1] = { ["px"] = 0.6432520115, ["py"] = 0.3769428010, ["pm"] = 198, },
+    },
+  },
+  [8893] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Eversleep Salve Recipe",
+    ["e"] = {
+      [1] = { ["px"] = 0.6809403958, ["py"] = 0.4073192007, ["pm"] = 7, },
+    },
+  },
+  [8894] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "A Husband's Remorse",
+    ["e"] = {
+      [1] = { ["px"] = 0.5712159866, ["py"] = 0.3704692055, ["pm"] = 543, },
+    },
+  },
+  [8911] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Mad Mal's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.2052727954, ["py"] = 0.2312112021, ["pm"] = 10, },
+    },
+  },
+  [8912] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "The Honest Toils Lies!",
+    ["e"] = {
+      [1] = { ["px"] = 0.3222168023, ["py"] = 0.5712344004, ["pm"] = 1074, },
+    },
+  },
+  [8913] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Cult-Leader Sermon",
+    ["e"] = {
+      [1] = { ["px"] = 0.3336900025, ["py"] = 0.5699376005, ["pm"] = 1074, },
+    },
+  },
+  [8914] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Our Thanks",
+    ["e"] = {
+      [1] = { ["px"] = 0.3694448043, ["py"] = 0.5539199903, ["pm"] = 1064, },
+    },
+  },
+  [8916] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Orders for Nightshade",
+    ["e"] = {
+      [1] = { ["px"] = 0.1856976031, ["py"] = 0.4250652114, ["pm"] = 539, },
+    },
+  },
+  [8921] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "The Gold Leaf Society",
+    ["e"] = {
+      [1] = { ["px"] = 0.1876243960, ["py"] = 0.2600259971, ["pm"] = 10, },
+    },
+  },
+  [8923] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "A Letter from Fenulas",
+    ["e"] = {
+      [1] = { ["px"] = 0.2319607995, ["py"] = 0.7220620180, ["pm"] = 143, },
+    },
+  },
+  [8924] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "A Letter from Caloliel",
+    ["e"] = {
+      [1] = { ["px"] = 0.2354320016, ["py"] = 0.7227604170, ["pm"] = 143, },
+    },
+  },
+  [8925] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "A Letter from Ellilas",
+    ["e"] = {
+      [1] = { ["px"] = 0.2336547961, ["py"] = 0.7226112153, ["pm"] = 143, },
+    },
+  },
+  [8930] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Lord Dralas Raviro's Journal",
+    ["e"] = {
+      [1] = { ["px"] = 0.6920555979, ["py"] = 0.4678816022, ["pm"] = 510, },
+    },
+  },
+  [8931] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Bounty for House Dres",
+    ["e"] = {
+      [1] = { ["px"] = 0.7381048059, ["py"] = 0.4495928118, ["pm"] = 511, },
+    },
+  },
+  [8932] = {
     ["c"] = true,
     ["cn"] = "Messages in Bottles",
     ["n"] = "Message in a Bottle: Under Attack",
     ["e"] = {
       [1] = { ["px"] = 0.2905080068, ["py"] = 0.5761856072, ["pm"] = 2822, ["d"] = true, },
+    },
+  },
+  [8933] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "Pirate Clans of the Abecean: Chapter Four",
+    ["e"] = {
+      [1] = { ["px"] = 0.2948284115, ["py"] = 0.5807756102, ["pm"] = 2824, ["d"] = true, },
+    },
+  },
+  [8944] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Ode to Esun",
+    ["e"] = {
+      [1] = { ["px"] = 0.2227844079, ["py"] = 0.5080636168, ["pm"] = 994, },
+    },
+  },
+  [8948] = {
+    ["c"] = true,
+    ["cn"] = "Rumormonger Review",
+    ["n"] = "Burned Documents",
+    ["e"] = {
+      [1] = { ["px"] = 0.7736455869, ["py"] = 0.5136463878, ["pm"] = 205, },
     },
   },
   [9025] = {
