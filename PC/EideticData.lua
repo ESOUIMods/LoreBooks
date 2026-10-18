@@ -64526,6 +64526,174 @@ local bookData = {
       [1] = { ["px"] = 0.3118724141, ["py"] = 0.5785444120, ["pm"] = 1006, },
     },
   },
+  [9049] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Arcanum Wing Secrets", -- Arcanum Wing Secrets I
+    ["e"] = {
+      [1] = { ["px"] = 0.0092915999, ["py"] = 0.1521560008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9050] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Arcanum Wing Secrets", -- Arcanum Wing Secrets II
+    ["e"] = {
+      [1] = { ["px"] = 0.0092915999, ["py"] = 0.1521560008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9051] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Arcanum Wing Secrets", -- Arcanum Wing Secrets III
+    ["e"] = {
+      [1] = { ["px"] = 0.0092915999, ["py"] = 0.1521560008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9052] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Arcanum Wing Secrets", -- Arcanum Wing Secrets IV
+    ["e"] = {
+      [1] = { ["px"] = 0.0092915999, ["py"] = 0.1521560008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9053] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Arcanum Wing Secrets", -- Arcanum Wing Secrets V
+    ["e"] = {
+      [1] = { ["px"] = 0.0092915999, ["py"] = 0.1521560008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9054] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Arcanum Wing Secrets", -- Arcanum Wing Secrets VI
+    ["e"] = {
+      [1] = { ["px"] = 0.0092915999, ["py"] = 0.1521560008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9055] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Arcanum Wing Secrets", -- Arcanum Wing Secrets VII
+    ["e"] = {
+      [1] = { ["px"] = 0.0092915999, ["py"] = 0.1521560008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9056] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Lunar Wing Secrets I
+    ["e"] = {
+      [1] = { ["px"] = 0.0069427999, ["py"] = 0.1509576008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9057] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Lunar Wing Secrets II
+    ["e"] = {
+      [1] = { ["px"] = 0.0069427999, ["py"] = 0.1509576008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9058] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Lunar Wing Secrets III
+    ["e"] = {
+      [1] = { ["px"] = 0.0069427999, ["py"] = 0.1509576008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9059] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Lunar Wing Secrets IV
+    ["e"] = {
+      [1] = { ["px"] = 0.0069427999, ["py"] = 0.1509576008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9060] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Lunar Wing Secrets V
+    ["e"] = {
+      [1] = { ["px"] = 0.0069427999, ["py"] = 0.1509576008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9061] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Lunar Wing Secrets VI
+    ["e"] = {
+      [1] = { ["px"] = 0.0069427999, ["py"] = 0.1509576008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9062] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Lunar Wing Secrets VII
+    ["e"] = {
+      [1] = { ["px"] = 0.0069427999, ["py"] = 0.1509576008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9063] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Castle Wing Secrets I
+    ["e"] = {
+      [1] = { ["px"] = 0.0062560000, ["py"] = 0.1522448008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9064] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Castle Wing Secrets II
+    ["e"] = {
+      [1] = { ["px"] = 0.0062560000, ["py"] = 0.1522448008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9065] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Castle Wing Secrets III
+    ["e"] = {
+      [1] = { ["px"] = 0.0062560000, ["py"] = 0.1522448008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9066] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Castle Wing Secrets IV
+    ["e"] = {
+      [1] = { ["px"] = 0.0062560000, ["py"] = 0.1522448008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9067] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Castle Wing Secrets V
+    ["e"] = {
+      [1] = { ["px"] = 0.0062560000, ["py"] = 0.1522448008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9068] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Castle Wing Secrets VI
+    ["e"] = {
+      [1] = { ["px"] = 0.0062560000, ["py"] = 0.1522448008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
+  [9069] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Unlocked Secrets", -- Castle Wing Secrets VII
+    ["e"] = {
+      [1] = { ["px"] = 0.0062560000, ["py"] = 0.1522448008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
   [9076] = {
     ["c"] = true,
     ["cn"] = "Season One Books",
