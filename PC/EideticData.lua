@@ -62674,6 +62674,14 @@ local bookData = {
       [2] = { ["px"] = 0.6609244088, ["py"] = 0.9208807865, ["pm"] = 2603, ["fp"] = true, },
     },
   },
+  [8497] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "Maldriths: Correctors of Coldharbour",
+    ["e"] = {
+      [1] = { ["px"] = 0.7043907921, ["py"] = 0.9268956267, ["pm"] = 2728, ["d"] = true, },
+    },
+  },
   [8498] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations",
@@ -63016,6 +63024,14 @@ local bookData = {
       [1] = { ["px"] = 0.7140192218, ["py"] = 0.9311535925, ["pm"] = 2603, },
     },
   },
+  [8568] = {
+    ["c"] = true,
+    ["cn"] = "Solstice Summations, Part 2",
+    ["n"] = "The Collected Writings of Tzinik-Muz",
+    ["e"] = {
+      [1] = { ["px"] = 0.7107980182, ["py"] = 0.9277847959, ["pm"] = 2603, },
+    },
+  },
   [8569] = {
     ["c"] = true,
     ["cn"] = "Solstice Summations, Part 2",
@@ -63230,6 +63246,7 @@ local bookData = {
     ["n"] = "Panicked Note",
     ["e"] = {
        [1] = { ["px"] = 0.6999892045, ["py"] = 0.9090087902, ["pm"] = 2754, ["d"] = true, },
+	   [2] = { ["px"] = 0.6972868173, ["py"] = 0.9057171935, ["pm"] = 2603, },
     },
   },
   [8615] = {
@@ -63860,6 +63877,14 @@ local bookData = {
       [1] = { ["px"] = 0.2728607950, ["py"] = 0.2553759996, ["pm"] = 667, },
     },
   },
+  [8761] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Observations on the Vault",
+    ["e"] = {
+      [1] = { ["px"] = 0.0082784001, ["py"] = 0.1509808008, ["pm"] = 2937, ["d"] = true, },
+    },
+  },
   [8762] = {
     ["c"] = true,
     ["cn"] = "Favors for the Freerunners",
@@ -64061,6 +64086,13 @@ local bookData = {
       [1] = { ["px"] = 0.7371408058, ["py"] = 0.4524088119, ["pm"] = 511, },
     },
   },
+  [8852] = {
+    ["c"] = true,
+    ["cn"] = "Season One Books",
+    ["n"] = "The Destroyed Painting",
+    ["e"] = {
+      [1] = { ["px"] = 0.0370647988, ["py"] = 0.1923695993, ["pm"] = 2849, ["d"] = true, },
+    },
   [8853] = {
     ["c"] = true,
     ["cn"] = "Season One Books",
@@ -64260,6 +64292,22 @@ local bookData = {
     ["n"] = "A Husband's Remorse",
     ["e"] = {
       [1] = { ["px"] = 0.5712159866, ["py"] = 0.3704692055, ["pm"] = 543, },
+    },
+  },
+  [8902] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Note on Curios",
+    ["e"] = {
+      [1] = { ["px"] = 0.0341275991, ["py"] = 0.1925803994, ["pm"] = 2849, ["d"] = true, },
+    },
+  },
+  [8907] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "The Vault Expedition",
+    ["e"] = {
+      [1] = { ["px"] = 0.0081756000, ["py"] = 0.1465364006, ["pm"] = 2876, ["d"] = true, },
     },
   },
   [8911] = {
@@ -64484,6 +64532,14 @@ local bookData = {
     ["n"] = "The Sea Can Never Claim Our Home",
     ["e"] = {
       [1] = { ["px"] = 0.3121084157, ["py"] = 0.5790732125, ["pm"] = 1006, },
+    },
+  },
+  [9080] = {
+    ["c"] = true,
+    ["cn"] = "Knowledge of the Nowhere Vault",
+    ["n"] = "Note on Curios",
+    ["e"] = {
+      [1] = { ["px"] = 0.0341275991, ["py"] = 0.1925803994, ["pm"] = 2849, ["d"] = true, },
     },
   },
 }
