@@ -356,7 +356,7 @@ local lorebooksData = {
     { 0.559, 0.592, 9, 6 },
     { 0.565, 0.558, 9, 6 },
     -- { 0.521, 0.547, 9, 6 },
-	{ 0.5181661844, 0.5449923873, 9, 6}, -- Triumphs of a Monarch, Ch. 6, auridon/auridon_base_0
+    { 0.5181661844, 0.5449923873, 9, 6 }, -- Triumphs of a Monarch, Ch. 6, auridon/auridon_base_0
     { 0.4958, 0.5458, 9, 7 }, -- Triumphs of a Monarch, Ch. 10
     { 0.4532, 0.5154, 9, 7 },
     { 0.4428, 0.5532, 9, 7 },
@@ -3264,7 +3264,9 @@ local lorebooksData = {
     { 0.5740, 0.1740, 9, 7 }, --Triumphs of a Monarch, Ch. 10
     { 0.5360, 0.5710, 18, 5 }, --Flesh to Cut from Bone
   },
-  [2219] = { 0.3963344693, 0.5498281717, 2, 3, worldY = 3790 }, -- The Knightly Orders of High Rock, systres/u34_navirecommander_base_0
+  [2219] = {
+    { 0.3963344693, 0.5498281717, 2, 3, worldY = 3790 }, -- The Knightly Orders of High Rock, systres/u34_navirecommander_base_0
+  },
 
   -- guild maps
   [563] = { -- abagarlas_base
@@ -3308,7 +3310,9 @@ local lorebooksData = {
     { 0.840, 0.343, 8, 4 }, --The House of Troubles
     { 0.5881690382, 0.6865075826, 20, 1, ld = { 9999, 15 } }, -- Ancestors and the Dunmer (Abridged)
   },
-  [2401] = { 0.4168690443, 0.6903295517, 20, 1 }, -- Ancestors and the Dunmer (Abridged)
+  [2401] = {
+    { 0.4168690443, 0.6903295517, 20, 1 }, -- Ancestors and the Dunmer (Abridged)
+  },
   [2317] = { -- apocrypha/u38_disquiet_study_base_0
     { 0.4920897484, 0.3628119528, 8, 6 }, -- Modern Heretics
   },

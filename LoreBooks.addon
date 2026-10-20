@@ -1,12 +1,12 @@
 ## Title: |cEFEBBELoreBooks|r
 ## Description: Displays map pins for Shalidor's and Eidetic Libraries books
-## Version: 103
-## AddOnVersion: 103
+## Version: 108
+## AddOnVersion: 108
 ## Author: Garkin, Ayantir, Kyoma, Sharlikran
-## APIVersion: 101047 101048
+## APIVersion: 101050 101051
 ## SavedVariables: LBooks_SavedVariables
-## PCDependsOn: LibAddonMenu-2.0>=40 LibMapPins-1.0>=10045 CustomCompassPins>=137 LibGPS>=73 LibMapData>=119
-## ConsoleDependsOn: LibMapPins-1.0>=10045 CustomCompassPins>=137
+## PCDependsOn: LibAddonMenu-2.0>=43 LibMapPins-1.0>=10047 CustomCompassPins>=138 LibGPS>=73 LibMapData>=121
+## ConsoleDependsOn: LibMapPins-1.0>=10047 CustomCompassPins>=138
 ## OptionalDependsOn: LibDebugLogger DebugLogViewer
 
 Constants.lua
